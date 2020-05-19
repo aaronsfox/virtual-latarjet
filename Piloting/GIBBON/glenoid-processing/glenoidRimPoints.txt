@@ -1,0 +1,44 @@
+Legend
+======
+
+Point:
+Name:          Name of the point
+X1,Y1,Z1:      Coordinates of the point
+
+Data
+====
+
+Point:
+Name         	X1      	Y1       	Z1       	
+glenoidRim1  	97.8210 	273.2663 	939.0000 	
+glenoidRim2  	76.2374 	295.9290 	939.0000 	
+glenoidRim3  	76.6691 	295.2815 	936.0000 	
+glenoidRim4  	97.8210 	272.8346 	936.0000 	
+glenoidRim5  	95.2310 	273.0504 	933.0000 	
+glenoidRim6  	76.0216 	294.2023 	933.0000 	
+glenoidRim7  	93.2885 	274.3455 	930.0000 	
+glenoidRim8  	76.4533 	294.2023 	930.0000 	
+glenoidRim9  	93.0726 	274.5613 	927.0000 	
+glenoidRim10 	91.3459 	275.6405 	924.0000 	
+glenoidRim11 	98.0368 	273.6979 	942.0000 	
+glenoidRim12 	77.3166 	295.4973 	942.0000 	
+glenoidRim13 	77.7483 	296.3607 	945.0000 	
+glenoidRim14 	97.8210 	272.6188 	945.0000 	
+glenoidRim15 	96.5260 	271.5396 	948.0000 	
+glenoidRim16 	78.8275 	296.5765 	948.0000 	
+glenoidRim17 	96.5260 	270.0287 	951.0000 	
+glenoidRim18 	80.1225 	294.6340 	951.0000 	
+glenoidRim19 	95.8785 	270.0287 	954.0000 	
+glenoidRim20 	96.3102 	270.0287 	957.0000 	
+glenoidRim21 	91.4201 	276.0000 	959.2997 	
+glenoidRim22 	89.0081 	278.0000 	923.3875 	
+glenoidRim23 	90.2141 	279.0000 	959.7017 	
+glenoidRim24 	87.2661 	281.0000 	921.5115 	
+glenoidRim25 	87.4001 	284.0000 	957.5577 	
+glenoidRim26 	84.1840 	284.0000 	922.1815 	
+glenoidRim27 	82.5972 	292.0000 	953.7722 	
+glenoidRim28 	84.5495 	289.0000 	955.7244 	
+glenoidRim29 	93.9854 	273.0000 	958.6528 	
+glenoidRim30 	78.4360 	292.5524 	927.0000 	
+glenoidRim31 	80.5855 	289.0000 	925.0734 	
+

@@ -1,0 +1,15 @@
+Legend
+======
+
+Sphere:
+Name:          Name of the sphere
+X1,Y1,Z1:      Coordinates of the center
+R:             Radius
+
+Data
+====
+
+Sphere:
+Name                   	X1      	Y1       	Z1       	R       	
+humeralHeadSphere_copy 	69.1868 	267.6142 	944.9138 	24.7949 	
+
