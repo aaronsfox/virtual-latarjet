@@ -1,0 +1,12 @@
+Scapula_Xc_origin,-44.4656,16.3826,21.7050
+Scapula_Yc_origin,-44.4656,16.3826,21.7050
+Scapula_Zc_origin,-44.4656,16.3826,21.7050
+Humerus_Xc_origin,0.0,0.0,30.7676
+Humerus_Yc_origin,0.0,0.0,30.7676
+Humerus_Zc_origin,0.0,0.0,30.7676
+Scapula_Xc_direction,0.8807,0.4495,0.1496
+Scapula_Yc_direction,-0.4247,0.8890,-0.1710
+Scapula_Zc_direction,-0.2098,0.0871,0.9738
+Humerus_Xc_direction,0.8807,0.4495,0.1496
+Humerus_Yc_direction,-0.4248,0.8890,-0.1708
+Humerus_Zc_direction,-0.2098,0.0871,0.9738
