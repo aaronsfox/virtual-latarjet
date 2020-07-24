@@ -3,7 +3,11 @@
 
 %%%%% following a lot of the sphere sliding demo in GIBBON
     %%%%% https://www.gibboncode.org/html/DEMO_febio_0007_sphere_sliding.html
+%%%%% a fair bit for slicing and fixing up the hole also comes from the foot insole demo
+    %%%%% https://www.gibboncode.org/html/DEMO_febio_0050_foot_insole_01.html
 
+%%%%% TODO: add generatePlots logical input
+    
 %% Current test code
 %  Building up piece by piece to get to final simulation
 
@@ -15,8 +19,8 @@ cd('..\..\FEA\SurfaceMeshes');
 
 %Load surface files
 [headSTLstruct] = import_STL('BaseHumeralHead.stl');
-    [scapulaSTLstruct] = import_STL('Scapula_r.stl');
-[glenoidSTLstruct] = import_STL('BaseGlenoid.stl');
+[scapulaSTLstruct] = import_STL('Scapula.stl');
+% % % [glenoidSTLstruct] = import_STL('BaseGlenoid.stl');
 
 %Access the data from the STL structs
 
@@ -32,282 +36,147 @@ headV = headSTLstruct.solidVertices{1}; %Vertices
 %Remesh sphere to reduce number of triangles
 [headF,headV] = triRemeshLabel(headF,headV,3);
 
-%% Scapula testing
-%  TODO: fix variable naming throughout
+%% Create the glenoid section from the scapula
 
-%Get single surface faces and vertices
+%Get scapula faces and vertices
 scapulaF = scapulaSTLstruct.solidFaces{1}; %Faces
 scapulaV = scapulaSTLstruct.solidVertices{1}; %Vertices
 
 %Merge vertices
 [scapulaF,scapulaV] = mergeVertices(scapulaF,scapulaV);
 
-% % % cFigure;
-% % % gpatch(scapulaF,scapulaV);
-% % % axisGeom;
-
-%TEST FULL SCAPULA VOLUMETRIC MESHING
-
-%Create tetgen input structure
-inputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
-inputStruct.Faces = scapulaF; %Boundary faces
-inputStruct.Nodes = scapulaV; %Nodes of boundary
-inputStruct.regionPoints= getInnerPoint(scapulaF,scapulaV); %Interior points for regions
-inputStruct.holePoints = []; %Interior points for holes
-inputStruct.regionA = tetVolMeanEst(scapulaF,scapulaV); %Desired tetrahedral volume for each region
-
-%Mesh model
-[scapulaMesh] = runTetGen(inputStruct); %Run tetGen
-
-%Visualise scapula mesh
-meshView(scapulaMesh);
-
-%%%%% SCAPULA MESHES WITH VOLUME WITH NO ERRORS
-
-%% Test extracting glenoid from scapula with GIBBON
-
 %Slice the scapula 10mm back from the glenoid origin
 %Generate settings for slicing
+cutLevel = -10; %Set the cut level
 snapTolerance = mean(patchEdgeLengths(scapulaF,scapulaV))/100;
 n = vecnormalize([0 0 -1]); %Normal direction to plane
-P = [0 0 -10]; %Point on plane
+P = [0 0 cutLevel]; %Point on plane
 
 %Slicing surface (note 3rd color data output is supressed)
-[Fc,Vc,~,logicSide,Eb] = triSurfSlice(scapulaF,scapulaV,[],P,n,snapTolerance);
+[scapulaFc,scapulaVc,~,logicSide,scapulaEc] = triSurfSlice(scapulaF,scapulaV,[],P,n,snapTolerance);
 
 %Visualise slice
-cFigure; subplot(1,2,1); hold on;
-hp1 = gpatch(Fc(~logicSide,:),Vc,'bw','k',1);
-hp2 = gpatch(Fc(logicSide,:),Vc,'rw','k',1);
-legend([hp1 hp2],{'Surface above plane','Surface below plane'})
-axisGeom; axis manual; camlight headligth;
-colormap gjet;
-set(gca,'FontSize',25);
-subplot(1,2,2); hold on;
-gpatch(Fc(logicSide,:),Vc,'w','k',1);
-gpatch(Fc(~logicSide,:),Vc,'w','none',0.25);
-hp1=gpatch(Eb,Vc,'none','b',1,3);
-hp2=quiverVec(P,n,50,'k');
-legend([hp1 hp2],{'Intersection curve','Plane normal vector'})
-axisGeom; axis manual; camlight headligth;
-set(gca,'FontSize',25);
+if generatePlots
+    %Plot split planes
+    cFigure; subplot(1,2,1); hold on;
+    hp1 = gpatch(scapulaFc(~logicSide,:),scapulaVc,'bw','k',1);
+    hp2 = gpatch(scapulaFc(logicSide,:),scapulaVc,'rw','k',1);
+    legend([hp1 hp2],{'Surface above plane','Surface below plane'})
+    axisGeom; axis manual; camlight headligth;
+    colormap gjet;
+    set(gca,'FontSize',25);
+    %Plot extracted surface and boundary
+    subplot(1,2,2); hold on;
+    gpatch(scapulaFc(logicSide,:),scapulaVc,'w','k',1);
+    gpatch(scapulaFc(~logicSide,:),scapulaVc,'w','none',0.25);
+    hp1=gpatch(scapulaEc,scapulaVc,'none','b',1,3);
+    hp2=quiverVec(P,n,50,'k');
+    legend([hp1 hp2],{'Intersection curve','Plane normal vector'})
+    axisGeom; axis manual; camlight headligth;
+    set(gca,'FontSize',25);
+end
 
 %Extract the faces we want to keep
-[glenoidF,glenoidV] = patchCleanUnused(Fc(logicSide,:),Vc);
+[scapulaKeepF,scapulaKeepV] = patchCleanUnused(scapulaFc(logicSide,:),scapulaVc);
 
 %Use the grouping function to split the extra part of the scapula that
 %comes through with the cut away
-[groupIndexVertices,groupIndexFaces] = groupVertices(glenoidF,glenoidV,1);
+[indV,indF] = groupVertices(scapulaKeepF,scapulaKeepV,1);
 
 %Visualise the grouping
-cFigure; subplot(1,2,1); hold on;
-title('Ungrouped')
-gpatch(glenoidF,glenoidV,'kw','none');
-axisGeom;
-camlight headlight;
-subplot(1,2,2); hold on;
-title('Grouped')
-gpatch(glenoidF,glenoidV,'kw','none');
-scatterV(glenoidV,15,groupIndexVertices,'filled');
-axisGeom;
-camlight headlight;
-colormap gjet; icolorbar;
+if generatePlots
+    %Plot ungrouped sections
+    cFigure; subplot(1,2,1); hold on;
+    title('Ungrouped')
+    gpatch(scapulaKeepF,scapulaKeepV,'kw','none');
+    axisGeom;
+    camlight headlight;
+    %Plot grouped sections
+    subplot(1,2,2); hold on;
+    title('Grouped')
+    gpatch(scapulaKeepF,scapulaKeepV,indF,'none');
+    axisGeom;
+    camlight headlight;
+    colormap gjet; icolorbar;
+end
 
 %Extract set 2, which is the glenoid
-logicKeep = logical(groupIndexFaces == 2);
-[extractedGlenoidF,extractedGlenoidV] = patchCleanUnused(glenoidF(logicKeep,:),glenoidV);
+logicKeep = logical(indF == 2);
+[extractedGlenoidF,extractedGlenoidV] = patchCleanUnused(scapulaKeepF(logicKeep,:),scapulaKeepV);
 
 %Merge vertices
 [extractedGlenoidF,extractedGlenoidV] = mergeVertices(extractedGlenoidF,extractedGlenoidV);
 
-%Attempt to self triangulate potentially jagged edge
-Eb = patchBoundary(extractedGlenoidF,extractedGlenoidV); %Get boundary edges
-indBoundary = edgeListToCurve(Eb); %Convert boundary edges to a curve list
+%Self triangulate the potentially jagged edge of the cut
+extractedGlenoidEb = patchBoundary(extractedGlenoidF,extractedGlenoidV); %Get boundary edges
+indBoundary = edgeListToCurve(extractedGlenoidEb); %Convert boundary edges to a curve list
 indBoundary = indBoundary(1:end-1); %Trim off last point since it is equal to first on a closed loop
 angleThreshold = pi*(120/180); %threshold for self triangulation
 [extractedGlenoidF,extractedGlenoidV,indBoundaryBack] = ...
     triSurfSelfTriangulateBoundary(extractedGlenoidF,extractedGlenoidV,indBoundary,angleThreshold,1);
 
-%Force boundary to have the Z level chosen
-%i.e. where the cut was made at -10
-extractedGlenoidV(indBoundaryBack,3) = -10;
+%Force boundary to have a Z level aligned with the cut
+extractedGlenoidV(indBoundaryBack,3) = cutLevel;
 
-%Visualise
-cFigure; hold on;
-gpatch(extractedGlenoidF,extractedGlenoidV,'bw','k');
-plotV(extractedGlenoidV(indBoundaryBack,:),'r-','LineWidth',2);
-camlight('headlight');
-axisGeom;
-
-%Close the back of the glenoid
-[backF,backV] = regionTriMesh2D({extractedGlenoidV(indBoundaryBack,[1 2])},1.5,0,0);
-backV(:,3) = mean(extractedGlenoidV(indBoundaryBack,3)); %Add/set z-level
-
-%Visualise
-cFigure; hold on;
-gpatch(extractedGlenoidF,extractedGlenoidV,'bw','k');
-gpatch(backF,backV,'gw','k');
-plotV(extractedGlenoidV(indBoundaryBack,:),'r-','LineWidth',2);
-camlight('headlight');
-axisGeom;
-
-clear glenoidF glenoidV
-
-%Joint element sets
-[glenoidF,glenoidV,glenoidC] = ...
-    joinElementSets({extractedGlenoidF,backF},...
-    {extractedGlenoidV,backV});
-
-%Merge vertices
-[glenoidF,glenoidV] = mergeVertices(glenoidF,glenoidV);
-
-%Visualise
-cFigure;
-gpatch(glenoidF,glenoidV,glenoidC,'k');
-colormap gjet; icolorbar;
-axisGeom;
-
-%Check boundaries
-if isempty(patchBoundary(glenoidF,glenoidV))
-    disp('No boundaries identified');
-else
-    disp('Boundaries identified. Oh no...!');
+%Visualise the boundary on the cut surface
+if generatePlots
+    cFigure; hold on;
+    gpatch(extractedGlenoidF,extractedGlenoidV,'bw','k');
+    plotV(extractedGlenoidV(indBoundaryBack,:),'r-','LineWidth',2);
+    camlight('headlight');
+    axisGeom;
 end
 
-%Test volumetric meshing of glenoid
+%Create a surface that closes the back of the glenoid
+%uses 1.5 point spacing
+[backF,backV] = regionTriMesh2D({extractedGlenoidV(indBoundaryBack,[1 2])},1.5,0,0);
+backV(:,3) = mean(extractedGlenoidV(indBoundaryBack,3)); %Add/set z-level converting to 3D mesh
 
-%Create tetgen input structure
-inputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
-inputStruct.Faces = glenoidF; %Boundary faces
-inputStruct.Nodes = glenoidV; %Nodes of boundary
-inputStruct.regionPoints= getInnerPoint(glenoidF,glenoidV); %Interior points for regions
-inputStruct.holePoints = []; %Interior points for holes
-inputStruct.regionA = tetVolMeanEst(glenoidF,glenoidV); %Desired tetrahedral volume for each region
+%Visualise new meshes
+if generatePlots
+    cFigure; hold on;
+    gpatch(extractedGlenoidF,extractedGlenoidV,'bw','k');
+    gpatch(backF,backV,'gw','k');
+    plotV(extractedGlenoidV(indBoundaryBack,:),'r-','LineWidth',2);
+    camlight('headlight');
+    axisGeom;
+end
 
-%Mesh model
-[glenoidMesh] = runTetGen(inputStruct); %Run tetGen
-
-%Visualise scapula mesh
-meshView(glenoidMesh);
-
-%%%%% THIS APPROACH WORKS TO MESH THE GLENOID! IT IS POSSIBLE THAT THIS
-%%%%% APPROACH MIGHT BE ABLE TO BE APPLIED TO THE GLENOID? NOPE...THERE ARE
-%%%%% STILL SELF-INTERSECTING FACES -- IT SEEMS LIKE ANY SLICING APPLIED TO
-%%%%% SURFACE MESHES MIGHT BE BEST DONE WITH GIBBON. STRAIGHT LINE CUTS
-%%%%% ALONG AXES WILL BE EASY ENOUGH TO APPLY, ANGLED MIGHT BE TRICKY --
-%%%%% SOLUTION MIGHT BE TO ALIGN THE ANGLE CUT TO AN AXES, CUT AND FIX, AND
-%%%%% THEN REALIGN BACK TO ORIGINAL AXES...
-
-
-%% This section isn't needed but may have some useful sections...
-
-
-%Glenoid
-
-%TEST different approach of filling the back with our own mesh
-
-%%%%% TODO: fix variable labelling through here
-
-%Start by extracting the two separate front and back surfaces
-F1 = glenoidSTLstruct.solidFaces{1}; %Faces
-V1 = glenoidSTLstruct.solidVertices{1}; %Vertices
-% % % F2 = glenoidSTLstruct.solidFaces{2}; %Faces
-% % % V2 = glenoidSTLstruct.solidVertices{2}; %Vertices
-
-%Get a clean slice on the back of the glenoid. The slice in 3matic was
-%created 10mm back from the origin point (-Z axis), so we can just sneak in
-%a little bit from this
-%Generate settings for slicing
-snapTolerance = mean(patchEdgeLengths(F1,V1))/100;
-n = vecnormalize([0 0 1]); %Normal direction to plane
-P = [0 0 -9]; %Point on plane
-
-%Slicing surface (note 3rd color data output is supressed)
-[Fc,Vc,~,logicSide,~] = triSurfSlice(F1,V1,[],P,n,snapTolerance);
-
-%Visualise slice
-% % % cFigure; subplot(1,2,1); hold on;
-% % % hp1 = gpatch(Fc(~logicSide,:),Vc,'bw','k',1);
-% % % hp2 = gpatch(Fc(logicSide,:),Vc,'rw','k',1);
-% % % legend([hp1 hp2],{'Surface above plane','Surface below plane'})
-% % % axisGeom; axis manual; camlight headligth;
-% % % colormap gjet;
-% % % set(gca,'FontSize',25);
-% % % subplot(1,2,2); hold on;
-% % % gpatch(Fc(logicSide,:),Vc,'w','k',1);
-% % % gpatch(Fc(~logicSide,:),Vc,'w','none',0.25);
-% % % hp1=gpatch(Eb,Vc,'none','b',1,3);
-% % % hp2=quiverVec(P,n,50,'k');
-% % % legend([hp1 hp2],{'Intersection curve','Plane normal vector'})
-% % % axisGeom; axis manual; camlight headligth;
-% % % set(gca,'FontSize',25);
-
-%Extract faces from upper side
-[F2,V2] = patchCleanUnused(Fc(~logicSide,:),Vc);
+%Join the two element sets
+[glenoidF,glenoidV,glenoidC] = joinElementSets({extractedGlenoidF,backF},{extractedGlenoidV,backV});
 
 %Merge vertices
-[F2,V2] = mergeVertices(F2,V2);
-
-%Get boundary of glenoid en face surface
-Eb = patchBoundary(F2,V2);
-indBoundary = edgeListToCurve(Eb); %Convert boundary edges to a curve list
-indBoundary = indBoundary(1:end-1); %Remove the final point from the boundary to not have closed
-
-%Fill area
-%Defining a region and control parameters
-regionCell = {V2(indBoundary,:)};
-pointSpacing = 1.5; %Desired point spacing
-resampleCurveOpt = 1;
-interpMethod = 'linear'; %or 'natural'
-[backF,backV] = regionTriMesh3D(regionCell,pointSpacing,resampleCurveOpt,interpMethod);
-
-%Plot meshes together
-cFigure; hold on;
-gpatch(F2,V2,'gw','k');
-gpatch(backF,backV,'kw','k');
-plotV(V2(indBoundary,:),'r-','LineWidth',2);
-axisGeom;
-
-%Join element sets
-F_cell{1} = F2; F_cell{2} = backF;
-V_cell{1} = V2; V_cell{2} = backV;
-[glenoidF,glenoidV] = joinElementSets(F_cell,V_cell);
-
-%Include a colour label for different surfaces
-glenoidC = [ones(length(F2),1); ones(length(backF),1)*2];
-
-%Close holes in glenoid surface
-[glenodoidF,glenoidV] = triSurfCloseHoles(glenoidF,glenoidV);
-
-
-%Cleanup
-clear F1 F2 V1 V2 F_cell V_cell
-
 [glenoidF,glenoidV] = mergeVertices(glenoidF,glenoidV);
 
-%Visualise the model
-cFigure; hold on
-title('Imported patch data from STL','fontSize',25);
-gpatch(headF,headV,'kw','k');
-gpatch(glenoidF,glenoidV,glenoidC,'k');
-axisGeom;
-%%%%% TODO: identify the appropriate view(x,y) settings for a good view
+%Visualise the joined sets
+if generatePlots
+    cFigure;
+    gpatch(glenoidF,glenoidV,glenoidC,'k');
+    colormap gjet; icolorbar;
+    axisGeom;
+end
 
+%Check boundaries to make sure there are no holes
+if isempty(patchBoundary(glenoidF,glenoidV))
+    disp('No boundaries and holes identified in extracted glenoid.');
+else
+    disp('Boundaries identified, which means holes. Oh no...!');
+end
 
-%% Mesh using tetgen
+%% Mesh the surfaces using TetGen
 
 %Humeral head
 
 %Create tetgen input structure
-inputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
-inputStruct.Faces = headF; %Boundary faces
-inputStruct.Nodes = headV; %Nodes of boundary
-inputStruct.regionPoints= getInnerPoint(headF,headV); %Interior points for regions
-inputStruct.holePoints = []; %Interior points for holes
-inputStruct.regionA = tetVolMeanEst(headF,headV); %Desired tetrahedral volume for each region
+headInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
+headInputStruct.Faces = headF; %Boundary faces
+headInputStruct.Nodes = headV; %Nodes of boundary
+headInputStruct.regionPoints= getInnerPoint(headF,headV); %Interior points for regions
+headInputStruct.holePoints = []; %Interior points for holes
+headInputStruct.regionA = tetVolMeanEst(headF,headV); %Desired tetrahedral volume for each region
 
 %Mesh model
-[headMesh] = runTetGen(inputStruct); %Run tetGen
+[headMesh] = runTetGen(headInputStruct); %Run tetGen
 
 %Get outputs of mesh structure
 headVolE = headMesh.elements; %The elements
@@ -317,42 +186,24 @@ headVolFb = headMesh.facesBoundary; %The boundary faces
 headVolCb = headMesh.boundaryMarker; %The boundary markers
 
 %Visualise humeral head mesh
-meshView(headMesh);
-title('Tetrahedral Mesh: Humeral Head','FontSize',25);
-
+if generatePlots
+    meshView(headMesh);
+    title('Tetrahedral Mesh: Humeral Head','FontSize',25);
+end
 
 
 %Glenoid
 
-%%%%% SELF INTER-SECTING FACES ARE A PROBLEM...!!!!!
-stlStruct.solidNames={'intersectingGlenoid'}; %names of parts
-stlStruct.solidVertices={glenoidV}; %Vertices
-stlStruct.solidFaces={glenoidF}; %Faces
-stlStruct.solidNormals={[]}; %Face normals (optional)
-export_STL_txt('intersectingGlenoid.stl',stlStruct);
-
-[newGlenoidSTLstruct] = import_STL('intersectingGlenoid.stl');
-
-%Humeral head
-
-%Get single surface faces and vertices
-newGlenoidF = newGlenoidSTLstruct.solidFaces{1}; %Faces
-newGlenoidV = newGlenoidSTLstruct.solidVertices{1}; %Vertices
-
-%Merge vertices
-[newGlenoidF,newGlenoidV] = mergeVertices(newGlenoidF,newGlenoidV);
-
-
 %Create tetgen input structure
-inputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options; add -d for self intersecting faces
-inputStruct.Faces = newGlenoidF; %Boundary faces
-inputStruct.Nodes = newGlenoidV; %Nodes of boundary
-inputStruct.regionPoints= getInnerPoint(newGlenoidF,newGlenoidV); %Interior points for regions
-inputStruct.holePoints = []; %Interior points for holes
-inputStruct.regionA = tetVolMeanEst(newGlenoidF,newGlenoidV); %Desired tetrahedral volume for each region
+glenoidInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
+glenoidInputStruct.Faces = glenoidF; %Boundary faces
+glenoidInputStruct.Nodes = glenoidV; %Nodes of boundary
+glenoidInputStruct.regionPoints= getInnerPoint(glenoidF,glenoidV); %Interior points for regions
+glenoidInputStruct.holePoints = []; %Interior points for holes
+glenoidInputStruct.regionA = tetVolMeanEst(glenoidF,glenoidV); %Desired tetrahedral volume for each region
 
 %Mesh model
-[glenoidMesh] = runTetGen(inputStruct); %Run tetGen
+[glenoidMesh] = runTetGen(glenoidInputStruct); %Run tetGen
 
 %Get outputs of mesh structure
 glenoidVolE = glenoidMesh.elements; %The elements
@@ -361,11 +212,11 @@ glenoidVolCE = glenoidMesh.elementMaterialID; %Element material or region id
 glenoidVolFb = glenoidMesh.facesBoundary; %The boundary faces
 glenoidVolCb = glenoidMesh.boundaryMarker; %The boundary markers
 
-%Visualise humeral head mesh
-meshView(glenoidMesh);
-title('Tetrahedral Mesh: Glenoid','FontSize',25);
-
-
+%Visualise glenoid mesh
+if generatePlots
+    meshView(glenoidMesh);
+    title('Tetrahedral Mesh: Glenoid','FontSize',25);
+end
 
 %% FEBio details
 
