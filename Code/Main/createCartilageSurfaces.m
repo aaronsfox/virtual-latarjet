@@ -24,6 +24,12 @@ function createCartilageSurfaces(method,generatePlots)
 % and scapula is calculated and then halved to specify a maximum constant
 % thickness cartilage for the humeral head and glenoid.
 %
+%   %%%%% TODO: constant thickness method not up to date for humeral
+%   cartilage and tidying edges, but may still work due to patchThick usage
+%
+%   %%%%% TODO: constatnt thickness method not up to date for glenoid
+%   cartilage, inverting the normals of the surface
+%
 % Curvature Method:
 % This method uses the approach outlined in two studies by Walia et al.
 % (2013,2015) and considers the minimum thickness of the cartilage surfaces
@@ -77,6 +83,9 @@ function createCartilageSurfaces(method,generatePlots)
             error('Generate plots input must be a logical of true or false')
         end
     end
+    
+    %Add supplementary code folder to path
+    addpath(genpath('..\Supplementary'));
     
     %% Load in relevant curves and meshes
 
@@ -132,7 +141,8 @@ function createCartilageSurfaces(method,generatePlots)
    
     %%%%% TODO: consider offsetting the cartilage surface vertices from the
     %%%%% scapula so they don't sit exactly on it -- this could impact the
-    %%%%% contact interface
+    %%%%% contact interface --- note, this could be done later with with
+    %%%%% simulation code too
 
     %% Constant thickness method
     if strcmp(method,'constant-thickness')
@@ -416,7 +426,7 @@ function createCartilageSurfaces(method,generatePlots)
         %Export STL file
         export_STL_txt('..\Processed\HumeralCartilage_ConstantThickness.stl',stlStruct);
     
-    %% Constant thickness method
+    %% Curvature method
     elseif strcmp(method,'curvature')
         
         %% CREATE GLENOID CARTILAGE MESH
@@ -538,11 +548,17 @@ function createCartilageSurfaces(method,generatePlots)
 
         %Convert the outer surface from quad to tri elements to coincide with the faces elements
         [outerFtri,outerVtri] = quad2tri(outerF,outerV,'x');
-
+        
+        %Invert the normals of the surface faces so they face the scapula
+        surfaceF = fliplr(surfaceF);
+        
         %Join the tri element sets
         Fc = {surfaceF,endF,outerFtri};
         Vc = {surfaceV,endV,outerVtri};
         [FT,VT,CT] = joinElementSets(Fc,Vc);
+        
+        %Merge vertices
+        [FT,VT] = mergeVertices(FT,VT);
 
         %Visualise
         if generatePlots
@@ -578,75 +594,100 @@ function createCartilageSurfaces(method,generatePlots)
         
         %% CREATE HUMERAL HEAD CARTILAGE MESH
         
-        %% Loft between the humeral head surfaces to connect the meshes
-
-        %Create the first sketch from the base surface faces
-
-        %Get the boundary points of the two faces from the thickness approach
-        cartilageBaseEb = patchBoundary(headF,headV);
-        cartilageBaseBC = edgeListToCurve(cartilageBaseEb);
-        cartilageBaseBC = cartilageBaseBC(1:end-1)'; %Start=End for closed curve so remove double entry
-
-        %Set start loft
-        startLoft = headV(cartilageBaseBC,:);
-
-        %Create the second sketch from the end surface faces
-
-        %Get the boundary points of the two faces from the thickness approach
-        cartilageEndEb = patchBoundary(outerHeadF,outerHeadV);
-        cartilageEndBC = edgeListToCurve(cartilageEndEb);
-        cartilageEndBC = cartilageEndBC(1:end-1)'; %Start=End for closed curve so remove double entry
-
-        %Set start loft
-        endLoft = outerHeadV(cartilageEndBC,:);
+        %% Fill the gap between the humeral head meshes
         
-        %Interpolate end loft to same number of points as start loft
-        x = 1:1:length(endLoft);
-        xq = 1:length(endLoft)/length(startLoft):length(endLoft);
-        endLoft = interp1(x,endLoft,xq);
-
-        %Create a guide curve (some default parameters)
-        %Should just be a straight line really...
-        numStepsCurve = 3; %Number of steps for the curve (creates two element height)
-        p1 = mean(startLoft,1); %First point
-        n1 = [0,0,1]; %First direction vector; z direction
-        p2 = mean(endLoft,1); %End point
-        n2 = [0,0,1]; %End direction vector; z direction
-        csapsSmoothPar = 1; %Cubic smoothening spline smoothening parameter
-        f = 0.05; %Extent of tangential nature to boundary curves, surface will remain approximately orthogonal to input curves for f*distance between curves
-        Vg = sweepCurveSmooth(p1,p2,n1,n2,numStepsCurve,csapsSmoothPar,f);
-
-        %Create the loft feature
-        [outerF,outerV] = sweepLoft(startLoft,endLoft,n1,n2,Vg);
-
-        %Visualise the loft feature
-        if generatePlots
-            cFigure;
-            subplot(1,2,1);
-            hold on;
-            h(1)=plotV(Vg,'k.-','LineWidth',2);
-            h(2)=plotV(startLoft,'r.-','LineWidth',2);
-            h(3)=plotV(endLoft,'g.-','LineWidth',2);
-            h(4)=quiverVec(p1,n1,3,'r');
-            h(5)=quiverVec(p2,n2,3,'g');
-            legend(h,{'Guide curve','Start section','End section','Start direction vector','End direction vector'});
-            axisGeom;
-
-            subplot(1,2,2); hold on;
-            h = gpatch(outerF,outerV,'r','k',1);
-            axisGeom;
-            legend(h,{'Loften surface'});
-            camlight headlight
+        %To make the filling of the section between the two dome spheres
+        %easier, we'll first rotate it so that the cut edge is on a flat
+        %surface (i.e. parallel to an axes) in our global coordinate
+        %system.
+        
+        %To do this, we first need the plane that was used to cut these
+        %surfaces, which is stored in the 'HumeralCartilagePlane.xml' file.
+        planeXML = parseXML('HumeralCartilagePlane.xml');
+        %Extract the info (weird data structure but it works...)
+        originPt = planeXML.Children.Children(2).Children.Data;
+        originPt = str2double(strsplit(originPt,' '));
+        originPt = originPt(1:3);
+        normVec = planeXML.Children.Children(3).Children.Data;
+        normVec = str2double(strsplit(normVec,' '));
+        normVec = normVec(1:3);
+        
+        %Use the geom3d tool to rotate the humeral head cartilage surfaces
+        %to align with the global plane. After this, the border of the
+        %surfaces will roughly equate to zeor on the Z-axis
+        baseTransform = createBasisTransform3d('global',createPlane(originPt,normVec));
+        %Transform each point
+        for hh = 1:length(headV)
+            headV(hh,:) = transformPoint3d(headV(hh,:),baseTransform);
         end
+        for hh = 1:length(outerHeadV)
+            outerHeadV(hh,:) = transformPoint3d(outerHeadV(hh,:),baseTransform);
+        end
+        clear hh
 
-        %Convert the outer surface from quad to tri elements to coincide with the faces elements
-        [outerFtri,outerVtri] = quad2tri(outerF,outerV,'x');
+        %Self triangulate the potentially jagged edges of the cut humeral
+        %head cartilage surfaces
+        angleThreshold = pi*(120/180); %threshold for self triangulation
+        %Cartilage base
+        headEb = patchBoundary(headF,headV); %Get boundary edges
+        indBoundaryHead = edgeListToCurve(headEb); %Convert boundary edges to a curve list
+        indBoundaryHead = indBoundaryHead(1:end-1); %Trim off last point since it is equal to first on a closed loop
+        [headF,headV,indBoundaryHeadBase] = ...
+            triSurfSelfTriangulateBoundary(headF,headV,indBoundaryHead,angleThreshold,1);
+        %Catilage outer
+        outerHeadEb = patchBoundary(outerHeadF,outerHeadV); %Get boundary edges
+        indBoundaryOuter = edgeListToCurve(outerHeadEb); %Convert boundary edges to a curve list
+        indBoundaryOuter = indBoundaryOuter(1:end-1); %Trim off last point since it is equal to first on a closed loop
+        [outerHeadF,outerHeadV,indBoundaryHeadOuter] = ...
+            triSurfSelfTriangulateBoundary(outerHeadF,outerHeadV,indBoundaryOuter,angleThreshold,1);
+        
+        %Force boundary to have the Z level that we've aligned with the
+        %global plane (i.e. z = 0)
+        headV(indBoundaryHeadBase,3) = 0;
+        outerHeadV(indBoundaryHeadOuter,3) = 0;
+        
+        %Visualise the boundary on the cut surfaces
+        if generatePlots
+            cFigure; hold on;
+            gpatch(headF,headV,'gw','k');
+            plotV(headV(indBoundaryHeadBase,:),'r-','LineWidth',1.5);
+            gpatch(outerHeadF,outerHeadV,'bw','k');
+            plotV(outerHeadV(indBoundaryHeadOuter,:),'r-','LineWidth',1.5);
+            camlight('headlight');
+            axisGeom;
+        end
+        
+        %Create a surface that closes the back of the glenoid
+        %uses 0.5 point spacing        
+        %Define the region. Second input forms a hole inside first
+        regionCell = {outerHeadV(indBoundaryHeadOuter,[1 2]),headV(indBoundaryHeadBase,[1 2])};
+        [headJoinF,headJoinV] = regionTriMesh2D(regionCell,0.5,0,0);
+        %Add/set the z-level to convert to 3D mesh
+        headJoinV(:,3) = mean(headV(indBoundaryHeadBase,3)); %Add/set z-level converting to 3D mesh
 
-        %Join the tri element sets
-        Fc = {headF,outerHeadF,outerFtri};
-        Vc = {headV,outerHeadV,outerVtri};
+        %Visualise new meshes
+        if generatePlots
+            cFigure; hold on;
+            gpatch(headF,headV,'gw','k');
+            plotV(headV(indBoundaryHeadBase,:),'r-','LineWidth',1.5);
+            gpatch(outerHeadF,outerHeadV,'bw','k');
+            plotV(outerHeadV(indBoundaryHeadOuter,:),'r-','LineWidth',1.5);
+            gpatch(headJoinF,headJoinV,'rw','k');
+            camlight('headlight');
+            axisGeom;
+        end
+        
+        %The normals of te base surface need to be flipped to face outwards
+        headF = fliplr(headF);
+        
+        %Join the element sets together
+        Fc = {headF,outerHeadF,headJoinF};
+        Vc = {headV,outerHeadV,headJoinV};
         [FT,VT,CT] = joinElementSets(Fc,Vc);
 
+        %Merge vertices
+        [FT,VT] = mergeVertices(FT,VT);
+        
         %Visualise
         if generatePlots
             cFigure;
@@ -667,8 +708,16 @@ function createCartilageSurfaces(method,generatePlots)
             axisGeom(gca,25);
             colormap(gjet(numel(Fc))); icolorbar;
         end
+        
+        %Rotate humeral head cartilage back to original rotation
+        baseTransform2 = createBasisTransform3d(createPlane(originPt,normVec),'global');
+        %Transform each point
+        for hh = 1:length(VT)
+            VT(hh,:) = transformPoint3d(VT(hh,:),baseTransform2);
+        end
+        clear hh
 
-        %% Export glenoid cartilage as a surface model
+        %% Export humeral cartilage as a surface model
 
         %Set up export structure
         stlStruct.solidNames={'humeralCartilage'}; %names of parts

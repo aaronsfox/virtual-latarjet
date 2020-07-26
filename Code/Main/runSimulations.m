@@ -8,6 +8,33 @@
 
 %%%%% TODO: add generatePlots logical input
     
+generatePlots = false;
+
+
+%%%%%%%%%%% NEED TO FIX HUMERAL HEAD CARTILAGE - IT IS NOT CLOSED. THE
+%%%%%%%%%%% REGIONTRIMESH3D APPROACH IS A BETTER OPTION FOR CREATING THE
+%%%%%%%%%%% CARTILAGE THAN THE SWEEP LOFT (WHICH SEEMS TO WORK FOR THE
+%%%%%%%%%%% GLENOID). AS PART OF THIS UPDATED PROCESS WE SHOULD ALSO INVERT
+%%%%%%%%%%% THE NORMALS OF THE INTERNAL PIECE (FLIPLR APPLIED TO THE
+%%%%%%%%%%% FACES). IT'S LIKELY THAT WE NEED TO TAKE A SIMILAR APPROACH TO
+%%%%%%%%%%% WHAT'S DONE WITH THE SCAPULA CUTTING HERE AND FORCING THE
+%%%%%%%%%%% VERTICES OF THE SEPARATE PIECES TO BE ON THE BOUNDARY (I.E. PIN
+%%%%%%%%%%% THEM TO THE BOUNDARY)...
+
+%%
+
+%%%%% THE ABOVE POINT SEEMS TO HAVE BEEN SOLVED IN THE CREATE CARTILAGE
+%%%%% FUNCTION - THE FUNCTION HAS BEEN EDITED WELL ENOUGH THAT IT COULD BE
+%%%%% USED AS A SUPPLEMENTARY WITHIN THIS SCRIPT, AND RATHER THAN PASSING
+%%%%% OUT TO .STL FILES, BRING THE CREATED FACES, VERTICES AND COLOURS BACK
+%%%%% INTO THIS FUNCTION AS REMESHED & APPROPRIATE SURFACES...
+
+%%%%% Would need to save the STL's in the right place if wanting to store
+%%%%% them for latter use, but this wouldn't even be necessary
+
+%%%%% Taking this apporach we could be more particular about using colours
+%%%%% to separate surfaces, as these wouldn't get lost in the STL export
+
 %% Current test code
 %  Building up piece by piece to get to final simulation
 
@@ -16,11 +43,11 @@ warning off
 %Navigate to surface mesh directory
 cd('..\..\FEA\SurfaceMeshes');
 
-
 %Load surface files
 [headSTLstruct] = import_STL('BaseHumeralHead.stl');
 [scapulaSTLstruct] = import_STL('Scapula.stl');
-% % % [glenoidSTLstruct] = import_STL('BaseGlenoid.stl');
+[glenoidCartilageSTLstruct] = import_STL('BaseGlenoidCartilage.stl');
+[humeralCartilageSTLstruct] = import_STL('BaseHumeralCartilage.stl');
 
 %Access the data from the STL structs
 
@@ -35,6 +62,35 @@ headV = headSTLstruct.solidVertices{1}; %Vertices
 
 %Remesh sphere to reduce number of triangles
 [headF,headV] = triRemeshLabel(headF,headV,3);
+
+%Glenoid cartilage
+
+%Get surface faces and vertices
+glenoidCartilageF = glenoidCartilageSTLstruct.solidFaces{1}; %Faces
+glenoidCartilageV = glenoidCartilageSTLstruct.solidVertices{1}; %Vertices
+
+%Merge vertices
+[glenoidCartilageF,glenoidCartilageV] = mergeVertices(glenoidCartilageF,glenoidCartilageV);
+
+%Remesh glenoid cartilage for consistent point spacing
+[glenoidCartilageF,glenoidCartilageV] = triRemeshLabel(glenoidCartilageF,glenoidCartilageV,1.0);
+
+%Humeral cartilage
+
+%Get surface faces and vertices
+humeralCartilageF = humeralCartilageSTLstruct.solidFaces{1}; %Faces
+humeralCartilageV = humeralCartilageSTLstruct.solidVertices{1}; %Vertices
+
+%Merge vertices
+[humeralCartilageF,humeralCartilageV] = mergeVertices(humeralCartilageF,humeralCartilageV);
+
+%Remesh humeral cartilage for consistent point spacing
+[humeralCartilageF,humeralCartilageV] = triRemeshLabel(humeralCartilageF,humeralCartilageV,1.0);
+
+cFigure; hold on
+gpatch(glenoidCartilageF,glenoidCartilageV,'gw','k');
+gpatch(humeralCartilageF,humeralCartilageV,'bw','k');
+axisGeom;
 
 %% Create the glenoid section from the scapula
 
@@ -163,6 +219,18 @@ else
     disp('Boundaries identified, which means holes. Oh no...!');
 end
 
+%% Visualise all loaded in surfaces together
+
+if generatePlots
+    cFigure; hold on
+    gpatch(glenoidF,glenoidV,'kw','none');
+    gpatch(headF,headV,'kw','none');
+    gpatch(glenoidCartilageF,glenoidCartilageV,'bw','none');
+    gpatch(humeralCartilageF,humeralCartilageV,'bw','none');
+    camlight headlight;
+    axisGeom;
+end
+
 %% Mesh the surfaces using TetGen
 
 %Humeral head
@@ -218,7 +286,46 @@ if generatePlots
     title('Tetrahedral Mesh: Glenoid','FontSize',25);
 end
 
+
+%Glenoid cartilage
+
+%Create tetgen input structure
+glenoidCartilageInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
+glenoidCartilageInputStruct.Faces = glenoidCartilageF; %Boundary faces
+glenoidCartilageInputStruct.Nodes = glenoidCartilageV; %Nodes of boundary
+glenoidCartilageInputStruct.regionPoints= getInnerPoint(glenoidCartilageF,glenoidCartilageV); %Interior points for regions
+glenoidCartilageInputStruct.holePoints = []; %Interior points for holes
+glenoidCartilageInputStruct.regionA = tetVolMeanEst(glenoidCartilageF,glenoidCartilageV); %Desired tetrahedral volume for each region
+
+%Mesh model
+[glenoidCartilageMesh] = runTetGen(glenoidCartilageInputStruct); %Run tetGen
+
+%Get outputs of mesh structure
+glenoidCartilageVolE = glenoidCartilageMesh.elements; %The elements
+glenoidCartilageVolV = glenoidCartilageMesh.nodes; %The vertices or nodes
+glenoidCartilageVolCE = glenoidCartilageMesh.elementMaterialID; %Element material or region id
+glenoidCartilageVolFb = glenoidCartilageMesh.facesBoundary; %The boundary faces
+glenoidCartilageVolCb = glenoidCartilageMesh.boundaryMarker; %The boundary markers
+
+%Visualise glenoid mesh
+if generatePlots
+    meshView(glenoidCartilageMesh);
+    title('Tetrahedral Mesh: Glenoid Cartilage','FontSize',25);
+end
+
+%% Define contact surfaces
+
+%Glenoid cartilage to glenoid
+
+
+%Humeral head to glenoid cartilage
+%%%%% TODO: adapt this given that it should be cartilage to cartilage
+
+
+
 %% FEBio details
+
+%%%%% EVERYTHING SOMEWHAT WORKING AT THE MOMENT...
 
 %Defining file names
 %%%%% TODO: ensure these work without full file paths, or adapt appropriately
@@ -245,19 +352,18 @@ max_retries = 5; %Maximum number of retires
 dtmin = (1/numTimeSteps)/100; %Minimum time step size
 dtmax = 1/numTimeSteps; %Maximum time step size
 
-% % % %Contact parameters
-% % % contactInitialOffset=0.1;
-% % % contactAlg=2;
-% % % switch contactAlg
-% % %     case 1
-% % %         contactType='sticky';
-% % %     case 2
-% % %         contactType='facet-to-facet sliding';
-% % %     case 3
-% % %         contactType='sliding_with_gaps';
-% % %     case 4
-% % %         contactType='sliding2';
-% % % end
+%Contact parameters
+contactAlg = 2;
+switch contactAlg
+    case 1
+        contactType='sticky';
+    case 2
+        contactType='facet-to-facet sliding';
+    case 3
+        contactType='sliding_with_gaps';
+    case 4
+        contactType='sliding2';
+end
 
 %Get a template with default settings
 [febio_spec] = febioStructTemplate;
@@ -271,7 +377,7 @@ febio_spec.Module.ATTR.type = 'solid';
 %Create control structure for use by all steps
 stepStruct.Control.analysis.ATTR.type = 'static';
 stepStruct.Control.time_steps = numTimeSteps;
-stepStruct.Control.step_size = 1/numTimeSteps;
+stepStruct.Control.step_size = 1/numTimeSteps; %0.1 right now
 stepStruct.Control.time_stepper.dtmin = dtmin;
 stepStruct.Control.time_stepper.dtmax = dtmax;
 stepStruct.Control.time_stepper.max_retries = max_retries;
@@ -298,40 +404,58 @@ febio_spec.Material.material{1}.ATTR.type = 'rigid body';
 febio_spec.Material.material{1}.ATTR.id = 1;
 febio_spec.Material.material{1}.density = 1;
 febio_spec.Material.material{1}.center_of_mass = mean(headV,1);
+%Rigid body for glenoid
+febio_spec.Material.material{2}.ATTR.type = 'rigid body';
+febio_spec.Material.material{2}.ATTR.id = 2;
+febio_spec.Material.material{2}.density = 1;
+febio_spec.Material.material{2}.center_of_mass = mean(glenoidV,1);
 
-% % % febio_spec.Material.material{2}.ATTR.type='Ogden';
-% % % febio_spec.Material.material{2}.ATTR.id=1;
-% % % febio_spec.Material.material{2}.c1=c1;
-% % % febio_spec.Material.material{2}.m1=m1;
-% % % febio_spec.Material.material{2}.c2=c1;
-% % % febio_spec.Material.material{2}.m2=-m1;
-% % % febio_spec.Material.material{2}.k=k;
+% % % %A default like Ogden material
+% % % %%%%% TODO: applying to glenoid for now - adapt
+% % % febio_spec.Material.material{2}.ATTR.type = 'Ogden';
+% % % febio_spec.Material.material{2}.ATTR.id = 2;
+% % % febio_spec.Material.material{2}.c1 = c;
+% % % febio_spec.Material.material{2}.m1 = m;
+% % % febio_spec.Material.material{2}.c2 = c;
+% % % febio_spec.Material.material{2}.m2 = -m;
+% % % febio_spec.Material.material{2}.k = k;
 
 %Geometry section
 % -> Nodes
 %%%%% TODO: adapt with additional bodies
-febio_spec.Geometry.Nodes{1}.ATTR.name = 'nodeSet_all'; %The node set name
-febio_spec.Geometry.Nodes{1}.node.ATTR.id = (1:size(headVolV,1))'; %The node id's
-febio_spec.Geometry.Nodes{1}.node.VAL = headVolV; %The nodel coordinates
+%Combine node sets
+V = [headVolV;glenoidVolV];
+%Fixed element indices
+glenoidVolE = glenoidVolE+size(headVolV,1);
+%Set
+%%%% COULD STILL TRY SPLITTING TO MULTIPLE NODES, but this works...I think...
+febio_spec.Geometry.Nodes{1}.ATTR.name = 'allNodes'; %The node set name
+febio_spec.Geometry.Nodes{1}.node.ATTR.id = (1:size(V,1))'; %The node id's
+febio_spec.Geometry.Nodes{1}.node.VAL = V; %The nodel coordinates
 
 % -> Elements
+%Humeral head
 febio_spec.Geometry.Elements{1}.ATTR.type='tri3'; %Element type of this set
 febio_spec.Geometry.Elements{1}.ATTR.mat = 1; %material index for this set
 febio_spec.Geometry.Elements{1}.ATTR.name = 'HumeralHead'; %Name of the element set
 febio_spec.Geometry.Elements{1}.elem.ATTR.id = (1:1:size(headVolE,1))'; %Element id's
 febio_spec.Geometry.Elements{1}.elem.VAL = headVolE;
-
-% % % febio_spec.Geometry.Elements{2}.ATTR.type='hex8'; %Element type of this set
-% % % febio_spec.Geometry.Elements{2}.ATTR.mat=1; %material index for this set
-% % % febio_spec.Geometry.Elements{2}.ATTR.name='Slab'; %Name of the element set
-% % % febio_spec.Geometry.Elements{2}.elem.ATTR.id=(1:1:size(E1,1))'; %Element id's
-% % % febio_spec.Geometry.Elements{2}.elem.VAL=E1;
+%Glenoid
+febio_spec.Geometry.Elements{2}.ATTR.type = 'tri3'; %Element type of this set
+febio_spec.Geometry.Elements{2}.ATTR.mat = 2; %material index for this set
+febio_spec.Geometry.Elements{2}.ATTR.name = 'Glenoid'; %Name of the element set
+febio_spec.Geometry.Elements{2}.elem.ATTR.id = (1:1:size(glenoidVolE,1))' + length(headVolE); %Element id's
+febio_spec.Geometry.Elements{2}.elem.VAL = glenoidVolE;
 
 % % % % -> NodeSets
+%%%%% TODO: this might be the place to set something that makes collecting
+%%%%% displacement data easier...
 % % % febio_spec.Geometry.NodeSet{1}.ATTR.name='bcSupportList';
 % % % febio_spec.Geometry.NodeSet{1}.node.ATTR.id=bcSupportList(:);
 
 %%%%% TODO: add surfaces when contact added
+%%%%% Seems like this is needed, as the faces aren't anywhere in the data
+%%%%% at the moment...
 % % % % -> Surfaces
 % % % febio_spec.Geometry.Surface{1}.ATTR.name='contact_master';
 % % % febio_spec.Geometry.Surface{1}.tri3.ATTR.lid=(1:1:size(F_contact_master,1))';
@@ -356,6 +480,7 @@ febio_spec.Geometry.Elements{1}.elem.VAL = headVolE;
 % % % febio_spec.Boundary.fix{3}.ATTR.node_set=febio_spec.Geometry.NodeSet{1}.ATTR.name;
 
 % -> Prescribed boundary conditions on the rigid body
+%Humeral head
 febio_spec.Step{1}.Boundary.rigid_body{1}.ATTR.mat = 1;
 febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
 febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'z';
@@ -365,16 +490,14 @@ febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{5}.ATTR.bc = 'Rz';
 febio_spec.Step{1}.Boundary.rigid_body{1}.prescribed.ATTR.bc = 'x';
 febio_spec.Step{1}.Boundary.rigid_body{1}.prescribed.ATTR.lc = 1;
 febio_spec.Step{1}.Boundary.rigid_body{1}.prescribed.VAL = 45; %prescribed displacement of 45mm
-
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.ATTR.mat=2;
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc='z';
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc='y';
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc='Rx';
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc='Ry';
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{5}.ATTR.bc='Rz';
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.bc='x';
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.lc=2;
-% % % febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.VAL=bcPrescribeMagnitudes(1);
+%Glenoid
+febio_spec.Step{1}.Boundary.rigid_body{2}.ATTR.mat = 2;
+febio_spec.Step{1}.Boundary.rigid_body{2}.fixed{1}.ATTR.bc = 'x';
+febio_spec.Step{1}.Boundary.rigid_body{2}.fixed{2}.ATTR.bc = 'y';
+febio_spec.Step{1}.Boundary.rigid_body{2}.fixed{3}.ATTR.bc = 'z';
+febio_spec.Step{1}.Boundary.rigid_body{2}.fixed{4}.ATTR.bc = 'Rx';
+febio_spec.Step{1}.Boundary.rigid_body{2}.fixed{5}.ATTR.bc = 'Ry';
+febio_spec.Step{1}.Boundary.rigid_body{2}.fixed{6}.ATTR.bc = 'Rz';
 
 % % % %Contact section
 % % % switch contactType
@@ -433,6 +556,7 @@ febio_spec.Step{1}.Boundary.rigid_body{1}.prescribed.VAL = 45; %prescribed displ
 % % % end
 
 % LoadData section
+%%%% TODO: current basic load curve for displacement testing
 febio_spec.LoadData.loadcurve{1}.ATTR.id = 1;
 febio_spec.LoadData.loadcurve{1}.ATTR.type = 'linear';
 febio_spec.LoadData.loadcurve{1}.point.VAL=[0 0; 1 1];
@@ -443,11 +567,19 @@ febio_spec.LoadData.loadcurve{1}.point.VAL=[0 0; 1 1];
 
 %Output section
 % -> log file
+%Collect humeral head displacement
 febio_spec.Output.logfile.ATTR.file = febioLogFileName;
 febio_spec.Output.logfile.node_data{1}.ATTR.file = febioLogFileName_disp;
 febio_spec.Output.logfile.node_data{1}.ATTR.data = 'ux;uy;uz';
 febio_spec.Output.logfile.node_data{1}.ATTR.delim = ',';
-febio_spec.Output.logfile.node_data{1}.VAL = 1:size(headVolV,1);
+febio_spec.Output.logfile.node_data{1}.VAL = 1:size(headVolV,1); %%%only collect the first head set of nodes
+
+%%%%% TODO: CURRENTLY MATCHING ID'S GIVEN THAT THE SETS HAVEN'T BEEN JOINED
+%%%%% TOGETHER, DON'T KNOW WHAT THIS MEANS FOR DATA THOUGH?
+    %%%%% SEEMS LIKE IT CAUSES AN ERROR
+    %%%%% LOOKS LIKE NODESET NEEDS TO BE JOINED, BUT ELEMENT SETS DON'T FOR
+    %%%%% THE ID NUMBERING (I.E. ELEMENT ID NUMBERING CAN START AT WHATEVER
+    %%%%% IT WANTS TO...
 
 % % % febio_spec.Output.logfile.node_data{2}.ATTR.file=febioLogFileName_force;
 % % % febio_spec.Output.logfile.node_data{2}.ATTR.data='Rx;Ry;Rz';
@@ -473,6 +605,7 @@ febioAnalysis.maxtpi = 1e99; %Max analysis time
 febioAnalysis.maxLogCheckTime = 10; %Max log file checking time
 
 %Run FEBio
+clc
 [runFlag] = runMonitorFEBio(febioAnalysis);
 
 
@@ -484,16 +617,37 @@ if runFlag == 1
     %Importing nodal displacements from a log file
     %%%%% TODO: comment this better and adjust variable names
     %%%%% TODO: might be a better way to extract results too...
+    
+    %%%%% TODO: anim8 is not working right, there is some disconnect
+    %%%%% between the elements it's animating and the data...
+    
+    %Import the output logfile for displacements
     [time_mat, N_disp_mat,~] = importFEBio_logfile(febioLogFileName_disp); %Nodal displacements
-    time_mat = [0; time_mat(:)]; %Time
+    
+    %Extract the time data
+    time_mat = [0; time_mat(:)];
+    
+    %Extract the displacement data (raw)
     N_disp_mat = N_disp_mat(:,2:end,:);
+    
+    %Get data from each time step in the matrix
+    %Get size of matrix and time steps
     sizImport = size(N_disp_mat);
     sizImport(3) = sizImport(3)+1;
+    %Extract displacement at each step
     N_disp_mat_n = zeros(sizImport);
     N_disp_mat_n(:,:,2:end) = N_disp_mat;
+    %Replace original matrix
     N_disp_mat = N_disp_mat_n;
+    %Get end displacement    
     DN = N_disp_mat(:,:,end);
     DN_magnitude = sqrt(sum(DN(:,3).^2,2));
+    
+    %Define positions of objects across steps by taking node positions and
+    %adding displacement to these 
+    
+    %%%%% CURRENTLY ONLY COLLECTING HEAD DISPLACEMENT (VOLUME)
+    
     V_def = headVolV+DN;
     V_DEF = N_disp_mat+repmat(headVolV,[1 1 size(N_disp_mat,3)]);
     X_DEF = V_DEF(:,1,:);
@@ -503,26 +657,46 @@ if runFlag == 1
 
     %Plot simulated results using anim8
     
+    %%%%% TODO: using elements to plot faces here means no faces
+    %%%%% visualised...
+    
     %Create basic view and store graphics handle to initiate animation
     hf = cFigure; %Open figure
     gtitle([febioFebFileNamePart,': Press play to animate']);
-    hp1 = gpatch(headVolFb,V_def,'gw'); %Add graphics object to animate
+    hp1 = gpatch(headVolFb,V,'gw'); %Add graphics object to animate
+    %%%%% IF WANT TO USE glenoidVolFb NEED TO ADD INDEXING TO THIS LIKE
+    %%%%% EARLIER WITH THE GLENOID VOLUME ELEMENT ID'S
+    hp2 = gpatch(glenoidVolE,V,'bw'); %Add graphics object to animate
 % % %     hp2=gpatch(E2,V_def,'kw','none',faceAlpha2); %Add graphics object to animate
 % % %     gpatch(Fb1,V,0.5*ones(1,3),'none',0.25); %A static graphics object
 
     axisGeom(gca,25);
 % % %     colormap(gjet(250)); colorbar;
     caxis([0 max(DN_magnitude)]);
-    axis([min(X_DEF(:)) max(X_DEF(:)) min(Y_DEF(:)) max(Y_DEF(:)) min(Z_DEF(:)) max(Z_DEF(:))]);
+    
+    %Set axes to min and max displacement values
+% % %     axis([min(X_DEF(:)) max(X_DEF(:)) min(Y_DEF(:)) max(Y_DEF(:)) min(Z_DEF(:)) max(Z_DEF(:))]);
+    %The above isn't appropriate when the glenoid is considered, as it
+    %goes outside of the humeral head displacement we recorded. We'l only
+    %adjust the X-axis values for now as this is where the head goes...
+    ax = gca;
+    axis([min(X_DEF(:)) max(X_DEF(:)) ax.YLim(1) ax.YLim(2) ax.ZLim(1) ax.ZLim(2)]);
     camlight headlight;
     
     %Set up animation features
     animStruct.Time = time_mat; %The time vector
     for qt = 1:1:size(N_disp_mat,3) %Loop over time increments
         
-        DN = N_disp_mat(:,:,qt); %Current displacement
-        DN_magnitude = sqrt(sum(DN.^2,2)); %Current displacement magnitude
-        V_def = headVolV+DN; %Current nodal coordinates
+        %Get the current displacement position from matrix
+        DN = N_disp_mat(:,:,qt);
+        
+        %Get the current displacement magnitude
+        DN_magnitude = sqrt(sum(DN.^2,2));
+        
+        %Get the current nodal coordinates, factoring in original position
+        %and current displacement
+        V_def = headVolV+DN;
+        
 % % %         [CF]=vertexToFaceMeasure(Fb1,DN_magnitude); %Current color data to use
 
         %Set entries in animation structure
@@ -531,6 +705,5 @@ if runFlag == 1
         animStruct.Set{qt} = {V_def};%{V_def,CF,V_def}; %Property values for to set in order to animate
     end
     anim8(hf,animStruct); %Initiate animation feature
-    drawnow;
 
 end
