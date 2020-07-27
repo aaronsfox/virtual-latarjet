@@ -38,16 +38,79 @@ generatePlots = false;
 %% Current test code
 %  Building up piece by piece to get to final simulation
 
+%% Set-up
+
 warning off
+
+%Add supplementary code folder to path
+addpath(genpath('..\Supplementary'));
+
+%% Load and create relevant surface and volumetric meshes
+
+% This step takes in relevant surface meshes exported from the 3matic
+% processing to create a base system to run FEA simulations and adapt with
+% bone defects to run subsequent simulations.
+%
+% As part of this the glenoid section is extracted from the scapula, the
+% glenoid and humeral head cartilages are meshed, and the entire system is
+% compiled and meshed as volumes. 
+%
+% Relevant files from the FEA\SurfaceMeshes directory are used in this
+% process. The glenoid section is created from the 'Scapula.stl' file. The
+% glenoid and humeral cartilages are created from the 'GlenoidFace.stl' and
+% 'HumeralCartilageBase.stl'/'HumeralCartilageOuter.stl' files using the
+% relevant supplementary functions. The idealised humeral head is meshged
+% from the 'BaseHumeralHead.stl' file.
 
 %Navigate to surface mesh directory
 cd('..\..\FEA\SurfaceMeshes');
 
-%Load surface files
+%Set-up the stl files structure to pass to the cartilage surfaces function
+%This only contains the relevant files for the curvature method
+stlFiles.GlenoidFace = fullfile(pwd,'GlenoidFace.stl');
+stlFiles.HumeralCartilageBase = fullfile(pwd,'HumeralCartilageBase.stl');
+stlFiles.HumeralCartilageOuter = fullfile(pwd,'HumeralCartilageOuter.stl');
+stlFiles.HumeralCartilagePlane = fullfile(pwd,'HumeralCartilagePlane.xml');
+% % % stlFiles.Scapula = fullfile(pwd,'Scapula.stl');
+% % % stlFiles.Humerus = fullfile(pwd,'Humerus.stl');
+
+%Create and obtain the cartilage surface meshes
+outputSTL = createCartilageSurfaces(stlFiles,'curvature',false,pwd);
+
+%Unpack surface mesh components
+
+%Glenoid cartilage
+
+%Access mesh parts
+glenoidCartilageF = outputSTL.glenoidCartilage.FT;
+glenoidCartilageV = outputSTL.glenoidCartilage.VT;
+glenoidCartilageC = outputSTL.glenoidCartilage.CT;
+
+%Uniformly remesh cartilage surface
+[glenoidCartilageF,glenoidCartilageV] = triRemeshLabel(glenoidCartilageF,glenoidCartilageV,1.0);
+
+%Humeral cartilage
+
+%Access mesh parts
+humeralCartilageF = outputSTL.humeralCartilage.FT;
+humeralCartilageV = outputSTL.humeralCartilage.VT;
+humeralCartilageC = outputSTL.humeralCartilage.CT;
+
+%Uniformly remesh cartilage surface
+[humeralCartilageF,humeralCartilageV] = triRemeshLabel(humeralCartilageF,humeralCartilageV,1.0);
+
+%Visualise cartilages together
+if generatePlots
+    cFigure; hold on
+    gpatch(glenoidCartilageF,glenoidCartilageV,'gw','k');
+    gpatch(humeralCartilageF,humeralCartilageV,'bw','k');
+    title('Cartilage Surfaces');
+    axisGeom;
+end
+
+%Load in additional surface files
 [headSTLstruct] = import_STL('BaseHumeralHead.stl');
 [scapulaSTLstruct] = import_STL('Scapula.stl');
-[glenoidCartilageSTLstruct] = import_STL('BaseGlenoidCartilage.stl');
-[humeralCartilageSTLstruct] = import_STL('BaseHumeralCartilage.stl');
 
 %Access the data from the STL structs
 
@@ -56,50 +119,29 @@ cd('..\..\FEA\SurfaceMeshes');
 %Get surface faces and vertices
 headF = headSTLstruct.solidFaces{1}; %Faces
 headV = headSTLstruct.solidVertices{1}; %Vertices
-
-%Merge vertices
-[headF,headV] = mergeVertices(headF,headV);
-
-%Remesh sphere to reduce number of triangles
-[headF,headV] = triRemeshLabel(headF,headV,3);
-
-%Glenoid cartilage
-
-%Get surface faces and vertices
-glenoidCartilageF = glenoidCartilageSTLstruct.solidFaces{1}; %Faces
-glenoidCartilageV = glenoidCartilageSTLstruct.solidVertices{1}; %Vertices
-
-%Merge vertices
-[glenoidCartilageF,glenoidCartilageV] = mergeVertices(glenoidCartilageF,glenoidCartilageV);
-
-%Remesh glenoid cartilage for consistent point spacing
-[glenoidCartilageF,glenoidCartilageV] = triRemeshLabel(glenoidCartilageF,glenoidCartilageV,1.0);
-
-%Humeral cartilage
-
-%Get surface faces and vertices
-humeralCartilageF = humeralCartilageSTLstruct.solidFaces{1}; %Faces
-humeralCartilageV = humeralCartilageSTLstruct.solidVertices{1}; %Vertices
-
-%Merge vertices
-[humeralCartilageF,humeralCartilageV] = mergeVertices(humeralCartilageF,humeralCartilageV);
-
-%Remesh humeral cartilage for consistent point spacing
-[humeralCartilageF,humeralCartilageV] = triRemeshLabel(humeralCartilageF,humeralCartilageV,1.0);
-
-cFigure; hold on
-gpatch(glenoidCartilageF,glenoidCartilageV,'gw','k');
-gpatch(humeralCartilageF,humeralCartilageV,'bw','k');
-axisGeom;
-
-%% Create the glenoid section from the scapula
-
-%Get scapula faces and vertices
 scapulaF = scapulaSTLstruct.solidFaces{1}; %Faces
 scapulaV = scapulaSTLstruct.solidVertices{1}; %Vertices
 
 %Merge vertices
+[headF,headV] = mergeVertices(headF,headV);
 [scapulaF,scapulaV] = mergeVertices(scapulaF,scapulaV);
+
+%Remesh humeral head sphere to reduce number of triangles
+[headF,headV] = triRemeshLabel(headF,headV,3);
+
+%Visualise all loaded in surfaces together
+if generatePlots
+    cFigure; hold on
+    gpatch(scapulaF,scapulaV,'kw','none');
+    gpatch(headF,headV,'kw','none');
+    gpatch(glenoidCartilageF,glenoidCartilageV,'bw','none');
+    gpatch(humeralCartilageF,humeralCartilageV,'bw','none');
+    title('Complete Base System');
+    camlight headlight;
+    axisGeom;
+end
+
+%% Create the glenoid section from the scapula
 
 %Slice the scapula 10mm back from the glenoid origin
 %Generate settings for slicing
@@ -212,23 +254,10 @@ if generatePlots
     axisGeom;
 end
 
-%Check boundaries to make sure there are no holes
-if isempty(patchBoundary(glenoidF,glenoidV))
-    disp('No boundaries and holes identified in extracted glenoid.');
-else
-    disp('Boundaries identified, which means holes. Oh no...!');
-end
-
-%% Visualise all loaded in surfaces together
-
-if generatePlots
-    cFigure; hold on
-    gpatch(glenoidF,glenoidV,'kw','none');
-    gpatch(headF,headV,'kw','none');
-    gpatch(glenoidCartilageF,glenoidCartilageV,'bw','none');
-    gpatch(humeralCartilageF,humeralCartilageV,'bw','none');
-    camlight headlight;
-    axisGeom;
+%Check boundaries to make sure there are no holes. If there is throw an
+%error as the volumetric meshing won't work.
+if ~isempty(patchBoundary(glenoidF,glenoidV))
+    error('Holes detected in glenoid. Stopping here as volumetric meshing won''t work');
 end
 
 %% Mesh the surfaces using TetGen
