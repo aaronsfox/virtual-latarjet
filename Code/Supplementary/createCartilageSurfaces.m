@@ -1,5 +1,7 @@
 function [outputSTL] = createCartilageSurfaces(stlFiles,method,generatePlots,exportDir)
 
+%%%%% NOTE: this script is somewhat deprecated with the change in methodology to rigid bodies
+
 % @author: Aaron Fox
 % Centre for Sport Research, Deakin University
 % aaron.f@deakin.edu.au
