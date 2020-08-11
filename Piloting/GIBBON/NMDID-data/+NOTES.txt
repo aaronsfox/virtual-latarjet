@@ -1,0 +1,17 @@
+- Thin H/N/UPEXT CT scan used from NMDID dataset
+- Segmentation done the same way as standard segmentation README
+- Didn't smooth scapula before porting to 3matic - smoothed the humerus in Mimics to remove some noise and tiny islands
+- In 3matic, smoothed scapula with 0.7 factor; ran adaptive remesh with target length of 0.5 and maximum length of 1.0, while maintaining surface contours
+- Did the same to humerus as with scapula in 3matic
+- this gives quite a fine mesh, but we can adapt from this with mesh convergence
+- fit sphere to humeral head ('HeadSphere') by marking triangles (copied and kept these triangles)
+- created point at head sphere centre for GH joint centre
+- marked epicondyle points EL and EM on humerus
+- marked AA, TS and AI on scapula
+- marked SGT and IGT on scapula
+- fit a plane to marked triangles on the glenoid surface ('GlenoidPlane'); copied these traingles to retain as separate part
+- used created plane to assist in identifying the 'DeepGlenoidPoint' on the glenoid surface
+- exported Humerus and Scapula as ASCII STL files
+- exported the landmarks as 'Curves and Primitives' as separate .xml files
+
+- next steps done in Matlab...see 'testAnalysisCode.m'
