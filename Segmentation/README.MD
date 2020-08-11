@@ -1,87 +1,35 @@
 # Segmentation & Surface Meshing Processes
 
-The following sections outline the details and processes used for segmenting and eatracting surface meshes from the Visible Human Dataset. Thoughout the folders included in this directory (i.e. Mimics, 3matic and Exported) will be referred to.
+The following sections outline the details and processes used for segmenting and extracting surface meshes from the [NMDID Dataset](https://nmdid.unm.edu/). Each participant has their own folder which includes the Mimics segmentation file, the 3matic project file, and the extracted surface meshes of the humeru and scapula.
 
 ## Segmentation in Mimics
 
 Segmentation of the CT data was performed in Materialise Mimics Research v21.0. The major tool used was the threshold feature to create masks of the bony elements of the scans. Mimics splitting tool was used to extract indiviual parts. The various filling tools were used to fill out the masks and create subsequent complete surface parts of the relevant bodies. Manual refinement of the masks was performed using the other editing tools (e.g. threshold painting) to finalise the parts.
 
-***TODO:***
-
-- Add details of bodies extracted and process to do so.
+The masks of the scapula and humerus were converted to parts and copied across to a 3matic project file, where some further processing (see notes below) were undertaken before exporting as an ASCII STL file.
 
 ## Surface Meshing in 3matic
 
-Meshing of the parts was a slightly more complex process than segmentation, and was performed across a number of steps. These will be outlined here. Materialise 3matic Research v13.0 was used to export surface meshes that were post processed with the [GIBBON toolbox](https://www.gibboncode.org/) in Matlab and will be mentioned throughout. 
+Some processing of the meshes prior to exporting was performed in 3matic. This included some surface smoothing as well as marking of landmarks for processing later on. Materialise 3matic Research v13.0 was used to edit and export surface meshes. 
 
 ### Meshing Steps
 
 The following section outlines the steps for creating the meshes used for analysis:
 
-- The masks were originally converted to 'Parts' in Mimics and copied across to the 3matic project workspace.
-- The 3matic 'Smooth' feature was used with a smooth factor of 0.7 to smooth the surfaces
-- The 3matic 'Uniform Remesh' feature was used to get uniform triangle sizes of 1.5 on both the humerus and scapula surfaces. Sharp angles (60.0) were preserved, but not really expected. The triangle edge size was based off that used by Moroder et al. (2019) who used a glenoid part in a similar manner
-- Following these steps a new 3matic project file was created to rotate the parts to a *'glenoid coordinate system'*.
-- A 3D plane was fit to the glenoid by marking the triangles on the glenoid face surface and fitting a plane to this. This plane will serve as the XY plane of the glenoid coordinate system. 
-- A point was added to the deepest point of the glenoid which will serve as the glenoid coordinate systems origin. The centre of the plane fitted to the glenoid surface assisted in identifying this point.
-- The supra and infraglenoid tubercles were marked with points, which will serve as the long axis of the glenoid (i.e. Y-axis).
-- A plane was fit that passed through the two tubercle points and was perpendicular to the glenoid surface plane. This plane will serve as the YZ plane in the glenoid coordinate system.
-- Original world coordinate system planes were created for the XY, XZ and YZ planes in the original coordinate system. This was done by creating planes that ran through three points on thes planes (e.g. using relevant 0 and 1 coordinates).
-- The 'Plane to Plane Align' function of 3matic was used to make the glenoid surface plane coincident with the world XY plane, thus making the vector pointing away from the glenoid surface the Z-axis.
-- The same 'Plane to Plane Align' feature was then repeated to align the plane fit to the tubercles to the world YZ plane, making the line between the tubercles the Y-axis of the glenoid coordinate system.
-- The 'Translate' function of 3matic was then used to shift all of the objects and make the deep glenoid point the origin (i.e. 0,0,0).
-- Following all of this, the X-axis essentially also corresponds with the short axis of the glenoid. 
-- Next we fit a sphere to the humeral head to approximate the humeral head size and position. This was achieved by marking triangles around the humeral head and fitting a sphere analytical primitive to the marked triangles.
-- The humerus is clearly rotated and offset from the scapula in it's segmented form (i.e. not a neutral glenohumeral position). We create a new 3matic project file that will have an aligned neutral humerus position.
-- We created the coordinate system axes for the scapula and humerus bodies as per Wu et al. (2005). In the absence of the elbow epicondyles on the humerus, we had to approximate certain aspects of the humeral coordinate system. Specifically, the longitudinal axes was a line fit to the centre of the humeral shaft; and a lateal point on the greater tubercle to indicate the lateral directional axis. After defining the coordinate systems, the appropriate rotations were applied to the humerus body to align all three of the axes with the scapula coordiante system. To do this, three planes were crated for each coordinate system and these were subsequently aligned with one another.
-- After alignment was completed we saved a new 3matic project file to create the base system for the FE analysis.
-- The next step is to create the glenoid surface cartilage. We carefully marked the triangles that were on the glenoid surface as a means to create an initial rough outline edge of the glenoid surface. We create a copy of the scapula so that we can smooth the border of these marked triangles without affecting the original mesh. Smoothing the edges of the marked triangles is achieved through the 'Smooth Marking Border' in 3matic. After this we now have a smooth edge surface of the glenoid face that we can extract from the scapula object to its own object (under the Surface List tree in 3matic). This surface can now be exported as an STL. Prior to processing, it is beneficial to iteratively mark the face triangles and smooth the border multiple times to ensure a smooth part edge. Lastly, filtering sharp triangles (filter distance = 0.4) produced a smooth edge by increasing triangle size around the edges evenly. This STL file is used in the createCartilageSurfaces.m function (see Code > Main folder) to create a surface of the glenoid cartilage. The surfaces of the humerus and scapula are also exported at this point as they are needed to create the glenoid cartilage mesh (if using the constant thickness method).
-- We created a smooth version of the humeral head cartilage on the idealised head sphere using a slightly different process to above. A circle was fit that approximated the border of the humeral cartilage and this was used to cut the idealised humeral head to extract the relevant surface for articular cartilage (i.e. approximately the upper-medial two thirds). The cutting entity was defined as a plane that was parallel to the glenoid cartilage arc created. The STL of this is exported in a similar fashion as before and also used in the createCartilageSurfaces.m function (see Code > Main folder) as the base of the humeral cartilage surface. We then created a sphere at the same centre point as the iealised humeral head, but with a larger radius relevant to the curvature radius of the cartilage. The radius of this 'cartilage sphere' was increased by the same proportions from humeral head:humeral cartilage radius of curvature presented in Walia et al. (2013; 2015). We translated this new sphere back along the normal vector of the plane we used to cut the idealised humeral head sphere into its cartilage section by a distance that was the difference of the two sphere radii, so that the sphere edges coincided at a point directly away form the normal of the cutting plane. We then shifted the sphere back along this normal direction by 2.03mm to replicate the minimum thickness of the humeral cartilage also specified in Walia et al. (2013; 2015). Lastly, we cut this larger sphere using the same plane we used to cut the humeral head sphere into its cartilage surface. From this, we had two cut spheres, one slightly smaller representing the base surface of the cartilage, and the other larger one representing the outer surface of the cartilage. These could then be used in the createCartilageSurfaces.m Matlab code (see Code > Main) to create the humeral head cartilage.
-- The created cartilages were imported back into the 'BaseSystem' 3matic file. As part of this we inverted or fixed the face normals to be pointing out. 
-- We then offset the humeral head aspects away from the glenoid by 5mm. This potentially presented an 'unnatural' position of the joint, but provided a consistent starting position with whch simulations could be run.
-- Next we detached the glenoid from the remaining aspect of the scapula. To do this, we created a transection plane parallel to the glenoid face plane created earlier - but 1cm back from the deepest glenoid point as per Moroder et al. (2019). This plane was used with 3matic's 'Cut' function to transect the scapula along this plane. We duplicated the scapula as part of this cutting procedure to avoid editing the original part. The transection plane leaves some elements of the acromion with this new part as they are on the correct side of the plane. We marked these triangles in 3matic and deleted them from the glenoid part. We filtered any sharp triangles with a 0.5 factor using the 3matic function for this. Then the surface was uniformyl remeshed with a target edge length of 0.5 to keep the previous triangle size similar. Lastly, we applied 3matics fix wizard to correct any minor inconsistencies in the surface mesh (e.g. holes, inverted normals). The glenoid surface mesh was then exported to the FEA > SurfaceMeshes folder as 'BaseGlenoid.stl'.
-- The surface meshes of the idealised humeral head ('BaseHumeralHead.stl'), humeral cartilage surface ('BaseHumeralCartilage.stl') and glenoid cartilage surface ('BaseGlenoidCartilage.stl') were also exported to the FEA > SurfaceMeshes folder.
-- A text file ('BaseCoordinateSystems.txt') was created in the FEA > CoordinateSystems folder and the information about the origin and directions of the scapula and humerus coordinate systems were copied in. This will allow us to perform relevant rotations of the bodies for different analysis positions.
-- The next step was to create defects in the glenoid and humeral head parts and export these as additional surfaces for analyses. This was done in the specialised 'DefectCreation' file. We created two sets of defects in accordance with the existing work of Klemt et al. (2019) (i.e. anterior defects) and Walia et al. (2013, 2015) (i.e. antero-inferior defects). In both of these cases, the vertical and horizontal lengths of the glenoid are required, so these were measured on the base glenoig surface in 3matic.
-- The anterior defects were created according to Klemt et al. (2019), whereby the defect was created by cutting parrallel to the long axis of the glenoid at a set number of percentages of the glenoid length (i.e. superior to inferior rim), specifically: 4%, 8%, 12%, 16%, 20% and 24%. Cutting planes parallel to the long axis of the glenoid system (i.e. the global y-axis) were created at the respective distances from the most anterior point of the glenoid rim. 
-- The antero-inferior defects were created according to Walia et al. (2013, 2015). A circle was fit so that it passed through the superior and inferior glenoid rim points, as depicted in Figure 2A in Walia et al. (2013). A 45 degree plane was also set at the origin of the glenoid as a means to create the cutting planes parallel to these (again as depicted in Walia et al. (2013) Figure 2A) - with this also serving as the 100% radius cutting plane. The radius of this circle was used to create the antero-inferior glenoid defects at 25%, 50%, 75% and 100% of this glenoid circle radius.
-- Across both glenoid defect types we used the relevant plane and 3matic's 'Cut' function to create the appropriate defect. After creating the defect we used the filter sharp triangles function (0.5 and 0.3 filter distance for cartilage and glenoid, respectively ***TODO: try an fix the triangles on the back surface of the glenoid, causing smooth issues...***) to smooth the edges of the defects created. We did not fill the holes in the surface created by the cuts, as we did this later using GIBBON toolbox remeshing features (***TODO: ensure this holds true...***).
-- In the 'CoracoidHarvesting' file we used a series of procedures to 'harvest' and prepare a coracoid graft from the scapula. We marked the triangles of the coracoid process and fit a plane to this, which somewhat represented the horizontal midline of the process. The tip of the coracoid was then marked with a point, along with a point on the superior, anterior and posterior aspects of the coracoid at an estimated mid-point. A plane was fit to these latter three points. We then drew a line from the tip of the coracoid along the normal of this created plane, which effectively should run down along the coracoid. This line was drew at a length of 22mm, coinciding with the smallest recommended graft size by Bhatia et al. (2014). We created a plane at the end of this line that was parallel with the coracoid mid plane, with this serving as the plane to cut a 22m coracoid bone graft. The cut results in some other aspects of the scapula being included, so we marked these triangles and then deleted them.
-- After cutting the graft we prepared the inferior surface to be flat and broad as recommended by Bhatia et al. (2014). This involved creating a plane that made the inferior surface flat, while still maintaining as much of the coracoid as possible (i.e. not removing too much inferiorly). Firstly, we shifted the cutting plane of the coracoid graft to be coincident with the world XZ plane, so that the Y-axis pointed upwards through the graft. We then rotated arbitrarily around the Y-axis until the X-axis pointed straight downwards relative to the graft. We then dropped the line that ran down the middle of the coracoid along the X-axis until it met a point that could indicate a good flat cut (it was 1.8mm inferior from the tip and line) while maintaining the maximum amount of coracoid. We fit a plane through the two points ending this line and perpendicular to one of the world planes, so that we could create a plane that made an inferior cut of the coracoid. 
-- ***TODO: fix order of exporting humeral head cartilage to occur after translating head to outer position. Add need to note down position of humeral head cartilage cutting surface. Humeral cartilage arc plane was exported as a curves and primitives .xml file.*** 
-- ***TODO: update everything in line with the runSimulations.m code...***
-
-### 3matic File System
-
-There are a number of different 3matic project files included in the firectory. These are explained here:
-
-**1_BaselineMeshing:** This contains the baseline smoothed and remeshed humerus and scapula in their original coordinate system corresponding to the CT scans.
-
-**2_GlenoidCoordinateSystem:** This contains the humerus and scapula meshes rotated to the *'glenoid coordinate system'* whereby the deep glenoid point is the origin, the z-axis points directly away from the glenoid surface plane, and the x- and y-axis represent the horizontal (i.e. 3 o'clock to 9 o'clock) and vertical axes (i.e. 12 o'clock to 6 o'clock; or supra to infraglenoid tubercle) of the glenoid.
-
-**3_AlignedHumerus:** This builds on the glenoid coordinate system file and rotates/translates the humerus into what we would consider a neutral glenohumeral position (i.e. 0 degrees of axial rotation and elevation).
-
-**4_BaseSystem:** This builds on the glenoid coordinate system and aligned humerus files by creating the base system for the FE analysis which includes the idealised humeral head sphere and it's cartilage surface, along with the simplified detached glenoid section.
-
-**5_DefectCreation**: This file took only the relevant parts of the glenoid, glenoid cartilage, humeral head and humeral cartilage and incldues duplicate of these with various defects (i.e. Bankart defects and Hill-Sachs lesions).
-
-**6_CoracoidHarvesting:** This file took the scapula part and excised a coracoid graft from it. This graft was then copied across to the 'DefectCreation' file to be linked to the various defects.
-
-
-## TODO:
-- Complete the list of different project files and what they contain (i.e. baseline file, rotated file etc.)
-- Add any remaining references
+- The 3matic 'Smooth' feature was used with a smooth factor of 0.7 to smooth the scapula and humerus surfaces.
+- The 3matic 'Adaptive Remesh' feature was used to remesh the triangles of the surfaces. A target edge length of 0.5mm and maximum edge length of 1.0mm were used while maintaining surface contours. This resulted in quite a fine mesh but this will be re-assessed later with mesh refinement processes.
+- A sphere was fit to the humeral head ('HeadSphere') by marking selected triangles with the brush mark and fitting an analytical sphere to these. The triangles were copiedand retained in a new surface part to be exported later.
+- A series of landmarks were marked according to the definitions provided by Wu et al. (2005).
+- A 'GHJ' point was created at the centre of the aforementioned sphere.
+- The epicondyle points of the humerus were marked and labelled as 'EL' and 'EM'.
+- The angulus acromialis ('AA'), trigonum scapulae ('TS') and angulus inferior ('AI') were marked on the scapula.
+- The supraglenoid ('SGT') and infraglenoid ('IGT') tubercles of the scapula were marked.
+- A plane was fit to the glenoid surface ('GlenoidPlane') by marking triangles on the glenoid face. These triangles were copied and retained as a separate part.
+- This plane was used to identify and create a point at the central deepest point of the glenoid surface ('DeepGlenoidPoint').
+- The humerus and scapula were exported as ASCII .stl files.
+- All landmarks and objects were exported as 'Curves and Primitives' to separate .xml files.
+- These files were used as inputs in a subsequent Matlab code (see: ***TODO: add .m filename***).
 
 ## References
-
-Bhatia et al. (2014). The outcomes and surgical techniques of the Latarjet procedure. *Arthroscopy*, 30: 227-235.
-
-Klemt et al. (2019). The critical size of a defect in the glenoid causing anterior instability of the shoulder after a Bankart repair, under physiological joint loading. *Bone Joint J*, 101-B: 68-74.
-
-Moroder et al. (2019). Challenging the current concept of critical glenoid bone loss in shoulder instability. Does the size measurement really tell all? *Am J Sports Med*, 47: 688-694.
-
-Walia et al. (2013). Theoretical model of the effect of combined glenohumeral bone defects on anterior shoulder instability: A finite element approach. *J Orthop Res*, 31: 601-607.
-
-Walia et al. (2015). Influence of combined Hill-Sachs and bony Bankart defects on range of motion in anterior instability in a finite element model. *Arthroscopy*, 31: 2119-2127.
 
 Wu et al. (2005). ISB recommendation on definitions of joint coordinate systems of various joints for the reporting of human joint motion - Part II: Shoulder, elbow, wrist and hand. *J Biomech*, 38: 981-992.
