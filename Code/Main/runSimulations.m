@@ -374,6 +374,205 @@ if generatePlots
     axisGeom;
 end
 
+%% Determine displacement for 50N compression force
+
+% Our design requires that we apply a constant 50N compression force (i.e.
+% Z-axis) to the humeral head, which would require us to use force control
+% within FEBio. This brings inherent instability when considering a force
+% driven problem with contact (i.e. between cartilage surfaces) making it
+% very difficult to converge. The problem can be stabilised by running the
+% step dynamicallt, but this problem can be avoided by running the problem
+% as displacement-driven instaed and thus using a static step. A relevant
+% discussion on this can be found on the FEBio forum here:
+%
+%   https://forums.febio.org/showthread.php?91-Applying-force-on-rigid-body&highlight=rigid+force
+%   See posts from Steve Mass in this thread
+%
+% In order to do this though, we need to determine the displacement per a
+% relevant time step (e.g. per second) that would result from a 50N force
+% being applied to the humeral head. We can use FEBio to run a simple
+% dynamic simulation that applies a 50N force to a node on the outside of
+% the sphere, and subsequently extract the displacement generated over a
+% relevant time period resulting from this force.
+%
+% As part of this, we will allocate a density to the humeral head that
+% resembles bone - that being 1,850 kg/m^3. This information was obtained
+% from:
+%
+%   National Institute of Standards and Technology; U.S. Department of
+%   Commerce; 100 Bureau Drive; Gaithersburg, MD 20899 USA. Available at:
+%   https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=119
+%
+% Note that the units of this estimation are in kg for [M]ass, metres for
+% [L]enth, and seconds for [T]ime
+
+%This example considers a sphere with a radius of 0.0242m, as this is
+%somewhat close to what our current sphere is. In the future we can be more
+%accurate with this.
+
+%Create a simple sphere with the desired radius
+radius = 0.0242;
+nRefinements = 3;
+% [sphereF,sphereV] = quadSphere(nRefinements,radius,2);
+[sphereF,sphereV,~] = geoSphere(nRefinements,radius);
+
+%Mesh sphere
+
+%Create tetgen input structure
+inputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
+inputStruct.Faces = sphereF; %Boundary faces
+inputStruct.Nodes = sphereV; %Nodes of boundary
+inputStruct.regionPoints= getInnerPoint(sphereF,sphereV); %Interior points for regions
+inputStruct.holePoints = []; %Interior points for holes
+inputStruct.regionA = tetVolMeanEst(sphereF,sphereV); %Desired tetrahedral volume for each region
+
+%Mesh model
+[sphereMesh] = runTetGen(inputStruct); %Run tetGen
+
+%Visualise sphere
+if generatePlots
+   hFig = cFigure; 
+   subplot(1,2,1); hold on
+   gpatch(sphereF,sphereV);
+   axisGeom;
+   
+   hs = subplot(1,2,2); hold on
+   optionStruct.hFig = [hFig hs];
+   meshView(sphereMesh,optionStruct);
+   axisGeom;
+end
+
+%Get mesh outputs from sphere
+sphereVolE = sphereMesh.elements; %The elements
+sphereVolV = sphereMesh.nodes; %The vertices or nodes
+sphereVolFb = sphereMesh.facesBoundary; %The boundary faces
+
+%As part of this sphere there should be a node that sits on half the
+%spheres radius in the -X direction, and on the Y and Z axes. Find this.
+forceNodeInd = find(sphereVolV(:,1) == radius & sphereVolV(:,2) == 0 & sphereVolV(:,3) == 0);
+
+%Set-up the FEBio simulation
+
+%Create FEBio template with default settings
+[febio_spec] = febioStructTemplate;
+
+%febio_spec version
+febio_spec.ATTR.version = '2.5';
+
+%Module section
+febio_spec.Module.ATTR.type = 'solid';
+
+%Defining file names
+%%%%% TODO: ensure these work without full file paths, or adapt appropriately
+febioFebFileNamePart = 'displacementTest';
+febioFebFileName = [febioFebFileNamePart,'.feb']; %FEB file name
+febioLogFileName = [febioFebFileNamePart,'.txt']; %FEBio log file name
+febioLogFileName_disp = [febioFebFileNamePart,'_disp_out.txt']; %Log file name for exporting displacement
+
+%FEA control settings
+numTimeSteps = 50; %Number of time steps desired
+max_refs = 25; %Max reforms
+max_ups = 0; %Set to zero to use full-Newton iterations
+opt_iter = 10; %Optimum number of iterations
+max_retries = 5; %Maximum number of retires
+dtmin = (1/10)/100; %Minimum time step size
+dtmax = 1/10; %Maximum time step size
+
+%Create control structure for use by all steps
+stepStruct.Control.analysis.ATTR.type = 'dynamic';
+stepStruct.Control.time_steps = numTimeSteps;
+stepStruct.Control.step_size = 0.1; %0.1 right now
+stepStruct.Control.time_stepper.dtmin = dtmin;
+stepStruct.Control.time_stepper.dtmax = dtmax;
+stepStruct.Control.time_stepper.max_retries = max_retries;
+stepStruct.Control.time_stepper.opt_iter = opt_iter;
+stepStruct.Control.max_refs = max_refs;
+stepStruct.Control.max_ups = max_ups;
+
+%Add template based default settings to proposed control section
+[stepStruct.Control] = structComplete(stepStruct.Control,febio_spec.Control,1); %Complement provided with default if missing
+
+%Remove control field (part of template) since step specific control sections are used
+febio_spec = rmfield(febio_spec,'Control');
+
+%Step specific control section
+febio_spec.Step{1}.Control = stepStruct.Control;
+febio_spec.Step{1}.ATTR.id = 1;
+
+%Material section
+%Rigid body for sphere
+febio_spec.Material.material{1}.ATTR.type = 'rigid body';
+febio_spec.Material.material{1}.ATTR.name = 'sphere';
+febio_spec.Material.material{1}.ATTR.id = 1;
+febio_spec.Material.material{1}.density = 1850; %kg/m^3 for bone
+
+%Geometry section
+
+%Nodes
+febio_spec.Geometry.Nodes{1}.ATTR.name = 'allNodes'; %The node set name
+febio_spec.Geometry.Nodes{1}.node.ATTR.id = (1:size(sphereVolV,1))'; %The node id's
+febio_spec.Geometry.Nodes{1}.node.VAL = sphereVolV; %The nodel coordinates
+
+%Elements
+febio_spec.Geometry.Elements{1}.ATTR.type = 'tet4'; %Element type of this set
+febio_spec.Geometry.Elements{1}.ATTR.mat = 1; %material index for this set
+febio_spec.Geometry.Elements{1}.ATTR.name = 'sphereElems'; %Name of the element set
+febio_spec.Geometry.Elements{1}.elem.ATTR.id = (1:1:size(sphereVolE,1))'; %Element id's
+febio_spec.Geometry.Elements{1}.elem.VAL = sphereVolE;
+
+%NodeSets
+febio_spec.Geometry.NodeSet{1}.ATTR.name = 'forceNode';
+febio_spec.Geometry.NodeSet{1}.node.ATTR.id = forceNodeInd;
+
+%Rigid body constraints
+febio_spec.Step{1}.Boundary.rigid_body{1}.ATTR.mat = 1;
+febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
+febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'z';
+febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Rx';
+febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Ry';
+febio_spec.Step{1}.Boundary.rigid_body{1}.fixed{5}.ATTR.bc = 'Rz';
+
+%Provide consistent load curve
+febio_spec.LoadData.loadcurve{1}.ATTR.id = 1;
+febio_spec.LoadData.loadcurve{1}.ATTR.type = 'linear';
+febio_spec.LoadData.loadcurve{1}.point.VAL=[0 1; 1 1];
+
+%Nodal load
+febio_spec.Loads.nodal_load{1}.ATTR.bc = 'x';
+febio_spec.Loads.nodal_load{1}.ATTR.node_set = 'forceNode';
+febio_spec.Loads.nodal_load{1}.scale.ATTR.lc = 1;
+febio_spec.Loads.nodal_load{1}.scale.VAL = 1.0;
+febio_spec.Loads.nodal_load{1}.value = 50;
+
+%Output section
+%Collect sphere displacement. This can be done at a singular node, given
+%the rigid body will move consistently.
+febio_spec.Output.logfile.ATTR.file = febioLogFileName;
+febio_spec.Output.logfile.node_data{1}.ATTR.file = febioLogFileName_disp;
+febio_spec.Output.logfile.node_data{1}.ATTR.data = 'ux;uy;uz';
+febio_spec.Output.logfile.node_data{1}.ATTR.delim = ',';
+febio_spec.Output.logfile.node_data{1}.VAL = 1;
+
+%Export feb file
+febioStruct2xml(febio_spec,febioFebFileName); %Exporting to file and domNode
+
+%Run the FEBio analysis
+
+%Setup analysis details
+febioAnalysis.run_filename = febioFebFileName; %The input file name
+febioAnalysis.run_logname = febioLogFileName; %The name for the log file
+febioAnalysis.disp_on = 1; %Display information on the command window
+febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
+febioAnalysis.runMode = 'external';
+febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
+febioAnalysis.maxtpi = 1e99; %Max analysis time
+febioAnalysis.maxLogCheckTime = 10; %Max log file checking time
+
+%Run FEBio
+clc
+[runFlag] = runMonitorFEBio(febioAnalysis);
+
+
 %% Join the node sets together and specify new variables for indexing
 
 %Combine the node sets into one space
@@ -504,14 +703,14 @@ febio_spec.Step{1}.Control = stepStruct.Control;
 %Set constants for incompressible neo-Hookean materials based on Youngs
 %modulus and Poisson's ratio from Walia et al. (2015)
 %Set Youngs and Poisson
-E = 10;
+E = 1e+07; %10Mpa;
 v = 0.4;
 %Calculate constants using Walia et al. (2015) equations
 %Multiplication by factor of 1000 appears necessary to get appropriate
 %behaviour and likely has to do with variable mesh units
 %%%%% TODO: check relation of these to the shear and bulk factors in FEBio
-c10 = (E / (4*(1+v)))*1000;
-d10 = (E / (6*(1-2*v)))*1000;
+c10 = (E / (4*(1+v)));%*1000;
+d10 = (E / (6*(1-2*v)));%*1000;
 
 %Glenoid
 
@@ -519,8 +718,8 @@ d10 = (E / (6*(1-2*v)))*1000;
 febio_spec.Material.material{1}.ATTR.type = 'rigid body';
 febio_spec.Material.material{1}.ATTR.id = 1;
 febio_spec.Material.material{1}.ATTR.name = 'rigidGlenoid';
-febio_spec.Material.material{1}.density = 1;
-febio_spec.Material.material{1}.center_of_mass = mean(glenoidV,1);
+febio_spec.Material.material{1}.density = 1850;%1;
+% % % febio_spec.Material.material{1}.center_of_mass = mean(glenoidV,1);
 
 %Glenoid cartilage
 
@@ -538,8 +737,8 @@ febio_spec.Material.material{2}.k = d10;
 febio_spec.Material.material{3}.ATTR.type = 'rigid body';
 febio_spec.Material.material{3}.ATTR.id = 3;
 febio_spec.Material.material{3}.ATTR.name = 'rigidHead';
-febio_spec.Material.material{3}.density = 1;
-febio_spec.Material.material{3}.center_of_mass = mean(headV,1);
+febio_spec.Material.material{3}.density = 1850;%1;
+% % % febio_spec.Material.material{3}.center_of_mass = mean(headV,1);
 
 %Humeral cartilage
 
@@ -556,7 +755,7 @@ febio_spec.Material.material{4}.k = d10;
 %Nodes
 febio_spec.Geometry.Nodes{1}.ATTR.name = 'allNodes'; %The node set name
 febio_spec.Geometry.Nodes{1}.node.ATTR.id = (1:size(allV,1))'; %The node id's
-febio_spec.Geometry.Nodes{1}.node.VAL = allV; %The nodel coordinates
+febio_spec.Geometry.Nodes{1}.node.VAL = allV/1000; %The nodel coordinates
 
 %Elements
 
