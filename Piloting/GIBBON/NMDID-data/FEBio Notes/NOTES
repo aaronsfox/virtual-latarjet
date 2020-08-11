@@ -1,0 +1,13 @@
+In FEBio studio:
+- Import glenoid as STL, convert to shell mesh with 0.01 thickness
+- Create a sphere of 25mm diameter sitting 1mm off the surface (i.e. -26 z direction), mesh this
+- Use a rigid glenoid material and isotropic elastic material for the blob (E = 18,000; v = 0.4)
+- Apply a body load of -1 to the blob over 5 seconds ramped
+- Use sliding elastic contact with laug off and auto penalty off, penalty factor of 25,000; two pass on, symmetric stiffness off, search radius 0.1
+- Analysis step of 20 steps, time step of 0.25 (min and max of 0.0025 and 0.25), dynamic, non-symmetric matrix, max refs 25, max upd 0
+
+> The above essentially works, but the blob bounces, increasing friction coefficient up to 1.0 causes less bouncing; increasing to 10 still has a little bouncing...sticky to start with?
+
+> Using the same parameters as above with a rigid material for the blob seems to work OK too
+
+1 kg*mm/s^2 = 0.001 N.
