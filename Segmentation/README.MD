@@ -4,9 +4,9 @@ The following sections outline the details and processes used for segmenting and
 
 ## Segmentation in Mimics
 
-Segmentation of the CT data was performed in Materialise Mimics Research v21.0. The major tool used was the threshold feature to create masks of the bony elements of the scans. Mimics splitting tool was used to extract indiviual parts. The various filling tools were used to fill out the masks and create subsequent complete surface parts of the relevant bodies. Manual refinement of the masks was performed using the other editing tools (e.g. threshold painting) to finalise the parts.
+Segmentation of the CT data was performed in Materialise Mimics Research v21.0. The major tool used was the threshold feature to create masks of the bony elements of the scans. Mimics splitting tool was used to extract indiviual parts. The various filling tools were used to fill out the masks and create subsequent complete surface parts of the relevant bodies. Manual refinement of the masks was performed using the other editing tools (e.g. threshold painting) to finalise the parts. The file was saved in the 'Segmentation' folder in a folder with the participant ID as 'id*_Segmentation.mcs'.
 
-The masks of the scapula and humerus were converted to parts and copied across to a 3matic project file, where some further processing (see notes below) were undertaken before exporting as an ASCII STL file.
+The masks of the scapula and humerus were converted to parts and copied across to a 3matic project file, where some further processing (see Surface Meshing notes below) were undertaken before exporting as an ASCII STL file.
 
 ## Surface Meshing in 3matic
 
@@ -24,10 +24,13 @@ The following section outlines the steps for creating the meshes used for analys
 - The epicondyle points of the humerus were marked and labelled as 'EL' and 'EM'.
 - The angulus acromialis ('AA'), trigonum scapulae ('TS') and angulus inferior ('AI') were marked on the scapula.
 - The supraglenoid ('SGT') and infraglenoid ('IGT') tubercles of the scapula were marked.
+- The superior ('SupGlenoid'), inferior ('InfGlenoid'), anterior ('AntGlenoid') and posterior ('PostGlenoid') points of the glenoid rim were estimated and marked (i.e. widest points).
 - A plane was fit to the glenoid surface ('GlenoidPlane') by marking triangles on the glenoid face. These triangles were copied and retained as a separate part.
 - This plane was used to identify and create a point at the central deepest point of the glenoid surface ('DeepGlenoidPoint').
-- The humerus and scapula were exported as ASCII .stl files.
+- Prior to exporting, the humerus and scapula surfaces were remeshed using the 3matic 'Uniform Remesh' function (target triangle edge length = 0.5, preserve sharp edges = true, sharp edge angle = 60). This is quite a fine mesh, however we will adjust and potentially adapt this with a later mesh refinement procedure.
+- The humerus ('Humerus_r') and scapula ('Scapula_r'), along with the extracted triangles of the humeral head surface ('HumerusArticulating_r'), were exported as ASCII .stl files.
 - All landmarks and objects were exported as 'Curves and Primitives' to separate .xml files.
+- All files were saved in the participant's ID folder under the 'Segmentation' folder.
 - These files were used as inputs in a subsequent Matlab code (see: ***TODO: add .m filename***).
 
 ## References
