@@ -202,6 +202,10 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     
     %% Position humeral head against glenoid
     
+    %%%%% TODO: the repositioning doesn't seem to work with the high
+    %%%%% rotation and elevation --- need to develop a method that's
+    %%%%% consistent...
+    
     % In the starting position the humeral head centre was positioned 10mm 
     % plus its radius from the deep glenoid origin. With the glenoid likely
     % being rotated, the origin point has changed, and hence the humeral

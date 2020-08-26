@@ -288,48 +288,83 @@ function runSimulations()
     %%%%% TODO: set this from mesh refinement process
     pointSpacing = 0.1;
     
+    %Create a list of elevation angles to test
+    elvTestAngles = [45,90];
+    
+    %Create a list of rotation angles to test
+    %+ve = internal; -ve = external
+    rotTestAngles = [0,20,40,-20,-40,-60];
+    
+    %Create a list of clock face translational directions
+    transDirections = [3,4,5];
+    
     %Loop through the different meshes
     for gg = 1:length(glenoidTests)
-    
-        %Create a directory to store current simulation data
-        mkdir(glenoidTests{gg}); cd(glenoidTests{gg});
         
-        %%%%% TODO: add the different 'clock-face' names to this
-        %%%%% Currently not included and defaulting to 3
-        
-        %Create the FEBio run file
-        if gg == 1
-            %Use the baseline glenoid mesh structure
-            [feaMeshOutputs.(glenoidTests{gg}).glenoidMeshOutput,...
-                feaMeshOutputs.(glenoidTests{gg}).headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,...
-                glenoidTests{gg},45,0,3,scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots);
-        else
-            %Use the defect glenoid mesh structure
-            [feaMeshOutputs.(glenoidTests{gg}).glenoidMeshOutput,...
-                feaMeshOutputs.(glenoidTests{gg}).headMeshOutput] = createFEBioRunFile(anteroInferiorDefectsMesh.(glenoidTests{gg}),headMesh,...
-                glenoidTests{gg},45,0,3,scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots);
-        end
+        %Loop through the elevation angles
+        for ee = 1:length(elvTestAngles)
             
-% % %         %Set FEBio analysis details
-% % %         febioAnalysis.run_filename = [glenoidTests{gg},'.feb']; %The input file name
-% % %         febioAnalysis.run_logname = [glenoidTests{gg},'.txt']; %The name for the log file
-% % %         febioAnalysis.disp_on = 1; %Display information on the command window
-% % %         febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
-% % %         febioAnalysis.runMode = 'internal';%'external';
-% % %         febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
-% % %         febioAnalysis.maxtpi = 1e99; %Max analysis time
-% % %         febioAnalysis.maxLogCheckTime = 60; %Max log file checking time
-% % %         
-% % %         %Run the simulation in FEBio
-% % %         clc
-% % %         %%%%% TODO: write up display outputs better to track progress
-% % %         [runFlag(gg)] = runMonitorFEBio(febioAnalysis);
-        
-        %%%%% TODO: check why for some reason Matlab crashes out when FEBio
-        %%%%% continues to run --- might need to switch to internal???
-        
-        %Navigate back up a directory
-        cd('..');
+            %Loop through the rotation angles
+            for rr = 1:length(rotTestAngles)
+                
+                %Loop through translational directions
+                for tt = 1:length(transDirections)
+                
+                    %Create a simulation name based on the different components
+                    simName = [glenoidTests{gg},...
+                        '_elv',num2str(elvTestAngles(ee)),...
+                        '_rot',num2str(rotTestAngles(rr)),...
+                        '_',num2str(transDirections(tt)),'oClock'];
+
+                    %Create a directory to store current simulation data
+                    mkdir(simName); cd(simName);
+
+                    %Create the FEBio run file
+                    if gg == 1
+                        %Use the baseline glenoid mesh structure
+                        [feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
+                            feaMeshOutputs.(char(simName)).headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,...
+                            simName,elvTestAngles(ee),rotTestAngles(rr),transDirections(tt),...
+                            scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots);
+                    else
+                        %Use the defect glenoid mesh structure
+                        [feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
+                            feaMeshOutputs.(char(simName)).headMeshOutput] = createFEBioRunFile(anteroInferiorDefectsMesh.(glenoidTests{gg}),headMesh,...
+                            simName,elvTestAngles(ee),rotTestAngles(rr),transDirections(tt),...
+                            scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots);
+                    end
+
+                    %Set FEBio analysis details
+                    febioAnalysis.run_filename = [simName,'.feb']; %The input file name
+                    febioAnalysis.run_logname = [simName,'.txt']; %The name for the log file
+                    febioAnalysis.disp_on = 1; %Display information on the command window
+                    febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
+                    febioAnalysis.runMode = 'internal';%'external';
+                    febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
+                    febioAnalysis.maxtpi = 1e99; %Max analysis time
+                    febioAnalysis.maxLogCheckTime = 60; %Max log file checking time
+                    
+                    %Run the simulation in FEBio
+                    clc
+                    %%%%% TODO: write up display outputs better to track progress
+                    [runFlag(gg)] = runMonitorFEBio(febioAnalysis);
+
+                    %%%%% TODO: check why for some reason Matlab crashes out when FEBio
+                    %%%%% continues to run --- might need to switch to internal???
+                    %%%%% Internal running seems to fix this --- but
+                    %%%%% potentially slows sims down?
+
+                    %Navigate back up a directory
+                    cd('..');
+                    
+                end
+                clear tt
+                
+            end
+            clear rr
+            
+        end
+        clear ee
         
     end
     clear gg
