@@ -1,0 +1,80 @@
+---
+title: Short Paper
+author:
+  - name: Aaron S. Fox
+    affiliation: Centre for Sports Research,Barwon Centre for Orthopaedic Research and Education (B-CORE)
+    footnote: 1
+  - name: Stephen D. Gill
+    affiliation: Barwon Centre for Orthopaedic Research and Education (B-CORE),School of Medicine,Orthopaedic Department
+  - name: Jason Bonacci
+    affiliation: Centre for Sports Research
+  - name: Richard S. Page
+    affiliation: Barwon Centre for Orthopaedic Research and Education (B-CORE),School of Medicine,Orthopaedic Department
+address:
+  - code: Centre for Sports Research
+    address: Centre for Sports Research, School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia
+  - code: Barwon Centre for Orthopaedic Research and Education (B-CORE)
+    address: Barwon Centre for Orthopaedic Research and Education (B-CORE), Barwon Health, St John of Jod Hospital and Deakin University, Geelong, Australia
+  - code: School of Medicine
+    address: School of Medicine, Deakin University, Geelong, Australia
+  - code: Orthopaedic Department
+    address: Orthopaedic Department, University Hospital Geelong, Barwon Health, Geelong, Australia
+footnote:
+  - code: 1
+    text: "Corresponding Author: aaron.f@deakin.edu.au"
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+
+journal: "An awesome journal"
+date: "Version 1.0; Last Updated:`r Sys.Date()`"
+bibliography: mybibfile.bib
+#linenumbers: true
+numbersections: true
+csl: elsevier-harvard.csl
+output: rticles::elsevier_article
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# Introduction
+
+Insert text...
+
+# Methods
+
+- Use distance to dislocation as our primary metric then we can compare how the presence of a bone defect affects the distance relative to the intact glenoid (i.e. as a %)
+- We can then apply this same approach to testing how completing the Latarjet procedure changes the distance, still probably keeping this in the same relative scale to the intact model (i.e. does it get back to 100%, or how close to intact does the Latarjet get to).
+- We can then look at the data across Latarjet variations (i.e. displacement in the vertical and horizontal directions, graft size) in isolation and see what impact this has. From a practical perspective, this might tell us where the optimal positioning is to maximise distance to dislocation; whether larger grafts equate to better outcomes; whether a smaller graft can be used with optimum placement; whether you need bigger grafts if you stray away from optimum placement etc. Examining the results from the individual variations in the context of one another, given they are on the same proportional scale, should theoretically help answer these questions. 
+- It’s also possible that the above mentioned aspects may vary with different bone defect sizes or types (e.g. Hill-Sachs included?)
+
+
+``` {r cars}
+
+#Test some r code
+summary(cars)
+
+```
+
+
+
+
+
+Bibliography styles
+===================
+
+There are various bibliography styles available. You can select the
+style of your choice in the preamble of this document. These styles are
+Elsevier styles based on standard styles like Harvard and Vancouver.
+Please use BibTeX to generate your bibliography and include DOIs
+whenever available.
+
+Here are two sample references: @Feynman1963118 [@Dirac1953888].
+
+References {#references .unnumbered}
+==========

@@ -1,0 +1,180 @@
+\documentclass[]{elsarticle} %review=doublespace preprint=single 5p=2 column
+%%% Begin My package additions %%%%%%%%%%%%%%%%%%%
+\usepackage[hyphens]{url}
+
+  \journal{An awesome journal} % Sets Journal name
+
+
+\usepackage{lineno} % add
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{graphicx}
+\usepackage{booktabs} % book-quality tables
+%%%%%%%%%%%%%%%% end my additions to header
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\bibliographystyle{elsarticle-harv}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={Short Paper},
+            colorlinks=false,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+\setcounter{secnumdepth}{5}
+% Pandoc toggle for numbering sections (defaults to be off)
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
+  {\par}
+
+% Pandoc header
+
+
+
+\begin{document}
+\begin{frontmatter}
+
+  \title{Short Paper}
+    \author[Centre for Sports Research,Barwon Centre for Orthopaedic
+Research and Education (B-CORE)]{Aaron S. Fox\corref{1}}
+  
+    \author[Barwon Centre for Orthopaedic Research and Education
+(B-CORE),School of Medicine,Orthopaedic Department]{Stephen D. Gill}
+  
+    \author[Centre for Sports Research]{Jason Bonacci}
+  
+    \author[Barwon Centre for Orthopaedic Research and Education
+(B-CORE),School of Medicine,Orthopaedic Department]{Richard S. Page}
+  
+      \address[Centre for Sports Research]{Centre for Sports Research,
+School of Exercise and Nutrition Sciences, Deakin University, Geelong,
+Australia}
+    \address[Barwon Centre for Orthopaedic Research and Education
+(B-CORE)]{Barwon Centre for Orthopaedic Research and Education (B-CORE),
+Barwon Health, St John of Jod Hospital and Deakin University, Geelong,
+Australia}
+    \address[School of Medicine]{School of Medicine, Deakin University,
+Geelong, Australia}
+    \address[Orthopaedic Department]{Orthopaedic Department, University
+Hospital Geelong, Barwon Health, Geelong, Australia}
+      \cortext[1]{Corresponding Author: aaron.f@deakin.edu.au}
+  
+  \begin{abstract}
+  This is the abstract.
+
+  It consists of two paragraphs.
+  \end{abstract}
+  
+ \end{frontmatter}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Insert text\ldots{}
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\begin{itemize}
+\tightlist
+\item
+  Use distance to dislocation as our primary metric then we can compare
+  how the presence of a bone defect affects the distance relative to the
+  intact glenoid (i.e.~as a \%)
+\item
+  We can then apply this same approach to testing how completing the
+  Latarjet procedure changes the distance, still probably keeping this
+  in the same relative scale to the intact model (i.e.~does it get back
+  to 100\%, or how close to intact does the Latarjet get to).
+\item
+  We can then look at the data across Latarjet variations
+  (i.e.~displacement in the vertical and horizontal directions, graft
+  size) in isolation and see what impact this has. From a practical
+  perspective, this might tell us where the optimal positioning is to
+  maximise distance to dislocation; whether larger grafts equate to
+  better outcomes; whether a smaller graft can be used with optimum
+  placement; whether you need bigger grafts if you stray away from
+  optimum placement etc. Examining the results from the individual
+  variations in the context of one another, given they are on the same
+  proportional scale, should theoretically help answer these questions.
+\item
+  It's also possible that the above mentioned aspects may vary with
+  different bone defect sizes or types (e.g.~Hill-Sachs included?)
+\end{itemize}
+
+\begin{verbatim}
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+\end{verbatim}
+
+\hypertarget{bibliography-styles}{%
+\section{Bibliography styles}\label{bibliography-styles}}
+
+There are various bibliography styles available. You can select the
+style of your choice in the preamble of this document. These styles are
+Elsevier styles based on standard styles like Harvard and Vancouver.
+Please use BibTeX~to generate your bibliography and include DOIs
+whenever available.
+
+Here are two sample references: Feynman and Vernon Jr. (1963; Dirac,
+1953).
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-Dirac1953888}{}%
+Dirac, P.A.M., 1953. The lorentz transformation and absolute time.
+Physica 19, 888--896.
+doi:\href{https://doi.org/10.1016/S0031-8914(53)80099-6}{10.1016/S0031-8914(53)80099-6}
+
+\leavevmode\hypertarget{ref-Feynman1963118}{}%
+Feynman, R.P., Vernon Jr., F.L., 1963. The theory of a general quantum
+system interacting with a linear dissipative system. Annals of Physics
+24, 118--173.
+doi:\href{https://doi.org/10.1016/0003-4916(63)90068-X}{10.1016/0003-4916(63)90068-X}
+\end{cslreferences}
+
+
+\end{document}
+
