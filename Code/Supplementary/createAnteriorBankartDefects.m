@@ -1,6 +1,6 @@
 function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmarks,generatePlots)
     
-    %% TODO: consider inlcuding Latarjet process with this? Or separate
+    %% TODO: consider inlcluding Latarjet process with this? Or separate
 
     %% This function serves to import in and create the base surface system for
     %  running the FEA analysis of the humeral head against the glenoid.

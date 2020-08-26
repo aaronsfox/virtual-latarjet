@@ -22,10 +22,22 @@ function runSimulations()
     
     % References
     %
+    % Itoi et al. (2000). Effect of a glenoid defect on anteroinferior
+    % stability of the shoulder after Bankart repair. J Bone Joint Surg,
+    % 82-A: 35-46.
+    %
     % Klemt et al. (2019). The critical size of a defect in the glenoid
     % causing anterior instability of the shoulder after a Bankart repair,
     % under physiological joint loading. Bone Joint J, 101-B: 68-74.
-
+    %
+    % Walia et al. (2013). Theoretical model of the effect of combined
+    % glenohumeral bone defects on anterior shoulder instability: A finite
+    % element approach. J Orthop Res, 31: 601-607.
+    %
+    % Walia et al. (2015). Influence of combined Hill-Sachs and bony
+    % Bankart defects on range of motion in anterior instability of the
+    % shoulder in a finite element model. Arthroscopy, 31: 2119-2127.
+    
     %% Current test code
     %  Building up piece by piece to get to final simulation
 
@@ -81,8 +93,10 @@ function runSimulations()
     %%%%%% TODO: remeshing of glenoids could be necessary if we want to fix
     %%%%%% up the flat surfaces, but it might not matter?
     
-    %Visualise anterior defects on a subplot
+    %Generate list of anterior defect meshes
     anteriorDefectsList = fieldnames(anteriorDefectsMesh);
+
+    %Visualise anterior defects on a subplot
     if generatePlots
         cFigure;
         for dd = 1:length(anteriorDefectsList)
@@ -104,149 +118,258 @@ function runSimulations()
     
     %Create volumetric meshes of anterior defect glenoids
     
-    %%%%%% TODO: tetgen on anterior defect glenoids
+    %Create generic aspects of tetgen input structure
+    tetGenInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
+    tetGenInputStruct.holePoints = []; %Interior points for holes
     
-    %%
+    %Setup figure to visualise meshes
+    if generatePlots
+        hFig = cFigure;
+    end
     
-    %% Run baseline FEBio simulation
+    %Start the waitbar
+    wbar = waitbar(0/(length(anteriorDefectsList)),'Creating anterior defect volumetric meshes...');
     
-    %%%%% TODO: appropriate spot to store FEBio run file
+    %Loop through anterior defects list
+    for dd = 1:length(anteriorDefectsList)
+        
+        %Update waitbar
+        splitStr = strsplit((anteriorDefectsList{dd}),'_');
+        per = sscanf(splitStr{2},'%f');
+        waitbar(dd/(length(anteriorDefectsList)),wbar,...
+            ['Creating ',num2str(per),'% anterior defect volumetric mesh...']);
+        
+        %Mesh specific tetgen inputs
+        tetGenInputStruct.Faces = anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidF; %Boundary faces
+        tetGenInputStruct.Nodes = anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidV; %Nodes of boundary
+        tetGenInputStruct.regionPoints= getInnerPoint(anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidF,...
+            anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidV); %Interior points for regions
+        tetGenInputStruct.regionA = tetVolMeanEst(anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidF,...
+            anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidV); %Desired tetrahedral volume for each region
+        
+        %Mesh model
+        [tetGenOutput] = runTetGen(tetGenInputStruct); %Run tetGen
+        
+        %Store tetgen outputs
+        anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidVolE = tetGenOutput.elements; %The elements
+        anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidVolV = tetGenOutput.nodes; %The vertices or nodes
+        anteriorDefectsMesh.(anteriorDefectsList{dd}).glenoidVolFb = tetGenOutput.facesBoundary; %The boundary faces
+        
+        %Visualise current mesh on subplot figure
+        if generatePlots
+            %Set subplot
+            hs = subplot(2,round(length(anteriorDefectsList)/2),dd);
+            %Set title
+            title(['Cut View of ',num2str(per),'% Anterior Defect Mesh'],...
+                'FontSize',12);
+            %Plot mesh
+            optionStruct.hFig = [hFig hs];
+            meshView(tetGenOutput,optionStruct);
+        end
+        
+    end
+    clear dd
     
-    createFEBioRunFile()
+    %Close wbar
+    close(wbar);
     
-    %%%%%% TODO: set this up better...
+    %% Create anteroinferior bone defects
     
-    febioAnalysis.run_filename = 'baselineSim.feb'; %The input file name
-    febioAnalysis.run_logname = 'baselineSim.txt'; %The name for the log file
-    febioAnalysis.disp_on = 1; %Display information on the command window
-    febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
-    febioAnalysis.runMode = 'external';%'internal';
-    febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
-    febioAnalysis.maxtpi = 1e99; %Max analysis time
-    febioAnalysis.maxLogCheckTime = 60; %Max log file checking time
+    % This step takes in the extracted base glenoid surface and creates
+    % anterior Bankart bone defects of varying sizes. The process included
+    % in the function follows that of Walia et al. (2013, 2015) which is an
+    % adaptation of Itoi et al. (2000), whereby the defects are created by
+    % performing a simulated osteotomy at warious distances relative to the
+    % length of the glenoid on a 45 degree orientation. The length of the
+    % glenoid is determined based on landmarks added to the scapula surface
+    % during segmentation.
+    [anteroInferiorDefectsMesh] = createAnteroInferiorBankartDefects(glenoidMesh,landmarks,generatePlots);
     
-    %%%%% log checking seems to take a lomg time on laptop --- it's having
-    %%%%% a slow day though...although it worked quicker another time...
+    %%%%%% TODO: remeshing of glenoids could be necessary if we want to fix
+    %%%%%% up the flat surfaces, but it might not matter?
     
-    %%%%%% may need to setup FEBio better on the lab computer...
+    %Generate list of anterior defect meshes
+    anteroInferiorDefectsList = fieldnames(anteroInferiorDefectsMesh);
+
+    %Visualise anterior defects on a subplot
+    if generatePlots
+        cFigure;
+        for dd = 1:length(anteroInferiorDefectsList)
+            %Plot current glenoid
+            subplot(2,round(length(anteroInferiorDefectsList)/2),dd)
+            gpatch(anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidF,...
+                anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidV,...
+                'kw','none')
+            axisGeom; camlight headlight
+            %Get percentage number for title
+            splitStr = strsplit((anteroInferiorDefectsList{dd}),'_');
+            per = sscanf(splitStr{2},'%f');
+            title([num2str(per),'% Glenoid Radius Anteroinferior Defect'])
+            %Cleanup
+            clear splitStr per
+        end
+        clear dd
+    end
     
-    clc
-    [runFlag] = runMonitorFEBio(febioAnalysis);%START FEBio NOW!!!!!!!!
+    %Create volumetric meshes of anterior defect glenoids
     
+    %Create generic aspects of tetgen input structure
+    tetGenInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
+    tetGenInputStruct.holePoints = []; %Interior points for holes
     
-    %%%%% Surprisingly, this all works. Need to therefore work on the FEBio
-    %%%%% creation function so that it is suitably adaptable to the
-    %%%%% different scenarios.
+    %Setup figure to visualise meshes
+    if generatePlots
+        hFig = cFigure;
+    end
     
+    %Start the waitbar
+    wbar = waitbar(0/(length(anteroInferiorDefectsList)),'Creating anteroinferior defect volumetric meshes...');    
     
+    %Loop through anterior defects list
+    for dd = 1:length(anteroInferiorDefectsList)
+        
+        %Update waitbar
+        splitStr = strsplit((anteroInferiorDefectsList{dd}),'_');
+        per = sscanf(splitStr{2},'%f');
+        waitbar(dd/(length(anteroInferiorDefectsList)),wbar,...
+            ['Creating ',num2str(per),'% anteroinferior defect volumetric mesh...']);
+        
+        %Mesh specific tetgen inputs
+        tetGenInputStruct.Faces = anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidF; %Boundary faces
+        tetGenInputStruct.Nodes = anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidV; %Nodes of boundary
+        tetGenInputStruct.regionPoints= getInnerPoint(anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidF,...
+            anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidV); %Interior points for regions
+        tetGenInputStruct.regionA = tetVolMeanEst(anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidF,...
+            anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidV); %Desired tetrahedral volume for each region
+        
+        %Mesh model
+        [tetGenOutput] = runTetGen(tetGenInputStruct); %Run tetGen
+        
+        %Store tetgen outputs
+        anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidVolE = tetGenOutput.elements; %The elements
+        anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidVolV = tetGenOutput.nodes; %The vertices or nodes
+        anteroInferiorDefectsMesh.(anteroInferiorDefectsList{dd}).glenoidVolFb = tetGenOutput.facesBoundary; %The boundary faces
+        
+        %Visualise current mesh on subplot figure
+        if generatePlots
+            %Set subplot
+            hs = subplot(2,round(length(anteroInferiorDefectsList)/2),dd);
+            %Set title
+            title(['Cut View of ',num2str(per),'% Glenoid Length Anteroinferior Defect Mesh'],...
+                'FontSize',11);
+            %Plot mesh
+            optionStruct.hFig = [hFig hs];
+            meshView(tetGenOutput,optionStruct);
+        end
+        
+    end
+    clear dd
     
-    %%
-    %%
-    %%   
+    %Close wbar
+    close(wbar);
+    
+    %% Run defect FEBio simulations
+    
+    %%%%% TODO: consider Hill-Sachs defect incorporation here too?
+    
+    %%%%% TODO: factor in different glenohumeral positions...
+    
+    %Navigate to the FEA directory
+    cd('..\FEA');
+    
+    %Create directory for current participant
+    mkdir(participantID); cd(participantID);
+    
+    %Create a list of the meshes to loop through. This includes the
+    %baseline mesh and anteroinferior defect meshes
+    glenoidTests = ['intact'; anteroInferiorDefectsList];
+    
+    %Set point spacing for simulation input
+    %%%%% TODO: set this from mesh refinement process
+    pointSpacing = 0.1;
+    
+    %Loop through the different meshes
+    for gg = 1:length(glenoidTests)
+    
+        %Create a directory to store current simulation data
+        mkdir(glenoidTests{gg}); cd(glenoidTests{gg});
+        
+        %%%%% TODO: add the different 'clock-face' names to this
+        %%%%% Currently not included and defaulting to 3
+        
+        %Create the FEBio run file
+        if gg == 1
+            %Use the baseline glenoid mesh structure
+            [feaMeshOutputs.(glenoidTests{gg}).glenoidMeshOutput,...
+                feaMeshOutputs.(glenoidTests{gg}).headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,...
+                glenoidTests{gg},45,0,3,scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots);
+        else
+            %Use the defect glenoid mesh structure
+            [feaMeshOutputs.(glenoidTests{gg}).glenoidMeshOutput,...
+                feaMeshOutputs.(glenoidTests{gg}).headMeshOutput] = createFEBioRunFile(anteroInferiorDefectsMesh.(glenoidTests{gg}),headMesh,...
+                glenoidTests{gg},45,0,3,scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots);
+        end
+            
+% % %         %Set FEBio analysis details
+% % %         febioAnalysis.run_filename = [glenoidTests{gg},'.feb']; %The input file name
+% % %         febioAnalysis.run_logname = [glenoidTests{gg},'.txt']; %The name for the log file
+% % %         febioAnalysis.disp_on = 1; %Display information on the command window
+% % %         febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
+% % %         febioAnalysis.runMode = 'internal';%'external';
+% % %         febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
+% % %         febioAnalysis.maxtpi = 1e99; %Max analysis time
+% % %         febioAnalysis.maxLogCheckTime = 60; %Max log file checking time
+% % %         
+% % %         %Run the simulation in FEBio
+% % %         clc
+% % %         %%%%% TODO: write up display outputs better to track progress
+% % %         [runFlag(gg)] = runMonitorFEBio(febioAnalysis);
+        
+        %%%%% TODO: check why for some reason Matlab crashes out when FEBio
+        %%%%% continues to run --- might need to switch to internal???
+        
+        %Navigate back up a directory
+        cd('..');
+        
+    end
+    clear gg
+    
     %% Import FEBio results
     
-    %%%%% TODO: edit appropriately, cleanup to display better...
-    %%%%% Needs to factor in which displacements belong to which nodes...
-    %%%%% Perhaps it would be best to separate the displacement collection
-    %%%%% into two files?
-
-    %Check for successful run
-    if runFlag == 1
-
-        %Importing nodal displacements from a log file
-        %%%%% TODO: comment this better and adjust variable names
-        %%%%% TODO: might be a better way to extract results too...
-
-        %%%%% TODO: anim8 is not working right, there is some disconnect
-        %%%%% between the elements it's animating and the data...
-
-        %Import the output logfile for displacements
-        [time_mat, N_disp_mat,~] = importFEBio_logfile('baselineSim_disp_out.txt'); %Nodal displacements
-
-        %Extract the time data
-        time_mat = [0; time_mat(:)];
-
-        %Extract the displacement data (raw)
-        N_disp_mat = N_disp_mat(:,2:end,:);
-
-        %Get data from each time step in the matrix
-        %Get size of matrix and time steps
-        sizImport = size(N_disp_mat);
-        sizImport(3) = sizImport(3)+1;
-        %Extract displacement at each step
-        N_disp_mat_n = zeros(sizImport);
-        N_disp_mat_n(:,:,2:end) = N_disp_mat;
-        %Replace original matrix
-        N_disp_mat = N_disp_mat_n;
-        %Get end displacement    
-        DN = N_disp_mat(:,:,end);
-        DN_magnitude = sqrt(sum(DN(:,3).^2,2));
-
-        %Define positions of objects across steps by taking node positions and
-        %adding displacement to these 
-
-        %%%%% CURRENTLY ONLY COLLECTING HEAD DISPLACEMENT (VOLUME)
+    %Set flag to export animated gifs
+    %Note that this adds a bit of time to the process function. It also
+    %generates a number of warnings despite wanting these to be turned
+    %off.
+    exportAnimation = true;
+    
+    %Loop through glenoid tests variable
+    for gg = 1:length(glenoidTests)
         
-        
+        %Check for successful run
+        if runFlag(gg) == 1
+            
+            %Navigate to run directory
+            cd(glenoidTests{gg});
 
-        V_def = headVolV+DN;
-        V_DEF = N_disp_mat+repmat(headVolV,[1 1 size(N_disp_mat,3)]);
-        X_DEF = V_DEF(:,1,:);
-        Y_DEF = V_DEF(:,2,:);
-        Z_DEF = V_DEF(:,3,:);
-    % % %     [CF] = vertexToFaceMeasure(Fb1,DN_magnitude);
-
-        %Plot simulated results using anim8
-
-        %%%%% TODO: using elements to plot faces here means no faces
-        %%%%% visualised...
-
-        %Create basic view and store graphics handle to initiate animation
-        hf = cFigure; %Open figure
-        gtitle([febioFebFileNamePart,': Press play to animate']);
-        hp1 = gpatch(headVolFb,V,'gw'); %Add graphics object to animate
-        %%%%% IF WANT TO USE glenoidVolFb NEED TO ADD INDEXING TO THIS LIKE
-        %%%%% EARLIER WITH THE GLENOID VOLUME ELEMENT ID'S
-        hp2 = gpatch(glenoidVolE,V,'bw'); %Add graphics object to animate
-    % % %     hp2=gpatch(E2,V_def,'kw','none',faceAlpha2); %Add graphics object to animate
-    % % %     gpatch(Fb1,V,0.5*ones(1,3),'none',0.25); %A static graphics object
-
-        axisGeom(gca,25);
-    % % %     colormap(gjet(250)); colorbar;
-        caxis([0 max(DN_magnitude)]);
-
-        %Set axes to min and max displacement values
-    % % %     axis([min(X_DEF(:)) max(X_DEF(:)) min(Y_DEF(:)) max(Y_DEF(:)) min(Z_DEF(:)) max(Z_DEF(:))]);
-        %The above isn't appropriate when the glenoid is considered, as it
-        %goes outside of the humeral head displacement we recorded. We'l only
-        %adjust the X-axis values for now as this is where the head goes...
-        ax = gca;
-        axis([min(X_DEF(:)) max(X_DEF(:)) ax.YLim(1) ax.YLim(2) ax.ZLim(1) ax.ZLim(2)]);
-        camlight headlight;
-
-        %Set up animation features
-        animStruct.Time = time_mat; %The time vector
-        for qt = 1:1:size(N_disp_mat,3) %Loop over time increments
-
-            %Get the current displacement position from matrix
-            DN = N_disp_mat(:,:,qt);
-
-            %Get the current displacement magnitude
-            DN_magnitude = sqrt(sum(DN.^2,2));
-
-            %Get the current nodal coordinates, factoring in original position
-            %and current displacement
-            V_def = headVolV+DN;
-
-    % % %         [CF]=vertexToFaceMeasure(Fb1,DN_magnitude); %Current color data to use
-
-            %Set entries in animation structure
-            animStruct.Handles{qt} = [hp1]; %[hp1 hp1 hp2]; %Handles of objects to animate
-            animStruct.Props{qt} = {'Vertices'}; %{'Vertices','CData','Vertices'}; %Properties of objects to animate
-            animStruct.Set{qt} = {V_def};%{V_def,CF,V_def}; %Property values for to set in order to animate
+            %Run process function to collate results
+            [processedResults.(glenoidTests{gg})] = processFEBioResults(glenoidTests{gg},...
+                feaMeshOutputs.(glenoidTests{gg}).glenoidMeshOutput,...
+                feaMeshOutputs.(glenoidTests{gg}).headMeshOutput,...
+                landmarks,exportAnimation,generatePlots);
+            
+            %Return up a directory
+            cd('..');
         end
-        anim8(hf,animStruct); %Initiate animation feature
-
     end
+    clear gg
+    
+    %% Compile simulation results
+    
+    
+    
+    
+    %%
+    
+    %%
 
 end
