@@ -1,5 +1,5 @@
 function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,febioFebFileNamePart,...
-    elevationAngle,rotationAngle,translateDirection,scapulaCS,humerusCS,landmarks,pointSpacing,generatePlots)
+    elevationAngle,rotationAngle,translateDirection,scapulaCS,humerusCS,landmarks,generatePlots)
 
     %% This function serves to import in and create the base surface system for
     %  running the FEA analysis of the humeral head against the glenoid.
@@ -25,7 +25,6 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %                       system so that the glenoid can be rotated
     %   landmarks           structure containing imported landmark points
     %                       on scapula/humerus
-    %   pointSpacing        point spacing of glenoid mesh
     %   generatePlots       flag whether to generate figures from the
     %                       processing throughout the function (default = false)
     %   
@@ -55,9 +54,9 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
 
     %Need all inputs
     if nargin < 9
-        error('Need all function inputs except for pointSpacing and generatePlots')
+        error('Need all function inputs except for generatePlots')
     end
-    if nargin < 11
+    if nargin < 10
         generatePlots = false;
     end
     
@@ -95,9 +94,7 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     headF = headMesh.headVolFb;
     
     %Calculate point spacing if not input
-    if nargin < 9
-        pointSpacing = mean(patchEdgeLengths(glenoidF,glenoidVolV));        
-    end
+    pointSpacing = mean(patchEdgeLengths(glenoidF,glenoidVolV));        
     
     %Create a list humeral landmarks
     humerusLandmarks = [{'GHJC'},{'EL'},{'EM'},{'EJC'}];
@@ -171,6 +168,11 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     
     %% Humeral axial rotation
     
+    %%%%% TODO: check other participants starting humeral alignment,
+    %%%%% externally rotated seems to get to a more 'neutral' position for
+    %%%%% the first sample participant given they started at a relatively
+    %%%%% internally rotated position???
+    
     %Rotate the head by the axial rotation specified
     
     if rotationAngle ~= 0
@@ -199,66 +201,6 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
         clear mm
         
     end    
-    
-    %% Position humeral head against glenoid
-    
-    %%%%% TODO: the repositioning doesn't seem to work with the high
-    %%%%% rotation and elevation --- need to develop a method that's
-    %%%%% consistent...
-    
-    % In the starting position the humeral head centre was positioned 10mm 
-    % plus its radius from the deep glenoid origin. With the glenoid likely
-    % being rotated, the origin point has changed, and hence the humeral
-    % head will be a different distance from this point now. Given we have
-    % the updated origin point and the humeral head has simply rotated
-    % about it's central point, we have both values to calculate the
-    % updated distance. The humeral head was aligned with the original
-    % Z-axis or compression vector, so given we have the updated
-    % compression vector we also have the direction the humeral head sits
-    % from the deep glenoid point.
-    
-    %Create the translation line from the humeral head to the current deep
-    %glenoid origin point
-    headToGlenoid = createLine3d(headPt,originPt);
-    
-    %Calculate the original and new distance from the head to glenoid
-    origHeadDist = distancePoints3d(headPt,[0 0 0]);
-    newHeadDist = distancePoints3d(headPt,originPt);
-    
-    %Calculate difference between original and new head distance
-    diffHeadDist = newHeadDist - origHeadDist;
-    
-    %The original distance the head needs to move to be the desired 0.5mm
-    %is 9.5mm. Set this as a variable
-    origShift = 9.5;
-    
-    %The summation between the original shift and the difference between
-    %the original and new head position is how far the head now needs to
-    %move.
-    newShift = diffHeadDist + origShift;
-    
-    %We need the relative magnitude of the new shift against the current
-    %distance of the head from the glenoid point as to multiply the line we
-    %created earlier by this relative factor in order to generate the
-    %appropriate translation matrix
-    relHeadShift = newShift / newHeadDist;
-    
-    %Create translation matrix to shift the humeral head along the head to
-    %glenoid line, taking into account the relative difference in the new
-    %shift distance by the current head to glenoid distance
-    headTransMat = createTranslation3d(headToGlenoid(4:end)*relHeadShift);
-    
-    %Translate the head nodes
-    for pp = 1:length(headVolV)
-        headVolV(pp,:) = transformPoint3d(headVolV(pp,:),headTransMat);
-    end
-    clear pp
-    
-    %Translate humeral landmarks
-    for mm = 1:length(humerusLandmarks)
-        landmarks.(humerusLandmarks{mm}) = transformPoint3d(landmarks.(humerusLandmarks{mm}),headTransMat);            
-    end
-    clear mm
     
     %% Realign the glenoid and head to the world XY plane
     
@@ -397,10 +339,47 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
             headVolV(pp,:) = transformPoint3d(headVolV(pp,:),zRot);    
         end
         clear pp
+        
+        %Rotate landmarks
+        for mm = 1:length(scapulaLandmarks)
+            landmarks.(scapulaLandmarks{mm}) = transformPoint3d(landmarks.(scapulaLandmarks{mm}),zRot);            
+        end
+        clear mm    
+        for mm = 1:length(humerusLandmarks)
+            landmarks.(humerusLandmarks{mm}) = transformPoint3d(landmarks.(humerusLandmarks{mm}),zRot);            
+        end
+        clear mm
 
     end
-        
     
+    %% Position humeral head above glenoid centre
+    
+    %Identify the distance the humeral head centre needs to be placed from
+    %the deep glenoid origin. We want a starting position where the edge of
+    %the humeral head is 0.5mm from the glenoid face. We can calculate this
+    %by identifying the original starting distance (i.e. 10mm from the
+    %glenoid face) and subtracting 9.5mm from this.
+    
+    %Calculate original head distance and desired new head distance
+    origHeadDist = distancePoints3d(headPt,[0 0 0]);
+    newHeadDist = origHeadDist - 9.5;
+    
+    %Set new head distance in coordinates (i.e. 0 for x and y coords)
+    newHeadCoords = [0 0 newHeadDist];
+    
+    %Identify the translation required to move the current humeral head
+    %centre coordinate to the new head coordinates
+    headTransLine = createLine3d(landmarks.GHJC,newHeadCoords);
+    
+    %Create transformation to translate the humeral head
+    headTransMat = createTranslation3d(headTransLine(4:end));
+    
+    %Translate head surface
+    for pp = 1:length(headVolV)
+        headVolV(pp,:) = transformPoint3d(headVolV(pp,:),headTransMat);    
+    end
+    clear pp    
+       
     %% Set force vector values
     
     %Set original force values
