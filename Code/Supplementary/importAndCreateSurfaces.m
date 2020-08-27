@@ -596,6 +596,14 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
         %Title
         title('Rotated and Aligned Surfaces');
     end
+    
+    %% Estimate GH rotation centre from regression...
+    
+    %PC - 
+    %AI - 
+    %AA - 
+    
+    xC = 18.9743 + (PCx * 0.2434) + (AIx * 0.2341) + (L_AI_AA * 0.1590) + (PCy * 0.0558)
 
     %% Extract glenoid section from whole scapula
 

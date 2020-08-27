@@ -22,7 +22,7 @@ The following section outlines the steps for creating the meshes used for analys
 - A series of landmarks were marked according to the definitions provided by Wu et al. (2005).
 - A 'GHJ' point was created at the centre of the aforementioned sphere.
 - The epicondyle points of the humerus were marked and labelled as 'EL' and 'EM'.
-- The angulus acromialis ('AA'), trigonum scapulae ('TS') and angulus inferior ('AI') were marked on the scapula.
+- The angulus acromialis ('AA'), trigonum scapulae ('TS'), angulus inferior ('AI') and most ventral point on the coracoid process ('PC') were marked on the scapula.
 - The supraglenoid ('SGT') and infraglenoid ('IGT') tubercles of the scapula were marked.
 - The superior ('SupGlenoid'), inferior ('InfGlenoid'), anterior ('AntGlenoid') and posterior ('PostGlenoid') points of the glenoid rim were estimated and marked (i.e. widest points).
 - A plane was fit to the glenoid surface ('GlenoidPlane') by marking triangles on the glenoid face. These triangles were copied and retained as a separate part.
