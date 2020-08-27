@@ -111,7 +111,7 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     waitbar(1/9,wbar,'Importing landmarks...');
     
     %Scapula landmarks
-    scapPoints = [{'AA'},{'AI'},{'TS'},{'DeepGlenoid'},{'SGT'},{'IGT'},...
+    scapPoints = [{'AA'},{'AI'},{'TS'},{'PC'},{'AC'},{'DeepGlenoid'},{'SGT'},{'IGT'},...
         {'AntGlenoid'},{'PostGlenoid'},{'SupGlenoid'},{'InfGlenoid'}];
     for pp = 1:length(scapPoints)
         tree = xml_read([scapPoints{pp},'.txt']);
@@ -140,6 +140,15 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     planes.glenoid.origin = tree.Plane.Origin;% / 1000;
     planes.glenoid.normal = tree.Plane.Normal;
     clear tree
+    
+    %Create the GH landmark
+    
+    
+    %% CREATE GH LANDMARK HERE
+    
+    
+    
+    %%
 
     %Visualise
     %Get current landmarks
@@ -387,14 +396,17 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
 
     %% Create humeral coordinate system
 
+    %%%%% TODO: should really rename the GHJC to HHC to reflect what it
+    %%%%% actually is...
+    
     %Create landmark at the midpoint of EL and EM
     landmarks.EJC(1) = (landmarks.EL(1) + landmarks.EM(1)) / 2;
     landmarks.EJC(2) = (landmarks.EL(2) + landmarks.EM(2)) / 2;
     landmarks.EJC(3) = (landmarks.EL(3) + landmarks.EM(3)) / 2;
 
-    %Create line connecting GHJC and EJC
-    Ytemp = createLine3d(landmarks.EJC,landmarks.GHJC);
-    humerusCS.Yc = [landmarks.GHJC,Ytemp(4:end)];
+    %Create line connecting GH and EJC
+    Ytemp = createLine3d(landmarks.EJC,landmarks.GH);
+    humerusCS.Yc = [landmarks.GH,Ytemp(4:end)];
 
     %Create plane that goes through EL, EM and GHJC
     humBodyPlane = createPlane(landmarks.EL,landmarks.EM,landmarks.GHJC);
@@ -596,14 +608,6 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
         %Title
         title('Rotated and Aligned Surfaces');
     end
-    
-    %% Estimate GH rotation centre from regression...
-    
-    %PC - 
-    %AI - 
-    %AA - 
-    
-    xC = 18.9743 + (PCx * 0.2434) + (AIx * 0.2341) + (L_AI_AA * 0.1590) + (PCy * 0.0558)
 
     %% Extract glenoid section from whole scapula
 
