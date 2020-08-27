@@ -1,5 +1,5 @@
 ---
-title: Short Paper
+title: "Technical variations in the Latarjet procedure impact glenohumeral joint stability: A simulation study"
 author:
   - name: Aaron S. Fox
     affiliation: Centre for Sports Research,Barwon Centre for Orthopaedic Research and Education (B-CORE)
@@ -23,11 +23,9 @@ footnote:
   - code: 1
     text: "Corresponding Author: aaron.f@deakin.edu.au"
 abstract: |
-  This is the abstract.
+  Insert abstract...
 
-  It consists of two paragraphs.
-
-journal: "An awesome journal"
+journal: BioR$\chi$iv
 date: "Version 1.0; Last Updated:`r Sys.Date()`"
 bibliography: mybibfile.bib
 #linenumbers: true
@@ -40,13 +38,26 @@ output: rticles::elsevier_article
 
 knitr::opts_chunk$set(echo = FALSE)
 
+#Multiple knit options - in YAML
+# knit: (function(inputFile, encoding) {
+#   rmarkdown::render(inputFile, encoding = encoding,
+#   output_format = "all") })
+
+
 ```
 
 # Introduction
 
-Insert text...
+Shoulder instability injuries occur with excessive force that translates the humeral head out of the shoulder joint socket [@Thangarajah2016]. Shoulder instability injuries are a concerning problem affecting young athletes in overhead collision sports (e.g. Australian football; rugby) [@Bohu2015,@Orchard2013]. Effective clinical care is vital to avoid recurrent injuries, as well as reduced shoulder function and joint degradation [@Thangarajah2016]. Surgery is commonly used to address pathology, restore function, and correct stability [@Kavaja2012]. The Latarjet procedure is a non-anatomic, open shoulder reconstruction surgery involving a bone block via transfer of the coracoid process to the anterior glenoid (i.e. coracoid bone graft) with the attached conjoint tendon [@Latarjet1954]. The Latarjet procedure is commonly used in cases with significant glenoid bone loss, large humerus compression fractures, or glenoid and humeral bone defects [@Millett2005] — and is effective in combatting recurrent anterior instability injury [@Bonacci2018,@Bessiere2014]. While it is a more aggressive treatment, open Latarjet surgeries are emerging as the preferred option for shoulder stabilisation, especially in contact sport settings [@Millett2005,@Bonazza2017].
+
+The Latarjet procedure requires high precision, and subtle variations in surgical technique may impact the likelihood of joint instability and subsequent injury [@Bhatia2014,@Ghodadra2010].
 
 # Methods
+
+- All the different simulation iterations take too long, need to reduce
+- If we do 1 Bankart defect (e.g. 37.5% glenoid width radius), 1 Hill-Sachs defect (e.g. 31% humeral head diameter) in isolation and combination; at one elevation and external rotation position; in 3, 4 and 5 o clock directions — that will be a total of 4 defect simulations x 3 direction (i.e. 12 simulations) multiplied by the different Latarjet variations. Based on 20 minute simulations this would take 4 hours to get through each. Are the different translation directions needed?
+- The Bankart defect and Hill-Sachs lesion sizes chosen, along with the elevation and external rotation positions can be referred to existing literature (Walia et al. studies, Kaar et al. Itoi et al.) as identified for significantly reducing joint stability. External rotation of 40 degrees might align with maximum achievable for Latarjet operated patients too?
+
 
 - Use distance to dislocation as our primary metric then we can compare how the presence of a bone defect affects the distance relative to the intact glenoid (i.e. as a %)
 - We can then apply this same approach to testing how completing the Latarjet procedure changes the distance, still probably keeping this in the same relative scale to the intact model (i.e. does it get back to 100%, or how close to intact does the Latarjet get to).
@@ -74,7 +85,7 @@ Elsevier styles based on standard styles like Harvard and Vancouver.
 Please use BibTeX to generate your bibliography and include DOIs
 whenever available.
 
-Here are two sample references: @Feynman1963118 [@Dirac1953888].
+
 
 References {#references .unnumbered}
 ==========
