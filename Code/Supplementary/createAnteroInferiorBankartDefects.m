@@ -59,7 +59,8 @@ function [glenoidDefectMesh] = createAnteroInferiorBankartDefects(glenoidMesh,la
 
     %Set the defect sizes to create. These values are relative to the
     %radius of a circle fitted to the glenoid length
-    defectSizes = [0.25, 0.50, 0.75, 1.00];
+% % %     defectSizes = [0.25, 0.50, 0.75, 1.00];
+    defectSizes = 0.75;
     
     %% Calculate glenoid length
     
@@ -81,8 +82,8 @@ function [glenoidDefectMesh] = createAnteroInferiorBankartDefects(glenoidMesh,la
     
     %Determine the size of the defects to be created based on the radius
     %(i.e. half) of glenoid length
-    defectDistances = zeros(1,length(defectSizes));
-    for dd = 1:length(defectSizes)
+    defectDistances = zeros(1,size(defectSizes,2));
+    for dd = 1:size(defectSizes,2)
         defectDistances(dd) = defectSizes(dd) * (glenoidLength/2);
     end
     clear dd
@@ -90,13 +91,13 @@ function [glenoidDefectMesh] = createAnteroInferiorBankartDefects(glenoidMesh,la
     %% Create defect surfaces
     
     %Start the waitbar
-    wbar = waitbar(0/(length(defectSizes)+1),'Creating anteroinferior defects...');
+    wbar = waitbar(0/(size(defectSizes,2)+1),'Creating anteroinferior defects...');
     
     %Loop through defect sizes
-    for dd = 1:length(defectSizes)
+    for dd = 1:size(defectSizes,2)
         
         %Update wait bar
-        waitbar(dd/(length(defectSizes)+1),wbar,...
+        waitbar(dd/(size(defectSizes,2)+1),wbar,...
             ['Creating ',num2str(defectSizes(dd)*100),'% glenoid radius anteroinferior bone defect...']);
         
         %To create the defect cutting plane we must generate a plane that
@@ -359,7 +360,7 @@ function [glenoidDefectMesh] = createAnteroInferiorBankartDefects(glenoidMesh,la
     %% Finish process
     
     %Update waitbar
-    waitbar((length(defectSizes)+1)/(length(defectSizes)+1),wbar,...
+    waitbar((size(defectSizes,2)+1)/(size(defectSizes,2)+1),wbar,...
             'Finished creating anteroinferior bone defects!');
     
     %Close waitbar

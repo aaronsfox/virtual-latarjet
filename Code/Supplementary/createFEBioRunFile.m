@@ -1,5 +1,5 @@
 function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,febioFebFileNamePart,...
-    elevationAngle,rotationAngle,translateDirection,scapulaCS,humerusCS,landmarks,generatePlots)
+    elevationAngle,rotationAngle,glenoidRotation,scapulaCS,humerusCS,landmarks,generatePlots)
 
     %% This function serves to import in and create the base surface system for
     %  running the FEA analysis of the humeral head against the glenoid.
@@ -16,9 +16,8 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %   rotationAngle       humeral axial rotation angle to run simulations at
     %                       (in degrees). Internal rotation is +ve while
     %                       external rotation is -ve
-    %   translateDirection  a value containing the 'clock-face' direction
-    %                       to translate the humeral head in. Currently
-    %                       supports 3, 4 and 5
+    %   glenoidRotation     amount to rotate the glenoid counter-clockwise
+    %                       to change the direction of translation
     %   scapulaCS           structure containing details of scapula coordinate
     %                       system so that the glenoid can be rotated
     %   humerusCS           structure containing details of humerus coordinate
@@ -71,15 +70,6 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %is directly along the Z-axis, while the translation relates to the
     %different translation clock face inputs
     compressionVec = [0 0 1];
-% % %     if translateDirection == 3
-% % %         translationVec = [-1 0 0];
-% % %     elseif translateDirection == 4
-% % %         translationVec = [-1 0 0];
-% % %     elseif translateDirection == 5
-% % %         translationVec = [-1 0 0];
-% % %     else
-% % %         error('Translation direction must be 3, 4 or 5 - representing this direction on a clock face.')
-% % %     end
     
     %Create a string for the coordinate system labels
     csLabels = [{'Xc'}, {'Yc'}, {'Zc'}];
@@ -292,44 +282,17 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %%%%% be consistent, unlike at the import and create surfaces stage.
     
     %The glenoid is now aligned that the 3 o clock direction represents the
-    %positive X-axis. If this is the translation direction input, no
-    %further translation about the Z-axis is required. However, if we want
-    %to do the 4 or 5 o clock translation, the objects need to be rotated
-    %by a specific amount so that the x-axis lines up to these directions.
-    %Given a clock face has 12 intervals, the amount of rotation for one
-    %'tick' is 360/12 degrees --- we therefore use this information to
-    %apply the appropriate amount of rotation around the Z-axis.
+    %positive X-axis (i.e. absolute anterior translation). The
+    %glenoidRotation input argument specifies the amount to
+    %counter-clockwise rotate the glenoid so that the translational X-axis
+    %shifts in the antero-inferior direction. 
     
-    %Check for error
-    if ~ismember(translateDirection,[3 4 5])
-        error('Translation direction must be 3, 4 or 5 - representing this direction on a clock face.')
-    end
-    
-    %Check for the amount of rotation needed
-    if translateDirection == 3
-        
-        %No rotation needs to be done
-        
-    else
-    
-        if translateDirection == 4
-        
-            %Specify the rotation magnitude (in degrees)
-            rotMagDeg = 360/12 * 1;
+    %Check for non-zero value
+    if glenoidRotation ~= 0
 
-            %Create the rotation transform about the pure Z-axis
-            zRot = createRotationOz(deg2rad(rotMagDeg));
-        
-        elseif translateDirection == 5
-            
-            %Specify the rotation magnitude (in degrees)
-            rotMagDeg = 360/12 * 2;
+        %Create the rotation transform about the pure Z-axis
+        zRot = createRotationOz(deg2rad(glenoidRotation));
 
-            %Create the rotation transform about the pure Z-axis
-            zRot = createRotationOz(deg2rad(rotMagDeg));
-            
-        end
-        
         %Apply the rotation to the surfaces
         for pp = 1:length(glenoidVolV)
             glenoidVolV(pp,:) = transformPoint3d(glenoidVolV(pp,:),zRot);    
@@ -339,7 +302,7 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
             headVolV(pp,:) = transformPoint3d(headVolV(pp,:),zRot);    
         end
         clear pp
-        
+
         %Rotate landmarks
         for mm = 1:length(scapulaLandmarks)
             landmarks.(scapulaLandmarks{mm}) = transformPoint3d(landmarks.(scapulaLandmarks{mm}),zRot);            
