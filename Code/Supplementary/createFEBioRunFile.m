@@ -87,7 +87,8 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     pointSpacing = mean(patchEdgeLengths(glenoidF,glenoidVolV));        
     
     %Create a list humeral landmarks
-    humerusLandmarks = [{'GHJC'},{'EL'},{'EM'},{'EJC'}];
+% % %     humerusLandmarks = [{'GHJC'},{'EL'},{'EM'},{'EJC'}];
+    humerusLandmarks = [{'GH'},{'EL'},{'EM'},{'EJC'}];
     
     %Create a list of scapula landmarks
     scapulaLandmarks = [{'AA'},{'AI'},{'TS'},{'DeepGlenoid'},{'SGT'},{'IGT'},{'AntGlenoid'},{'PostGlenoid'},{'SupGlenoid'},{'InfGlenoid'}];
@@ -95,15 +96,22 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %% Humeral elevation
     
     %Rotate the head and glenoid mesh according to the elevation angle
-    %provided in the function. A 3:2 elevation ratio is adopted for moving
-    %the glenoid relative to the humerus as per Walia et al. (2013, 2015).
+    %provided in the function. A 2:1 elevation ratio is adopted for moving
+    %the glenohumeral and scapulothoracic joints as per Walia et al.
+    %(2013). For example, if the arm abducts to a humero-thoracic angle of
+    %90 degrees, the humerus rotates 60 degrees while the scapulo thoracic
+    %joint rotates 30 degrees
     
     if elevationAngle > 0
+        
+        %Calculate humeral and scapulothoracic rotation
+        humeralRot = elevationAngle*(2/3);
+        scapRot = elevationAngle*(1/3);
     
         %Rotate relevant aspects of the humeral head
 
         %Create the transform about humeral coordinate system X axis
-        humerusElvTrans = createRotation3dLineAngle(humerusCS.Xc,deg2rad(elevationAngle*-1)); %inverted to rotate the right way
+        humerusElvTrans = createRotation3dLineAngle(humerusCS.Xc,deg2rad(humeralRot*-1)); %inverted to rotate the right way
 
         %Rotate nodes
         for pp = 1:length(headVolV)
@@ -127,7 +135,7 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
         %Rotate the relevant aspects of the glenoid
 
         %Create the transform about scapula coordinate system X axis
-        glenoidElvTrans = createRotation3dLineAngle(scapulaCS.Xc,deg2rad((elevationAngle)*(2/3)*-1)); %inverted to rotate the right way
+        glenoidElvTrans = createRotation3dLineAngle(scapulaCS.Xc,deg2rad(scapRot*-1)); %inverted to rotate the right way
 
         %Rotate nodes
         for pp = 1:length(glenoidVolV)
@@ -332,7 +340,7 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     
     %Identify the translation required to move the current humeral head
     %centre coordinate to the new head coordinates
-    headTransLine = createLine3d(landmarks.GHJC,newHeadCoords);
+    headTransLine = createLine3d(landmarks.GH,newHeadCoords);
     
     %Create transformation to translate the humeral head
     headTransMat = createTranslation3d(headTransLine(4:end));
@@ -366,7 +374,8 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     % but are also estimated off the cortical bone values used in Edwards
     % et al. (2010), Clin Biomech, 25: 372-377. Admittedly this was a study
     % on the tibia, but nonetheless it represents an estimate high enough
-    % that represents rigid bone.
+    % that represents rigid bone. These values are also only used in the
+    % contact model calculations, given that rigid materials are used.
 
     %Rigid glenoid
     febio_spec.Material.material{1}.ATTR.type = 'rigid body';
@@ -512,7 +521,12 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %Translation load curve
     febio_spec.LoadData.loadcurve{2}.ATTR.id = 2;
     febio_spec.LoadData.loadcurve{2}.ATTR.type = 'linear';
-    febio_spec.LoadData.loadcurve{2}.point.VAL = [2 0; 2.1 0.1; 11.1 1];
+    febio_spec.LoadData.loadcurve{2}.point.VAL = [2 0; 2.1 0.1; 111.1 1];
+    
+    %Translation DISPLACEMENT load curve
+    febio_spec.LoadData.loadcurve{3}.ATTR.id = 3;
+    febio_spec.LoadData.loadcurve{3}.ATTR.type = 'linear';
+    febio_spec.LoadData.loadcurve{3}.point.VAL = [2 0; 30 1];
 
     %% Output section
 
@@ -574,6 +588,55 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     febio_spec.Step{1}.Loads.body_load{1}.z.VAL = compressionForce;
     febio_spec.Step{1}.Loads.body_load{1}.z.ATTR.lc = 1;
 
+% % %     %Add second step
+% % % 
+% % %     %Control section
+% % %     %Translation step. This applies the translational force at 1N
+% % %     %intervals at each 0.1s step size. We set this to 50 steps in order to
+% % %     %reach a force of 60N, as the stability ratios provided in Moroder et
+% % %     %al. (2019) did not appear to reach this (not much above 50%).
+% % %     
+% % %     febio_spec.Step{2}.ATTR.name = 'translate';
+% % %     febio_spec.Step{2}.Control.time_steps = 500;
+% % %     febio_spec.Step{2}.Control.step_size = 0.1;
+% % %     febio_spec.Step{2}.Control.max_refs = 25;
+% % %     febio_spec.Step{2}.Control.max_ups = 0;
+% % %     febio_spec.Step{2}.Control.diverge_reform = 1;
+% % %     febio_spec.Step{2}.Control.reform_each_time_step = 1;
+% % %     febio_spec.Step{2}.Control.dtol = 0.001;
+% % %     febio_spec.Step{2}.Control.etol = 0.01;
+% % %     febio_spec.Step{2}.Control.rtol = 0;
+% % %     febio_spec.Step{2}.Control.lstol = 0.9;
+% % %     febio_spec.Step{2}.Control.min_residual = 1e-20;
+% % %     febio_spec.Step{2}.Control.qnmethod = 0;
+% % %     febio_spec.Step{2}.Control.rhoi = 0;
+% % %     febio_spec.Step{2}.Control.time_stepper.dtmin = 0.01;
+% % %     febio_spec.Step{2}.Control.time_stepper.dtmax = 0.1;
+% % %     febio_spec.Step{2}.Control.time_stepper.max_retries = 10;
+% % %     febio_spec.Step{2}.Control.time_stepper.opt_iter = 10;
+% % %     febio_spec.Step{2}.Control.analysis.ATTR.type = 'dynamic';
+% % %     febio_spec.Step{2}.Control.symmetric_stiffness = 0;
+% % % 
+% % %     %Boundary section
+% % %     %Given that compression is occurring along the Z-axis, and translation
+% % %     %is occurring purely along the X-axis --- we can just allow movements
+% % %     %along these directions.
+% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.ATTR.mat = 2;
+% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
+% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'Rx';
+% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Ry';
+% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Rz';
+% % % 
+% % %     %Load section
+% % %     %Add the translational load to the head elements, purely X-axis force 
+% % %     %but needs to be inverted to translate anteriorly along the glenoid
+% % %     febio_spec.Step{2}.Loads.body_load{1}.ATTR.type = 'const';
+% % %     febio_spec.Step{2}.Loads.body_load{1}.ATTR.elem_set = 'headPart';
+% % %     febio_spec.Step{2}.Loads.body_load{1}.x.VAL = translationForce*-1;
+% % %     febio_spec.Step{2}.Loads.body_load{1}.x.ATTR.lc = 2;
+
+    %% Testing out displacement approach
+    
     %Add second step
 
     %Control section
@@ -582,11 +645,8 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %reach a force of 60N, as the stability ratios provided in Moroder et
     %al. (2019) did not appear to reach this (not much above 50%).
     
-    %%%%% TODO: is this step size // number of steps going to take too
-    %%%%% long?
-    
     febio_spec.Step{2}.ATTR.name = 'translate';
-    febio_spec.Step{2}.Control.time_steps = 50;
+    febio_spec.Step{2}.Control.time_steps = 300;
     febio_spec.Step{2}.Control.step_size = 0.1;
     febio_spec.Step{2}.Control.max_refs = 25;
     febio_spec.Step{2}.Control.max_ups = 0;
@@ -615,14 +675,10 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'Rx';
     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Ry';
     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Rz';
-
-    %Load section
-    %Add the translational load to the head elements, purely X-axis force 
-    %but needs to be inverted to translate anteriorly along the glenoid
-    febio_spec.Step{2}.Loads.body_load{1}.ATTR.type = 'const';
-    febio_spec.Step{2}.Loads.body_load{1}.ATTR.elem_set = 'headPart';
-    febio_spec.Step{2}.Loads.body_load{1}.x.VAL = translationForce*-1;
-    febio_spec.Step{2}.Loads.body_load{1}.x.ATTR.lc = 2;
+    febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.bc = 'x';
+    febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.lc = 3;
+    febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.VAL= 30;
+    
 
     %% Output section 
     

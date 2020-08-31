@@ -247,7 +247,7 @@ function runSimulations()
     wbar = waitbar(0/(length(anteroInferiorDefectsList)),'Creating anteroinferior defect volumetric meshes...');    
     
     %Loop through anterior defects list
-    for dd = 1:length(anteroInferiorDefectsList)
+    for dd = 1:size(anteroInferiorDefectsList,2)
         
         %Update waitbar
         splitStr = strsplit((anteroInferiorDefectsList{dd}),'_');
@@ -298,7 +298,7 @@ function runSimulations()
     %Close wbar
     close(wbar);
     
-    %% Run defect FEBio simulations
+    %% Run FEBio simulations
     
     %%%%% TODO: consider Hill-Sachs defect incorporation here too?
     
@@ -357,7 +357,14 @@ function runSimulations()
 
                     %Create a directory to store current simulation data
                     mkdir(simName); cd(simName);
-
+                    
+                    
+                    %%%%%%% TODO: HAVE INCREASED STEP NUMBERS AND REDUCED
+                    %%%%%%% STEP SIZE FOR TRANSLATE STEP AS IT'S NEEDE FOR
+                    %%%%%%% SHORTER TRANSLATION INCREMENTS --- BUT IT
+                    %%%%%%% DOESN'T SEEM TO BE GETTING RESPECTED IN
+                    %%%%%%% FEBIO??????
+                    
                     %Create the FEBio run file
                     if gg == 1
                         %Use the baseline glenoid mesh structure
@@ -378,7 +385,7 @@ function runSimulations()
                     febioAnalysis.run_logname = [simName,'.txt']; %The name for the log file
                     febioAnalysis.disp_on = 1; %Display information on the command window
                     febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
-                    febioAnalysis.runMode = 'external';
+                    febioAnalysis.runMode = 'internal';
                     febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
                     febioAnalysis.maxtpi = 1e99; %Max analysis time
                     febioAnalysis.maxLogCheckTime = 60; %Max log file checking time
@@ -388,13 +395,22 @@ function runSimulations()
                     %Run the simulation in FEBio
                     clc
                     %%%%% TODO: write up display outputs better to track progress
+                    
+                    
+                    %%%%%%% even the 0.1 N increase per step seems to
+                    %%%%%%% aggressive for defect model --- it flies off
+                    %%%%%%% before it translates, which overestimates
+                    %%%%%%% distance to dislocation...maybe need a
+                    %%%%%%% displacement driven translation problem to
+                    %%%%%%% solve dislocation distance?
+                    
+                    
                     [runFlag(gg)] = runMonitorFEBio(febioAnalysis);
 
                     %%%%% TODO: check why for some reason Matlab crashes out when FEBio
                     %%%%% continues to run --- might need to switch to internal???
                     %%%%% Internal running seems to fix this --- but
                     %%%%% potentially slows sims down? 
-                    %%%%% External running seems to work better on lab PC
 
                     %Navigate back up a directory
                     cd('..');
@@ -425,17 +441,54 @@ function runSimulations()
         %Check for successful run
         if runFlag(gg) == 1
             
-            %Navigate to run directory
-            cd(glenoidTests{gg});
+            %Loop through the elevation angles
+            for ee = 1:size(elvTestAngles,2)
 
-            %Run process function to collate results
-            [processedResults.(glenoidTests{gg})] = processFEBioResults(glenoidTests{gg},...
-                feaMeshOutputs.(glenoidTests{gg}).glenoidMeshOutput,...
-                feaMeshOutputs.(glenoidTests{gg}).headMeshOutput,...
-                landmarks,exportAnimation,generatePlots);
+                %Loop through the rotation angles
+                for rr = 1:size(rotTestAngles,2)
+
+                    %Loop through glenoid rotation
+                    for tt = 1:size(glenoidRotations,2)
+                        
+                        %Get simulation name
+                        if rotTestAngles(rr) > 0
+                            simName = [glenoidTests{gg},...
+                                '_elv',num2str(elvTestAngles(ee)),...
+                                '_intRot',num2str(rotTestAngles(rr)),...
+                                '_',num2str(glenoidRotations(tt)),'degTranslate'];
+                        elseif rotTestAngles(rr) < 0
+                            simName = [glenoidTests{gg},...
+                                '_elv',num2str(elvTestAngles(ee)),...
+                                '_extRot',num2str(abs(rotTestAngles(rr))),...
+                                '_',num2str(glenoidRotations(tt)),'degTranslate'];
+                        else
+                            simName = [glenoidTests{gg},...
+                                '_elv',num2str(elvTestAngles(ee)),...
+                                '_rot',num2str(abs(rotTestAngles(rr))),...
+                                '_',num2str(glenoidRotations(tt)),'degTranslate'];
+                        end
             
-            %Return up a directory
-            cd('..');
+                        %Navigate to run directory
+                        cd(simName);
+
+                        %Run process function to collate results
+                        [processedResults.(char(simName))] = processFEBioResults(simName,...
+                            feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
+                            feaMeshOutputs.(char(simName)).headMeshOutput,...
+                            landmarks,exportAnimation,generatePlots);
+
+                        %Return up a directory
+                        cd('..');
+                        
+                    end
+                    clear tt
+                    
+                end
+                clear rr
+                
+            end
+            clear ee
+            
         end
     end
     clear gg

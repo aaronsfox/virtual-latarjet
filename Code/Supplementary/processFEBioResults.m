@@ -67,20 +67,30 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     %Find point where translation is half of glenoid length
     indEndTrans = find(nodeDispMat(:,2) > (glenoidLength/2),1);
     
+    %Create smoothing function and get values
+    smoothFunc = csapi(nodeDispMat(:,2),nodeDispMat(:,4));
+    smoothVals = fnval(smoothFunc,nodeDispMat(:,2));
+    
     %Visualise translation vs. compression curve
     if generatePlots
+        hold on
         plot(nodeDispMat(indStartTrans:indEndTrans,2),...
-            nodeDispMat(indStartTrans:indEndTrans,4))
+            nodeDispMat(indStartTrans:indEndTrans,4),'r.')
+        plot(nodeDispMat(indStartTrans:indEndTrans,2),...
+            smoothVals(indStartTrans:indEndTrans,1))
         xlabel('Anterior Translation');
         ylabel('Compressive Translation');
     end
+        
+    [~,dislocDist] = findpeaks(smoothVals(indStartTrans:indEndTrans,1),...
+        nodeDispMat(indStartTrans:indEndTrans,2))
     
     %Find the peak of this curve
     [~,dislocDist] = findpeaks(nodeDispMat(indStartTrans:indEndTrans,4),...
         nodeDispMat(indStartTrans:indEndTrans,2));
     
     %Check for singular peak
-    if size(dislocDist,2) ~= 1
+    if size(dislocDist,1) ~= 1
         error('More or less than one peak found in anterior-compression translation curve.')
     end
     

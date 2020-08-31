@@ -90,13 +90,19 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     [humerusF,humerusV] = mergeVertices(humerusF,humerusV);
     
     %Update the waitbar
-    waitbar(0.66/9,wbar,'Importing articulating surface...');
+    waitbar(0.66/9,wbar,'Importing articulating surfaces...');
     
     %Humeral articulating surface
     [headSTLstruct] = import_STL(['HumerusArticulating_',limb,'.stl']);
     headF = headSTLstruct.solidFaces{1}; %Faces
     headV = headSTLstruct.solidVertices{1}; %Vertices
     [headF,headV] = mergeVertices(headF,headV);
+    
+    %Glenoid surface
+    [surfaceSTLstruct] = import_STL(['GlenoidSurface_',limb,'.stl']);
+    surfaceF = surfaceSTLstruct.solidFaces{1}; %Faces
+    surfaceV = surfaceSTLstruct.solidVertices{1}; %Vertices
+    [surfaceF,surfaceV] = mergeVertices(surfaceF,surfaceV);
 
     % % % %Convert mm nodes to m
     % % % scapulaV = scapulaV / 1000;
@@ -121,7 +127,8 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     clear pp
 
     %Humeral landmarks
-    humPoints = [{'GHJC'},{'EL'},{'EM'}];
+% % %     humPoints = [{'HHC'},{'EL'},{'EM'}];
+    humPoints = [{'EL'},{'EM'}];
     for pp = 1:length(humPoints)
         tree = xml_read([humPoints{pp},'.txt']);
         landmarks.(char(tree.Point.Name)) = tree.Point.Coordinate;% / 1000;
@@ -142,14 +149,8 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     clear tree
     
     %Create the GH landmark
+    landmarks.GH = createGH(surfaceV,shapes,generatePlots);
     
-    
-    %% CREATE GH LANDMARK HERE
-    
-    
-    
-    %%
-
     %Visualise
     %Get current landmarks
     currLandmarks = fieldnames(landmarks);
@@ -395,10 +396,7 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     end
 
     %% Create humeral coordinate system
-
-    %%%%% TODO: should really rename the GHJC to HHC to reflect what it
-    %%%%% actually is...
-    
+   
     %Create landmark at the midpoint of EL and EM
     landmarks.EJC(1) = (landmarks.EL(1) + landmarks.EM(1)) / 2;
     landmarks.EJC(2) = (landmarks.EL(2) + landmarks.EM(2)) / 2;
@@ -408,16 +406,16 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     Ytemp = createLine3d(landmarks.EJC,landmarks.GH);
     humerusCS.Yc = [landmarks.GH,Ytemp(4:end)];
 
-    %Create plane that goes through EL, EM and GHJC
-    humBodyPlane = createPlane(landmarks.EL,landmarks.EM,landmarks.GHJC);
+    %Create plane that goes through EL, EM and GH
+    humBodyPlane = createPlane(landmarks.EL,landmarks.EM,landmarks.GH);
     %Get normal of plane
     humBodyNormal = planeNormal(humBodyPlane);
-    %Create line at GHJC origin with normal of this plane
-    humerusCS.Xc = createLine3d(landmarks.GHJC,humBodyNormal(1),humBodyNormal(2),humBodyNormal(3));
+    %Create line at GH origin with normal of this plane
+    humerusCS.Xc = createLine3d(landmarks.GH,humBodyNormal(1),humBodyNormal(2),humBodyNormal(3));
 
     %Take cross product of other two axes
     Ztemp = crossProduct3d(humerusCS.Yc(4:end),humerusCS.Xc(4:end))*-1;
-    humerusCS.Zc = [landmarks.GHJC,Ztemp];
+    humerusCS.Zc = [landmarks.GH,Ztemp];
 
     %Visualise axes
     if generatePlots
@@ -450,7 +448,7 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
 
     %% Align humerus with scapula and translate to a 'neutral' position
     %  Here the neutral position corresponds to a distance of 10mm for the
-    %  GHJC from the deep glenoid point. This assists with the basic force
+    %  GH from the deep glenoid point. This assists with the basic force
     %  application later in FEA simulations.
     
     %Update waitbar
@@ -483,7 +481,8 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     clear cc
 
     %Rotate landmarks
-    landmarks.GHJC = transformPoint3d(landmarks.GHJC,humerusRotX);
+% % %     landmarks.HHC = transformPoint3d(landmarks.HHC,humerusRotX);
+    landmarks.GH = transformPoint3d(landmarks.GH,humerusRotX);
     landmarks.EL = transformPoint3d(landmarks.EL,humerusRotX);
     landmarks.EM = transformPoint3d(landmarks.EM,humerusRotX);
     landmarks.EJC = transformPoint3d(landmarks.EJC,humerusRotX);
@@ -516,7 +515,8 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     clear cc
 
     %Rotate landmarks
-    landmarks.GHJC = transformPoint3d(landmarks.GHJC,humerusRotZ);
+% % %     landmarks.HHC = transformPoint3d(landmarks.HHC,humerusRotZ);
+    landmarks.GH = transformPoint3d(landmarks.GH,humerusRotZ);
     landmarks.EL = transformPoint3d(landmarks.EL,humerusRotZ);
     landmarks.EM = transformPoint3d(landmarks.EM,humerusRotZ);
     landmarks.EJC = transformPoint3d(landmarks.EJC,humerusRotZ);
@@ -524,7 +524,7 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     %Rotate shapes
     shapes.headSphere.centre = transformPoint3d(shapes.headSphere.centre,humerusRotZ);
 
-    %Translate the GHJC to align with the deep glenoid. The joint centre will
+    %Translate the GH to align with the deep glenoid. The joint centre will
     %be placed at a distance of 10mm plus the humeral head sphere radius from
     %the deep glenoid point along the world Z-axes. Theoretically this should
     %position the edge of the humeral head 10mm from the deep glenoid point.
@@ -534,7 +534,7 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     desiredGHJCpoint = [0,0,10 + shapes.headSphere.radius];
 
     %Calculate required shift to get this based on the current GHJC position
-    humerusTranslate = landmarks.GHJC - desiredGHJCpoint;
+    humerusTranslate = landmarks.GH - desiredGHJCpoint;
 
     %Shift humerus points
     for pp = 1:length(humerusV)
@@ -555,7 +555,8 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     clear cc
 
     %Shift landmarks
-    landmarks.GHJC = landmarks.GHJC - humerusTranslate;
+% % %     landmarks.HHC = landmarks.HHC - humerusTranslate;
+    landmarks.GH = landmarks.GH - humerusTranslate;
     landmarks.EL = landmarks.EL - humerusTranslate;
     landmarks.EM = landmarks.EM - humerusTranslate;
     landmarks.EJC = landmarks.EJC - humerusTranslate;
