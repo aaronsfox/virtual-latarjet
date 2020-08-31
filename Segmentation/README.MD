@@ -20,7 +20,7 @@ The following section outlines the steps for creating the meshes used for analys
 - The 3matic 'Adaptive Remesh' feature was used to remesh the triangles of the surfaces. A target edge length of 0.5mm and maximum edge length of 1.0mm were used while maintaining surface contours. This resulted in quite a fine mesh but this will be re-assessed later with mesh refinement processes.
 - A sphere was fit to the humeral head ('HeadSphere') by marking selected triangles with the brush mark and fitting an analytical sphere to these. The triangles were copiedand retained in a new surface part to be exported later.
 - A series of landmarks were marked according to the definitions provided by Wu et al. (2005).
-- A 'GHJ' point was created at the centre of the aforementioned sphere.
+- A 'HHC' point was created at the centre of the aforementioned sphere.
 - The epicondyle points of the humerus were marked and labelled as 'EL' and 'EM'.
 - The angulus acromialis ('AA'), trigonum scapulae ('TS'), angulus inferior ('AI'), the most dorsal point of the acromioclavicular joint ('AC'), and most ventral point on the coracoid process ('PC') were marked on the scapula.
 - The supraglenoid ('SGT') and infraglenoid ('IGT') tubercles of the scapula were marked.
@@ -28,7 +28,7 @@ The following section outlines the steps for creating the meshes used for analys
 - A plane was fit to the glenoid surface ('GlenoidPlane') by marking triangles on the glenoid face. These triangles were copied and retained as a separate part.
 - This plane was used to identify and create a point at the central deepest point of the glenoid surface ('DeepGlenoidPoint').
 - Prior to exporting, the humerus and scapula surfaces were remeshed using the 3matic 'Uniform Remesh' function (target triangle edge length = 0.5, preserve sharp edges = true, sharp edge angle = 60). This is quite a fine mesh, however we will adjust and potentially adapt this with a later mesh refinement procedure.
-- The humerus ('Humerus_r') and scapula ('Scapula_r'), along with the extracted triangles of the humeral head surface ('HumerusArticulating_r'), were exported as ASCII .stl files.
+- The humerus ('Humerus_r') and scapula ('Scapula_r'), along with the extracted triangles of the humeral head surface ('HumerusArticulating_r') and glenoid surface ('GlenoidSurface_r'), were exported as ASCII .stl files.
 - All landmarks and objects were exported as 'Curves and Primitives' to separate .xml files.
 - All files were saved in the participant's ID folder under the 'Segmentation' folder.
 - These files were used as inputs in a subsequent Matlab code (see: ***TODO: add .m filename***).
