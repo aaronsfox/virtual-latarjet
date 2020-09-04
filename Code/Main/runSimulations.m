@@ -358,31 +358,26 @@ function runSimulations()
                     %Create a directory to store current simulation data
                     mkdir(simName); cd(simName);
                     
-                    
-                    %%%%%%% TODO: HAVE INCREASED STEP NUMBERS AND REDUCED
-                    %%%%%%% STEP SIZE FOR TRANSLATE STEP AS IT'S NEEDE FOR
-                    %%%%%%% SHORTER TRANSLATION INCREMENTS --- BUT IT
-                    %%%%%%% DOESN'T SEEM TO BE GETTING RESPECTED IN
-                    %%%%%%% FEBIO??????
-                    
-                    %Create the FEBio run file
+                    %Create the FEBio run file for the distance to
+                    %dislocation testing
+                    simType = 'translation';
                     if gg == 1
                         %Use the baseline glenoid mesh structure
                         [feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
                             feaMeshOutputs.(char(simName)).headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,...
                             simName,elvTestAngles(ee),rotTestAngles(rr),glenoidRotations(tt),...
-                            scapulaCS,humerusCS,landmarks,generatePlots);
+                            scapulaCS,humerusCS,landmarks,simType,generatePlots);
                     else
                         %Use the defect glenoid mesh structure
                         [feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
                             feaMeshOutputs.(char(simName)).headMeshOutput] = createFEBioRunFile(anteroInferiorDefectsMesh.(glenoidTests{gg}),headMesh,...
                             simName,elvTestAngles(ee),rotTestAngles(rr),glenoidRotations(tt),...
-                            scapulaCS,humerusCS,landmarks,generatePlots);
+                            scapulaCS,humerusCS,landmarks,simType,generatePlots);
                     end
-
+                    
                     %Set FEBio analysis details
-                    febioAnalysis.run_filename = [simName,'.feb']; %The input file name
-                    febioAnalysis.run_logname = [simName,'.txt']; %The name for the log file
+                    febioAnalysis.run_filename = [simName,'_',simType,'.feb']; %The input file name
+                    febioAnalysis.run_logname = [simName,'_',simType,'.txt']; %The name for the log file
                     febioAnalysis.disp_on = 1; %Display information on the command window
                     febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
                     febioAnalysis.runMode = 'internal';
@@ -395,22 +390,40 @@ function runSimulations()
                     %Run the simulation in FEBio
                     clc
                     %%%%% TODO: write up display outputs better to track progress
-                    
-                    
-                    %%%%%%% even the 0.1 N increase per step seems to
-                    %%%%%%% aggressive for defect model --- it flies off
-                    %%%%%%% before it translates, which overestimates
-                    %%%%%%% distance to dislocation...maybe need a
-                    %%%%%%% displacement driven translation problem to
-                    %%%%%%% solve dislocation distance?
-                    
-                    
                     [runFlag(gg)] = runMonitorFEBio(febioAnalysis);
+                    
+                    %Create the FEBio run file for the force simulation
+                    simType = 'force';
+                    if gg == 1
+                        %Use the baseline glenoid mesh structure
+                        [feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
+                            feaMeshOutputs.(char(simName)).headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,...
+                            simName,elvTestAngles(ee),rotTestAngles(rr),glenoidRotations(tt),...
+                            scapulaCS,humerusCS,landmarks,simType,generatePlots);
+                    else
+                        %Use the defect glenoid mesh structure
+                        [feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
+                            feaMeshOutputs.(char(simName)).headMeshOutput] = createFEBioRunFile(anteroInferiorDefectsMesh.(glenoidTests{gg}),headMesh,...
+                            simName,elvTestAngles(ee),rotTestAngles(rr),glenoidRotations(tt),...
+                            scapulaCS,humerusCS,landmarks,simType,generatePlots);
+                    end
+                    
+                    %Set FEBio analysis details
+                    febioAnalysis.run_filename = [simName,'_',simType,'.feb']; %The input file name
+                    febioAnalysis.run_logname = [simName,'_',simType,'.txt']; %The name for the log file
+                    febioAnalysis.disp_on = 1; %Display information on the command window
+                    febioAnalysis.disp_log_on = 1; %Display convergence information in the command window
+                    febioAnalysis.runMode = 'internal';
+                    febioAnalysis.t_check = 0.25; %Time for checking log file (dont set too small)
+                    febioAnalysis.maxtpi = 1e99; %Max analysis time
+                    febioAnalysis.maxLogCheckTime = 60; %Max log file checking time
+                    %Specifying path required on lab PC for some reason???
+                    febioAnalysis.FEBioPath = 'C:\Program Files\FEBio2.8.3\bin\FEBio2.exe';
 
-                    %%%%% TODO: check why for some reason Matlab crashes out when FEBio
-                    %%%%% continues to run --- might need to switch to internal???
-                    %%%%% Internal running seems to fix this --- but
-                    %%%%% potentially slows sims down? 
+                    %Run the simulation in FEBio
+                    clc
+                    %%%%% TODO: write up display outputs better to track progress
+                    [runFlag(gg)] = runMonitorFEBio(febioAnalysis);
 
                     %Navigate back up a directory
                     cd('..');
@@ -471,7 +484,7 @@ function runSimulations()
                         %Navigate to run directory
                         cd(simName);
 
-                        %Run process function to collate results
+                        %Run process function to collate results from both simulations 
                         [processedResults.(char(simName))] = processFEBioResults(simName,...
                             feaMeshOutputs.(char(simName)).glenoidMeshOutput,...
                             feaMeshOutputs.(char(simName)).headMeshOutput,...

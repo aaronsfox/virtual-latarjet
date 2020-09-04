@@ -1,5 +1,5 @@
 function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,headMesh,febioFebFileNamePart,...
-    elevationAngle,rotationAngle,glenoidRotation,scapulaCS,humerusCS,landmarks,generatePlots)
+    elevationAngle,rotationAngle,glenoidRotation,scapulaCS,humerusCS,landmarks,simType,generatePlots)
 
     %% This function serves to import in and create the base surface system for
     %  running the FEA analysis of the humeral head against the glenoid.
@@ -24,6 +24,8 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %                       system so that the glenoid can be rotated
     %   landmarks           structure containing imported landmark points
     %                       on scapula/humerus
+    %   simType             string of 'translation' or 'force' for the two
+    %                       different driven simulations
     %   generatePlots       flag whether to generate figures from the
     %                       processing throughout the function (default = false)
     %   
@@ -52,10 +54,10 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %% Check inputs
 
     %Need all inputs
-    if nargin < 9
+    if nargin < 10
         error('Need all function inputs except for generatePlots')
     end
-    if nargin < 10
+    if nargin < 11
         generatePlots = false;
     end
     
@@ -423,13 +425,29 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %%%%% alignment of humerus and scapula axes????? May be best to check
     %%%%% this on another participant at some stage
     
+    %Having aspects on the cut flat surface as contact faces seems to slow
+    %down the simulation, potentially due to the shering sort of contact
+    %they experience. We can remove these from the contact surface by
+    %extracting the patch norms that are directly points along the X-axis.
+    %We can also remove those on the back surface too for brevity based on
+    %those that are exactly -Z
+    
+    %Extract the glenoid face normals
+    glenoidNormals = patchNormal(glenoidF,glenoidVolV);
+    
+    %Identify those that are either directly pointing along the +X or -Z
+    notFaces = glenoidNormals(:,1) == 1 | glenoidNormals(:,3) == -1;
+    
+    %Get the glenoid surface faces that we want to keep
+    keepFaces = glenoidF(~notFaces,:);
+    
     % Plotting surface models and contact faces
     if generatePlots
         cFigure; hold on;
         title('Contact sets and normal directions');
         gpatch(glenoidF,glenoidVolV,'kw','none',0.3); 
         hl(1) = gpatch(glenoidF,glenoidVolV,'g','k',1); 
-        patchNormPlot(glenoidF,glenoidVolV);
+        patchNormPlot(keepFaces,glenoidVolV);
         hl(2) = gpatch(headF,headVolV,'b','k',1);
         patchNormPlot(headF,headVolV);
         legend(hl,{'Master','Slave'});
@@ -439,8 +457,8 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     
     %Add surfaces
     febio_spec.Geometry.Surface{1}.ATTR.name = 'headToGlenoid_master';
-    febio_spec.Geometry.Surface{1}.tri3.ATTR.lid = (1:1:size(glenoidF,1))';
-    febio_spec.Geometry.Surface{1}.tri3.VAL = glenoidF;
+    febio_spec.Geometry.Surface{1}.tri3.ATTR.lid = (1:1:size(keepFaces,1))';
+    febio_spec.Geometry.Surface{1}.tri3.VAL = keepFaces;
     
     febio_spec.Geometry.Surface{2}.ATTR.name = 'headToGlenoid_slave';
     febio_spec.Geometry.Surface{2}.quad4.ATTR.lid = (1:1:size(headF,1))';
@@ -512,6 +530,10 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %reaching the glenoid edge smoothly (i.e. it progresses to the edge and
     %then rolls back) --- which is computationally expensive from the model
     %perspective.
+    %
+    %The translation driven approach causes 45mm displacement at 0.5mm
+    %intervals, and hence takes 9 seconds to reach it's maximum of 30. This
+    %is why we have a load curve of 2-11 seconds.
     
     %Compression load curve
     febio_spec.LoadData.loadcurve{1}.ATTR.id = 1;
@@ -519,14 +541,16 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     febio_spec.LoadData.loadcurve{1}.point.VAL = [0 0; 2 1];
 
     %Translation load curve
-    febio_spec.LoadData.loadcurve{2}.ATTR.id = 2;
-    febio_spec.LoadData.loadcurve{2}.ATTR.type = 'linear';
-    febio_spec.LoadData.loadcurve{2}.point.VAL = [2 0; 2.1 0.1; 111.1 1];
-    
-    %Translation DISPLACEMENT load curve
-    febio_spec.LoadData.loadcurve{3}.ATTR.id = 3;
-    febio_spec.LoadData.loadcurve{3}.ATTR.type = 'linear';
-    febio_spec.LoadData.loadcurve{3}.point.VAL = [2 0; 30 1];
+    %Driven by displacement or force
+    if strcmp(simType,'translation')
+        febio_spec.LoadData.loadcurve{2}.ATTR.id = 2;
+        febio_spec.LoadData.loadcurve{2}.ATTR.type = 'linear';
+        febio_spec.LoadData.loadcurve{2}.point.VAL = [2 0; 11 1];
+    elseif strcmp(simType,'force')
+        febio_spec.LoadData.loadcurve{2}.ATTR.id = 2;
+        febio_spec.LoadData.loadcurve{2}.ATTR.type = 'linear';
+        febio_spec.LoadData.loadcurve{2}.point.VAL = [2 0; 2.1 0.1; 11.1 1];
+    end    
 
     %% Output section
 
@@ -588,55 +612,6 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     febio_spec.Step{1}.Loads.body_load{1}.z.VAL = compressionForce;
     febio_spec.Step{1}.Loads.body_load{1}.z.ATTR.lc = 1;
 
-% % %     %Add second step
-% % % 
-% % %     %Control section
-% % %     %Translation step. This applies the translational force at 1N
-% % %     %intervals at each 0.1s step size. We set this to 50 steps in order to
-% % %     %reach a force of 60N, as the stability ratios provided in Moroder et
-% % %     %al. (2019) did not appear to reach this (not much above 50%).
-% % %     
-% % %     febio_spec.Step{2}.ATTR.name = 'translate';
-% % %     febio_spec.Step{2}.Control.time_steps = 500;
-% % %     febio_spec.Step{2}.Control.step_size = 0.1;
-% % %     febio_spec.Step{2}.Control.max_refs = 25;
-% % %     febio_spec.Step{2}.Control.max_ups = 0;
-% % %     febio_spec.Step{2}.Control.diverge_reform = 1;
-% % %     febio_spec.Step{2}.Control.reform_each_time_step = 1;
-% % %     febio_spec.Step{2}.Control.dtol = 0.001;
-% % %     febio_spec.Step{2}.Control.etol = 0.01;
-% % %     febio_spec.Step{2}.Control.rtol = 0;
-% % %     febio_spec.Step{2}.Control.lstol = 0.9;
-% % %     febio_spec.Step{2}.Control.min_residual = 1e-20;
-% % %     febio_spec.Step{2}.Control.qnmethod = 0;
-% % %     febio_spec.Step{2}.Control.rhoi = 0;
-% % %     febio_spec.Step{2}.Control.time_stepper.dtmin = 0.01;
-% % %     febio_spec.Step{2}.Control.time_stepper.dtmax = 0.1;
-% % %     febio_spec.Step{2}.Control.time_stepper.max_retries = 10;
-% % %     febio_spec.Step{2}.Control.time_stepper.opt_iter = 10;
-% % %     febio_spec.Step{2}.Control.analysis.ATTR.type = 'dynamic';
-% % %     febio_spec.Step{2}.Control.symmetric_stiffness = 0;
-% % % 
-% % %     %Boundary section
-% % %     %Given that compression is occurring along the Z-axis, and translation
-% % %     %is occurring purely along the X-axis --- we can just allow movements
-% % %     %along these directions.
-% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.ATTR.mat = 2;
-% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
-% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'Rx';
-% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Ry';
-% % %     febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Rz';
-% % % 
-% % %     %Load section
-% % %     %Add the translational load to the head elements, purely X-axis force 
-% % %     %but needs to be inverted to translate anteriorly along the glenoid
-% % %     febio_spec.Step{2}.Loads.body_load{1}.ATTR.type = 'const';
-% % %     febio_spec.Step{2}.Loads.body_load{1}.ATTR.elem_set = 'headPart';
-% % %     febio_spec.Step{2}.Loads.body_load{1}.x.VAL = translationForce*-1;
-% % %     febio_spec.Step{2}.Loads.body_load{1}.x.ATTR.lc = 2;
-
-    %% Testing out displacement approach
-    
     %Add second step
 
     %Control section
@@ -645,47 +620,97 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile(glenoidMesh,hea
     %reach a force of 60N, as the stability ratios provided in Moroder et
     %al. (2019) did not appear to reach this (not much above 50%).
     
-    febio_spec.Step{2}.ATTR.name = 'translate';
-    febio_spec.Step{2}.Control.time_steps = 300;
-    febio_spec.Step{2}.Control.step_size = 0.1;
-    febio_spec.Step{2}.Control.max_refs = 25;
-    febio_spec.Step{2}.Control.max_ups = 0;
-    febio_spec.Step{2}.Control.diverge_reform = 1;
-    febio_spec.Step{2}.Control.reform_each_time_step = 1;
-    febio_spec.Step{2}.Control.dtol = 0.001;
-    febio_spec.Step{2}.Control.etol = 0.01;
-    febio_spec.Step{2}.Control.rtol = 0;
-    febio_spec.Step{2}.Control.lstol = 0.9;
-    febio_spec.Step{2}.Control.min_residual = 1e-20;
-    febio_spec.Step{2}.Control.qnmethod = 0;
-    febio_spec.Step{2}.Control.rhoi = 0;
-    febio_spec.Step{2}.Control.time_stepper.dtmin = 0.01;
-    febio_spec.Step{2}.Control.time_stepper.dtmax = 0.1;
-    febio_spec.Step{2}.Control.time_stepper.max_retries = 10;
-    febio_spec.Step{2}.Control.time_stepper.opt_iter = 10;
-    febio_spec.Step{2}.Control.analysis.ATTR.type = 'dynamic';
-    febio_spec.Step{2}.Control.symmetric_stiffness = 0;
+    %Second step is either displacement vs. force control
+    if strcmp(simType,'translation')
+        
+        %The specified steps here aim to move the head 45mm. It moves 0.5mm
+        %at each step, hence we need 90 steps
+        febio_spec.Step{2}.ATTR.name = 'translate';
+        febio_spec.Step{2}.Control.time_steps = 90;
+        febio_spec.Step{2}.Control.step_size = 0.1;
+        febio_spec.Step{2}.Control.max_refs = 25;
+        febio_spec.Step{2}.Control.max_ups = 0;
+        febio_spec.Step{2}.Control.diverge_reform = 1;
+        febio_spec.Step{2}.Control.reform_each_time_step = 1;
+        febio_spec.Step{2}.Control.dtol = 0.001;
+        febio_spec.Step{2}.Control.etol = 0.01;
+        febio_spec.Step{2}.Control.rtol = 0;
+        febio_spec.Step{2}.Control.lstol = 0.9;
+        febio_spec.Step{2}.Control.min_residual = 1e-20;
+        febio_spec.Step{2}.Control.qnmethod = 0;
+        febio_spec.Step{2}.Control.rhoi = 0;
+        febio_spec.Step{2}.Control.time_stepper.dtmin = 0.01;
+        febio_spec.Step{2}.Control.time_stepper.dtmax = 0.1;
+        febio_spec.Step{2}.Control.time_stepper.max_retries = 10;
+        febio_spec.Step{2}.Control.time_stepper.opt_iter = 10;
+        febio_spec.Step{2}.Control.analysis.ATTR.type = 'dynamic';
+        febio_spec.Step{2}.Control.symmetric_stiffness = 0;
 
-    %Boundary section
-    %Given that compression is occurring along the Z-axis, and translation
-    %is occurring purely along the X-axis --- we can just allow movements
-    %along these directions.
-    febio_spec.Step{2}.Boundary.rigid_body{1}.ATTR.mat = 2;
-    febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
-    febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'Rx';
-    febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Ry';
-    febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Rz';
-    febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.bc = 'x';
-    febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.lc = 3;
-    febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.VAL= 30;
-    
+        %Boundary section
+        %Given that compression is occurring along the Z-axis, and translation
+        %is occurring purely along the X-axis --- we can just allow movements
+        %along these directions.
+        febio_spec.Step{2}.Boundary.rigid_body{1}.ATTR.mat = 2;
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'Rx';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Ry';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Rz';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.bc = 'x';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.ATTR.lc = 2;
+        febio_spec.Step{2}.Boundary.rigid_body{1}.prescribed.VAL = 45;
+        
+    elseif strcmp(simType,'force')    
+        
+        febio_spec.Step{2}.ATTR.name = 'translate';
+        febio_spec.Step{2}.Control.time_steps = 50;
+        febio_spec.Step{2}.Control.step_size = 0.1;
+        febio_spec.Step{2}.Control.max_refs = 25;
+        febio_spec.Step{2}.Control.max_ups = 0;
+        febio_spec.Step{2}.Control.diverge_reform = 1;
+        febio_spec.Step{2}.Control.reform_each_time_step = 1;
+        febio_spec.Step{2}.Control.dtol = 0.001;
+        febio_spec.Step{2}.Control.etol = 0.01;
+        febio_spec.Step{2}.Control.rtol = 0;
+        febio_spec.Step{2}.Control.lstol = 0.9;
+        febio_spec.Step{2}.Control.min_residual = 1e-20;
+        febio_spec.Step{2}.Control.qnmethod = 0;
+        febio_spec.Step{2}.Control.rhoi = 0;
+        febio_spec.Step{2}.Control.time_stepper.dtmin = 0.01;
+        febio_spec.Step{2}.Control.time_stepper.dtmax = 0.1;
+        febio_spec.Step{2}.Control.time_stepper.max_retries = 10;
+        febio_spec.Step{2}.Control.time_stepper.opt_iter = 10;
+        febio_spec.Step{2}.Control.analysis.ATTR.type = 'dynamic';
+        febio_spec.Step{2}.Control.symmetric_stiffness = 0;
+
+        %Boundary section
+        %Given that compression is occurring along the Z-axis, and translation
+        %is occurring purely along the X-axis --- we can just allow movements
+        %along these directions.
+        febio_spec.Step{2}.Boundary.rigid_body{1}.ATTR.mat = 2;
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{1}.ATTR.bc = 'y';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{2}.ATTR.bc = 'Rx';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{3}.ATTR.bc = 'Ry';
+        febio_spec.Step{2}.Boundary.rigid_body{1}.fixed{4}.ATTR.bc = 'Rz';
+
+        %Load section
+        %Add the translational load to the head elements, purely X-axis force 
+        %but needs to be inverted to translate anteriorly along the glenoid
+        febio_spec.Step{2}.Loads.body_load{1}.ATTR.type = 'const';
+        febio_spec.Step{2}.Loads.body_load{1}.ATTR.elem_set = 'headPart';
+        febio_spec.Step{2}.Loads.body_load{1}.x.VAL = translationForce*-1;
+        febio_spec.Step{2}.Loads.body_load{1}.x.ATTR.lc = 2;
+        
+    end
 
     %% Output section 
     
+    %Set filename variable
+    fileName = [febioFebFileNamePart,'_',simType];
+    
     %Defining file names
-    febioFebFileName = [febioFebFileNamePart,'.feb']; %FEB file name
-    febioLogFileName = [febioFebFileNamePart,'.txt']; %FEBio log file name
-    febioLogFileName_dispHead = [febioFebFileNamePart,'_dispHead_out.txt']; %Log file name for exporting displacement
+    febioFebFileName = [fileName,'.feb']; %FEB file name
+    febioLogFileName = [fileName,'.txt']; %FEBio log file name
+    febioLogFileName_dispHead = [fileName,'_dispHead_out.txt']; %Log file name for exporting displacement
     % febioLogFileName_force=[febioFebFileNamePart,'_force_out.txt']; %Log file name for exporting force
 
     %Log file

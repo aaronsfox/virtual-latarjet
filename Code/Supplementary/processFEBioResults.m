@@ -16,7 +16,7 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     %   landmarks           structure containing imported landmark points
     %                       on scapula/humerus
     %   exportAnimation     flag whether to export the animated gif of the
-    %                       FEA simulation via GIBBON
+    %                       FEA simulation via GIBBON   
     %   generatePlots       flag whether to generate figures from the
     %                       processing throughout the function (default = false)
     %   
@@ -30,6 +30,11 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     %  (https://au.mathworks.com/matlabcentral/fileexchange/24484-geom3d).
     
     warning off
+    
+    %%
+    
+    %%%%%%%% TODO: INSTEAD OF A SIM TYPE IT'S PROBABLY BETTER JUST TO
+    %%%%%%%% INCORPORATE BOTH FEBIO RESULT SETS IN THIS FUNCTION
 
     %% Check inputs
 
@@ -42,13 +47,20 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     
     %% Set-up
     
-    %Import the output log file for displacements
-    [timeMat,nodeDispMat] = importFEBio_logfile([febioFileNamePart,'_dispHead_out.txt']); %Nodal displacements
+    %Set filename variable
+    fileNameTranslate = [febioFileNamePart,'_translation'];
+    fileNameForce = [febioFileNamePart,'_force'];
     
-    %% Calculate dislocation point data 
+    %Import the output log file for displacements from translation sim
+    [timeMatTranslate,nodeDispMatTranslate] = importFEBio_logfile([fileNameTranslate,'_dispHead_out.txt']); %Nodal displacements
+    
+    %Import the output log file for displacements from force sim
+    [timeMatForce,nodeDispMatForce] = importFEBio_logfile([fileNameForce,'_dispHead_out.txt']); %Nodal displacements
+    
+    %% Calculate dislocation point data from the translation simulation
     
     %Find where anterior translation starts
-    indStartTrans = find(diff(nodeDispMat(:,2)) > 0,1);
+    indStartTrans = find(diff(nodeDispMatTranslate(:,2)) > 0,1);
     
     %Find where anterior translation equates to radius of glenoid length as
     %a section to fit the spline curve to
@@ -64,55 +76,62 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     %Calculate the distance between the points for glenoid length
     glenoidLength = distancePoints3d(projSupGlenoid,projInfGlenoid);
     
-    %Find point where translation is half of glenoid length
-    indEndTrans = find(nodeDispMat(:,2) > (glenoidLength/2),1);
+    %Find point where translation is 0.75 of glenoid length
+    indEndTrans = find(nodeDispMatTranslate(:,2) > (glenoidLength*0.75),1);
     
-    %Create smoothing function and get values
-    smoothFunc = csapi(nodeDispMat(:,2),nodeDispMat(:,4));
-    smoothVals = fnval(smoothFunc,nodeDispMat(:,2));
+    %Smooth values
+    windowSize = 15; %%%%% seems to result in appropriately smoothed curve
+    smoothVals = smooth(nodeDispMatTranslate(:,2),nodeDispMatTranslate(:,4),windowSize);
     
     %Visualise translation vs. compression curve
     if generatePlots
-        hold on
-        plot(nodeDispMat(indStartTrans:indEndTrans,2),...
-            nodeDispMat(indStartTrans:indEndTrans,4),'r.')
-        plot(nodeDispMat(indStartTrans:indEndTrans,2),...
-            smoothVals(indStartTrans:indEndTrans,1))
+        figure; hold on
+        plot(nodeDispMatTranslate(indStartTrans:indEndTrans,2),...
+            smoothVals(indStartTrans:indEndTrans,1),...
+            '-b','LineWidth',2)
+        plot(nodeDispMatTranslate(indStartTrans:indEndTrans,2),...
+            nodeDispMatTranslate(indStartTrans:indEndTrans,4),'r.')
         xlabel('Anterior Translation');
         ylabel('Compressive Translation');
     end
-        
-    [~,dislocDist] = findpeaks(smoothVals(indStartTrans:indEndTrans,1),...
-        nodeDispMat(indStartTrans:indEndTrans,2))
     
-    %Find the peak of this curve
-    [~,dislocDist] = findpeaks(nodeDispMat(indStartTrans:indEndTrans,4),...
-        nodeDispMat(indStartTrans:indEndTrans,2));
+    %Find peaks of smoothed curve
+    [~,dislocDist] = findpeaks(smoothVals(indStartTrans:indEndTrans,1),...
+        nodeDispMatTranslate(indStartTrans:indEndTrans,2));    
+    
+% % %     %Find the peak of normal points
+% % %     [~,dislocDist] = findpeaks(nodeDispMat(indStartTrans:indEndTrans,4),...
+% % %         nodeDispMat(indStartTrans:indEndTrans,2));
     
     %Check for singular peak
     if size(dislocDist,1) ~= 1
         error('More or less than one peak found in anterior-compression translation curve.')
     end
     
-    %Identify the index of where the translational peaks are
-    dislocInd = find(nodeDispMat(:,2) == dislocDist);
+    %Find the nearest index to this for animation purposes
+    dislocInd = find(nodeDispMatTranslate(indStartTrans:end,2) > dislocDist,1);
+    
+    %% Calculate the force required to get to the dislocation distance
+    
+    %Identify the index where the dislocation distance is exceeded
+	dislocForceInd = find(nodeDispMatForce(:,2) > dislocDist,1) - 1;
     
     %Get the time where dislocation occurred
-    dislocTime = timeMat(dislocInd);
-    
+    dislocTime = timeMatForce(dislocForceInd);
+
     %Identify the translation force being applied at the point of dislocation
     %This considers that at 2.1 seconds 10N of force was being applied, and
     %force increases at a rate of 10N per second in the simulation set-up
     forceStartTime = 2.1;
     forceStartMagnitude = 10;
     forcePerSecond = 10;
-    
+
     %Identify difference between force start and dislocation times
     dislocTimeDiff = dislocTime - forceStartTime;
-    
+
     %Calculate dislocation force based on time difference and force rate
     dislocForce = forceStartMagnitude + (forcePerSecond * dislocTimeDiff);
-    
+
     %Calculate stability ratio, considering compressive force of 100N
     compressForce = 100;
     stabilityRatio = dislocForce / compressForce * 100;
@@ -123,36 +142,42 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     
         %Set scaled RGB bone colour
         boneRGB = [251/255 244/255 231/255];
-
+        
+        %Get starting point displacement based on when translation starts
+        DNstart = nodeDispMatTranslate(indStartTrans,2:4);
+        
+        %Get the displaced nodal coordinates, factoring in starting position
+        V_defStart = headMeshOutput.headVolV + DNstart;
+        
         %Create basic view and store graphics handle to initiate animation    
         hf = cFigure;
         gtitle([febioFileNamePart,' Animation']);
-        hp1 = gpatch(headMeshOutput.headVolFb,headMeshOutput.headVolV,boneRGB,'none');
+        hp1 = gpatch(headMeshOutput.headVolFb,V_defStart,boneRGB,'none');
         hp2 = gpatch(glenoidMeshOutput.glenoidF,glenoidMeshOutput.glenoidVolV,boneRGB,'none'); %Add graphics object to animate
         axisGeom; camlight headlight
 
         %Set animation time
         %Go to the dislocation point plus a second
-        animEndInd = find(timeMat > timeMat(dislocInd) + 1.0,1);
-        animStruct.Time = timeMat(1:animEndInd);
+        animEndInd = find(timeMatTranslate > timeMatTranslate(indStartTrans+dislocInd) + 1.0,1);
+        animStruct.Time = timeMatTranslate(indStartTrans:animEndInd);
 
         %Set the axes to stay in their current position
         ax = gca;
         axis([ax.XLim(1) ax.XLim(2) ax.YLim(1) ax.YLim(2) ax.ZLim(1) ax.ZLim(2)]);
 
         %Loop through time steps to set animation
-        for tt = 1:1:animEndInd
+        for tt = indStartTrans:1:animEndInd
 
             %Get the current displacement value
-            DN = nodeDispMat(tt,2:4);
+            DN = nodeDispMatTranslate(tt,2:4);
 
             %Get the displaced nodal coordinates, factoring in starting position
-            V_def = headMeshOutput.headVolV + DN;
+            V_def = V_defStart + DN;
 
             %Set entries in animation structure
-            animStruct.Handles{tt} = [hp1]; %[hp1 hp1 hp2]; %Handles of objects to animate
-            animStruct.Props{tt} = {'Vertices'}; %{'Vertices','CData','Vertices'}; %Properties of objects to animate
-            animStruct.Set{tt} = {V_def};%{V_def,CF,V_def}; %Property values for to set in order to animate
+            animStruct.Handles{tt-(indStartTrans-1)} = [hp1]; %[hp1 hp1 hp2]; %Handles of objects to animate
+            animStruct.Props{tt-(indStartTrans-1)} = {'Vertices'}; %{'Vertices','CData','Vertices'}; %Properties of objects to animate
+            animStruct.Set{tt-(indStartTrans-1)} = {V_def};%{V_def,CF,V_def}; %Property values for to set in order to animate
 
         end
         clear tt
@@ -180,8 +205,8 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     %% Outputs
     
     %Output the dislocation distance stability ratio and
-    processedOutputs.distanceToDislocation = dislocDist;
     processedOutputs.stabilityRatio = stabilityRatio;
-    
+    processedOutputs.distanceToDislocation = dislocDist;
+        
 %% %%%%% ----- End of importFEBioResults.m ----- %%%%%
 end
