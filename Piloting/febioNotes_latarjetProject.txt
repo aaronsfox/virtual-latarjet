@@ -1,0 +1,49 @@
+changed cartilage materials to isotropic elastic in line with Klemt et al.
+neo-Hookean implementation in FEBio is compressible, which disagrees with the incompressible of Walia et al.
+
+tied-elastic with head fails - auto penalty on; penalty 100, gap tolerance 0.01, augtol 0.1
+	> changed gap tolerance to zero? get some fail to converge messages and reducing time steps and fails
+	
+	>> could be the tied-elastic contact or it could be the change in material, given I thought this contact worked before?
+	
+tied facet to facet with head as primary, augtol 0.1, penalty 100 fails
+	> swapped primary to secondary, seems to progress better, still has time step issues, and fails...
+	> turning augmented lagrangian on results in a seemingly shitty outcome
+	> a low penalty on tied face to face allows the sim to progress, but only because the spjhere projects through the cartilage, and then it fails
+	
+tied facet to facet contact with a 1000 penalty and changing back to neo-Hookean material progresses through the simulation better
+	> this probably produces the cartilage stretching though and some surface penetration, and the material is 'compressible' (not like in Walia et al.)
+	> the cartilage travels with the head but the elements get compressed and squished - likely because of compress-ability
+	> tested out a Mooney-Rivlin with 10/20/1000 properties -- the cartilage moves well with the head and doesn't squish at all!
+		>> From FEBio manual -- This material model uses a standard displacement-based element formulation, so care must be taken when modeling materials with nearly-incompressible material behavior to avoid element locking. For this case, use the Mooney-Rivlin material described in Section 4.1.2.8.
+	> When C2=0 , Mooney-Rivlin reduces to an uncoupled version of the neo-Hookean constitutive model.
+		>> tested this...seems to produce similar resul
+	> There is an incompressible neo-Hookean available in the uncoupled elastic materials, with shear and bulk modulus parameters (don't know what these are?)
+		>> tested this with 10 and 0.4 applied respectively -- get a similar response to the normal neo-Hookean
+			>>> bumped up to 1000 each for the parameters -- get a response much more like the Mooney-Rivlin where the cartilage doesn't squish!
+			>>> Walia et al. has equations for two constants (C and D), likely the shear and bulk modulus
+				>>>> Using these equations gives small numbers, when input to shear and bulk modulus this results in the cartilage stretching rather than translating
+				>>>> Multiply these by 100 (i.e. ~100 and ~800) & you get a better result
+					>>>>> Units in FEBio being dimensionless? Different to the Walia et al. paper? mm vs. m would be 1000 factor...
+					>>>>> Settled on 1000 and 8000 as these for testing purposes, seeing as these gives a quite stiff surface
+	> Added the same material properties to glenoid cartilage and added same tied face to face contact interface between this and glenoid
+		>> Things work as expected, head penetrates glenoid cartilage as there is no contact interface
+	> Added a sliding face to face contct surface between humeral and glenoid cartilage -- augtol 0.1, penatly 1000, auto penalty off, laugon off, humeral primary surface
+		>> things progress well through early simulation, starts to struggle around 0.8-0.9 likel when cartilage contact occurs, solver adjusts time step
+			>>> wouldn't converge, so stopped to see what was happening -- glenoid cartilage is receiving contact and compressing, but has some decent penetration
+		>> cranked up penalty to 1e+07 and re-ran
+			>>> can't deal with the contact -- maybe try auto penalty with 1000 penalty?
+				>>>> 1000 too high, auto penalty with 10 penalty also fails
+		
+	
+	
+tied node on facet seems to produce the same results
+	
+the new isotropic elastic material doesn't seem to want to move?
+
+sliding face to face, rigid as primary, auto penalty on, penalty at 100, augtol 0.01, other default settings
+	> seems to be similarly shitty outcome
+	
+	
+if cartilage doesn't want to move with rigid connection, perhaps apply body load to cartilage?
+	> don't know if this will work any better or solve the contact problem
