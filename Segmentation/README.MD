@@ -28,11 +28,16 @@ The following section outlines the steps for creating the meshes used for analys
 - A plane was fit to the glenoid surface ('GlenoidPlane') by marking triangles on the glenoid face. These triangles were copied and retained as a separate part.
 - This plane was used to identify and create a point at the central deepest point of the glenoid surface ('DeepGlenoidPoint').
 - Prior to exporting, the humerus and scapula surfaces were remeshed using the 3matic 'Uniform Remesh' function (target triangle edge length = 0.5, preserve sharp edges = true, sharp edge angle = 60). This is quite a fine mesh, however we will adjust and potentially adapt this with a later mesh refinement procedure.
+- As much of the coracoid setion prior to hitting scapula/glenboid was marked, and a cylinder fit to this ('CoracoidCylinder'). The axis of this cylinder was used as the normal of a line from the coracoid tip (i.e. end of cylinder). We can create a line starting at the coracoid tip and prjecting along the cylinder axis by a specified distance. The distance was based off two factors . Firstly, guided by the 22 to 27mm recommendation of Bhatia et al. (2014). Secondly, only going to a point that still is onyl coracoid, rather than projecting into the scapula. This line was created and saved as a landmark ('GraftLine'). A plane was then fit using the origin as the end of this line, and the direction of this line as the normal ('GraftPlane').
+- To create the plane to shave the inferior surface of the coracoid for the standard graft, an estimate of the inferior surface of the coracoid was marked and a plane was fit to this ('InferiorPlaneFit'). This plane may be OK, but to maximise the size of the graft we use a line along the normal of this plane to a point on the coracoid that creates a flat surface, while maximising the size of the graft ('InferiorShaveLine'). A plane was then fit at the end of this line, parallel to the original fit plane ('InferiorShavePlane').
+- The same process as above was followed but just using te anterior portion of the coracoid to create the landmarks/planes for te congruent arc technique (i.e. 'AnteriorPlaneFit', 'AnteriorShaveLine', 'AnteriorShavePlane').
 - The humerus ('Humerus_r') and scapula ('Scapula_r'), along with the extracted triangles of the humeral head surface ('HumerusArticulating_r') and glenoid surface ('GlenoidSurface_r'), were exported as ASCII .stl files.
 - All landmarks and objects were exported as 'Curves and Primitives' to separate .xml files.
 - All files were saved in the participant's ID folder under the 'Segmentation' folder.
 - These files were used as inputs in a subsequent Matlab code (see: ***TODO: add .m filename***).
 
 ## References
+
+Bhatia et al. (2014). The outcomes and surgical techniques of the Latarjet procedure. *Arthroscopy*, 30: 227-235. 
 
 Wu et al. (2005). ISB recommendation on definitions of joint coordinate systems of various joints for the reporting of human joint motion - Part II: Shoulder, elbow, wrist and hand. *J Biomech*, 38: 981-992.

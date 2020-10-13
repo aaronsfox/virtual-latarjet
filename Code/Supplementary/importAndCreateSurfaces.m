@@ -125,6 +125,16 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
         clear tree
     end
     clear pp
+    
+    %Coracoid planes
+    coracoidPlanes = [{'GraftPlane'}, {'InferiorShavePlane'}, {'AnteriorShavePlane'}];
+    for pp = 1:length(coracoidPlanes)
+        tree = xml_read([coracoidPlanes{pp},'.txt']);
+        planes.(char(tree.Plane.Name)).origin = tree.Plane.Origin;% / 1000;
+        planes.(char(tree.Plane.Name)).normal = tree.Plane.Normal;% / 1000;
+        clear tree
+    end
+    clear pp
 
     %Humeral landmarks
 % % %     humPoints = [{'HHC'},{'EL'},{'EM'}];
@@ -208,6 +218,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     shapes.headSphere.centre = transformPoint3d(shapes.headSphere.centre,worldTransform);
 
     %Transform planes
+    for pp = 1:length(coracoidPlanes)
+        planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,worldTransform);
+        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,worldTransform);
+    end
+    clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,worldTransform);
     planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,worldTransform);
 
@@ -259,6 +274,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     shapes.headSphere.centre = transformPoint3d(shapes.headSphere.centre,rotMatrix);
 
     %Rotate planes
+    for pp = 1:length(coracoidPlanes)
+        planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,rotMatrix);
+        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,rotMatrix);
+    end
+    clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,rotMatrix);
     planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,rotMatrix);
     
@@ -290,6 +310,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     shapes.headSphere.centre = transformPoint3d(shapes.headSphere.centre,rotMatrixY);
 
     %Rotate planes
+    for pp = 1:length(coracoidPlanes)
+        planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,rotMatrixY);
+        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,rotMatrixY);
+    end
+    clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,rotMatrixY);
     planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,rotMatrixY);
     
@@ -320,6 +345,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     shapes.headSphere.centre = transformPoint3d(shapes.headSphere.centre,transMatrix);
 
     %Translate planes
+    for pp = 1:length(coracoidPlanes)
+        planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,transMatrix);
+        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,transMatrix);
+    end
+    clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,transMatrix);
     planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,transMatrix);
 
