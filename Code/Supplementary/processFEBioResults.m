@@ -59,6 +59,12 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     
     %% Calculate dislocation point data from the translation simulation
     
+    %%%%% Need to just consider if this is correct - the current
+    %%%%% dislocation specification is identifying the point where it gets
+    %%%%% to the lip and the starts dropping down, but is still in contact
+    %%%%% with the glenoid -- is this correct? It probably is a point of no
+    %%%%% return in reality...
+    
     %Find where anterior translation starts
     indStartTrans = find(diff(nodeDispMatTranslate(:,2)) > 0,1);
     
@@ -109,7 +115,7 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
     end
     
     %Find the nearest index to this for animation purposes
-    dislocInd = find(nodeDispMatTranslate(indStartTrans:end,2) > dislocDist,1);
+    dislocInd = find(nodeDispMatTranslate(1:end,2) > dislocDist,1);
     
     %% Calculate the force required to get to the dislocation distance
     
@@ -158,7 +164,7 @@ function [processedOutputs] = processFEBioResults(febioFileNamePart,glenoidMeshO
 
         %Set animation time
         %Go to the dislocation point plus a second
-        animEndInd = find(timeMatTranslate > timeMatTranslate(indStartTrans+dislocInd) + 1.0,1);
+        animEndInd = find(timeMatTranslate > (timeMatTranslate(dislocInd) + 1.0),1);
         animStruct.Time = timeMatTranslate(indStartTrans:animEndInd);
 
         %Set the axes to stay in their current position
