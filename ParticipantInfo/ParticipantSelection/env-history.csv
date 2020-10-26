@@ -1,0 +1,3598 @@
+id,deidentified_record_number,environmental_factor_type,environmental_factor_item
+5,178440,Activities,"other involving computer technology and electronic devices"
+5,178440,Activities,"string instrument playing"
+5,178440,"Drinking Status","High risk"
+105,149776,"Dietary Pattern",Normal
+105,149776,Activities,running
+105,149776,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+105,149776,Activities,"cross country skiing"
+105,149776,Activities,golf
+105,149776,Activities,"food preparation and clean up"
+105,149776,Activities,"cooking and baking"
+105,149776,Activities,"gardening and landscaping"
+105,149776,Carcinogens,"Oral tobacco products"
+105,149776,"Educational Level","Bachelor's degree"
+105,149776,"Socio Economic Status - Adult","Lower class"
+105,149776,"Socio Economic Status - Child","Upper middle class"
+105,149776,Occupations,"Information and Communications Technology Professionals"
+105,149776,Occupations,"Food Preparation Assistants"
+105,149776,"Tobacco Type","smoke tobacco"
+105,149776,"Tobacco Usage","light tobacco user"
+105,149776,"Drinking Status","Low risk"
+105,149776,"Strenuous Lifting",Yes
+119,113462,"Dietary Pattern",Normal
+119,113462,Activities,"other involving arts and handcrafts"
+119,113462,Carcinogens,"Tobacco smoke, environmental"
+119,113462,"Educational Level","Some college credit but no degree"
+119,113462,"Socio Economic Status - Adult","Middle class"
+119,113462,"Socio Economic Status - Child","Middle class"
+119,113462,Occupations,"Hospitality, Retail and Other Services Managers"
+119,113462,"Tobacco Type","smoke tobacco"
+119,113462,"Tobacco Usage","light tobacco user"
+119,113462,"Drinking Status","High risk"
+119,113462,"Strenuous Lifting",No
+120,146027,"Dietary Pattern",Normal
+120,146027,Activities,baseball
+120,146027,Activities,basketball
+120,146027,Activities,"food preparation and clean up"
+120,146027,Carcinogens,None
+120,146027,"Educational Level","High school graduate or GED diploma"
+120,146027,"Socio Economic Status - Adult","Middle class"
+120,146027,"Socio Economic Status - Child","Middle class"
+120,146027,Occupations,"Food Preparation Assistants"
+120,146027,"Tobacco Type","smoke tobacco"
+120,146027,"Tobacco Usage","Current some day tobacco user"
+120,146027,"Drinking Status","Low risk"
+120,146027,"Strenuous Lifting",Yes
+222,104735,"Dietary Pattern",Normal
+222,104735,Activities,Other
+222,104735,Carcinogens,"Oral tobacco products"
+222,104735,"Educational Level","Some college credit but no degree"
+222,104735,"Socio Economic Status - Adult","Middle class"
+222,104735,"Socio Economic Status - Child","Middle class"
+222,104735,Occupations,"Health Associate Professionals"
+222,104735,"Tobacco Type","smoke tobacco"
+222,104735,"Tobacco Usage","light tobacco user"
+222,104735,"Drinking Status","Drinker, current status unknown"
+222,104735,"Strenuous Lifting",No
+257,147194,"Dietary Pattern",Normal
+257,147194,Activities,"water skiing and wake boarding"
+257,147194,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+257,147194,Activities,golf
+257,147194,Carcinogens,"Tobacco smoke, environmental"
+257,147194,"Educational Level","High school graduate or GED diploma"
+257,147194,"Socio Economic Status - Child","Upper middle class"
+257,147194,Occupations,"Food Preparation Assistants"
+257,147194,"Tobacco Type","smoke tobacco"
+257,147194,"Tobacco Usage","light tobacco user"
+257,147194,"Drinking Status","Low risk"
+257,147194,"Strenuous Lifting",No
+274,181140,"Dietary Pattern",Normal
+274,181140,Activities,swimming
+274,181140,Activities,"other involving muscle strengthening exercises"
+274,181140,Carcinogens,"Oral tobacco products"
+274,181140,"Educational Level","Bachelor's degree"
+274,181140,"Socio Economic Status - Adult","Middle class"
+274,181140,"Socio Economic Status - Child","Middle class"
+274,181140,Occupations,"Health Professionals"
+274,181140,Occupations,"Health Associate Professionals"
+274,181140,"Tobacco Type","smoke tobacco"
+274,181140,"Tobacco Usage","light tobacco user"
+274,181140,"Drinking Status","Low risk"
+274,181140,"Strenuous Lifting",No
+309,142485,"Dietary Pattern",Normal
+309,142485,Activities,"other involving computer technology and electronic devices"
+309,142485,Activities,"other involving arts and handcrafts"
+309,142485,Carcinogens,"Tobacco smoke, environmental"
+309,142485,"Educational Level","High school graduate or GED diploma"
+309,142485,"Socio Economic Status - Adult","Middle class"
+309,142485,"Socio Economic Status - Child","Middle class"
+309,142485,Occupations,None
+309,142485,"Tobacco Type","Never used tobacco"
+309,142485,"Drinking Status","Never drank"
+309,142485,"Strenuous Lifting",No
+342,143984,"Dietary Pattern",Normal
+342,143984,Activities,Other
+342,143984,Carcinogens,"Oral tobacco products"
+342,143984,"Educational Level","Some college credit but no degree"
+342,143984,"Socio Economic Status - Adult","Lower class"
+342,143984,"Socio Economic Status - Child","Middle class"
+342,143984,Occupations,"Other Clerical Support Workers"
+342,143984,Occupations,"Personal Services Workers"
+342,143984,"Tobacco Type","smoke tobacco"
+342,143984,"Tobacco Usage","tobacco user,  current status unknown"
+342,143984,"Drinking Status","Previous High risk "
+342,143984,"Strenuous Lifting",No
+343,140368,Activities,basketball
+343,140368,Activities,Other
+343,140368,"Educational Level","High school graduate or GED diploma"
+343,140368,"Socio Economic Status - Adult","Upper class"
+343,140368,"Socio Economic Status - Child","Upper class"
+343,140368,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+343,140368,Occupations,"Refuse Workers and Other Elementary Workers"
+343,140368,"Tobacco Type","smoke tobacco"
+343,140368,"Tobacco Usage","tobacco user,  current status unknown"
+343,140368,"Drinking Status","Low risk"
+343,140368,"Strenuous Lifting",Unknown
+357,140694,"Dietary Pattern",Normal
+357,140694,Activities,"other involving dancing and other rhythmic movements"
+357,140694,Activities,"other involving arts and handcrafts"
+357,140694,Carcinogens,"Oral tobacco products"
+357,140694,"Educational Level","Associate degree"
+357,140694,"Socio Economic Status - Adult","Middle class"
+357,140694,"Socio Economic Status - Child","Middle class"
+357,140694,Occupations,"Sales Workers"
+357,140694,Occupations,"Personal Care Workers"
+357,140694,"Tobacco Type","smoke tobacco"
+357,140694,"Tobacco Usage","light tobacco user"
+357,140694,"Drinking Status","Low risk"
+357,140694,"Strenuous Lifting",No
+359,138645,"Dietary Pattern","Weight reduction"
+359,138645,"Dietary Pattern",Normal
+359,138645,Activities,None
+359,138645,"Educational Level","Master's degree"
+359,138645,"Socio Economic Status - Adult","Middle class"
+359,138645,"Socio Economic Status - Child","Middle class"
+359,138645,Occupations,"Information and Communications Technicians"
+359,138645,Occupations,None
+359,138645,"Tobacco Type","Never used tobacco"
+359,138645,"Drinking Status","Low risk"
+359,138645,"Strenuous Lifting",Yes
+381,109634,"Dietary Pattern","Weight reduction"
+381,109634,"Dietary Pattern",Normal
+381,109634,Activities,basketball
+381,109634,Activities,"other involving exterior property and land maintenance, building and construction"
+381,109634,Activities,Other
+381,109634,Carcinogens,"Wood dust"
+381,109634,"Educational Level","High school graduate or GED diploma"
+381,109634,"Socio Economic Status - Adult","Middle class"
+381,109634,"Socio Economic Status - Child","Middle class"
+381,109634,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+381,109634,Occupations,"Drivers and Mobile Plant Operators"
+381,109634,"Tobacco Type","Never used tobacco"
+381,109634,"Drinking Status","Low risk"
+381,109634,"Strenuous Lifting",Yes
+404,138238,"Dietary Pattern","Weight reduction"
+404,138238,"Dietary Pattern","Convenience food"
+404,138238,Activities,None
+404,138238,Carcinogens,Unknown
+404,138238,"Educational Level","High school graduate or GED diploma"
+404,138238,"Socio Economic Status - Adult","Lower class"
+404,138238,"Socio Economic Status - Child","Lower class"
+404,138238,Occupations,None
+404,138238,"Tobacco Type","smoke tobacco"
+404,138238,"Tobacco Usage","Heavy tobacco user"
+404,138238,"Drinking Status","Drinker, current status unknown"
+404,138238,"Strenuous Lifting",No
+465,170527,"Dietary Pattern",Normal
+465,170527,Activities,None
+465,170527,"Educational Level","Bachelor's degree"
+465,170527,"Socio Economic Status - Adult","Middle class"
+465,170527,"Socio Economic Status - Child","Middle class"
+465,170527,Occupations,"Science and Engineering Associate Professionals"
+465,170527,"Tobacco Type","Never used tobacco"
+465,170527,"Drinking Status","Low risk"
+465,170527,"Strenuous Lifting",No
+489,108398,"Dietary Pattern",Normal
+489,108398,Activities,"computer keyboarding"
+489,108398,Carcinogens,None
+489,108398,"Educational Level","Bachelor's degree"
+489,108398,"Socio Economic Status - Adult","Middle class"
+489,108398,"Socio Economic Status - Child","Middle class"
+489,108398,Occupations,"Administrative and Commercial Managers"
+489,108398,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+489,108398,"Tobacco Type","chew tobacco"
+489,108398,"Tobacco Usage","Current some day tobacco user"
+489,108398,"Drinking Status","High risk"
+489,108398,"Strenuous Lifting",Yes
+499,178090,"Dietary Pattern",Normal
+499,178090,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+499,178090,Activities,"roller skating (inline) and skateboarding"
+499,178090,Activities,"bike riding"
+499,178090,Activities,"exercise machines primarily for muscle strengthening"
+499,178090,Activities,"gardening and landscaping"
+499,178090,Carcinogens,"Oral tobacco products"
+499,178090,Carcinogens,"Tobacco smoke, environmental"
+499,178090,"Educational Level","Some college credit but no degree"
+499,178090,"Socio Economic Status - Adult","Lower middle class"
+499,178090,"Socio Economic Status - Child","Lower class"
+499,178090,Occupations,"Drivers and Mobile Plant Operators"
+499,178090,Occupations,"Refuse Workers and Other Elementary Workers"
+499,178090,"Tobacco Type","smoke tobacco"
+499,178090,"Tobacco Usage","light tobacco user"
+499,178090,"Drinking Status","Low risk"
+499,178090,"Strenuous Lifting",Yes
+500,106128,"Dietary Pattern",Normal
+500,106128,Activities,"walking, marching and hiking"
+500,106128,Carcinogens,"Oral tobacco products"
+500,106128,"Educational Level","Some college credit but no degree"
+500,106128,"Socio Economic Status - Adult","Lower middle class"
+500,106128,"Socio Economic Status - Child","Middle class"
+500,106128,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+500,106128,Occupations,"Armed Forces Occupations, Other Ranks"
+500,106128,"Tobacco Type","chew tobacco"
+500,106128,"Tobacco Usage","Current everyday tobacco user"
+500,106128,"Drinking Status","High risk"
+500,106128,"Strenuous Lifting",Yes
+525,138700,"Dietary Pattern",Normal
+525,138700,"Dietary Pattern","Convenience food"
+525,138700,Activities,"other interior property and clothing maintenance"
+525,138700,Activities,"other involving exterior property and land maintenance, building and construction"
+525,138700,Activities,Other
+525,138700,Carcinogens,"Oral tobacco products"
+525,138700,Carcinogens,Unknown
+525,138700,"Educational Level","9th-12th, no diploma"
+525,138700,"Socio Economic Status - Adult","Lower middle class"
+525,138700,"Socio Economic Status - Child","Middle class"
+525,138700,Occupations,"Metal, Machinery and Related Trades Workers"
+525,138700,Occupations,"Electrical and Electronic Trades Workers"
+525,138700,"Tobacco Type","smoke tobacco"
+525,138700,"Tobacco Usage","Heavy tobacco user"
+525,138700,"Drinking Status","Low risk"
+525,138700,"Strenuous Lifting",Yes
+533,171351,"Dietary Pattern",Normal
+533,171351,Activities,"food preparation and clean up"
+533,171351,Activities,"cooking and baking"
+533,171351,Activities,"gardening and landscaping"
+533,171351,Carcinogens,Asbestos
+533,171351,Carcinogens,"Hepatitis C virus"
+533,171351,Carcinogens,"Tobacco smoke, environmental"
+533,171351,"Educational Level","High school graduate or GED diploma"
+533,171351,"Socio Economic Status - Adult","Lower class"
+533,171351,"Socio Economic Status - Child","Lower class"
+533,171351,Occupations,"Agricultural, Forestry and Fishery Labourers"
+533,171351,Occupations,"Food Preparation Assistants"
+533,171351,"Tobacco Type","smoke tobacco"
+533,171351,"Tobacco Usage","light tobacco user"
+533,171351,"Drinking Status","Low risk"
+533,171351,"Strenuous Lifting",Yes
+549,139246,"Dietary Pattern",Normal
+549,139246,Activities,None
+549,139246,Carcinogens,None
+549,139246,"Educational Level","High school graduate or GED diploma"
+549,139246,"Socio Economic Status - Adult","Middle class"
+549,139246,"Socio Economic Status - Child","Middle class"
+549,139246,Occupations,"Customer Services Clerks"
+549,139246,"Tobacco Type","Never used tobacco"
+549,139246,"Drinking Status","High risk"
+549,139246,"Strenuous Lifting",No
+554,103387,Activities,"bike riding"
+566,108247,Activities,"other involving animal care"
+566,108247,"Tobacco Type","Never used tobacco"
+566,108247,"Drinking Status","Low risk"
+568,177567,Activities,"volleyball (beach) (court)"
+568,177567,"Tobacco Type","smoke tobacco"
+568,177567,"Tobacco Usage","tobacco user,  current status unknown"
+568,177567,"Drinking Status","Low risk"
+677,149399,"Dietary Pattern",Normal
+677,149399,Activities,dancing
+677,149399,Activities,soccer
+677,149399,Activities,basketball
+677,149399,Activities,"volleyball (beach) (court)"
+677,149399,Activities,"caregiving, bathing"
+677,149399,Activities,"caregiving, lifting"
+677,149399,Carcinogens,None
+677,149399,"Educational Level","Bachelor's degree"
+677,149399,"Socio Economic Status - Adult","Middle class"
+677,149399,"Socio Economic Status - Child","Middle class"
+677,149399,Occupations,"Health Professionals"
+677,149399,Occupations,"Health Associate Professionals"
+677,149399,"Tobacco Type","Never used tobacco"
+677,149399,"Drinking Status","Low risk"
+677,149399,"Strenuous Lifting",Yes
+695,181775,"Dietary Pattern",Normal
+695,181775,Activities,Other
+695,181775,Carcinogens,"Oral tobacco products"
+695,181775,"Educational Level","High school graduate or GED diploma"
+695,181775,"Socio Economic Status - Adult","Middle class"
+695,181775,"Socio Economic Status - Child","Middle class"
+695,181775,Occupations,None
+695,181775,"Tobacco Type","smoke tobacco"
+695,181775,"Drinking Status","Never drank"
+695,181775,"Strenuous Lifting",Yes
+718,103497,"Dietary Pattern",Normal
+718,103497,Activities,"other involving arts and handcrafts"
+718,103497,Activities,Other
+718,103497,Carcinogens,"Oral tobacco products"
+718,103497,"Educational Level","9th-12th, no diploma"
+718,103497,"Socio Economic Status - Adult","Middle class"
+718,103497,"Socio Economic Status - Child","Middle class"
+718,103497,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+718,103497,"Tobacco Type","smoke tobacco"
+718,103497,"Tobacco Usage","tobacco user,  current status unknown"
+718,103497,"Drinking Status","Drinker, current status unknown"
+718,103497,"Strenuous Lifting",Yes
+731,173218,"Dietary Pattern",Normal
+731,173218,Activities,"computer keyboarding"
+731,173218,Activities,"other involving arts and handcrafts"
+731,173218,Activities,Other
+731,173218,Carcinogens,"Tobacco smoke, environmental"
+731,173218,"Educational Level","Some college credit but no degree"
+731,173218,"Socio Economic Status - Adult","Upper class"
+731,173218,"Socio Economic Status - Child","Upper class"
+731,173218,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+731,173218,"Tobacco Type","Never used tobacco"
+731,173218,"Drinking Status","Low risk"
+731,173218,"Strenuous Lifting",No
+747,142070,"Dietary Pattern",Normal
+747,142070,Activities,"horseback riding"
+747,142070,Carcinogens,None
+747,142070,"Educational Level","Bachelor's degree"
+747,142070,"Socio Economic Status - Adult","Middle class"
+747,142070,"Socio Economic Status - Child","Middle class"
+747,142070,Occupations,"Market-oriented Skilled Agricultural Workers"
+747,142070,Occupations,"Subsistence Farmers, Fishers, Hunters and Gatherers"
+747,142070,"Tobacco Type","Never used tobacco"
+747,142070,"Drinking Status","Low risk"
+747,142070,"Strenuous Lifting",Yes
+794,183707,Activities,"martial arts"
+798,174203,Activities,swimming
+798,174203,"Tobacco Type","smoke tobacco"
+798,174203,"Tobacco Usage","tobacco user,  current status unknown"
+798,174203,"Drinking Status","High risk"
+814,147375,"Dietary Pattern",Vegetarian
+814,147375,"Dietary Pattern",Normal
+814,147375,Activities,"other involving arts and handcrafts"
+814,147375,Activities,Other
+814,147375,Carcinogens,"Oral tobacco products"
+814,147375,"Educational Level","Some college credit but no degree"
+814,147375,"Socio Economic Status - Adult","Lower class"
+814,147375,"Socio Economic Status - Child","Upper middle class"
+814,147375,Occupations,None
+814,147375,Occupations,Other
+814,147375,"Tobacco Type","smoke tobacco"
+814,147375,"Tobacco Usage","tobacco user,  current status unknown"
+814,147375,"Drinking Status","Low risk"
+814,147375,"Strenuous Lifting",No
+818,174551,"Dietary Pattern",Vegan
+818,174551,"Dietary Pattern",Normal
+818,174551,Activities,Other
+818,174551,Carcinogens,"Oral tobacco products"
+818,174551,Carcinogens,"Tobacco smoke, environmental"
+818,174551,"Educational Level","9th-12th, no diploma"
+818,174551,"Socio Economic Status - Adult","Lower middle class"
+818,174551,"Socio Economic Status - Child","Upper middle class"
+818,174551,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+818,174551,Occupations,"Metal, Machinery and Related Trades Workers"
+818,174551,"Tobacco Type","smoke tobacco"
+818,174551,"Tobacco Usage","Current everyday tobacco user"
+818,174551,"Drinking Status","High risk"
+818,174551,"Strenuous Lifting",Yes
+850,110723,"Dietary Pattern",Normal
+850,110723,Activities,"other involving water and watercraft"
+850,110723,Activities,"american tackle football"
+850,110723,Activities,basketball
+850,110723,Activities,"cooking and baking"
+850,110723,Activities,Other
+850,110723,Carcinogens,"Oral tobacco products"
+850,110723,Carcinogens,Unknown
+850,110723,"Educational Level","High school graduate or GED diploma"
+850,110723,"Socio Economic Status - Adult","Middle class"
+850,110723,"Socio Economic Status - Child","Lower middle class"
+850,110723,Occupations,"Metal, Machinery and Related Trades Workers"
+850,110723,Occupations,"Food Preparation Assistants"
+850,110723,"Tobacco Type","smoke tobacco"
+850,110723,"Tobacco Usage","light tobacco user"
+850,110723,"Drinking Status","Low risk"
+850,110723,"Strenuous Lifting",Yes
+906,173359,"Dietary Pattern",Normal
+906,173359,Activities,"walking, marching and hiking"
+906,173359,Carcinogens,None
+906,173359,"Educational Level","High school graduate or GED diploma"
+906,173359,"Socio Economic Status - Adult","Middle class"
+906,173359,"Socio Economic Status - Child","Middle class"
+906,173359,Occupations,"Other Clerical Support Workers"
+906,173359,"Tobacco Type","Never used tobacco"
+906,173359,"Drinking Status","Never drank"
+906,173359,"Strenuous Lifting",No
+997,108421,"Dietary Pattern",Normal
+997,108421,Activities,"free weights"
+997,108421,Activities,"food preparation and clean up"
+997,108421,Activities,"piano playing"
+997,108421,Carcinogens,"Oral tobacco products"
+997,108421,"Educational Level","Some college credit but no degree"
+997,108421,"Socio Economic Status - Adult","Lower middle class"
+997,108421,"Socio Economic Status - Child","Lower middle class"
+997,108421,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+997,108421,Occupations,"Food Preparation Assistants"
+997,108421,"Tobacco Type","smoke tobacco"
+997,108421,"Tobacco Usage","light tobacco user"
+997,108421,"Drinking Status","High risk"
+997,108421,"Strenuous Lifting",Yes
+1011,178703,"Dietary Pattern",Normal
+1011,178703,Activities,"volleyball (beach) (court)"
+1011,178703,Carcinogens,None
+1011,178703,"Educational Level","Bachelor's degree"
+1011,178703,"Socio Economic Status - Adult","Middle class"
+1011,178703,"Socio Economic Status - Child","Middle class"
+1011,178703,Occupations,"Science and Engineering Professionals"
+1011,178703,Occupations,"Protective Services Workers"
+1011,178703,Occupations,"Refuse Workers and Other Elementary Workers"
+1011,178703,"Tobacco Type","Never used tobacco"
+1011,178703,"Drinking Status","Low risk"
+1011,178703,"Strenuous Lifting",Yes
+1032,134662,"Dietary Pattern",Normal
+1032,134662,Activities,Other
+1032,134662,Carcinogens,None
+1032,134662,"Educational Level","High school graduate or GED diploma"
+1032,134662,"Socio Economic Status - Adult","Upper middle class"
+1032,134662,"Socio Economic Status - Child","Upper middle class"
+1032,134662,Occupations,"Commissioned Armed Forces Officers"
+1032,134662,Occupations,None
+1032,134662,"Tobacco Type","Never used tobacco"
+1032,134662,"Drinking Status","Never drank"
+1032,134662,"Strenuous Lifting",Yes
+1084,143056,"Dietary Pattern",Normal
+1084,143056,Activities,soccer
+1084,143056,Activities,"volleyball (beach) (court)"
+1084,143056,Activities,sewing
+1084,143056,Carcinogens,None
+1084,143056,"Educational Level","Some college credit but no degree"
+1084,143056,"Socio Economic Status - Adult","Middle class"
+1084,143056,"Socio Economic Status - Child","Middle class"
+1084,143056,Occupations,Other
+1084,143056,"Tobacco Type","Never used tobacco"
+1084,143056,"Drinking Status","Low risk"
+1084,143056,"Strenuous Lifting",No
+1127,170051,"Dietary Pattern",Normal
+1127,170051,Activities,Other
+1127,170051,Carcinogens,None
+1127,170051,"Educational Level","High school graduate or GED diploma"
+1127,170051,"Socio Economic Status - Adult","Lower middle class"
+1127,170051,"Socio Economic Status - Child","Middle class"
+1127,170051,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+1127,170051,"Tobacco Type","Never used tobacco"
+1127,170051,"Drinking Status","Low risk"
+1127,170051,"Strenuous Lifting",No
+1137,108557,Activities,Other
+1143,100749,"Dietary Pattern",Normal
+1143,100749,Activities,None
+1143,100749,Carcinogens,"Oral tobacco products"
+1143,100749,Carcinogens,"Tobacco smoke, environmental"
+1143,100749,"Educational Level","High school graduate or GED diploma"
+1143,100749,"Socio Economic Status - Adult","Lower class"
+1143,100749,"Socio Economic Status - Child","Middle class"
+1143,100749,Occupations,None
+1143,100749,"Tobacco Type","smoke tobacco"
+1143,100749,"Tobacco Usage","light tobacco user"
+1143,100749,"Drinking Status","Low risk"
+1143,100749,"Strenuous Lifting",No
+1192,134142,"Dietary Pattern",Normal
+1192,134142,Activities,basketball
+1192,134142,Activities,Other
+1192,134142,Carcinogens,"Oral tobacco products"
+1192,134142,Carcinogens,"Tobacco smoke, environmental"
+1192,134142,"Educational Level","High school graduate or GED diploma"
+1192,134142,"Socio Economic Status - Adult","Lower class"
+1192,134142,"Socio Economic Status - Child","Upper middle class"
+1192,134142,Occupations,"Personal Services Workers"
+1192,134142,Occupations,"Drivers and Mobile Plant Operators"
+1192,134142,Occupations,"Food Preparation Assistants"
+1192,134142,"Tobacco Type","smoke tobacco"
+1192,134142,"Tobacco Usage","Current some day tobacco user"
+1192,134142,"Tobacco Usage","light tobacco user"
+1192,134142,"Drinking Status","Drinker, current status unknown"
+1192,134142,"Strenuous Lifting",No
+1287,172501,"Dietary Pattern","Weight reduction"
+1287,172501,Activities,dancing
+1287,172501,Activities,"computer keyboarding"
+1287,172501,Activities,"other involving arts and handcrafts"
+1287,172501,Carcinogens,None
+1287,172501,"Educational Level","Bachelor's degree"
+1287,172501,"Socio Economic Status - Adult","Lower middle class"
+1287,172501,"Socio Economic Status - Child","Middle class"
+1287,172501,Occupations,"Legal, Social and Cultural Professionals"
+1287,172501,Occupations,"Personal Services Workers"
+1287,172501,"Tobacco Type","smoke tobacco"
+1287,172501,"Drinking Status","Low risk"
+1287,172501,"Strenuous Lifting",No
+1291,170726,Activities,None
+1291,170726,Carcinogens,"Oral tobacco products"
+1291,170726,"Educational Level","9th-12th, no diploma"
+1291,170726,"Socio Economic Status - Adult","Middle class"
+1291,170726,"Socio Economic Status - Child","Middle class"
+1291,170726,Occupations,"Electrical and Electronic Trades Workers"
+1291,170726,"Tobacco Type","smoke tobacco"
+1291,170726,"Tobacco Usage","Current everyday tobacco user"
+1291,170726,"Tobacco Usage","light tobacco user"
+1291,170726,"Drinking Status","Drinker, current status unknown"
+1291,170726,"Strenuous Lifting",Yes
+1315,113271,"Dietary Pattern",Normal
+1315,113271,Activities,"other involving other sports and athletics played individually"
+1315,113271,Activities,"american flag or touch football"
+1315,113271,Activities,baseball
+1315,113271,Activities,basketball
+1315,113271,Carcinogens,Unknown
+1315,113271,"Educational Level","High school graduate or GED diploma"
+1315,113271,"Socio Economic Status - Adult","Middle class"
+1315,113271,"Socio Economic Status - Child","Middle class"
+1315,113271,Occupations,"Personal Care Workers"
+1315,113271,Occupations,"Drivers and Mobile Plant Operators"
+1315,113271,"Tobacco Type","Never used tobacco"
+1315,113271,"Drinking Status","High risk"
+1315,113271,"Strenuous Lifting",No
+1365,168709,"Dietary Pattern",Normal
+1365,168709,Activities,"winds and brass instrument playing"
+1365,168709,Activities,Other
+1365,168709,Carcinogens,"Oral tobacco products"
+1365,168709,"Educational Level","High school graduate or GED diploma"
+1365,168709,"Socio Economic Status - Adult","Middle class"
+1365,168709,"Socio Economic Status - Child","Middle class"
+1365,168709,Occupations,"Stationary Plant and Machine Operators"
+1365,168709,Occupations,"Food Preparation Assistants"
+1365,168709,"Tobacco Type","Unknown if ever used tobacco"
+1365,168709,"Drinking Status","Drinker, current status unknown"
+1365,168709,"Strenuous Lifting",No
+1376,169082,"Dietary Pattern",Normal
+1376,169082,Activities,Other
+1376,169082,Carcinogens,"Oral tobacco products"
+1376,169082,Carcinogens,"Tobacco smoke, environmental"
+1376,169082,"Educational Level","High school graduate or GED diploma"
+1376,169082,"Socio Economic Status - Adult","Lower class"
+1376,169082,"Socio Economic Status - Child","Lower class"
+1376,169082,"Socio Economic Status - Child","Middle class"
+1376,169082,Occupations,"Other Clerical Support Workers"
+1376,169082,Occupations,"Food Preparation Assistants"
+1376,169082,"Tobacco Usage","tobacco user,  current status unknown"
+1376,169082,"Drinking Status","Low risk"
+1376,169082,"Strenuous Lifting",No
+1390,179505,"Dietary Pattern",Normal
+1390,179505,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+1390,179505,Activities,"exercise machines primarily for muscle strengthening"
+1390,179505,Activities,Other
+1390,179505,Activities,"Working on cars and other mechanical objects"
+1390,179505,Carcinogens,Asbestos
+1390,179505,"Educational Level","9th-12th, no diploma"
+1390,179505,"Socio Economic Status - Adult","Middle class"
+1390,179505,"Socio Economic Status - Child","Middle class"
+1390,179505,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+1390,179505,"Tobacco Type","Never used tobacco"
+1390,179505,"Drinking Status","Low risk"
+1390,179505,"Strenuous Lifting",No
+1410,112574,"Dietary Pattern",Normal
+1410,112574,Activities,basketball
+1410,112574,Carcinogens,"Oral tobacco products"
+1410,112574,"Educational Level","Some college credit but no degree"
+1410,112574,"Socio Economic Status - Adult","Middle class"
+1410,112574,"Socio Economic Status - Child","Middle class"
+1410,112574,Occupations,"Electrical and Electronic Trades Workers"
+1410,112574,"Tobacco Type","smoke tobacco"
+1410,112574,"Tobacco Usage","Current some day tobacco user"
+1410,112574,"Tobacco Usage","light tobacco user"
+1410,112574,"Drinking Status","Low risk"
+1410,112574,"Strenuous Lifting",No
+1553,147949,"Dietary Pattern",Normal
+1553,147949,Activities,golf
+1553,147949,Activities,"exercise machines primarily for muscle strengthening"
+1553,147949,Activities,"Working on cars and other mechanical objects"
+1553,147949,Carcinogens,Asbestos
+1553,147949,Carcinogens,"Oral tobacco products"
+1553,147949,"Educational Level","High school graduate or GED diploma"
+1553,147949,"Socio Economic Status - Adult","Middle class"
+1553,147949,"Socio Economic Status - Child","Middle class"
+1553,147949,Occupations,"Science and Engineering Associate Professionals"
+1553,147949,Occupations,"Metal, Machinery and Related Trades Workers"
+1553,147949,Occupations,"Commissioned Armed Forces Officers"
+1553,147949,"Tobacco Type","smoke tobacco"
+1553,147949,"Tobacco Usage","Current everyday tobacco user"
+1553,147949,"Tobacco Usage","Heavy tobacco user"
+1553,147949,"Drinking Status","Drinker, current status unknown"
+1553,147949,"Strenuous Lifting",Yes
+1568,112802,"Dietary Pattern",Normal
+1568,112802,Activities,dancing
+1568,112802,Activities,Other
+1568,112802,Carcinogens,"Oral tobacco products"
+1568,112802,"Educational Level","Some college credit but no degree"
+1568,112802,"Socio Economic Status - Adult","Lower class"
+1568,112802,"Socio Economic Status - Child","Middle class"
+1568,112802,Occupations,"Personal Services Workers"
+1568,112802,Occupations,"Sales Workers"
+1568,112802,Occupations,"Personal Care Workers"
+1568,112802,"Tobacco Type","Never used tobacco"
+1568,112802,"Drinking Status","Drinker, current status unknown"
+1568,112802,"Strenuous Lifting",Yes
+1678,147599,"Dietary Pattern",Normal
+1678,147599,Activities,"other involving arts and handcrafts"
+1678,147599,Activities,Other
+1678,147599,Carcinogens,None
+1678,147599,"Educational Level","Some college credit but no degree"
+1678,147599,"Socio Economic Status - Adult","Middle class"
+1678,147599,"Socio Economic Status - Child","Middle class"
+1678,147599,Occupations,"Personal Services Workers"
+1678,147599,Occupations,"Metal, Machinery and Related Trades Workers"
+1678,147599,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+1678,147599,"Tobacco Type","Never used tobacco"
+1678,147599,"Drinking Status","Drinker, current status unknown"
+1678,147599,"Strenuous Lifting",Yes
+1691,107935,"Dietary Pattern",Normal
+1691,107935,Activities,baseball
+1691,107935,Activities,Other
+1691,107935,Carcinogens,"Oral tobacco products"
+1691,107935,"Educational Level","High school graduate or GED diploma"
+1691,107935,"Socio Economic Status - Adult","Upper middle class"
+1691,107935,"Socio Economic Status - Child","Upper middle class"
+1691,107935,Occupations,None
+1691,107935,"Tobacco Type","chew tobacco"
+1691,107935,"Tobacco Usage","light tobacco user"
+1691,107935,"Drinking Status","Never drank"
+1691,107935,"Strenuous Lifting",No
+1718,132433,"Dietary Pattern",Normal
+1718,132433,Activities,dancing
+1718,132433,Activities,"computer keyboarding"
+1718,132433,Activities,Other
+1718,132433,Carcinogens,None
+1718,132433,"Educational Level","High school graduate or GED diploma"
+1718,132433,"Socio Economic Status - Adult","Middle class"
+1718,132433,"Socio Economic Status - Child","Middle class"
+1718,132433,Occupations,"Other Clerical Support Workers"
+1718,132433,"Tobacco Type","Never used tobacco"
+1718,132433,"Drinking Status","Low risk"
+1718,132433,"Strenuous Lifting",No
+1732,111539,"Dietary Pattern",Normal
+1732,111539,Activities,"walking, marching and hiking"
+1732,111539,Activities,baseball
+1732,111539,Activities,Other
+1732,111539,Carcinogens,"Hepatitis C virus"
+1732,111539,Carcinogens,"Oral tobacco products"
+1732,111539,"Educational Level","High school graduate or GED diploma"
+1732,111539,"Socio Economic Status - Adult","Middle class"
+1732,111539,"Socio Economic Status - Child","Middle class"
+1732,111539,Occupations,"Customer Services Clerks"
+1732,111539,Occupations,"Personal Services Workers"
+1732,111539,"Tobacco Type","smoke tobacco"
+1732,111539,"Tobacco Usage","Former tobacco user"
+1732,111539,"Tobacco Usage","tobacco user,  current status unknown"
+1732,111539,"Drinking Status","Drinker, current status unknown"
+1732,111539,"Strenuous Lifting",Yes
+1765,179282,"Dietary Pattern",Normal
+1765,179282,Activities,"string instrument playing"
+1765,179282,Activities,Other
+1765,179282,Carcinogens,"Oral tobacco products"
+1765,179282,"Educational Level","Some college credit but no degree"
+1765,179282,"Socio Economic Status - Adult","Lower class"
+1765,179282,"Socio Economic Status - Child","Lower class"
+1765,179282,"Socio Economic Status - Child","Middle class"
+1765,179282,Occupations,"Customer Services Clerks"
+1765,179282,Occupations,"Sales Workers"
+1765,179282,Occupations,"Armed Forces Occupations, Other Ranks"
+1765,179282,"Tobacco Type","smoke tobacco"
+1765,179282,"Tobacco Usage","Current everyday tobacco user"
+1765,179282,"Tobacco Usage","Heavy tobacco user"
+1765,179282,"Drinking Status","Drinker, current status unknown"
+1765,179282,"Strenuous Lifting",Yes
+1779,100625,"Dietary Pattern","Convenience food"
+1779,100625,Activities,basketball
+1779,100625,Activities,"exercise machines primarily for muscle strengthening"
+1779,100625,Activities,"cooking and baking"
+1779,100625,Carcinogens,"Oral tobacco products"
+1779,100625,"Educational Level","9th-12th, no diploma"
+1779,100625,"Socio Economic Status - Adult","Middle class"
+1779,100625,"Socio Economic Status - Child","Middle class"
+1779,100625,Occupations,"Personal Services Workers"
+1779,100625,Occupations,"Metal, Machinery and Related Trades Workers"
+1779,100625,"Tobacco Type","smoke tobacco"
+1779,100625,"Tobacco Usage","Heavy tobacco user"
+1779,100625,"Drinking Status","Low risk"
+1779,100625,"Drinking Status","Previous High risk "
+1779,100625,"Strenuous Lifting",Yes
+1782,110448,"Dietary Pattern",Normal
+1782,110448,Activities,basketball
+1782,110448,Activities,Other
+1782,110448,Carcinogens,"Oral tobacco products"
+1782,110448,"Educational Level","Some college credit but no degree"
+1782,110448,"Socio Economic Status - Adult","Middle class"
+1782,110448,"Socio Economic Status - Child","Middle class"
+1782,110448,Occupations,"Administrative and Commercial Managers"
+1782,110448,Occupations,"General and Keyboard Clerks"
+1782,110448,Occupations,"Metal, Machinery and Related Trades Workers"
+1782,110448,"Tobacco Type","smoke tobacco"
+1782,110448,"Drinking Status","Low risk"
+1782,110448,"Strenuous Lifting",No
+1793,173795,"Dietary Pattern",Normal
+1793,173795,Activities,"building and construction"
+1793,173795,Carcinogens,"Oral tobacco products"
+1793,173795,"Educational Level","9th-12th, no diploma"
+1793,173795,"Socio Economic Status - Adult","Lower class"
+1793,173795,"Socio Economic Status - Child","Lower class"
+1793,173795,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+1793,173795,"Tobacco Type","smoke tobacco"
+1793,173795,"Tobacco Usage","Current everyday tobacco user"
+1793,173795,"Drinking Status","High risk"
+1793,173795,"Strenuous Lifting",Yes
+1795,107215,"Dietary Pattern",Normal
+1795,107215,Activities,basketball
+1795,107215,Activities,Other
+1795,107215,Activities,"Working on cars and other mechanical objects"
+1795,107215,Carcinogens,"Oral tobacco products"
+1795,107215,"Educational Level","Some college credit but no degree"
+1795,107215,"Socio Economic Status - Adult","Lower middle class"
+1795,107215,"Socio Economic Status - Child","Middle class"
+1795,107215,Occupations,"Other Clerical Support Workers"
+1795,107215,Occupations,"Handicraft and Printing Workers"
+1795,107215,"Tobacco Type","smoke tobacco"
+1795,107215,"Tobacco Usage","Heavy tobacco user"
+1795,107215,"Drinking Status","High risk"
+1795,107215,"Strenuous Lifting",Yes
+1836,112942,"Dietary Pattern",Normal
+1836,112942,Activities,"volleyball (beach) (court)"
+1836,112942,Activities,"other involving arts and handcrafts"
+1836,112942,Carcinogens,"Oral tobacco products"
+1836,112942,"Educational Level","Some college credit but no degree"
+1836,112942,"Socio Economic Status - Adult","Lower class"
+1836,112942,"Socio Economic Status - Child","Middle class"
+1836,112942,Occupations,"Personal Services Workers"
+1836,112942,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+1836,112942,"Tobacco Usage","Former tobacco user"
+1836,112942,"Tobacco Usage","light tobacco user"
+1836,112942,"Drinking Status","Low risk"
+1836,112942,"Strenuous Lifting",Yes
+1873,175470,"Dietary Pattern","Convenience food"
+1873,175470,Activities,baseball
+1873,175470,Activities,basketball
+1873,175470,Activities,"push-ups, pull-ups, sit-ups"
+1873,175470,Activities,"other involving arts and handcrafts"
+1873,175470,Activities,Other
+1873,175470,Carcinogens,"Oral tobacco products"
+1873,175470,Carcinogens,"Tobacco smoke, environmental"
+1873,175470,"Educational Level","9th-12th, no diploma"
+1873,175470,"Socio Economic Status - Adult","Lower class"
+1873,175470,"Socio Economic Status - Child","Lower class"
+1873,175470,Occupations,None
+1873,175470,"Tobacco Type","smoke tobacco"
+1873,175470,"Tobacco Usage","Current everyday tobacco user"
+1873,175470,"Tobacco Usage","Heavy tobacco user"
+1873,175470,"Drinking Status","Low risk"
+1873,175470,"Strenuous Lifting",No
+1887,171479,"Dietary Pattern",Unknown
+1887,171479,Activities,running
+1887,171479,Activities,"american tackle football"
+1887,171479,Activities,basketball
+1887,171479,Activities,"string instrument playing"
+1887,171479,Activities,"other involving animal care"
+1887,171479,Carcinogens,"Oral tobacco products"
+1887,171479,Carcinogens,"Tobacco smoke, environmental"
+1887,171479,"Educational Level","Bachelor's degree"
+1887,171479,"Socio Economic Status - Adult","Lower class"
+1887,171479,"Socio Economic Status - Child","Middle class"
+1887,171479,Occupations,"Personal Services Workers"
+1887,171479,Occupations,"Sales Workers"
+1887,171479,"Tobacco Type","smoke tobacco"
+1887,171479,"Tobacco Usage","light tobacco user"
+1887,171479,"Drinking Status","Drinker, current status unknown"
+1887,171479,"Strenuous Lifting",Yes
+1892,144977,"Dietary Pattern",Normal
+1892,144977,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+1892,144977,Activities,"roller skating (inline) and skateboarding"
+1892,144977,Activities,golf
+1892,144977,Activities,"bike riding"
+1892,144977,Activities,baseball
+1892,144977,Carcinogens,"Oral tobacco products"
+1892,144977,"Educational Level","Bachelor's degree"
+1892,144977,"Socio Economic Status - Adult","Middle class"
+1892,144977,"Socio Economic Status - Child","Middle class"
+1892,144977,Occupations,"Sales Workers"
+1892,144977,"Tobacco Type","smoke tobacco"
+1892,144977,"Tobacco Usage","Current some day tobacco user"
+1892,144977,"Drinking Status","High risk"
+1892,144977,"Strenuous Lifting",No
+1899,173684,"Dietary Pattern",Normal
+1899,173684,Activities,"free weights"
+1899,173684,Activities,"string instrument playing"
+1899,173684,Carcinogens,"Tobacco smoke, environmental"
+1899,173684,Carcinogens,Unknown
+1899,173684,"Educational Level","Some college credit but no degree"
+1899,173684,"Socio Economic Status - Adult","Middle class"
+1899,173684,"Socio Economic Status - Child","Lower class"
+1899,173684,Occupations,"Drivers and Mobile Plant Operators"
+1899,173684,Occupations,"Armed Forces Occupations, Other Ranks"
+1899,173684,"Tobacco Type","Never used tobacco"
+1899,173684,"Drinking Status","Low risk"
+1899,173684,"Strenuous Lifting",Yes
+1948,110728,"Dietary Pattern",Vegan
+1948,110728,"Dietary Pattern",Vegetarian
+1948,110728,Activities,"walking, marching and hiking"
+1948,110728,Activities,"rowing, canoeing, kayaking, rafting and tubing"
+1948,110728,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+1948,110728,Activities,"mountain climbing, rock climbing and wall climbing"
+1948,110728,Activities,soccer
+1948,110728,Activities,basketball
+1948,110728,Activities,frisbee
+1948,110728,Activities,"gardening and landscaping"
+1948,110728,Carcinogens,None
+1948,110728,"Educational Level","Bachelor's degree"
+1948,110728,"Socio Economic Status - Adult","Lower class"
+1948,110728,"Socio Economic Status - Child","Middle class"
+1948,110728,Occupations,"Science and Engineering Associate Professionals"
+1948,110728,"Tobacco Type","Never used tobacco"
+1948,110728,"Drinking Status","High risk"
+1948,110728,"Strenuous Lifting",Yes
+1985,178208,"Dietary Pattern",Normal
+1985,178208,Activities,"other involving climbing, rappelling and jumping off"
+1985,178208,Activities,"other involving arts and handcrafts"
+1985,178208,Activities,"other interior property and clothing maintenance"
+1985,178208,Activities,"building and construction"
+1985,178208,Activities,Other
+1985,178208,Carcinogens,Unknown
+1985,178208,"Educational Level","Master's degree"
+1985,178208,"Socio Economic Status - Adult","Middle class"
+1985,178208,"Socio Economic Status - Child","Lower middle class"
+1985,178208,Occupations,"Science and Engineering Professionals"
+1985,178208,Occupations,"Business and Administration Professionals"
+1985,178208,Occupations,"Science and Engineering Associate Professionals"
+1985,178208,"Tobacco Type","Never used tobacco"
+1985,178208,"Drinking Status","Low risk"
+1985,178208,"Strenuous Lifting",No
+1999,142882,"Dietary Pattern",Normal
+1999,142882,Activities,"american tackle football"
+1999,142882,Activities,basketball
+1999,142882,Activities,"exercise machines primarily for muscle strengthening"
+1999,142882,Carcinogens,"Oral tobacco products"
+1999,142882,"Educational Level","High school graduate or GED diploma"
+1999,142882,"Socio Economic Status - Adult","Lower class"
+1999,142882,"Socio Economic Status - Child","Lower class"
+1999,142882,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+1999,142882,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+1999,142882,Occupations,"Food Preparation Assistants"
+1999,142882,Occupations,Other
+1999,142882,"Tobacco Type","smoke tobacco"
+1999,142882,"Tobacco Usage","Former tobacco user"
+1999,142882,"Tobacco Usage","light tobacco user"
+1999,142882,"Drinking Status","Previous High risk "
+1999,142882,"Strenuous Lifting",Yes
+2053,112738,"Dietary Pattern",Vegetarian
+2053,112738,Activities,"walking, marching and hiking"
+2053,112738,Activities,"string instrument playing"
+2053,112738,Carcinogens,None
+2053,112738,"Educational Level","Doctorate or professional degree"
+2053,112738,"Socio Economic Status - Adult","Middle class"
+2053,112738,"Socio Economic Status - Child","Middle class"
+2053,112738,Occupations,"Legal, Social and Cultural Professionals"
+2053,112738,"Tobacco Type","Never used tobacco"
+2053,112738,"Drinking Status","Drinker, current status unknown"
+2053,112738,"Strenuous Lifting",No
+2223,146744,"Dietary Pattern",Normal
+2223,146744,Activities,Other
+2223,146744,Carcinogens,"Oral tobacco products"
+2223,146744,"Educational Level","9th-12th, no diploma"
+2223,146744,"Socio Economic Status - Adult","Middle class"
+2223,146744,"Socio Economic Status - Child","Middle class"
+2223,146744,Occupations,"Electrical and Electronic Trades Workers"
+2223,146744,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+2223,146744,"Tobacco Type","Never used tobacco"
+2223,146744,"Drinking Status","Drinker, current status unknown"
+2223,146744,"Strenuous Lifting",Yes
+2267,169575,"Dietary Pattern",Normal
+2267,169575,Activities,"cooking and baking"
+2267,169575,Activities,"winds and brass instrument playing"
+2267,169575,Carcinogens,"Oral tobacco products"
+2267,169575,"Educational Level","9th-12th, no diploma"
+2267,169575,"Socio Economic Status - Adult","Lower middle class"
+2267,169575,"Socio Economic Status - Child","Upper middle class"
+2267,169575,Occupations,"Sales Workers"
+2267,169575,Occupations,"Armed Forces Occupations, Other Ranks"
+2267,169575,"Tobacco Type","smoke tobacco"
+2267,169575,"Tobacco Usage","Current everyday tobacco user"
+2267,169575,"Drinking Status","Low risk"
+2267,169575,"Strenuous Lifting",Yes
+2315,141318,"Dietary Pattern",Normal
+2315,141318,Activities,Other
+2315,141318,Carcinogens,Asbestos
+2315,141318,"Educational Level","High school graduate or GED diploma"
+2315,141318,"Socio Economic Status - Adult","Middle class"
+2315,141318,"Socio Economic Status - Child","Middle class"
+2315,141318,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+2315,141318,Occupations,"Metal, Machinery and Related Trades Workers"
+2315,141318,Occupations,"Non-commissioned Armed Forces Officers"
+2315,141318,Occupations,None
+2315,141318,"Tobacco Type","Never used tobacco"
+2315,141318,"Drinking Status","High risk"
+2315,141318,"Strenuous Lifting",No
+2333,146511,"Dietary Pattern",Normal
+2333,146511,Activities,running
+2333,146511,Activities,swimming
+2333,146511,Activities,soccer
+2333,146511,Activities,basketball
+2333,146511,Activities,Other
+2333,146511,Carcinogens,"Oral tobacco products"
+2333,146511,"Educational Level","Some college credit but no degree"
+2333,146511,"Socio Economic Status - Adult","Middle class"
+2333,146511,"Socio Economic Status - Child","Middle class"
+2333,146511,Occupations,"Health Associate Professionals"
+2333,146511,Occupations,"Refuse Workers and Other Elementary Workers"
+2333,146511,"Tobacco Type","smoke tobacco"
+2333,146511,"Tobacco Usage","Former tobacco user"
+2333,146511,"Drinking Status","Drinker, current status unknown"
+2333,146511,"Strenuous Lifting",No
+2349,137685,"Dietary Pattern",Normal
+2349,137685,Activities,"household cleaning"
+2349,137685,Carcinogens,"Alpha radiation"
+2349,137685,"Educational Level","High school graduate or GED diploma"
+2349,137685,"Socio Economic Status - Adult","Middle class"
+2349,137685,"Socio Economic Status - Child","Middle class"
+2349,137685,Occupations,"Refuse Workers and Other Elementary Workers"
+2349,137685,"Tobacco Type","smoke tobacco"
+2349,137685,"Tobacco Usage","light tobacco user"
+2349,137685,"Drinking Status","Low risk"
+2349,137685,"Strenuous Lifting",No
+2354,107024,"Dietary Pattern",Normal
+2354,107024,Activities,Other
+2354,107024,Carcinogens,"Oral tobacco products"
+2354,107024,"Educational Level","Some college credit but no degree"
+2354,107024,"Socio Economic Status - Adult","Lower middle class"
+2354,107024,"Socio Economic Status - Child","Middle class"
+2354,107024,Occupations,"Personal Services Workers"
+2354,107024,Occupations,"Sales Workers"
+2354,107024,"Tobacco Type","Never used tobacco"
+2354,107024,"Drinking Status","Never drank"
+2354,107024,"Strenuous Lifting",Yes
+2363,174058,"Dietary Pattern",Normal
+2363,174058,Activities,"american flag or touch football"
+2363,174058,Activities,basketball
+2363,174058,Activities,Other
+2363,174058,Carcinogens,"Oral tobacco products"
+2363,174058,"Educational Level","High school graduate or GED diploma"
+2363,174058,"Socio Economic Status - Adult","Lower middle class"
+2363,174058,"Socio Economic Status - Child","Middle class"
+2363,174058,"Tobacco Type","smoke tobacco"
+2363,174058,"Tobacco Usage","Current everyday tobacco user"
+2363,174058,"Tobacco Usage","Heavy tobacco user"
+2363,174058,"Drinking Status","Low risk"
+2363,174058,"Strenuous Lifting",No
+2373,115014,"Dietary Pattern",Normal
+2373,115014,Activities,Other
+2373,115014,Carcinogens,"Oral tobacco products"
+2373,115014,"Educational Level","Some college credit but no degree"
+2373,115014,"Socio Economic Status - Adult","Middle class"
+2373,115014,"Socio Economic Status - Child","Middle class"
+2373,115014,Occupations,"Health Associate Professionals"
+2373,115014,Occupations,"Market-oriented Skilled Agricultural Workers"
+2373,115014,Occupations,"Non-commissioned Armed Forces Officers"
+2373,115014,"Tobacco Type","smoke tobacco"
+2373,115014,"Tobacco Usage","Current some day tobacco user"
+2373,115014,"Tobacco Usage","light tobacco user"
+2373,115014,"Drinking Status","Drinker, current status unknown"
+2373,115014,"Strenuous Lifting",No
+2525,144253,"Dietary Pattern",Normal
+2525,144253,Activities,"exercise machines primarily for cardiorespiratory conditioning"
+2525,144253,Activities,"exercise machines primarily for muscle strengthening"
+2525,144253,Carcinogens,"Wood dust"
+2525,144253,"Educational Level","High school graduate or GED diploma"
+2525,144253,"Socio Economic Status - Adult","Lower middle class"
+2525,144253,"Socio Economic Status - Child","Middle class"
+2525,144253,Occupations,"Electrical and Electronic Trades Workers"
+2525,144253,Occupations,"Food Preparation Assistants"
+2525,144253,"Tobacco Type","Never used tobacco"
+2525,144253,"Drinking Status","Drinker, current status unknown"
+2525,144253,"Strenuous Lifting",Yes
+2530,175848,"Dietary Pattern",Normal
+2530,175848,Activities,swimming
+2530,175848,Activities,"exercise machines primarily for muscle strengthening"
+2530,175848,Carcinogens,"Oral tobacco products"
+2530,175848,"Educational Level","High school graduate or GED diploma"
+2530,175848,"Socio Economic Status - Adult","Lower class"
+2530,175848,"Socio Economic Status - Child","Middle class"
+2530,175848,Occupations,"Sales Workers"
+2530,175848,Occupations,"Metal, Machinery and Related Trades Workers"
+2530,175848,Occupations,"Food Preparation Assistants"
+2530,175848,"Tobacco Type","smoke tobacco"
+2530,175848,"Tobacco Usage","light tobacco user"
+2530,175848,"Drinking Status","High risk"
+2530,175848,"Strenuous Lifting",Yes
+2574,168936,"Dietary Pattern",Normal
+2574,168936,Activities,"computer keyboarding"
+2574,168936,Activities,"gardening and landscaping"
+2574,168936,Activities,"building and construction"
+2574,168936,Carcinogens,"Oral tobacco products"
+2574,168936,"Educational Level","9th-12th, no diploma"
+2574,168936,"Socio Economic Status - Adult","Middle class"
+2574,168936,"Socio Economic Status - Child","Upper middle class"
+2574,168936,Occupations,None
+2574,168936,"Tobacco Type","smoke tobacco"
+2574,168936,"Tobacco Usage","Heavy tobacco user"
+2574,168936,"Drinking Status","Previous High risk "
+2574,168936,"Strenuous Lifting",No
+2627,143284,"Dietary Pattern",Overeating
+2627,143284,Activities,"computer keyboarding"
+2627,143284,Activities,"other involving arts and handcrafts"
+2627,143284,Activities,"building and construction"
+2627,143284,Carcinogens,"Hepatitis C virus"
+2627,143284,Carcinogens,"X-radiation and gamma radiation"
+2627,143284,"Educational Level","High school graduate or GED diploma"
+2627,143284,"Socio Economic Status - Adult","Middle class"
+2627,143284,"Socio Economic Status - Child","Lower class"
+2627,143284,Occupations,"Metal, Machinery and Related Trades Workers"
+2627,143284,Occupations,"Food Preparation Assistants"
+2627,143284,"Tobacco Type","Unknown if ever used tobacco"
+2627,143284,"Drinking Status","High risk"
+2627,143284,"Strenuous Lifting",Yes
+2639,145931,"Dietary Pattern",Normal
+2639,145931,"Dietary Pattern","Eating disorder"
+2639,145931,Activities,"other involving arts and handcrafts"
+2639,145931,Carcinogens,"Oral tobacco products"
+2639,145931,"Educational Level","Some college credit but no degree"
+2639,145931,"Socio Economic Status - Adult","Lower class"
+2639,145931,"Socio Economic Status - Child","Middle class"
+2639,145931,Occupations,"Customer Services Clerks"
+2639,145931,Occupations,"Metal, Machinery and Related Trades Workers"
+2639,145931,Occupations,"Cleaners and Helpers"
+2639,145931,"Tobacco Type","smoke tobacco"
+2639,145931,"Tobacco Usage","light tobacco user"
+2639,145931,"Drinking Status","High risk"
+2639,145931,"Strenuous Lifting",No
+2650,139915,"Dietary Pattern","Convenience food"
+2650,139915,Activities,swimming
+2650,139915,Carcinogens,"Oral tobacco products"
+2650,139915,"Educational Level","9th-12th, no diploma"
+2650,139915,"Socio Economic Status - Adult","Lower class"
+2650,139915,"Socio Economic Status - Child","Middle class"
+2650,139915,Occupations,"Personal Services Workers"
+2650,139915,"Tobacco Type","smoke tobacco"
+2650,139915,"Tobacco Usage","light tobacco user"
+2650,139915,"Drinking Status","High risk"
+2650,139915,"Strenuous Lifting",No
+2657,101607,"Dietary Pattern",Normal
+2657,101607,Activities,None
+2657,101607,Carcinogens,"Oral tobacco products"
+2657,101607,"Educational Level","High school graduate or GED diploma"
+2657,101607,"Socio Economic Status - Adult","Middle class"
+2657,101607,"Socio Economic Status - Child","Middle class"
+2657,101607,Occupations,"General and Keyboard Clerks"
+2657,101607,"Tobacco Type","smoke tobacco"
+2657,101607,"Tobacco Usage","Current everyday tobacco user"
+2657,101607,"Tobacco Usage","light tobacco user"
+2657,101607,"Drinking Status","Low risk"
+2657,101607,"Strenuous Lifting",No
+2660,145172,"Dietary Pattern",Normal
+2660,145172,Activities,"cooking and baking"
+2660,145172,Activities,"Working on cars and other mechanical objects"
+2660,145172,Carcinogens,Asbestos
+2660,145172,Carcinogens,"Oral tobacco products"
+2660,145172,"Educational Level","9th-12th, no diploma"
+2660,145172,"Socio Economic Status - Adult","Lower middle class"
+2660,145172,"Socio Economic Status - Child","Lower class"
+2660,145172,Occupations,"Metal, Machinery and Related Trades Workers"
+2660,145172,"Tobacco Type","smoke tobacco"
+2660,145172,"Tobacco Usage","Heavy tobacco user"
+2660,145172,"Drinking Status","High risk"
+2663,101014,"Dietary Pattern",Normal
+2663,101014,Activities,"american tackle football"
+2663,101014,Activities,baseball
+2663,101014,Activities,basketball
+2663,101014,Carcinogens,Unknown
+2663,101014,"Educational Level","9th-12th, no diploma"
+2663,101014,"Socio Economic Status - Adult","Middle class"
+2663,101014,"Socio Economic Status - Child","Middle class"
+2663,101014,Occupations,"Drivers and Mobile Plant Operators"
+2663,101014,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+2663,101014,"Tobacco Type","Never used tobacco"
+2663,101014,"Drinking Status","Previous High risk "
+2663,101014,"Strenuous Lifting",Yes
+2665,177588,"Dietary Pattern",Normal
+2665,177588,Activities,"walking, marching and hiking"
+2665,177588,Carcinogens,None
+2665,177588,"Educational Level",Unknown
+2665,177588,"Socio Economic Status - Adult","Middle class"
+2665,177588,"Socio Economic Status - Child","Middle class"
+2665,177588,Occupations,None
+2665,177588,"Tobacco Type","Never used tobacco"
+2665,177588,"Drinking Status","Low risk"
+2665,177588,"Strenuous Lifting",No
+2681,102436,"Dietary Pattern",Normal
+2681,102436,Activities,swimming
+2681,102436,Activities,"computer keyboarding"
+2681,102436,Activities,"furniture building and finishing"
+2681,102436,Activities,"string instrument playing"
+2681,102436,Carcinogens,None
+2681,102436,"Educational Level","Bachelor's degree"
+2681,102436,"Socio Economic Status - Adult","Upper middle class"
+2681,102436,"Socio Economic Status - Child","Upper class"
+2681,102436,Occupations,"Science and Engineering Professionals"
+2681,102436,Occupations,"Teaching Professionals"
+2681,102436,"Tobacco Type","Never used tobacco"
+2681,102436,"Drinking Status","Low risk"
+2681,102436,"Strenuous Lifting",No
+2685,179497,"Dietary Pattern",Normal
+2685,179497,Activities,"other involving animal care"
+2685,179497,Activities,"Working on cars and other mechanical objects"
+2685,179497,Carcinogens,Asbestos
+2685,179497,Carcinogens,"Oral tobacco products"
+2685,179497,"Educational Level","9th-12th, no diploma"
+2685,179497,"Socio Economic Status - Adult","Middle class"
+2685,179497,"Socio Economic Status - Child","Lower middle class"
+2685,179497,Occupations,"Metal, Machinery and Related Trades Workers"
+2685,179497,Occupations,"Drivers and Mobile Plant Operators"
+2685,179497,"Tobacco Type","smoke tobacco"
+2685,179497,"Tobacco Usage","Current some day tobacco user"
+2685,179497,"Tobacco Usage","light tobacco user"
+2685,179497,"Drinking Status","Drinker, current status unknown"
+2685,179497,"Strenuous Lifting",Yes
+2725,109833,"Dietary Pattern",Normal
+2725,109833,Activities,"other involving other sports and athletics played individually"
+2725,109833,Activities,"hand held interactive electronic device"
+2725,109833,Carcinogens,"Oral tobacco products"
+2725,109833,"Educational Level","Some college credit but no degree"
+2725,109833,"Socio Economic Status - Adult","Middle class"
+2725,109833,"Socio Economic Status - Child","Middle class"
+2725,109833,Occupations,"Protective Services Workers"
+2725,109833,Occupations,"Food Preparation Assistants"
+2725,109833,Occupations,"Refuse Workers and Other Elementary Workers"
+2725,109833,"Tobacco Type","smoke tobacco"
+2725,109833,"Tobacco Usage","Heavy tobacco user"
+2725,109833,"Drinking Status","Low risk"
+2725,109833,"Strenuous Lifting",No
+2744,174723,Activities,"american tackle football"
+2744,174723,Carcinogens,"Oral tobacco products"
+2744,174723,"Educational Level","High school graduate or GED diploma"
+2744,174723,"Socio Economic Status - Adult","Middle class"
+2744,174723,"Socio Economic Status - Child","Middle class"
+2744,174723,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+2744,174723,"Tobacco Type","smoke tobacco"
+2744,174723,"Tobacco Usage","Heavy tobacco user"
+2744,174723,"Drinking Status","High risk"
+2744,174723,"Strenuous Lifting",Yes
+2746,138767,"Dietary Pattern",Normal
+2746,138767,Activities,running
+2746,138767,Activities,"computer keyboarding"
+2746,138767,Activities,"other interior property and clothing maintenance"
+2746,138767,Carcinogens,None
+2746,138767,"Educational Level","High school graduate or GED diploma"
+2746,138767,"Socio Economic Status - Adult","Middle class"
+2746,138767,"Socio Economic Status - Child","Middle class"
+2746,138767,Occupations,"Personal Services Workers"
+2746,138767,Occupations,"Cleaners and Helpers"
+2746,138767,"Tobacco Type","Never used tobacco"
+2746,138767,"Drinking Status","Never drank"
+2746,138767,"Strenuous Lifting",No
+2748,180835,"Dietary Pattern",Normal
+2748,180835,Activities,"other involving water and watercraft"
+2748,180835,Activities,"building and construction"
+2748,180835,Carcinogens,"Hepatitis C virus"
+2748,180835,Carcinogens,"Oral tobacco products"
+2748,180835,"Educational Level","9th-12th, no diploma"
+2748,180835,"Socio Economic Status - Adult","Lower class"
+2748,180835,"Socio Economic Status - Child","Middle class"
+2748,180835,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+2748,180835,"Tobacco Type","smoke tobacco"
+2748,180835,"Tobacco Usage","Current some day tobacco user"
+2748,180835,"Tobacco Usage","light tobacco user"
+2748,180835,"Drinking Status","Low risk"
+2748,180835,"Strenuous Lifting",Yes
+2749,180333,"Dietary Pattern",Normal
+2749,180333,Activities,"bike riding"
+2749,180333,Activities,"gardening and landscaping"
+2749,180333,Carcinogens,"Oral tobacco products"
+2749,180333,Carcinogens,"Tobacco smoke, environmental"
+2749,180333,"Educational Level","High school graduate or GED diploma"
+2749,180333,"Socio Economic Status - Adult","Lower class"
+2749,180333,"Socio Economic Status - Child","Lower class"
+2749,180333,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+2749,180333,Occupations,"Metal, Machinery and Related Trades Workers"
+2749,180333,Occupations,"Armed Forces Occupations, Other Ranks"
+2749,180333,"Tobacco Type","chew tobacco"
+2749,180333,"Tobacco Usage","tobacco user,  current status unknown"
+2749,180333,"Drinking Status","Low risk"
+2749,180333,"Strenuous Lifting",No
+2775,103350,"Dietary Pattern",Normal
+2775,103350,Activities,"food preparation and clean up"
+2775,103350,Activities,"Working on cars and other mechanical objects"
+2775,103350,Carcinogens,"Oral tobacco products"
+2775,103350,"Educational Level","8th grade/less"
+2775,103350,"Socio Economic Status - Adult","Lower class"
+2775,103350,"Socio Economic Status - Child","Lower middle class"
+2775,103350,Occupations,"Food Preparation Assistants"
+2775,103350,"Tobacco Type","smoke tobacco"
+2775,103350,"Tobacco Usage","light tobacco user"
+2775,103350,"Drinking Status","Low risk"
+2775,103350,"Strenuous Lifting",No
+2817,143856,"Dietary Pattern",Normal
+2817,143856,Activities,None
+2817,143856,Carcinogens,"Oral tobacco products"
+2817,143856,"Educational Level","High school graduate or GED diploma"
+2817,143856,"Socio Economic Status - Adult","Lower class"
+2817,143856,"Socio Economic Status - Child","Lower class"
+2817,143856,Occupations,"Food Preparation Assistants"
+2817,143856,"Tobacco Type","smoke tobacco"
+2817,143856,"Tobacco Usage","tobacco user,  current status unknown"
+2817,143856,"Drinking Status","Low risk"
+2817,143856,"Strenuous Lifting",Yes
+2913,136959,"Dietary Pattern","Convenience food"
+2913,136959,Activities,"other involving other sports and athletics played individually"
+2913,136959,Activities,"building and construction"
+2913,136959,Carcinogens,"Oral tobacco products"
+2913,136959,"Educational Level","High school graduate or GED diploma"
+2913,136959,"Socio Economic Status - Adult","Middle class"
+2913,136959,"Socio Economic Status - Child","Middle class"
+2913,136959,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+2913,136959,Occupations,"Drivers and Mobile Plant Operators"
+2913,136959,"Tobacco Type","smoke tobacco"
+2913,136959,"Tobacco Usage","Heavy tobacco user"
+2913,136959,"Drinking Status","High risk"
+2913,136959,"Strenuous Lifting",No
+2914,112994,"Dietary Pattern",Normal
+2914,112994,Activities,"caregiving, bathing"
+2914,112994,Activities,"piano playing"
+2914,112994,Activities,"string instrument playing"
+2914,112994,Activities,"winds and brass instrument playing"
+2914,112994,Carcinogens,"Oral tobacco products"
+2914,112994,"Educational Level","Some college credit but no degree"
+2914,112994,"Socio Economic Status - Adult","Middle class"
+2914,112994,"Socio Economic Status - Child","Middle class"
+2914,112994,Occupations,"Personal Care Workers"
+2914,112994,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+2914,112994,"Tobacco Type","smoke tobacco"
+2914,112994,"Tobacco Usage","Heavy tobacco user"
+2914,112994,"Drinking Status","High risk"
+2914,112994,"Strenuous Lifting",No
+2990,174235,"Dietary Pattern",Normal
+2990,174235,Activities,"ice hockey"
+2990,174235,Activities,"other involving climbing, rappelling and jumping off"
+2990,174235,Activities,"other involving dancing and other rhythmic movements"
+2990,174235,Activities,baseball
+2990,174235,Activities,"walking an animal"
+2990,174235,Carcinogens,"Oral tobacco products"
+2990,174235,Carcinogens,"Tobacco smoke, environmental"
+2990,174235,"Educational Level","High school graduate or GED diploma"
+2990,174235,"Socio Economic Status - Adult","Lower class"
+2990,174235,"Socio Economic Status - Child","Middle class"
+2990,174235,Occupations,"Personal Services Workers"
+2990,174235,"Tobacco Usage","tobacco user,  current status unknown"
+2990,174235,"Drinking Status","High risk"
+2996,111836,"Dietary Pattern",Unknown
+2996,111836,Activities,"exercise machines primarily for muscle strengthening"
+2996,111836,Carcinogens,"Oral tobacco products"
+2996,111836,"Educational Level",Unknown
+2996,111836,"Socio Economic Status - Adult",Unknown
+2996,111836,"Socio Economic Status - Child",Unknown
+2996,111836,Occupations,None
+2996,111836,"Tobacco Usage","tobacco user,  current status unknown"
+2996,111836,"Drinking Status","Drinker, current status unknown"
+2996,111836,"Strenuous Lifting",Unknown
+3045,112387,"Dietary Pattern",Overeating
+3045,112387,Activities,swimming
+3045,112387,Carcinogens,"Oral tobacco products"
+3045,112387,"Educational Level","9th-12th, no diploma"
+3045,112387,"Socio Economic Status - Adult","Lower class"
+3045,112387,"Socio Economic Status - Child","Middle class"
+3045,112387,Occupations,None
+3045,112387,"Tobacco Type","smoke tobacco"
+3045,112387,"Tobacco Usage","Current everyday tobacco user"
+3045,112387,"Strenuous Lifting",No
+3102,135289,"Dietary Pattern",Normal
+3102,135289,Activities,basketball
+3102,135289,Carcinogens,"Tobacco smoke, environmental"
+3102,135289,"Educational Level","Bachelor's degree"
+3102,135289,"Socio Economic Status - Adult","Middle class"
+3102,135289,"Socio Economic Status - Child","Lower middle class"
+3102,135289,Occupations,"Science and Engineering Professionals"
+3102,135289,Occupations,"Legal, Social and Cultural Professionals"
+3102,135289,"Tobacco Type","Never used tobacco"
+3102,135289,"Drinking Status","Low risk"
+3102,135289,"Strenuous Lifting",Yes
+3103,146378,"Dietary Pattern",Normal
+3103,146378,Activities,"other involving arts and handcrafts"
+3103,146378,"Educational Level","Bachelor's degree"
+3103,146378,"Socio Economic Status - Adult","Middle class"
+3103,146378,"Socio Economic Status - Child","Middle class"
+3103,146378,Occupations,"Administrative and Commercial Managers"
+3103,146378,Occupations,"Food Preparation Assistants"
+3103,146378,"Tobacco Type","Never used tobacco"
+3103,146378,"Drinking Status","Low risk"
+3103,146378,"Strenuous Lifting",No
+3171,171168,"Dietary Pattern",Normal
+3171,171168,Activities,"walking, marching and hiking"
+3171,171168,Activities,"other involving arts and handcrafts"
+3171,171168,Activities,"gardening and landscaping"
+3171,171168,Activities,"walking an animal"
+3171,171168,"Educational Level","Bachelor's degree"
+3171,171168,"Socio Economic Status - Adult","Middle class"
+3171,171168,"Socio Economic Status - Child","Upper class"
+3171,171168,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+3171,171168,"Tobacco Type","smoke tobacco"
+3171,171168,"Tobacco Usage","Heavy tobacco user"
+3171,171168,"Drinking Status","Low risk"
+3171,171168,"Strenuous Lifting",Yes
+3183,112076,"Dietary Pattern",Normal
+3183,112076,Activities,Other
+3183,112076,Activities,"Working on cars and other mechanical objects"
+3183,112076,"Educational Level","8th grade/less"
+3183,112076,"Socio Economic Status - Adult","Lower class"
+3183,112076,"Socio Economic Status - Child","Lower class"
+3183,112076,Occupations,None
+3183,112076,"Tobacco Type","smoke tobacco"
+3183,112076,"Tobacco Usage","Heavy tobacco user"
+3183,112076,"Drinking Status","Drinker, current status unknown"
+3183,112076,"Strenuous Lifting",Yes
+3233,105937,"Dietary Pattern",Normal
+3233,105937,Activities,"walking, marching and hiking"
+3233,105937,Activities,"other involving other sports and athletics played as a team or group"
+3233,105937,"Educational Level","Bachelor's degree"
+3233,105937,"Socio Economic Status - Adult","Middle class"
+3233,105937,"Socio Economic Status - Child","Middle class"
+3233,105937,Occupations,None
+3233,105937,"Tobacco Type","Never used tobacco"
+3233,105937,"Drinking Status","Low risk"
+3233,105937,"Strenuous Lifting",Yes
+3237,105584,"Dietary Pattern",Normal
+3237,105584,Activities,bowling
+3237,105584,Activities,basketball
+3237,105584,Carcinogens,"Oral tobacco products"
+3237,105584,"Educational Level","Some college credit but no degree"
+3237,105584,"Socio Economic Status - Adult","Middle class"
+3237,105584,"Socio Economic Status - Child","Middle class"
+3237,105584,Occupations,"Drivers and Mobile Plant Operators"
+3237,105584,"Tobacco Type","smoke tobacco"
+3237,105584,"Tobacco Usage","Former tobacco user"
+3237,105584,"Drinking Status","Low risk"
+3237,105584,"Strenuous Lifting",Yes
+3258,178078,"Dietary Pattern",Normal
+3258,178078,Activities,soccer
+3258,178078,Activities,Other
+3258,178078,Carcinogens,Unknown
+3258,178078,"Educational Level","8th grade/less"
+3258,178078,"Socio Economic Status - Adult","Middle class"
+3258,178078,"Socio Economic Status - Child","Lower class"
+3258,178078,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+3258,178078,"Tobacco Type","Never used tobacco"
+3258,178078,"Drinking Status","Low risk"
+3258,178078,"Strenuous Lifting",Yes
+3286,134434,"Dietary Pattern",Normal
+3286,134434,Activities,"walking, marching and hiking"
+3286,134434,Carcinogens,"Hepatitis B virus"
+3286,134434,Carcinogens,"Tobacco smoke, environmental"
+3286,134434,"Educational Level","High school graduate or GED diploma"
+3286,134434,"Socio Economic Status - Adult","Lower class"
+3286,134434,"Socio Economic Status - Child","Lower class"
+3286,134434,Occupations,"Personal Care Workers"
+3286,134434,Occupations,"Cleaners and Helpers"
+3286,134434,Occupations,"Food Preparation Assistants"
+3286,134434,"Drinking Status","Never drank"
+3286,134434,"Strenuous Lifting",Yes
+3383,116070,"Dietary Pattern",Normal
+3383,116070,Activities,"walking, marching and hiking"
+3383,116070,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+3383,116070,Activities,"roller skating (inline) and skateboarding"
+3383,116070,Activities,"building and construction"
+3383,116070,Activities,"other involving exterior property and land maintenance, building and construction"
+3383,116070,Carcinogens,Unknown
+3383,116070,"Educational Level","Some college credit but no degree"
+3383,116070,"Socio Economic Status - Adult","Lower middle class"
+3383,116070,"Socio Economic Status - Child","Upper middle class"
+3383,116070,Occupations,"Science and Engineering Professionals"
+3383,116070,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+3383,116070,"Tobacco Type","Never used tobacco"
+3383,116070,"Drinking Status","Drinker, current status unknown"
+3383,116070,"Strenuous Lifting",Yes
+3409,178737,Activities,"bike riding"
+3409,178737,"Drinking Status","Low risk"
+3433,149112,Activities,"other involving animal care"
+3433,149112,"Drinking Status","Drinker, current status unknown"
+3445,107345,"Dietary Pattern",Normal
+3445,107345,Activities,Other
+3445,107345,Carcinogens,"Oral tobacco products"
+3445,107345,Carcinogens,"Tobacco smoke, environmental"
+3445,107345,"Educational Level","9th-12th, no diploma"
+3445,107345,"Socio Economic Status - Adult","Middle class"
+3445,107345,"Socio Economic Status - Child","Middle class"
+3445,107345,Occupations,"Personal Services Workers"
+3445,107345,Occupations,"Food Preparation Assistants"
+3445,107345,"Tobacco Type","smoke tobacco"
+3445,107345,"Tobacco Usage","Current everyday tobacco user"
+3445,107345,"Tobacco Usage","Heavy tobacco user"
+3445,107345,"Drinking Status","High risk"
+3445,107345,"Strenuous Lifting",No
+3474,176194,"Dietary Pattern",Normal
+3474,176194,Activities,"walking, marching and hiking"
+3474,176194,Activities,"martial arts"
+3474,176194,Activities,"free weights"
+3474,176194,Activities,Other
+3474,176194,Carcinogens,"Oral tobacco products"
+3474,176194,"Educational Level","Some college credit but no degree"
+3474,176194,"Socio Economic Status - Adult","Middle class"
+3474,176194,"Socio Economic Status - Child","Middle class"
+3474,176194,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+3474,176194,Occupations,"Personal Services Workers"
+3474,176194,"Tobacco Type","smoke tobacco"
+3474,176194,"Tobacco Usage","Former tobacco user"
+3474,176194,"Drinking Status","Low risk"
+3474,176194,"Strenuous Lifting",Yes
+3485,106598,"Dietary Pattern",Normal
+3485,106598,Activities,"walking, marching and hiking"
+3485,106598,Activities,basketball
+3485,106598,Carcinogens,"Oral tobacco products"
+3485,106598,"Educational Level","High school graduate or GED diploma"
+3485,106598,"Socio Economic Status - Adult","Middle class"
+3485,106598,"Socio Economic Status - Child","Middle class"
+3485,106598,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+3485,106598,Occupations,"Refuse Workers and Other Elementary Workers"
+3485,106598,"Tobacco Type","smoke tobacco"
+3485,106598,"Tobacco Usage","Current everyday tobacco user"
+3485,106598,"Tobacco Usage","light tobacco user"
+3485,106598,"Drinking Status","Low risk"
+3485,106598,"Strenuous Lifting",Yes
+3518,171946,Activities,"computer keyboarding"
+3525,115162,"Dietary Pattern",Normal
+3525,115162,Activities,"Working on cars and other mechanical objects"
+3525,115162,Carcinogens,None
+3525,115162,"Educational Level","High school graduate or GED diploma"
+3525,115162,"Socio Economic Status - Adult","Upper class"
+3525,115162,"Socio Economic Status - Child","Lower class"
+3525,115162,Occupations,"Business and Administration Professionals"
+3525,115162,Occupations,"Metal, Machinery and Related Trades Workers"
+3525,115162,Occupations,"Drivers and Mobile Plant Operators"
+3525,115162,"Tobacco Type","Never used tobacco"
+3525,115162,"Drinking Status","Low risk"
+3525,115162,"Strenuous Lifting",Yes
+3561,171208,"Dietary Pattern","Weight reduction"
+3561,171208,"Dietary Pattern",Normal
+3561,171208,Activities,"physical games generally associated with school recess, summer camp and children"
+3561,171208,Activities,Other
+3561,171208,Carcinogens,Unknown
+3561,171208,"Educational Level","Bachelor's degree"
+3561,171208,"Socio Economic Status - Adult","Middle class"
+3561,171208,"Socio Economic Status - Child","Middle class"
+3561,171208,Occupations,"Business and Administration Associate Professionals"
+3561,171208,"Tobacco Type","Never used tobacco"
+3561,171208,"Drinking Status","Low risk"
+3561,171208,"Strenuous Lifting",No
+3607,108039,"Dietary Pattern",Vegetarian
+3607,108039,"Dietary Pattern",Normal
+3607,108039,Activities,golf
+3607,108039,Activities,"other involving computer technology and electronic devices"
+3607,108039,Carcinogens,"Oral tobacco products"
+3607,108039,Carcinogens,"Tobacco smoke, environmental"
+3607,108039,"Educational Level","Bachelor's degree"
+3607,108039,"Socio Economic Status - Adult","Middle class"
+3607,108039,"Socio Economic Status - Child","Middle class"
+3607,108039,Occupations,"Health Associate Professionals"
+3607,108039,Occupations,"Stationary Plant and Machine Operators"
+3607,108039,Occupations,"Armed Forces Occupations, Other Ranks"
+3607,108039,"Tobacco Type","smoke tobacco"
+3607,108039,"Tobacco Usage","Current everyday tobacco user"
+3607,108039,"Tobacco Usage","Heavy tobacco user"
+3607,108039,"Drinking Status","High risk"
+3607,108039,"Strenuous Lifting",Yes
+3613,148122,"Dietary Pattern",Normal
+3613,148122,Activities,"walking, marching and hiking"
+3613,148122,Activities,"building and construction"
+3613,148122,Activities,Other
+3613,148122,Carcinogens,"Oral tobacco products"
+3613,148122,Carcinogens,"Tobacco smoke, environmental"
+3613,148122,"Educational Level","Some college credit but no degree"
+3613,148122,"Socio Economic Status - Adult","Lower class"
+3613,148122,"Socio Economic Status - Child","Lower class"
+3613,148122,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+3613,148122,"Tobacco Type","smoke tobacco"
+3613,148122,"Tobacco Usage","Current some day tobacco user"
+3613,148122,"Tobacco Usage","light tobacco user"
+3613,148122,"Drinking Status","High risk"
+3613,148122,"Strenuous Lifting",Yes
+3648,107998,Activities,Other
+3727,182401,"Dietary Pattern",Normal
+3727,182401,Activities,running
+3727,182401,Activities,"Working on cars and other mechanical objects"
+3727,182401,Carcinogens,"Oral tobacco products"
+3727,182401,"Educational Level","High school graduate or GED diploma"
+3727,182401,"Socio Economic Status - Child","Middle class"
+3727,182401,Occupations,"Metal, Machinery and Related Trades Workers"
+3727,182401,Occupations,"Armed Forces Occupations, Other Ranks"
+3727,182401,"Tobacco Type","smoke tobacco"
+3727,182401,"Tobacco Usage","Current everyday tobacco user"
+3727,182401,"Drinking Status","Low risk"
+3727,182401,"Strenuous Lifting",No
+3735,179637,Activities,Other
+3735,179637,Activities,"Working on cars and other mechanical objects"
+3739,146954,"Dietary Pattern",Normal
+3739,146954,Activities,Other
+3739,146954,Carcinogens,"Tobacco smoke, environmental"
+3739,146954,"Educational Level","High school graduate or GED diploma"
+3739,146954,"Socio Economic Status - Adult","Middle class"
+3739,146954,"Socio Economic Status - Child","Middle class"
+3739,146954,Occupations,"Other Clerical Support Workers"
+3739,146954,"Tobacco Type","smoke tobacco"
+3739,146954,"Tobacco Usage","Current everyday tobacco user"
+3739,146954,"Drinking Status","Low risk"
+3744,181109,"Dietary Pattern",Normal
+3744,181109,Activities,running
+3744,181109,Activities,"american tackle football"
+3744,181109,Activities,Other
+3744,181109,Carcinogens,Unknown
+3744,181109,"Educational Level","Some college credit but no degree"
+3744,181109,"Socio Economic Status - Adult","Lower class"
+3744,181109,"Socio Economic Status - Child","Lower class"
+3744,181109,Occupations,"Science and Engineering Associate Professionals"
+3744,181109,"Tobacco Type","Never used tobacco"
+3744,181109,"Drinking Status","High risk"
+3744,181109,"Strenuous Lifting",Yes
+3745,103862,"Dietary Pattern",Normal
+3745,103862,Activities,"volleyball (beach) (court)"
+3745,103862,Carcinogens,None
+3745,103862,"Educational Level","Master's degree"
+3745,103862,"Socio Economic Status - Adult","Middle class"
+3745,103862,"Socio Economic Status - Child","Middle class"
+3745,103862,Occupations,"Armed Forces Occupations, Other Ranks"
+3745,103862,Occupations,Other
+3745,103862,"Tobacco Type","Never used tobacco"
+3745,103862,"Drinking Status","Low risk"
+3745,103862,"Strenuous Lifting",No
+3774,133175,"Dietary Pattern",Vegetarian
+3774,133175,"Dietary Pattern",Normal
+3774,133175,Activities,"other involving animal care"
+3774,133175,Activities,Other
+3774,133175,Carcinogens,"Oral tobacco products"
+3774,133175,"Educational Level","Some college credit but no degree"
+3774,133175,"Socio Economic Status - Adult","Middle class"
+3774,133175,"Socio Economic Status - Child","Middle class"
+3774,133175,Occupations,"Personal Services Workers"
+3774,133175,Occupations,"Sales Workers"
+3774,133175,"Tobacco Type","smoke tobacco"
+3774,133175,"Tobacco Usage","Current everyday tobacco user"
+3774,133175,"Tobacco Usage","light tobacco user"
+3774,133175,"Drinking Status","Never drank"
+3774,133175,"Strenuous Lifting",No
+3869,100330,"Dietary Pattern",Normal
+3869,100330,Activities,"walking, marching and hiking"
+3869,100330,Carcinogens,"Tobacco smoke, environmental"
+3869,100330,"Educational Level","9th-12th, no diploma"
+3869,100330,"Socio Economic Status - Child","Middle class"
+3869,100330,Occupations,None
+3869,100330,"Tobacco Type","Never used tobacco"
+3869,100330,"Drinking Status","Low risk"
+3869,100330,"Strenuous Lifting",No
+3891,135963,"Dietary Pattern",Normal
+3891,135963,Activities,swimming
+3891,135963,Activities,"other involving other sports and athletics played individually"
+3891,135963,Activities,basketball
+3891,135963,Activities,"other involving arts and handcrafts"
+3891,135963,Carcinogens,"Oral tobacco products"
+3891,135963,Carcinogens,"Ultraviolet (UV) radiation, broad spectrum"
+3891,135963,"Educational Level","9th-12th, no diploma"
+3891,135963,"Socio Economic Status - Adult","Lower middle class"
+3891,135963,"Socio Economic Status - Child","Lower middle class"
+3891,135963,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+3891,135963,"Tobacco Type","smoke tobacco"
+3891,135963,"Tobacco Usage","light tobacco user"
+3891,135963,"Drinking Status","Low risk"
+3891,135963,"Strenuous Lifting",Yes
+3905,147865,"Dietary Pattern","Convenience food"
+3905,147865,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+3905,147865,Activities,"computer keyboarding"
+3905,147865,Carcinogens,"Oral tobacco products"
+3905,147865,Carcinogens,"Tobacco smoke, environmental"
+3905,147865,"Educational Level","Bachelor's degree"
+3905,147865,"Socio Economic Status - Adult","Lower class"
+3905,147865,"Socio Economic Status - Child","Upper middle class"
+3905,147865,Occupations,"Business and Administration Associate Professionals"
+3905,147865,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+3905,147865,"Tobacco Type","smoke tobacco"
+3905,147865,"Tobacco Usage","Heavy tobacco user"
+3905,147865,"Drinking Status","High risk"
+3905,147865,"Strenuous Lifting",No
+3922,109619,"Dietary Pattern",Normal
+3922,109619,Activities,basketball
+3922,109619,Activities,"volleyball (beach) (court)"
+3922,109619,Activities,"other involving arts and handcrafts"
+3922,109619,"Educational Level","Bachelor's degree"
+3922,109619,"Socio Economic Status - Adult","Middle class"
+3922,109619,"Socio Economic Status - Child","Middle class"
+3922,109619,Occupations,"Hospitality, Retail and Other Services Managers"
+3922,109619,Occupations,"Personal Care Workers"
+3922,109619,Occupations,"Food Preparation Assistants"
+3922,109619,"Tobacco Type","Never used tobacco"
+3922,109619,"Drinking Status","Drinker, current status unknown"
+3922,109619,"Strenuous Lifting",No
+4007,148327,"Dietary Pattern",Normal
+4007,148327,Activities,None
+4007,148327,Carcinogens,None
+4007,148327,"Educational Level","Associate degree"
+4007,148327,"Socio Economic Status - Adult","Upper middle class"
+4007,148327,"Socio Economic Status - Child","Upper middle class"
+4007,148327,Occupations,None
+4007,148327,"Tobacco Type","Never used tobacco"
+4007,148327,"Drinking Status","Low risk"
+4007,148327,"Strenuous Lifting",No
+4046,100853,"Dietary Pattern",Normal
+4046,100853,Activities,yoga
+4046,100853,Activities,"cooking and baking"
+4046,100853,Carcinogens,None
+4046,100853,"Educational Level","Associate degree"
+4046,100853,"Socio Economic Status - Adult","Middle class"
+4046,100853,"Socio Economic Status - Child","Middle class"
+4046,100853,Occupations,"Science and Engineering Associate Professionals"
+4046,100853,Occupations,"Health Associate Professionals"
+4046,100853,"Tobacco Type","Never used tobacco"
+4046,100853,"Drinking Status","Low risk"
+4046,100853,"Strenuous Lifting",No
+4060,147451,"Dietary Pattern",Normal
+4060,147451,"Dietary Pattern","Convenience food"
+4060,147451,Activities,None
+4060,147451,Carcinogens,"Oral tobacco products"
+4060,147451,"Educational Level","Some college credit but no degree"
+4060,147451,"Socio Economic Status - Adult","Lower class"
+4060,147451,"Socio Economic Status - Child","Upper class"
+4060,147451,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+4060,147451,"Tobacco Type","smoke tobacco"
+4060,147451,"Tobacco Usage","Heavy tobacco user"
+4060,147451,"Drinking Status","Previous High risk "
+4060,147451,"Strenuous Lifting",Yes
+4094,178461,"Dietary Pattern","Convenience food"
+4094,178461,Activities,"hand held interactive electronic device"
+4094,178461,Carcinogens,"Oral tobacco products"
+4094,178461,"Educational Level","9th-12th, no diploma"
+4094,178461,"Socio Economic Status - Adult","Lower class"
+4094,178461,"Socio Economic Status - Child","Lower class"
+4094,178461,Occupations,None
+4094,178461,"Tobacco Type","smoke tobacco"
+4094,178461,"Tobacco Usage","Heavy tobacco user"
+4094,178461,"Drinking Status","High risk"
+4094,178461,"Strenuous Lifting",No
+4108,100131,"Dietary Pattern","Convenience food"
+4108,100131,Activities,Other
+4108,100131,Carcinogens,"Tobacco smoke, environmental"
+4108,100131,"Educational Level","9th-12th, no diploma"
+4108,100131,"Socio Economic Status - Adult","Middle class"
+4108,100131,"Socio Economic Status - Child","Middle class"
+4108,100131,Occupations,Other
+4108,100131,"Tobacco Type","Never used tobacco"
+4108,100131,"Drinking Status","Low risk"
+4108,100131,"Strenuous Lifting",No
+4117,171170,"Dietary Pattern",Normal
+4117,171170,Activities,running
+4117,171170,Activities,"american tackle football"
+4117,171170,Activities,"free weights"
+4117,171170,Activities,"other involving arts and handcrafts"
+4117,171170,Activities,"cooking and baking"
+4117,171170,Carcinogens,"Oral tobacco products"
+4117,171170,"Educational Level","High school graduate or GED diploma"
+4117,171170,"Socio Economic Status - Adult","Middle class"
+4117,171170,"Socio Economic Status - Child","Middle class"
+4117,171170,Occupations,"Sales Workers"
+4117,171170,Occupations,"Food Preparation Assistants"
+4117,171170,Occupations,"Non-commissioned Armed Forces Officers"
+4117,171170,"Tobacco Type","smoke tobacco"
+4117,171170,"Tobacco Usage","light tobacco user"
+4117,171170,"Drinking Status","High risk"
+4117,171170,"Strenuous Lifting",Yes
+4222,134898,"Dietary Pattern",Normal
+4222,134898,Activities,"horseback riding"
+4222,134898,Carcinogens,None
+4222,134898,"Educational Level","9th-12th, no diploma"
+4222,134898,"Socio Economic Status - Adult","Upper class"
+4222,134898,"Socio Economic Status - Child","Upper class"
+4222,134898,Occupations,"Subsistence Farmers, Fishers, Hunters and Gatherers"
+4222,134898,"Tobacco Type","Never used tobacco"
+4222,134898,"Drinking Status","Never drank"
+4222,134898,"Strenuous Lifting",Yes
+4267,172583,Activities,running
+4267,172583,"Tobacco Type","Never used tobacco"
+4342,143459,"Dietary Pattern",Normal
+4342,143459,Activities,"walking, marching and hiking"
+4342,143459,Carcinogens,"Oral tobacco products"
+4342,143459,"Educational Level","Bachelor's degree"
+4342,143459,"Socio Economic Status - Adult","Lower middle class"
+4342,143459,"Socio Economic Status - Child","Upper class"
+4342,143459,Occupations,"Health Professionals"
+4342,143459,"Tobacco Type","smoke tobacco"
+4342,143459,"Tobacco Usage","tobacco user,  current status unknown"
+4342,143459,"Drinking Status","Drinker, current status unknown"
+4342,143459,"Strenuous Lifting",Yes
+4371,143249,"Dietary Pattern",Normal
+4371,143249,Activities,"other involving arts and handcrafts"
+4371,143249,Carcinogens,"Oral tobacco products"
+4371,143249,"Educational Level","High school graduate or GED diploma"
+4371,143249,"Socio Economic Status - Adult","Middle class"
+4371,143249,"Socio Economic Status - Child","Middle class"
+4371,143249,Occupations,None
+4371,143249,"Tobacco Type","smoke tobacco"
+4371,143249,"Tobacco Usage","tobacco user,  current status unknown"
+4371,143249,"Drinking Status","Low risk"
+4371,143249,"Strenuous Lifting",No
+4451,109385,"Dietary Pattern",Normal
+4451,109385,Activities,"physical games generally associated with school recess, summer camp and children"
+4451,109385,Activities,"other caregiving"
+4451,109385,Activities,Other
+4451,109385,Carcinogens,"Oral tobacco products"
+4451,109385,Carcinogens,Unknown
+4451,109385,"Educational Level","Some college credit but no degree"
+4451,109385,"Socio Economic Status - Adult","Middle class"
+4451,109385,"Socio Economic Status - Child","Middle class"
+4451,109385,Occupations,"Business and Administration Associate Professionals"
+4451,109385,Occupations,"Customer Services Clerks"
+4451,109385,"Tobacco Type","smoke tobacco"
+4451,109385,"Tobacco Usage","Current some day tobacco user"
+4451,109385,"Tobacco Usage","light tobacco user"
+4451,109385,"Drinking Status","Low risk"
+4451,109385,"Strenuous Lifting",No
+4559,107389,Activities,yoga
+4559,107389,Activities,"other involving cardiorespiratory exercise"
+4559,107389,Activities,"other involving muscle strengthening exercises"
+4559,107389,Carcinogens,"Oral tobacco products"
+4559,107389,"Tobacco Type","smoke tobacco"
+4559,107389,"Tobacco Usage","Current everyday tobacco user"
+4559,107389,"Tobacco Usage","Heavy tobacco user"
+4559,107389,"Drinking Status","High risk"
+4763,101510,Activities,"walking, marching and hiking"
+4763,101510,Occupations,"Agricultural, Forestry and Fishery Labourers"
+4763,101510,Occupations,"Armed Forces Occupations, Other Ranks"
+4764,144615,"Dietary Pattern",Vegetarian
+4764,144615,Activities,running
+4764,144615,Activities,"other involving other sports and athletics played as a team or group"
+4764,144615,"Educational Level","High school graduate or GED diploma"
+4764,144615,"Socio Economic Status - Child","Lower middle class"
+4764,144615,Occupations,"Customer Services Clerks"
+4764,144615,Occupations,"Sales Workers"
+4764,144615,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+4764,144615,"Tobacco Type","Never used tobacco"
+4764,144615,"Drinking Status","High risk"
+4764,144615,"Strenuous Lifting",No
+4814,103559,"Dietary Pattern","Convenience food"
+4814,103559,Activities,"walking, marching and hiking"
+4814,103559,Activities,"walking an animal"
+4814,103559,Carcinogens,"Tobacco smoke, environmental"
+4814,103559,"Educational Level","Some college credit but no degree"
+4814,103559,"Socio Economic Status - Adult","Middle class"
+4814,103559,"Socio Economic Status - Child","Middle class"
+4814,103559,Occupations,"Hospitality, Retail and Other Services Managers"
+4814,103559,Occupations,"Sales Workers"
+4814,103559,"Tobacco Type","Never used tobacco"
+4814,103559,"Drinking Status","High risk"
+4814,103559,"Strenuous Lifting",No
+4845,105371,"Dietary Pattern",Normal
+4845,105371,Activities,"other involving other sports and athletics played individually"
+4845,105371,Activities,"american tackle football"
+4845,105371,Activities,"hand held interactive electronic device"
+4845,105371,Activities,"Working on cars and other mechanical objects"
+4845,105371,Carcinogens,"Oral tobacco products"
+4845,105371,"Educational Level","High school graduate or GED diploma"
+4845,105371,"Socio Economic Status - Adult","Lower class"
+4845,105371,"Socio Economic Status - Child","Lower class"
+4845,105371,Occupations,"Hospitality, Retail and Other Services Managers"
+4845,105371,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+4845,105371,Occupations,"Armed Forces Occupations, Other Ranks"
+4845,105371,"Tobacco Type","smoke tobacco"
+4845,105371,"Tobacco Usage","light tobacco user"
+4845,105371,"Drinking Status","Low risk"
+4845,105371,"Strenuous Lifting",Yes
+4901,170349,"Dietary Pattern",Normal
+4901,170349,Activities,"walking, marching and hiking"
+4901,170349,Carcinogens,Asbestos
+4901,170349,Carcinogens,"Coal tars"
+4901,170349,Carcinogens,"Tobacco smoke, environmental"
+4901,170349,"Educational Level","Some college credit but no degree"
+4901,170349,"Socio Economic Status - Adult","Upper middle class"
+4901,170349,"Socio Economic Status - Child","Middle class"
+4901,170349,Occupations,"Protective Services Workers"
+4901,170349,"Tobacco Type","chew tobacco"
+4901,170349,"Tobacco Usage","Current some day tobacco user"
+4901,170349,"Tobacco Usage","light tobacco user"
+4901,170349,"Drinking Status","Low risk"
+4901,170349,"Strenuous Lifting",Yes
+4974,170206,"Dietary Pattern",Normal
+4974,170206,Activities,"walking, marching and hiking"
+4974,170206,Activities,running
+4974,170206,Activities,golf
+4974,170206,Carcinogens,None
+4974,170206,"Educational Level","Some college credit but no degree"
+4974,170206,"Socio Economic Status - Adult","Middle class"
+4974,170206,"Socio Economic Status - Child","Middle class"
+4974,170206,Occupations,"Health Professionals"
+4974,170206,"Tobacco Type","Never used tobacco"
+4974,170206,"Drinking Status","Low risk"
+4974,170206,"Strenuous Lifting",No
+5009,136283,"Dietary Pattern",Normal
+5009,136283,Activities,"other involving other sports and athletics played individually"
+5009,136283,Carcinogens,None
+5009,136283,"Educational Level","Some college credit but no degree"
+5009,136283,"Socio Economic Status - Adult","Middle class"
+5009,136283,"Socio Economic Status - Child","Middle class"
+5009,136283,Occupations,"General and Keyboard Clerks"
+5009,136283,Occupations,"Personal Services Workers"
+5009,136283,"Tobacco Type","Never used tobacco"
+5009,136283,"Drinking Status","Unknown if ever drank"
+5009,136283,"Strenuous Lifting",No
+5031,144071,"Dietary Pattern",Normal
+5031,144071,Activities,dancing
+5031,144071,Activities,"exercise machines primarily for cardiorespiratory conditioning"
+5031,144071,Activities,"exercise machines primarily for muscle strengthening"
+5031,144071,Activities,"other involving arts and handcrafts"
+5031,144071,Carcinogens,"Tobacco smoke, environmental"
+5031,144071,Carcinogens,"Wood dust"
+5031,144071,"Educational Level","Some college credit but no degree"
+5031,144071,"Socio Economic Status - Adult","Lower middle class"
+5031,144071,"Socio Economic Status - Child","Lower class"
+5031,144071,Occupations,"Commissioned Armed Forces Officers"
+5031,144071,"Tobacco Type","smoke tobacco"
+5031,144071,"Tobacco Usage","Current some day tobacco user"
+5031,144071,"Tobacco Usage","light tobacco user"
+5031,144071,"Drinking Status","Low risk"
+5031,144071,"Strenuous Lifting",Yes
+5044,136287,"Dietary Pattern",Normal
+5044,136287,Activities,"exercise machines primarily for cardiorespiratory conditioning"
+5044,136287,Activities,"exercise machines primarily for muscle strengthening"
+5044,136287,Carcinogens,None
+5044,136287,"Educational Level","Some college credit but no degree"
+5044,136287,"Socio Economic Status - Adult","Upper class"
+5044,136287,"Socio Economic Status - Child","Upper class"
+5044,136287,Occupations,"Hospitality, Retail and Other Services Managers"
+5044,136287,"Tobacco Type","Never used tobacco"
+5044,136287,"Drinking Status","Low risk"
+5044,136287,"Strenuous Lifting",No
+5061,135887,Activities,"hand held interactive electronic device"
+5061,135887,"Tobacco Type","smoke tobacco"
+5061,135887,"Tobacco Type","tobacco user, type unknown"
+5061,135887,"Drinking Status","Drinker, current status unknown"
+5062,112798,"Dietary Pattern",Normal
+5062,112798,Activities,"cooking and baking"
+5062,112798,Carcinogens,None
+5062,112798,"Educational Level","Some college credit but no degree"
+5062,112798,"Socio Economic Status - Adult","Upper middle class"
+5062,112798,"Socio Economic Status - Child","Lower class"
+5062,112798,Occupations,"Refuse Workers and Other Elementary Workers"
+5062,112798,"Tobacco Type","Never used tobacco"
+5062,112798,"Drinking Status","Low risk"
+5062,112798,"Strenuous Lifting",No
+5078,139325,"Dietary Pattern","Convenience food"
+5078,139325,Activities,None
+5078,139325,Carcinogens,Unknown
+5078,139325,"Educational Level","High school graduate or GED diploma"
+5078,139325,"Socio Economic Status - Adult","Lower class"
+5078,139325,"Socio Economic Status - Child","Lower class"
+5078,139325,Occupations,"Customer Services Clerks"
+5078,139325,"Tobacco Type","Never used tobacco"
+5078,139325,"Drinking Status","Drinker, current status unknown"
+5078,139325,"Strenuous Lifting",No
+5143,173112,"Dietary Pattern",Normal
+5143,173112,Activities,"roller coaster riding"
+5143,173112,Carcinogens,"Oral tobacco products"
+5143,173112,Carcinogens,"Tobacco smoke, environmental"
+5143,173112,"Educational Level","High school graduate or GED diploma"
+5143,173112,"Socio Economic Status - Adult","Lower middle class"
+5143,173112,"Socio Economic Status - Child","Lower middle class"
+5143,173112,Occupations,"Sales Workers"
+5143,173112,"Tobacco Type","smoke tobacco"
+5143,173112,"Tobacco Usage","Current everyday tobacco user"
+5143,173112,"Tobacco Usage","light tobacco user"
+5143,173112,"Drinking Status","Low risk"
+5143,173112,"Strenuous Lifting",Unknown
+5163,104099,"Dietary Pattern",Normal
+5163,104099,Activities,None
+5163,104099,Carcinogens,None
+5163,104099,"Educational Level","High school graduate or GED diploma"
+5163,104099,"Socio Economic Status - Adult","Middle class"
+5163,104099,"Socio Economic Status - Child","Middle class"
+5163,104099,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+5163,104099,"Tobacco Type","smoke tobacco"
+5163,104099,"Tobacco Usage","Current everyday tobacco user"
+5163,104099,"Drinking Status","Low risk"
+5163,104099,"Strenuous Lifting",Unknown
+5251,143391,Activities,"other involving water and watercraft"
+5251,143391,"Drinking Status","High risk"
+5298,138720,"Dietary Pattern","Convenience food"
+5298,138720,Activities,"walking, marching and hiking"
+5298,138720,Activities,"springboard and platform diving"
+5298,138720,Activities,"bike riding"
+5298,138720,Activities,basketball
+5298,138720,Carcinogens,"Oral tobacco products"
+5298,138720,"Educational Level","Some college credit but no degree"
+5298,138720,"Socio Economic Status - Adult","Lower class"
+5298,138720,"Socio Economic Status - Child","Middle class"
+5298,138720,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+5298,138720,Occupations,"Metal, Machinery and Related Trades Workers"
+5298,138720,Occupations,"Food Preparation Assistants"
+5298,138720,"Tobacco Type","smoke tobacco"
+5298,138720,"Tobacco Usage","light tobacco user"
+5298,138720,"Drinking Status","High risk"
+5298,138720,"Strenuous Lifting",Yes
+5340,139236,"Dietary Pattern",Normal
+5340,139236,Activities,"walking, marching and hiking"
+5340,139236,Activities,running
+5340,139236,Activities,wrestling
+5340,139236,Activities,"exercise machines primarily for cardiorespiratory conditioning"
+5340,139236,Activities,"exercise machines primarily for muscle strengthening"
+5340,139236,Carcinogens,None
+5340,139236,"Educational Level","High school graduate or GED diploma"
+5340,139236,"Socio Economic Status - Adult","Middle class"
+5340,139236,"Socio Economic Status - Child","Middle class"
+5340,139236,Occupations,"Business and Administration Associate Professionals"
+5340,139236,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+5340,139236,Occupations,"Sales Workers"
+5340,139236,Occupations,"Food Preparation Assistants"
+5340,139236,"Tobacco Type","smoke tobacco"
+5340,139236,"Tobacco Usage","Current some day tobacco user"
+5340,139236,"Tobacco Usage","light tobacco user"
+5340,139236,"Drinking Status","High risk"
+5340,139236,"Strenuous Lifting",Yes
+5381,110235,"Dietary Pattern",Normal
+5381,110235,Activities,"walking, marching and hiking"
+5381,110235,Activities,"gardening and landscaping"
+5381,110235,Carcinogens,"Oral tobacco products"
+5381,110235,"Educational Level","9th-12th, no diploma"
+5381,110235,"Socio Economic Status - Adult","Middle class"
+5381,110235,Occupations,"Science and Engineering Associate Professionals"
+5381,110235,"Tobacco Type","smoke tobacco"
+5381,110235,"Tobacco Usage","tobacco user,  current status unknown"
+5381,110235,"Drinking Status","Low risk"
+5381,110235,"Strenuous Lifting",Yes
+5384,144303,"Dietary Pattern",Normal
+5384,144303,Activities,"other involving other sports and athletics played as a team or group"
+5384,144303,Carcinogens,"Oral tobacco products"
+5384,144303,"Educational Level","Some college credit but no degree"
+5384,144303,"Socio Economic Status - Adult","Middle class"
+5384,144303,"Socio Economic Status - Child","Lower class"
+5384,144303,Occupations,"Sales Workers"
+5384,144303,Occupations,"Market-oriented Skilled Forestry, Fishery and Hunting Workers"
+5384,144303,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+5384,144303,Occupations,"Food Preparation Assistants"
+5384,144303,"Tobacco Type","chew tobacco"
+5384,144303,"Tobacco Usage","Heavy tobacco user"
+5384,144303,"Drinking Status","High risk"
+5384,144303,"Strenuous Lifting",Yes
+5402,174615,"Dietary Pattern",Normal
+5402,174615,Activities,"walking, marching and hiking"
+5402,174615,Activities,"other involving other sports and athletics played as a team or group"
+5402,174615,Activities,"cooking and baking"
+5402,174615,"Educational Level","Associate degree"
+5402,174615,"Socio Economic Status - Adult","Middle class"
+5402,174615,"Socio Economic Status - Child","Middle class"
+5402,174615,Occupations,"Agricultural, Forestry and Fishery Labourers"
+5402,174615,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+5402,174615,Occupations,"Food Preparation Assistants"
+5402,174615,"Tobacco Type","smoke tobacco"
+5402,174615,"Tobacco Usage","light tobacco user"
+5402,174615,"Drinking Status","High risk"
+5402,174615,"Strenuous Lifting",Yes
+5403,107190,"Dietary Pattern","Convenience food"
+5403,107190,Activities,"walking, marching and hiking"
+5403,107190,"Educational Level","Some college credit but no degree"
+5403,107190,"Socio Economic Status - Adult","Middle class"
+5403,107190,"Socio Economic Status - Child","Middle class"
+5403,107190,Occupations,"Business and Administration Professionals"
+5403,107190,"Tobacco Type","smoke tobacco"
+5403,107190,"Tobacco Usage","Heavy tobacco user"
+5403,107190,"Drinking Status","Low risk"
+5403,107190,"Strenuous Lifting",No
+5439,176980,Activities,"other involving water and watercraft"
+5447,112666,"Dietary Pattern",Normal
+5447,112666,Activities,"bike riding"
+5447,112666,Carcinogens,"Oral tobacco products"
+5447,112666,"Educational Level","High school graduate or GED diploma"
+5447,112666,"Socio Economic Status - Adult","Lower middle class"
+5447,112666,"Socio Economic Status - Child","Middle class"
+5447,112666,"Tobacco Type","smoke tobacco"
+5447,112666,"Tobacco Usage","Current everyday tobacco user"
+5447,112666,"Tobacco Usage","Heavy tobacco user"
+5447,112666,"Drinking Status","Drinker, current status unknown"
+5447,112666,"Strenuous Lifting",No
+5458,141682,"Dietary Pattern",Normal
+5458,141682,Activities,"walking, marching and hiking"
+5458,141682,Activities,running
+5458,141682,"Educational Level","Bachelor's degree"
+5458,141682,"Socio Economic Status - Adult","Middle class"
+5458,141682,"Socio Economic Status - Child","Middle class"
+5458,141682,Occupations,"Legal, Social and Cultural Professionals"
+5458,141682,Occupations,"Customer Services Clerks"
+5458,141682,"Tobacco Type","Never used tobacco"
+5458,141682,"Drinking Status","Low risk"
+5458,141682,"Strenuous Lifting",No
+5464,104998,"Dietary Pattern",Normal
+5464,104998,Activities,dancing
+5464,104998,Activities,"other involving dancing and other rhythmic movements"
+5464,104998,Activities,soccer
+5464,104998,Activities,"volleyball (beach) (court)"
+5464,104998,Activities,"other involving other sports and athletics played as a team or group"
+5464,104998,Carcinogens,"Tobacco smoke, environmental"
+5464,104998,"Educational Level","Associate degree"
+5464,104998,"Socio Economic Status - Adult","Upper class"
+5464,104998,"Socio Economic Status - Child","Upper class"
+5464,104998,Occupations,"Health Professionals"
+5464,104998,Occupations,"Customer Services Clerks"
+5464,104998,Occupations,"Personal Care Workers"
+5464,104998,Occupations,"Food Preparation Assistants"
+5464,104998,"Tobacco Type","Never used tobacco"
+5464,104998,"Drinking Status","Never drank"
+5464,104998,"Strenuous Lifting",No
+5500,144108,"Dietary Pattern",Normal
+5500,144108,Activities,"computer keyboarding"
+5500,144108,Activities,"hand held interactive electronic device"
+5500,144108,Activities,"other interior property and clothing maintenance"
+5500,144108,"Educational Level","Some college credit but no degree"
+5500,144108,"Socio Economic Status - Adult","Lower middle class"
+5500,144108,"Socio Economic Status - Child","Middle class"
+5500,144108,Occupations,"Food Preparation Assistants"
+5500,144108,Occupations,"Armed Forces Occupations, Other Ranks"
+5500,144108,"Tobacco Type","Never used tobacco"
+5500,144108,"Drinking Status","Drinker, current status unknown"
+5500,144108,"Strenuous Lifting",No
+5782,102325,"Dietary Pattern",Normal
+5782,102325,Activities,"walking, marching and hiking"
+5782,102325,Activities,basketball
+5782,102325,Activities,"caregiving, lifting"
+5782,102325,Activities,"cooking and baking"
+5782,102325,Carcinogens,"Oral tobacco products"
+5782,102325,"Educational Level","8th grade/less"
+5782,102325,"Socio Economic Status - Adult","Lower class"
+5782,102325,"Socio Economic Status - Child","Lower class"
+5782,102325,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+5782,102325,Occupations,"Food Preparation Assistants"
+5782,102325,"Tobacco Type","smoke tobacco"
+5782,102325,"Tobacco Usage","Current everyday tobacco user"
+5782,102325,"Tobacco Usage","light tobacco user"
+5782,102325,"Drinking Status","Drinker, current status unknown"
+5782,102325,"Strenuous Lifting",Yes
+5810,106643,"Dietary Pattern",Normal
+5810,106643,Activities,basketball
+5810,106643,Activities,"other involving arts and handcrafts"
+5810,106643,Carcinogens,"Oral tobacco products"
+5810,106643,"Educational Level","9th-12th, no diploma"
+5810,106643,"Socio Economic Status - Adult","Middle class"
+5810,106643,"Socio Economic Status - Child","Middle class"
+5810,106643,Occupations,"Personal Care Workers"
+5810,106643,"Tobacco Type","smoke tobacco"
+5810,106643,"Tobacco Usage","Current some day tobacco user"
+5810,106643,"Tobacco Usage","Heavy tobacco user"
+5810,106643,"Drinking Status","Drinker, current status unknown"
+5810,106643,"Strenuous Lifting",No
+5835,113288,"Dietary Pattern",Normal
+5835,113288,Activities,baseball
+5835,113288,Activities,"exercise machines primarily for muscle strengthening"
+5835,113288,Carcinogens,"Oral tobacco products"
+5835,113288,"Educational Level","9th-12th, no diploma"
+5835,113288,"Socio Economic Status - Adult","Middle class"
+5835,113288,"Socio Economic Status - Child","Middle class"
+5835,113288,Occupations,"Metal, Machinery and Related Trades Workers"
+5835,113288,Occupations,"Agricultural, Forestry and Fishery Labourers"
+5835,113288,"Tobacco Type","smoke tobacco"
+5835,113288,"Tobacco Usage","Current some day tobacco user"
+5835,113288,"Tobacco Usage","tobacco user,  current status unknown"
+5835,113288,"Drinking Status","Low risk"
+5835,113288,"Strenuous Lifting",No
+5857,145250,"Dietary Pattern","Convenience food"
+5857,145250,Activities,"walking, marching and hiking"
+5857,145250,Carcinogens,None
+5857,145250,"Educational Level","High school graduate or GED diploma"
+5857,145250,"Socio Economic Status - Adult","Middle class"
+5857,145250,"Socio Economic Status - Child","Middle class"
+5857,145250,Occupations,"Hospitality, Retail and Other Services Managers"
+5857,145250,"Tobacco Type","Never used tobacco"
+5857,145250,"Drinking Status","Low risk"
+5857,145250,"Strenuous Lifting",Yes
+5899,109755,"Dietary Pattern",Normal
+5899,109755,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+5899,109755,Activities,"other involving climbing, rappelling and jumping off"
+5899,109755,Carcinogens,"Wood dust"
+5899,109755,"Educational Level","Some college credit but no degree"
+5899,109755,"Socio Economic Status - Adult","Lower class"
+5899,109755,"Socio Economic Status - Child","Middle class"
+5899,109755,Occupations,"Health Associate Professionals"
+5899,109755,Occupations,"Non-commissioned Armed Forces Officers"
+5899,109755,"Tobacco Type","smoke tobacco"
+5899,109755,"Tobacco Usage","Current everyday tobacco user"
+5899,109755,"Tobacco Usage","Heavy tobacco user"
+5899,109755,"Drinking Status","Low risk"
+5899,109755,"Strenuous Lifting",No
+5905,170173,"Dietary Pattern",Normal
+5905,170173,Activities,"other involving animal care"
+5905,170173,"Educational Level","High school graduate or GED diploma"
+5905,170173,"Socio Economic Status - Adult","Lower middle class"
+5905,170173,"Socio Economic Status - Child","Lower class"
+5905,170173,Occupations,"Customer Services Clerks"
+5905,170173,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+5905,170173,Occupations,"Agricultural, Forestry and Fishery Labourers"
+5905,170173,"Tobacco Type","Never used tobacco"
+5905,170173,"Drinking Status","Never drank"
+5905,170173,"Strenuous Lifting",Yes
+5927,178647,"Dietary Pattern",Normal
+5927,178647,"Dietary Pattern","Convenience food"
+5927,178647,Activities,"walking, marching and hiking"
+5927,178647,Activities,"martial arts"
+5927,178647,Activities,"other involving muscle strengthening exercises"
+5927,178647,Carcinogens,"Tobacco smoke, environmental"
+5927,178647,"Educational Level","Bachelor's degree"
+5927,178647,"Socio Economic Status - Adult","Upper middle class"
+5927,178647,"Socio Economic Status - Child","Lower middle class"
+5927,178647,Occupations,"Business and Administration Professionals"
+5927,178647,Occupations,"Subsistence Farmers, Fishers, Hunters and Gatherers"
+5927,178647,Occupations,"Food Preparation Assistants"
+5927,178647,"Tobacco Type","Never used tobacco"
+5927,178647,"Drinking Status","High risk"
+5927,178647,"Strenuous Lifting",No
+5958,139194,"Dietary Pattern",Normal
+5958,139194,Activities,"cooking and baking"
+5958,139194,Carcinogens,None
+5958,139194,"Educational Level","Some college credit but no degree"
+5958,139194,"Socio Economic Status - Adult","Middle class"
+5958,139194,"Socio Economic Status - Child","Middle class"
+5958,139194,Occupations,None
+5958,139194,"Tobacco Type","Never used tobacco"
+5958,139194,"Drinking Status","Never drank"
+5958,139194,"Strenuous Lifting",No
+6076,146237,Activities,"Working on cars and other mechanical objects"
+6127,133388,"Dietary Pattern",Normal
+6127,133388,Activities,None
+6127,133388,Carcinogens,"Wood dust"
+6127,133388,"Educational Level","High school graduate or GED diploma"
+6127,133388,"Socio Economic Status - Child","Lower class"
+6127,133388,"Socio Economic Status - Child","Middle class"
+6127,133388,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+6127,133388,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+6127,133388,"Tobacco Type","Never used tobacco"
+6127,133388,"Drinking Status","Never drank"
+6127,133388,"Strenuous Lifting",Yes
+6171,134824,"Dietary Pattern",Normal
+6171,134824,Activities,running
+6171,134824,Activities,"exercise machines primarily for muscle strengthening"
+6171,134824,Carcinogens,Soots
+6171,134824,Carcinogens,"Tobacco smoke, environmental"
+6171,134824,"Educational Level","Associate degree"
+6171,134824,"Socio Economic Status - Adult","Middle class"
+6171,134824,"Socio Economic Status - Child","Upper middle class"
+6171,134824,Occupations,"Armed Forces Occupations, Other Ranks"
+6171,134824,"Tobacco Type","Never used tobacco"
+6171,134824,"Drinking Status","Low risk"
+6171,134824,"Strenuous Lifting",No
+6191,113825,Activities,"bike riding"
+6211,183704,"Dietary Pattern",Normal
+6211,183704,Activities,golf
+6211,183704,Carcinogens,"Oral tobacco products"
+6211,183704,"Educational Level","High school graduate or GED diploma"
+6211,183704,"Socio Economic Status - Adult","Middle class"
+6211,183704,"Socio Economic Status - Child","Middle class"
+6211,183704,Occupations,"Personal Services Workers"
+6211,183704,Occupations,"Armed Forces Occupations, Other Ranks"
+6211,183704,"Tobacco Type","smoke tobacco"
+6211,183704,"Tobacco Usage","Current everyday tobacco user"
+6211,183704,"Drinking Status","High risk"
+6211,183704,"Strenuous Lifting",No
+6220,104730,"Dietary Pattern",Normal
+6220,104730,Activities,dancing
+6220,104730,Activities,cheerleading
+6220,104730,Activities,sewing
+6220,104730,Activities,"other involving arts and handcrafts"
+6220,104730,Carcinogens,"Oral tobacco products"
+6220,104730,Carcinogens,"Tobacco smoke, environmental"
+6220,104730,"Educational Level","9th-12th, no diploma"
+6220,104730,"Socio Economic Status - Child","Middle class"
+6220,104730,Occupations,None
+6220,104730,"Tobacco Type","smoke tobacco"
+6220,104730,"Tobacco Usage","Current some day tobacco user"
+6220,104730,"Tobacco Usage","light tobacco user"
+6220,104730,"Drinking Status","Low risk"
+6220,104730,"Strenuous Lifting",No
+6229,102480,"Dietary Pattern",Normal
+6229,102480,Activities,dancing
+6229,102480,"Educational Level","8th grade/less"
+6229,102480,"Socio Economic Status - Adult","Middle class"
+6229,102480,"Socio Economic Status - Child","Lower middle class"
+6229,102480,Occupations,"Customer Services Clerks"
+6229,102480,Occupations,"Food Preparation Assistants"
+6229,102480,"Tobacco Type","Never used tobacco"
+6229,102480,"Drinking Status","Low risk"
+6229,102480,"Strenuous Lifting",No
+6239,114077,"Dietary Pattern",Normal
+6239,114077,Activities,"other involving other sports and athletics played individually"
+6239,114077,Activities,"other involving arts and handcrafts"
+6239,114077,Carcinogens,"Oral tobacco products"
+6239,114077,"Educational Level","High school graduate or GED diploma"
+6239,114077,"Socio Economic Status - Adult","Middle class"
+6239,114077,"Socio Economic Status - Child","Lower middle class"
+6239,114077,Occupations,"Metal, Machinery and Related Trades Workers"
+6239,114077,"Tobacco Type","smoke tobacco"
+6239,114077,"Tobacco Usage","Former tobacco user"
+6239,114077,"Drinking Status","High risk"
+6239,114077,"Strenuous Lifting",Yes
+6512,100049,"Dietary Pattern",Normal
+6512,100049,"Dietary Pattern","Convenience food"
+6512,100049,Activities,"string instrument playing"
+6512,100049,Carcinogens,"Tobacco smoke, environmental"
+6512,100049,"Educational Level","Some college credit but no degree"
+6512,100049,"Socio Economic Status - Adult","Lower middle class"
+6512,100049,"Socio Economic Status - Child","Middle class"
+6512,100049,Occupations,"Information and Communications Technicians"
+6512,100049,"Tobacco Type","Never used tobacco"
+6512,100049,"Drinking Status","High risk"
+6512,100049,"Strenuous Lifting",No
+6551,134987,"Dietary Pattern",Vegan
+6551,134987,"Dietary Pattern",Vegetarian
+6551,134987,"Dietary Pattern",Normal
+6551,134987,Activities,"walking, marching and hiking"
+6551,134987,Carcinogens,"Oral tobacco products"
+6551,134987,Carcinogens,"Tobacco smoke, environmental"
+6551,134987,"Educational Level","Bachelor's degree"
+6551,134987,"Socio Economic Status - Adult","Middle class"
+6551,134987,"Socio Economic Status - Child","Middle class"
+6551,134987,Occupations,"Hospitality, Retail and Other Services Managers"
+6551,134987,Occupations,"Sales Workers"
+6551,134987,"Tobacco Type","smoke tobacco"
+6551,134987,"Tobacco Usage","light tobacco user"
+6551,134987,"Drinking Status","Low risk"
+6551,134987,"Strenuous Lifting",No
+6568,144063,"Dietary Pattern",Normal
+6568,144063,"Dietary Pattern","Convenience food"
+6568,144063,Activities,"other involving water and watercraft"
+6568,144063,Activities,dancing
+6568,144063,Carcinogens,"Oral tobacco products"
+6568,144063,Carcinogens,"Tobacco smoke, environmental"
+6568,144063,Occupations,"Health Associate Professionals"
+6568,144063,Occupations,"General and Keyboard Clerks"
+6568,144063,Occupations,"Sales Workers"
+6568,144063,"Tobacco Type","smoke tobacco"
+6568,144063,"Tobacco Usage","Heavy tobacco user"
+6568,144063,"Drinking Status","High risk"
+6974,109600,"Dietary Pattern",Normal
+6974,109600,Activities,"other involving arts and handcrafts"
+6974,109600,Carcinogens,"Oral tobacco products"
+6974,109600,Carcinogens,"Tobacco smoke, environmental"
+6974,109600,"Educational Level","Some college credit but no degree"
+6974,109600,"Socio Economic Status - Adult","Middle class"
+6974,109600,"Socio Economic Status - Child","Middle class"
+6974,109600,Occupations,"Customer Services Clerks"
+6974,109600,"Tobacco Type","smoke tobacco"
+6974,109600,"Tobacco Usage","Current everyday tobacco user"
+6974,109600,"Tobacco Usage","Heavy tobacco user"
+6974,109600,"Drinking Status","Low risk"
+6974,109600,"Strenuous Lifting",No
+6975,180030,"Dietary Pattern",Normal
+6975,180030,Activities,"other involving other sports and athletics played individually"
+6975,180030,Carcinogens,"Oral tobacco products"
+6975,180030,Carcinogens,"Tobacco smoke, environmental"
+6975,180030,"Educational Level","High school graduate or GED diploma"
+6975,180030,"Socio Economic Status - Adult",Unknown
+6975,180030,"Socio Economic Status - Child",Unknown
+6975,180030,Occupations,"Commissioned Armed Forces Officers"
+6975,180030,"Tobacco Type","smoke tobacco"
+6975,180030,"Tobacco Usage","Heavy tobacco user"
+6975,180030,"Drinking Status","Low risk"
+6975,180030,"Strenuous Lifting",No
+7039,108461,"Dietary Pattern",Normal
+7039,108461,Activities,"other involving muscle strengthening exercises"
+7039,108461,Carcinogens,"Oral tobacco products"
+7039,108461,Carcinogens,"Tobacco smoke, environmental"
+7039,108461,"Educational Level","High school graduate or GED diploma"
+7039,108461,"Socio Economic Status - Adult","Middle class"
+7039,108461,"Socio Economic Status - Child","Lower class"
+7039,108461,Occupations,"Protective Services Workers"
+7039,108461,"Tobacco Type","smoke tobacco"
+7039,108461,"Tobacco Usage","Current everyday tobacco user"
+7039,108461,"Tobacco Usage","light tobacco user"
+7039,108461,"Drinking Status","Low risk"
+7039,108461,"Strenuous Lifting",Yes
+7162,112438,Activities,"horseback riding"
+7162,112438,Activities,"other involving other sports and athletics played individually"
+7186,169746,Activities,"horseback riding"
+7186,169746,Activities,"other involving exterior property and land maintenance, building and construction"
+7186,169746,Carcinogens,"Oral tobacco products"
+7186,169746,"Tobacco Type","smoke tobacco"
+7186,169746,"Tobacco Usage","tobacco user,  current status unknown"
+7205,182513,Activities,"bike riding"
+7205,182513,Occupations,"Legal, Social, Cultural and Related Associate Professionals"
+7205,182513,"Tobacco Type","Never used tobacco"
+7205,182513,"Drinking Status","High risk"
+7279,138873,"Dietary Pattern",Normal
+7279,138873,Activities,golf
+7279,138873,Activities,"american tackle football"
+7279,138873,Activities,basketball
+7279,138873,Carcinogens,Asbestos
+7279,138873,"Educational Level","High school graduate or GED diploma"
+7279,138873,"Socio Economic Status - Adult","Lower class"
+7279,138873,"Socio Economic Status - Child","Middle class"
+7279,138873,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+7279,138873,"Tobacco Type","smoke tobacco"
+7279,138873,"Tobacco Usage","Current everyday tobacco user"
+7279,138873,"Tobacco Usage","Heavy tobacco user"
+7279,138873,"Drinking Status","High risk"
+7279,138873,"Strenuous Lifting",Yes
+7350,177697,"Dietary Pattern",Normal
+7350,177697,Activities,"other involving exterior property and land maintenance, building and construction"
+7350,177697,Activities,"Working on cars and other mechanical objects"
+7350,177697,Carcinogens,"Oral tobacco products"
+7350,177697,"Educational Level","8th grade/less"
+7350,177697,"Socio Economic Status - Adult","Lower middle class"
+7350,177697,"Socio Economic Status - Child","Lower class"
+7350,177697,Occupations,"Personal Services Workers"
+7350,177697,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+7350,177697,"Tobacco Type","smoke tobacco"
+7350,177697,"Tobacco Usage","light tobacco user"
+7350,177697,"Drinking Status","Low risk"
+7350,177697,"Strenuous Lifting",Yes
+7360,178321,"Dietary Pattern",Normal
+7360,178321,Activities,None
+7360,178321,Carcinogens,Unknown
+7360,178321,"Educational Level","9th-12th, no diploma"
+7360,178321,"Socio Economic Status - Adult","Lower middle class"
+7360,178321,"Socio Economic Status - Child","Lower class"
+7360,178321,Occupations,"Stationary Plant and Machine Operators"
+7360,178321,"Tobacco Type","Never used tobacco"
+7360,178321,"Drinking Status","Low risk"
+7360,178321,"Strenuous Lifting",Yes
+7690,176245,"Dietary Pattern","Convenience food"
+7690,176245,Activities,golf
+7690,176245,Activities,"american tackle football"
+7690,176245,Activities,baseball
+7690,176245,Carcinogens,"Oral tobacco products"
+7690,176245,"Educational Level","High school graduate or GED diploma"
+7690,176245,"Socio Economic Status - Adult","Lower middle class"
+7690,176245,"Socio Economic Status - Child","Middle class"
+7690,176245,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+7690,176245,"Tobacco Type","smoke tobacco"
+7690,176245,"Tobacco Usage","Heavy tobacco user"
+7690,176245,"Drinking Status","High risk"
+7690,176245,"Strenuous Lifting",No
+8163,103543,"Dietary Pattern",Normal
+8163,103543,Activities,"other interior property and clothing maintenance"
+8163,103543,Activities,"cooking and baking"
+8163,103543,Carcinogens,None
+8163,103543,"Educational Level","9th-12th, no diploma"
+8163,103543,"Socio Economic Status - Adult","Middle class"
+8163,103543,"Socio Economic Status - Child","Middle class"
+8163,103543,Occupations,None
+8163,103543,"Tobacco Type","Never used tobacco"
+8163,103543,"Drinking Status","Never drank"
+8163,103543,"Strenuous Lifting",No
+9114,113033,"Dietary Pattern",Normal
+9114,113033,Activities,"walking, marching and hiking"
+9114,113033,Activities,"roller skating (inline) and skateboarding"
+9114,113033,Activities,"bike riding"
+9114,113033,Activities,"gardening and landscaping"
+9114,113033,Carcinogens,"Oral tobacco products"
+9114,113033,"Educational Level","9th-12th, no diploma"
+9114,113033,"Socio Economic Status - Adult","Lower class"
+9114,113033,"Socio Economic Status - Child","Middle class"
+9114,113033,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+9114,113033,Occupations,"Food Preparation Assistants"
+9114,113033,"Tobacco Type","smoke tobacco"
+9114,113033,"Tobacco Usage","tobacco user,  current status unknown"
+9114,113033,"Drinking Status","Low risk"
+9114,113033,"Strenuous Lifting",No
+9140,109631,"Dietary Pattern","Convenience food"
+9140,109631,Activities,"other involving other sports and athletics played individually"
+9140,109631,Carcinogens,"Oral tobacco products"
+9140,109631,"Educational Level","Associate degree"
+9140,109631,"Socio Economic Status - Adult","Middle class"
+9140,109631,"Socio Economic Status - Child","Middle class"
+9140,109631,Occupations,"Health Associate Professionals"
+9140,109631,"Tobacco Type","smoke tobacco"
+9140,109631,"Tobacco Usage","Heavy tobacco user"
+9140,109631,"Drinking Status","High risk"
+9140,109631,"Strenuous Lifting",No
+9170,172969,"Dietary Pattern",Normal
+9170,172969,Activities,"building and construction"
+9170,172969,Carcinogens,"Hepatitis C virus"
+9170,172969,Carcinogens,"Oral tobacco products"
+9170,172969,"Educational Level","High school graduate or GED diploma"
+9170,172969,"Socio Economic Status - Adult","Lower middle class"
+9170,172969,"Socio Economic Status - Child","Middle class"
+9170,172969,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+9170,172969,"Tobacco Type","smoke tobacco"
+9170,172969,"Tobacco Usage","Heavy tobacco user"
+9170,172969,"Drinking Status","High risk"
+9170,172969,"Strenuous Lifting",Yes
+9274,146242,"Dietary Pattern",Normal
+9274,146242,Activities,"horseback riding"
+9274,146242,Activities,"cooking and baking"
+9274,146242,Activities,"other involving animal care"
+9274,146242,Carcinogens,None
+9274,146242,"Educational Level","Some college credit but no degree"
+9274,146242,"Socio Economic Status - Adult","Middle class"
+9274,146242,"Socio Economic Status - Child","Middle class"
+9274,146242,Occupations,"Sales Workers"
+9274,146242,"Tobacco Type","Never used tobacco"
+9274,146242,"Drinking Status","Never drank"
+9274,146242,"Strenuous Lifting",Yes
+9275,173494,"Dietary Pattern",Normal
+9275,173494,Activities,sewing
+9275,173494,Carcinogens,"Hepatitis C virus"
+9275,173494,Carcinogens,"Oral tobacco products"
+9275,173494,Carcinogens,"Tobacco smoke, environmental"
+9275,173494,"Educational Level","High school graduate or GED diploma"
+9275,173494,"Socio Economic Status - Adult","Lower middle class"
+9275,173494,"Socio Economic Status - Child","Lower middle class"
+9275,173494,Occupations,None
+9275,173494,"Tobacco Type","smoke tobacco"
+9275,173494,"Tobacco Usage","light tobacco user"
+9275,173494,"Drinking Status","Low risk"
+9275,173494,"Strenuous Lifting",No
+9300,181545,"Dietary Pattern","Convenience food"
+9300,181545,Activities,None
+9300,181545,Carcinogens,"Oral tobacco products"
+9300,181545,"Educational Level","8th grade/less"
+9300,181545,"Socio Economic Status - Adult","Lower middle class"
+9300,181545,"Socio Economic Status - Child","Middle class"
+9300,181545,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+9300,181545,"Tobacco Type","smoke tobacco"
+9300,181545,"Tobacco Usage","Heavy tobacco user"
+9300,181545,"Drinking Status","High risk"
+9300,181545,"Strenuous Lifting",No
+9311,179036,"Dietary Pattern",Normal
+9311,179036,Activities,"other involving water and watercraft"
+9311,179036,Activities,"hand held interactive electronic device"
+9311,179036,Carcinogens,"Oral tobacco products"
+9311,179036,"Educational Level","Associate degree"
+9311,179036,"Socio Economic Status - Adult","Middle class"
+9311,179036,"Socio Economic Status - Child","Middle class"
+9311,179036,Occupations,"Metal, Machinery and Related Trades Workers"
+9311,179036,Occupations,"Drivers and Mobile Plant Operators"
+9311,179036,"Tobacco Type","smoke tobacco"
+9311,179036,"Tobacco Usage","Current some day tobacco user"
+9311,179036,"Drinking Status","Low risk"
+9311,179036,"Strenuous Lifting",No
+9332,107813,"Dietary Pattern","Convenience food"
+9332,107813,Activities,"walking, marching and hiking"
+9332,107813,Activities,"other involving water and watercraft"
+9332,107813,Activities,"drum and other percussion instrument playing"
+9332,107813,Activities,"string instrument playing"
+9332,107813,Carcinogens,"Oral tobacco products"
+9332,107813,Carcinogens,"Ultraviolet (UV) radiation, broad spectrum"
+9332,107813,"Educational Level","Bachelor's degree"
+9332,107813,"Socio Economic Status - Adult","Middle class"
+9332,107813,"Socio Economic Status - Child","Upper class"
+9332,107813,Occupations,"Science and Engineering Professionals"
+9332,107813,Occupations,"Cleaners and Helpers"
+9332,107813,"Tobacco Type","smoke tobacco"
+9332,107813,"Tobacco Usage","light tobacco user"
+9332,107813,"Drinking Status","High risk"
+9332,107813,"Strenuous Lifting",No
+9341,169436,Activities,"horseback riding"
+9341,169436,Carcinogens,"Oral tobacco products"
+9341,169436,"Tobacco Type","smoke tobacco"
+9341,169436,"Tobacco Usage","tobacco user,  current status unknown"
+9341,169436,"Drinking Status","High risk"
+9384,102895,"Dietary Pattern",Normal
+9384,102895,Activities,None
+9384,102895,Carcinogens,"Oral tobacco products"
+9384,102895,"Educational Level",Unknown
+9384,102895,"Socio Economic Status - Adult","Lower class"
+9384,102895,"Socio Economic Status - Child","Lower middle class"
+9384,102895,Occupations,"Refuse Workers and Other Elementary Workers"
+9384,102895,"Tobacco Type","smoke tobacco"
+9384,102895,"Tobacco Usage","Current everyday tobacco user"
+9384,102895,"Tobacco Usage","Heavy tobacco user"
+9384,102895,"Drinking Status","Low risk"
+9384,102895,"Strenuous Lifting",No
+9416,184392,"Dietary Pattern",Normal
+9416,184392,Activities,"exercise machines primarily for muscle strengthening"
+9416,184392,Activities,"other involving arts and handcrafts"
+9416,184392,Carcinogens,"Hepatitis C virus"
+9416,184392,Carcinogens,"Oral tobacco products"
+9416,184392,"Educational Level","High school graduate or GED diploma"
+9416,184392,"Socio Economic Status - Adult","Middle class"
+9416,184392,"Socio Economic Status - Child","Lower class"
+9416,184392,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+9416,184392,"Tobacco Type","smoke tobacco"
+9416,184392,"Tobacco Usage","Current some day tobacco user"
+9416,184392,"Tobacco Usage","light tobacco user"
+9416,184392,"Drinking Status","High risk"
+9416,184392,"Strenuous Lifting",Yes
+9473,148156,"Dietary Pattern",Normal
+9473,148156,Activities,"american tackle football"
+9473,148156,Activities,baseball
+9473,148156,Activities,"Working on cars and other mechanical objects"
+9473,148156,Carcinogens,"Oral tobacco products"
+9473,148156,Carcinogens,"Tobacco smoke, environmental"
+9473,148156,Carcinogens,"Wood dust"
+9473,148156,"Educational Level","Some college credit but no degree"
+9473,148156,"Socio Economic Status - Adult","Lower class"
+9473,148156,"Socio Economic Status - Child","Middle class"
+9473,148156,Occupations,"Production and Specialized Services Managers"
+9473,148156,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+9473,148156,Occupations,"Refuse Workers and Other Elementary Workers"
+9473,148156,"Tobacco Type","smoke tobacco"
+9473,148156,"Tobacco Type","chew tobacco"
+9473,148156,"Tobacco Usage","Current everyday tobacco user"
+9473,148156,"Tobacco Usage","light tobacco user"
+9473,148156,"Drinking Status","Low risk"
+9473,148156,"Strenuous Lifting",Yes
+9487,181648,"Dietary Pattern",Normal
+9487,181648,Activities,bowling
+9487,181648,Activities,basketball
+9487,181648,Carcinogens,"Oral tobacco products"
+9487,181648,"Educational Level","Some college credit but no degree"
+9487,181648,"Socio Economic Status - Adult","Middle class"
+9487,181648,"Socio Economic Status - Child","Middle class"
+9487,181648,Occupations,"Sales Workers"
+9487,181648,Occupations,"Refuse Workers and Other Elementary Workers"
+9487,181648,"Tobacco Type","smoke tobacco"
+9487,181648,"Tobacco Usage","Current everyday tobacco user"
+9487,181648,"Tobacco Usage","light tobacco user"
+9487,181648,"Drinking Status","Previous High risk "
+9487,181648,"Strenuous Lifting",Yes
+9518,113059,"Dietary Pattern",Normal
+9518,113059,Activities,"caregiving, bathing"
+9518,113059,Activities,Other
+9518,113059,Carcinogens,"Oral tobacco products"
+9518,113059,"Educational Level","High school graduate or GED diploma"
+9518,113059,"Socio Economic Status - Adult","Middle class"
+9518,113059,"Socio Economic Status - Child","Middle class"
+9518,113059,Occupations,"Customer Services Clerks"
+9518,113059,Occupations,"Sales Workers"
+9518,113059,Occupations,"Personal Care Workers"
+9518,113059,Occupations,"Protective Services Workers"
+9518,113059,Occupations,"Non-commissioned Armed Forces Officers"
+9518,113059,"Tobacco Type","smoke tobacco"
+9518,113059,"Tobacco Usage","Current some day tobacco user"
+9518,113059,"Tobacco Usage","light tobacco user"
+9518,113059,"Drinking Status","High risk"
+9518,113059,"Strenuous Lifting",No
+9662,138712,"Dietary Pattern",Normal
+9662,138712,Activities,"horseback riding"
+9662,138712,Carcinogens,None
+9662,138712,"Educational Level","Bachelor's degree"
+9662,138712,"Socio Economic Status - Adult","Upper class"
+9662,138712,"Socio Economic Status - Child","Upper class"
+9662,138712,Occupations,None
+9662,138712,"Tobacco Type","Never used tobacco"
+9662,138712,"Drinking Status","Low risk"
+9662,138712,"Strenuous Lifting",Yes
+9672,169522,"Dietary Pattern",Normal
+9672,169522,Activities,"horseback riding"
+9672,169522,Carcinogens,"Oral tobacco products"
+9672,169522,"Educational Level","Some college credit but no degree"
+9672,169522,"Socio Economic Status - Adult","Lower middle class"
+9672,169522,"Socio Economic Status - Adult","Upper middle class"
+9672,169522,"Socio Economic Status - Child","Middle class"
+9672,169522,Occupations,"Market-oriented Skilled Forestry, Fishery and Hunting Workers"
+9672,169522,Occupations,"Metal, Machinery and Related Trades Workers"
+9672,169522,"Tobacco Type","chew tobacco"
+9672,169522,"Tobacco Usage","Current everyday tobacco user"
+9672,169522,"Tobacco Usage","Heavy tobacco user"
+9672,169522,"Tobacco Usage","light tobacco user"
+9672,169522,"Drinking Status","Low risk"
+9672,169522,"Strenuous Lifting",Yes
+9681,145435,"Dietary Pattern",Normal
+9681,145435,Activities,baseball
+9681,145435,Carcinogens,"Oral tobacco products"
+9681,145435,Carcinogens,"Tobacco smoke, environmental"
+9681,145435,"Educational Level","9th-12th, no diploma"
+9681,145435,"Socio Economic Status - Adult","Lower class"
+9681,145435,"Socio Economic Status - Child","Middle class"
+9681,145435,Occupations,"Protective Services Workers"
+9681,145435,"Tobacco Type","smoke tobacco"
+9681,145435,"Tobacco Usage","Current some day tobacco user"
+9681,145435,"Tobacco Usage","light tobacco user"
+9681,145435,"Drinking Status","Low risk"
+9681,145435,"Drinking Status","High risk"
+9681,145435,"Strenuous Lifting",Yes
+9727,133273,Activities,"bike riding"
+10001,135418,"Dietary Pattern",Normal
+10001,135418,Activities,basketball
+10001,135418,Carcinogens,"Alpha radiation"
+10001,135418,"Educational Level","High school graduate or GED diploma"
+10001,135418,"Socio Economic Status - Adult","Lower class"
+10001,135418,"Socio Economic Status - Child","Lower class"
+10001,135418,Occupations,"Protective Services Workers"
+10001,135418,Occupations,"Stationary Plant and Machine Operators"
+10001,135418,Occupations,"Drivers and Mobile Plant Operators"
+10001,135418,Occupations,"Non-commissioned Armed Forces Officers"
+10001,135418,"Tobacco Type","Never used tobacco"
+10001,135418,"Drinking Status","High risk"
+10001,135418,"Strenuous Lifting",No
+10002,149483,"Dietary Pattern",Normal
+10002,149483,Activities,basketball
+10002,149483,Carcinogens,Unknown
+10002,149483,"Educational Level","9th-12th, no diploma"
+10002,149483,"Socio Economic Status - Adult","Lower middle class"
+10002,149483,"Socio Economic Status - Child","Lower middle class"
+10002,149483,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+10002,149483,"Tobacco Type","smoke tobacco"
+10002,149483,"Tobacco Usage","Current everyday tobacco user"
+10002,149483,"Tobacco Usage","Heavy tobacco user"
+10002,149483,"Drinking Status","Low risk"
+10002,149483,"Strenuous Lifting",Yes
+10013,104373,"Dietary Pattern",Normal
+10013,104373,Activities,"other involving arts and handcrafts"
+10013,104373,Activities,"cooking and baking"
+10013,104373,Activities,"other involving exterior property and land maintenance, building and construction"
+10013,104373,Carcinogens,"Oral tobacco products"
+10013,104373,Carcinogens,"Tobacco smoke, environmental"
+10013,104373,"Educational Level","High school graduate or GED diploma"
+10013,104373,"Socio Economic Status - Adult",Unknown
+10013,104373,"Socio Economic Status - Child","Middle class"
+10013,104373,Occupations,"Personal Services Workers"
+10013,104373,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+10013,104373,"Tobacco Type","smoke tobacco"
+10013,104373,"Tobacco Usage","Current everyday tobacco user"
+10013,104373,"Tobacco Usage","Heavy tobacco user"
+10013,104373,"Drinking Status","Low risk"
+10013,104373,"Strenuous Lifting",No
+10023,175725,"Dietary Pattern",Normal
+10023,175725,Activities,"walking, marching and hiking"
+10023,175725,Activities,"other involving other sports and athletics played as a team or group"
+10023,175725,Activities,"residential relocation"
+10023,175725,Carcinogens,"Oral tobacco products"
+10023,175725,"Educational Level","Some college credit but no degree"
+10023,175725,"Socio Economic Status - Adult","Lower class"
+10023,175725,"Socio Economic Status - Child","Middle class"
+10023,175725,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+10023,175725,"Tobacco Type","smoke tobacco"
+10023,175725,"Tobacco Usage","Current everyday tobacco user"
+10023,175725,"Tobacco Usage","Heavy tobacco user"
+10023,175725,"Drinking Status","Drinker, current status unknown"
+10023,175725,"Strenuous Lifting",Yes
+10384,135098,"Dietary Pattern",Normal
+10384,135098,Activities,"walking, marching and hiking"
+10384,135098,Carcinogens,"Oral tobacco products"
+10384,135098,Carcinogens,"Tobacco smoke, environmental"
+10384,135098,"Socio Economic Status - Adult","Middle class"
+10384,135098,"Socio Economic Status - Child","Lower class"
+10384,135098,Occupations,"Refuse Workers and Other Elementary Workers"
+10384,135098,"Tobacco Type","smoke tobacco"
+10384,135098,"Tobacco Usage","light tobacco user"
+10384,135098,"Drinking Status","Low risk"
+10384,135098,"Strenuous Lifting",Yes
+10407,182948,"Dietary Pattern",Normal
+10407,182948,Activities,None
+10407,182948,Carcinogens,"Oral tobacco products"
+10407,182948,"Educational Level","High school graduate or GED diploma"
+10407,182948,"Socio Economic Status - Adult","Middle class"
+10407,182948,"Socio Economic Status - Child","Upper class"
+10407,182948,Occupations,"Sales Workers"
+10407,182948,"Tobacco Type","smoke tobacco"
+10407,182948,"Tobacco Usage","light tobacco user"
+10407,182948,"Drinking Status","Low risk"
+10407,182948,"Strenuous Lifting",Yes
+11322,100221,"Dietary Pattern",Normal
+11322,100221,Activities,"other involving other sports and athletics played individually"
+11322,100221,Activities,baseball
+11322,100221,Carcinogens,"Tobacco smoke, environmental"
+11322,100221,"Educational Level","High school graduate or GED diploma"
+11322,100221,"Socio Economic Status - Adult","Lower class"
+11322,100221,"Socio Economic Status - Child","Upper class"
+11322,100221,Occupations,"Sales Workers"
+11322,100221,"Tobacco Type","Never used tobacco"
+11322,100221,"Drinking Status","High risk"
+11322,100221,"Strenuous Lifting",No
+11336,102602,"Dietary Pattern",Normal
+11336,102602,Activities,"walking, marching and hiking"
+11336,102602,Activities,swimming
+11336,102602,Activities,"other involving water and watercraft"
+11336,102602,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+11336,102602,Activities,Other
+11336,102602,Carcinogens,"Oral tobacco products"
+11336,102602,"Educational Level","High school graduate or GED diploma"
+11336,102602,"Socio Economic Status - Adult","Lower class"
+11336,102602,"Socio Economic Status - Child","Upper middle class"
+11336,102602,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+11336,102602,Occupations,Other
+11336,102602,"Tobacco Type","smoke tobacco"
+11336,102602,"Tobacco Usage","tobacco user,  current status unknown"
+11336,102602,"Drinking Status","Low risk"
+11336,102602,"Strenuous Lifting",Yes
+11342,134040,"Dietary Pattern",Normal
+11342,134040,Activities,golf
+11342,134040,Activities,"other involving arts and handcrafts"
+11342,134040,Activities,"string instrument playing"
+11342,134040,Activities,"winds and brass instrument playing"
+11342,134040,Carcinogens,"Oral tobacco products"
+11342,134040,"Educational Level","Some college credit but no degree"
+11342,134040,"Socio Economic Status - Adult","Lower class"
+11342,134040,"Socio Economic Status - Child","Middle class"
+11342,134040,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+11342,134040,Occupations,"Food Preparation Assistants"
+11342,134040,"Tobacco Type","smoke tobacco"
+11342,134040,"Tobacco Usage","Current everyday tobacco user"
+11342,134040,"Tobacco Usage","Heavy tobacco user"
+11342,134040,"Drinking Status","High risk"
+11342,134040,"Strenuous Lifting",No
+11359,174623,"Dietary Pattern",Normal
+11359,174623,Activities,bowling
+11359,174623,Activities,basketball
+11359,174623,Activities,"gardening and landscaping"
+11359,174623,Activities,"piano playing"
+11359,174623,Activities,Other
+11359,174623,Carcinogens,"Oral tobacco products"
+11359,174623,"Educational Level","9th-12th, no diploma"
+11359,174623,"Socio Economic Status - Child","Middle class"
+11359,174623,Occupations,"Drivers and Mobile Plant Operators"
+11359,174623,Occupations,"Refuse Workers and Other Elementary Workers"
+11359,174623,"Tobacco Type","smoke tobacco"
+11359,174623,"Tobacco Usage","Current everyday tobacco user"
+11359,174623,"Tobacco Usage","Heavy tobacco user"
+11359,174623,"Drinking Status","Low risk"
+11359,174623,"Strenuous Lifting",Yes
+11366,183944,"Dietary Pattern",Normal
+11366,183944,Activities,"bike riding"
+11366,183944,Activities,baseball
+11366,183944,Activities,"other involving arts and handcrafts"
+11366,183944,Activities,Other
+11366,183944,Carcinogens,"Oral tobacco products"
+11366,183944,"Educational Level","9th-12th, no diploma"
+11366,183944,"Socio Economic Status - Adult","Lower class"
+11366,183944,"Socio Economic Status - Child","Lower class"
+11366,183944,Occupations,"Cleaners and Helpers"
+11366,183944,Occupations,Other
+11366,183944,"Tobacco Type","smoke tobacco"
+11366,183944,"Tobacco Type","chew tobacco"
+11366,183944,"Tobacco Usage","Current everyday tobacco user"
+11366,183944,"Tobacco Usage","Heavy tobacco user"
+11366,183944,"Drinking Status","Low risk"
+11366,183944,"Strenuous Lifting",No
+11397,103530,"Dietary Pattern",Normal
+11397,103530,Activities,None
+11397,103530,Carcinogens,Asbestos
+11397,103530,Carcinogens,"Wood dust"
+11397,103530,"Educational Level",Unknown
+11397,103530,"Socio Economic Status - Adult","Lower class"
+11397,103530,"Socio Economic Status - Child","Middle class"
+11397,103530,Occupations,"Metal, Machinery and Related Trades Workers"
+11397,103530,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+11397,103530,"Tobacco Type","Never used tobacco"
+11397,103530,"Drinking Status","Low risk"
+11397,103530,"Strenuous Lifting",Yes
+11726,172918,"Dietary Pattern",Unknown
+11726,172918,Activities,"Working on cars and other mechanical objects"
+11726,172918,Carcinogens,None
+11726,172918,"Educational Level","9th-12th, no diploma"
+11726,172918,"Socio Economic Status - Adult","Middle class"
+11726,172918,"Socio Economic Status - Child","Middle class"
+11726,172918,Occupations,None
+11726,172918,"Tobacco Type","Never used tobacco"
+11726,172918,"Drinking Status","Drinker, current status unknown"
+11726,172918,"Strenuous Lifting",Unknown
+11736,174004,"Dietary Pattern","Convenience food"
+11736,174004,Activities,Other
+11736,174004,Carcinogens,None
+11736,174004,"Educational Level","High school graduate or GED diploma"
+11736,174004,"Socio Economic Status - Adult","Lower class"
+11736,174004,"Socio Economic Status - Child","Lower class"
+11736,174004,Occupations,None
+11736,174004,"Tobacco Type","Never used tobacco"
+11736,174004,"Drinking Status","Never drank"
+11736,174004,"Strenuous Lifting",No
+11761,115974,"Dietary Pattern",Normal
+11761,115974,Activities,"cooking and baking"
+11761,115974,Carcinogens,"Tobacco smoke, environmental"
+11761,115974,"Educational Level","9th-12th, no diploma"
+11761,115974,"Socio Economic Status - Adult","Lower class"
+11761,115974,"Socio Economic Status - Child","Middle class"
+11761,115974,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+11761,115974,Occupations,"Food Preparation Assistants"
+11761,115974,Occupations,"Refuse Workers and Other Elementary Workers"
+11761,115974,"Tobacco Type","Never used tobacco"
+11761,115974,"Drinking Status","Never drank"
+11761,115974,"Strenuous Lifting",No
+11773,147877,"Dietary Pattern",Normal
+11773,147877,Activities,"horseback riding"
+11773,147877,Activities,"other involving other sports and athletics played individually"
+11773,147877,Activities,"Working on cars and other mechanical objects"
+11773,147877,Carcinogens,None
+11773,147877,"Educational Level","9th-12th, no diploma"
+11773,147877,"Socio Economic Status - Adult","Lower class"
+11773,147877,"Socio Economic Status - Child","Middle class"
+11773,147877,Occupations,"Agricultural, Forestry and Fishery Labourers"
+11773,147877,Occupations,"Refuse Workers and Other Elementary Workers"
+11773,147877,"Tobacco Type","chew tobacco"
+11773,147877,"Tobacco Usage","Current some day tobacco user"
+11773,147877,"Tobacco Usage","light tobacco user"
+11773,147877,"Drinking Status","Low risk"
+11773,147877,"Strenuous Lifting",No
+11791,142348,"Dietary Pattern","Convenience food"
+11791,142348,Activities,"other involving other sports and athletics played individually"
+11791,142348,Activities,"free weights"
+11791,142348,Activities,"caregiving, bathing"
+11791,142348,Activities,"caregiving, lifting"
+11791,142348,Carcinogens,"Hepatitis C virus"
+11791,142348,Carcinogens,"Oral tobacco products"
+11791,142348,"Educational Level","High school graduate or GED diploma"
+11791,142348,"Socio Economic Status - Adult","Middle class"
+11791,142348,"Socio Economic Status - Child","Middle class"
+11791,142348,Occupations,"Sales Workers"
+11791,142348,Occupations,"Personal Care Workers"
+11791,142348,Occupations,"Cleaners and Helpers"
+11791,142348,"Tobacco Type","smoke tobacco"
+11791,142348,"Tobacco Usage","Heavy tobacco user"
+11791,142348,"Drinking Status","High risk"
+11791,142348,"Drinking Status","Drinker, current status unknown"
+11791,142348,"Strenuous Lifting",Yes
+11942,179200,"Dietary Pattern",Normal
+11942,179200,Activities,"bike riding"
+11942,179200,Activities,"free weights"
+11942,179200,Activities,"other involving computer technology and electronic devices"
+11942,179200,Activities,"string instrument playing"
+11942,179200,Carcinogens,"Oral tobacco products"
+11942,179200,"Educational Level","Bachelor's degree"
+11942,179200,"Socio Economic Status - Adult","Middle class"
+11942,179200,"Socio Economic Status - Child","Middle class"
+11942,179200,Occupations,"Electrical and Electronic Trades Workers"
+11942,179200,Occupations,"Food Preparation Assistants"
+11942,179200,Occupations,Other
+11942,179200,"Tobacco Type","smoke tobacco"
+11942,179200,"Tobacco Usage","Current some day tobacco user"
+11942,179200,"Tobacco Usage","light tobacco user"
+11942,179200,"Drinking Status","High risk"
+11942,179200,"Strenuous Lifting",Yes
+12076,107029,"Dietary Pattern","Convenience food"
+12076,107029,Activities,"other involving water and watercraft"
+12076,107029,Carcinogens,None
+12076,107029,"Educational Level","9th-12th, no diploma"
+12076,107029,"Socio Economic Status - Adult","Middle class"
+12076,107029,"Socio Economic Status - Child","Lower class"
+12076,107029,Occupations,"Market-oriented Skilled Agricultural Workers"
+12076,107029,"Tobacco Type","Never used tobacco"
+12076,107029,"Drinking Status","Low risk"
+12076,107029,"Strenuous Lifting",No
+12101,100122,"Dietary Pattern",Normal
+12101,100122,Activities,boxing
+12101,100122,Carcinogens,"Tobacco smoke, environmental"
+12101,100122,"Educational Level","High school graduate or GED diploma"
+12101,100122,"Socio Economic Status - Adult","Lower class"
+12101,100122,"Socio Economic Status - Child","Lower class"
+12101,100122,Occupations,"Customer Services Clerks"
+12101,100122,"Tobacco Type","Never used tobacco"
+12101,100122,"Drinking Status","Low risk"
+12101,100122,"Strenuous Lifting",No
+12103,134065,"Dietary Pattern",Normal
+12103,134065,Activities,"walking, marching and hiking"
+12103,134065,Carcinogens,"Oral tobacco products"
+12103,134065,Carcinogens,"Wood dust"
+12103,134065,"Educational Level","High school graduate or GED diploma"
+12103,134065,"Socio Economic Status - Adult","Lower class"
+12103,134065,"Socio Economic Status - Child","Upper middle class"
+12103,134065,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+12103,134065,"Tobacco Type","smoke tobacco"
+12103,134065,"Tobacco Usage","Current some day tobacco user"
+12103,134065,"Tobacco Usage","light tobacco user"
+12103,134065,"Drinking Status","Drinker, current status unknown"
+12103,134065,"Strenuous Lifting",No
+12117,101242,"Dietary Pattern",Normal
+12117,101242,Activities,None
+12117,101242,Carcinogens,"Oral tobacco products"
+12117,101242,"Educational Level","9th-12th, no diploma"
+12117,101242,"Socio Economic Status - Adult","Middle class"
+12117,101242,"Socio Economic Status - Child","Middle class"
+12117,101242,Occupations,"Personal Services Workers"
+12117,101242,"Tobacco Type","smoke tobacco"
+12117,101242,"Tobacco Usage","Current everyday tobacco user"
+12117,101242,"Tobacco Usage","light tobacco user"
+12117,101242,"Drinking Status","Low risk"
+12117,101242,"Strenuous Lifting",Yes
+12129,183863,"Dietary Pattern",Normal
+12129,183863,Activities,"bike riding"
+12129,183863,Carcinogens,"Oral tobacco products"
+12129,183863,"Educational Level","8th grade/less"
+12129,183863,"Socio Economic Status - Adult","Upper class"
+12129,183863,"Socio Economic Status - Child","Upper class"
+12129,183863,Occupations,"Cleaners and Helpers"
+12129,183863,"Tobacco Type","smoke tobacco"
+12129,183863,"Tobacco Usage","Current everyday tobacco user"
+12129,183863,"Tobacco Usage","light tobacco user"
+12129,183863,"Drinking Status","High risk"
+12129,183863,"Strenuous Lifting",Yes
+12148,115312,"Dietary Pattern",Normal
+12148,115312,Activities,"horseback riding"
+12148,115312,Carcinogens,"Oral tobacco products"
+12148,115312,"Educational Level","9th-12th, no diploma"
+12148,115312,"Socio Economic Status - Adult","Middle class"
+12148,115312,"Socio Economic Status - Child","Middle class"
+12148,115312,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+12148,115312,"Tobacco Type","smoke tobacco"
+12148,115312,"Tobacco Usage","Heavy tobacco user"
+12148,115312,"Drinking Status","Low risk"
+12148,115312,"Strenuous Lifting",Yes
+12513,147041,"Dietary Pattern",Normal
+12513,147041,Activities,"walking, marching and hiking"
+12513,147041,Activities,running
+12513,147041,Activities,"cooking and baking"
+12513,147041,Carcinogens,"Oral tobacco products"
+12513,147041,"Educational Level","9th-12th, no diploma"
+12513,147041,"Socio Economic Status - Adult","Lower middle class"
+12513,147041,"Socio Economic Status - Child","Lower class"
+12513,147041,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+12513,147041,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+12513,147041,"Tobacco Type","smoke tobacco"
+12513,147041,"Tobacco Usage","light tobacco user"
+12513,147041,"Drinking Status","Low risk"
+12513,147041,"Strenuous Lifting",Yes
+12567,182860,"Dietary Pattern",Normal
+12567,182860,Activities,"other involving other sports and athletics played individually"
+12567,182860,Carcinogens,"Mineral oils (untreated and mildly treated)"
+12567,182860,"Educational Level","High school graduate or GED diploma"
+12567,182860,"Socio Economic Status - Adult","Middle class"
+12567,182860,"Socio Economic Status - Child","Middle class"
+12567,182860,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+12567,182860,"Tobacco Type","Never used tobacco"
+12567,182860,"Drinking Status","Low risk"
+12567,182860,"Strenuous Lifting",Yes
+12587,107930,"Dietary Pattern",Normal
+12587,107930,Activities,"walking, marching and hiking"
+12587,107930,Carcinogens,"Oral tobacco products"
+12587,107930,"Educational Level","Some college credit but no degree"
+12587,107930,"Socio Economic Status - Adult","Middle class"
+12587,107930,"Socio Economic Status - Child","Middle class"
+12587,107930,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+12587,107930,"Tobacco Type","chew tobacco"
+12587,107930,"Tobacco Usage","light tobacco user"
+12587,107930,"Drinking Status","High risk"
+12587,107930,"Strenuous Lifting",Yes
+12624,101427,"Dietary Pattern",Normal
+12624,101427,Activities,"walking, marching and hiking"
+12624,101427,Activities,"grooming and shearing an animal"
+12624,101427,Carcinogens,Asbestos
+12624,101427,Carcinogens,"Oral tobacco products"
+12624,101427,"Educational Level","Some college credit but no degree"
+12624,101427,"Socio Economic Status - Adult","Middle class"
+12624,101427,"Socio Economic Status - Child","Upper middle class"
+12624,101427,Occupations,"Business and Administration Associate Professionals"
+12624,101427,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+12624,101427,"Tobacco Type","chew tobacco"
+12624,101427,"Tobacco Usage","light tobacco user"
+12624,101427,"Drinking Status","Low risk"
+12624,101427,"Strenuous Lifting",No
+12656,184373,"Dietary Pattern",Normal
+12656,184373,Activities,baseball
+12656,184373,Activities,basketball
+12656,184373,"Educational Level","Some college credit but no degree"
+12656,184373,"Tobacco Type","Unknown if ever used tobacco"
+12656,184373,"Drinking Status","Drinker, current status unknown"
+12656,184373,"Strenuous Lifting",No
+12724,102924,"Dietary Pattern",Normal
+12724,102924,Activities,"walking, marching and hiking"
+12724,102924,Activities,"Working on cars and other mechanical objects"
+12724,102924,Carcinogens,"Oral tobacco products"
+12724,102924,"Educational Level","High school graduate or GED diploma"
+12724,102924,"Socio Economic Status - Adult","Middle class"
+12724,102924,"Socio Economic Status - Child","Middle class"
+12724,102924,Occupations,"Business and Administration Professionals"
+12724,102924,"Tobacco Type","smoke tobacco"
+12724,102924,"Tobacco Usage","tobacco user,  current status unknown"
+12724,102924,"Drinking Status","High risk"
+12724,102924,"Drinking Status","Drinker, current status unknown"
+12724,102924,"Strenuous Lifting",No
+13211,135579,"Dietary Pattern",Normal
+13211,135579,Activities,"other involving other sports and athletics played individually"
+13211,135579,Carcinogens,None
+13211,135579,"Educational Level","9th-12th, no diploma"
+13211,135579,"Socio Economic Status - Adult","Lower class"
+13211,135579,"Socio Economic Status - Child","Lower class"
+13211,135579,Occupations,"Sales Workers"
+13211,135579,Occupations,"Drivers and Mobile Plant Operators"
+13211,135579,"Tobacco Type","chew tobacco"
+13211,135579,"Tobacco Usage","Current some day tobacco user"
+13211,135579,"Drinking Status","Low risk"
+13211,135579,"Strenuous Lifting",No
+13212,137402,"Dietary Pattern",Normal
+13212,137402,Activities,"american tackle football"
+13212,137402,Activities,basketball
+13212,137402,Activities,"household cleaning"
+13212,137402,Activities,"building and construction"
+13212,137402,Carcinogens,None
+13212,137402,"Educational Level","High school graduate or GED diploma"
+13212,137402,"Socio Economic Status - Adult","Upper class"
+13212,137402,"Socio Economic Status - Child","Upper class"
+13212,137402,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+13212,137402,Occupations,"Drivers and Mobile Plant Operators"
+13212,137402,"Tobacco Type","Never used tobacco"
+13212,137402,"Drinking Status","High risk"
+13212,137402,"Strenuous Lifting",No
+13262,168993,"Dietary Pattern",Normal
+13262,168993,Activities,"walking, marching and hiking"
+13262,168993,Activities,dancing
+13262,168993,Activities,yoga
+13262,168993,Carcinogens,Unknown
+13262,168993,"Educational Level","Some college credit but no degree"
+13262,168993,"Socio Economic Status - Adult","Lower middle class"
+13262,168993,"Socio Economic Status - Child","Middle class"
+13262,168993,Occupations,"Personal Services Workers"
+13262,168993,"Tobacco Type","Never used tobacco"
+13262,168993,"Drinking Status","High risk"
+13262,168993,"Strenuous Lifting",Unknown
+13266,103293,"Dietary Pattern",Normal
+13266,103293,Activities,running
+13266,103293,Activities,"other involving water and watercraft"
+13266,103293,Activities,golf
+13266,103293,Activities,"american tackle football"
+13266,103293,Activities,basketball
+13266,103293,Carcinogens,None
+13266,103293,"Educational Level","Bachelor's degree"
+13266,103293,"Socio Economic Status - Adult","Middle class"
+13266,103293,"Socio Economic Status - Child","Middle class"
+13266,103293,Occupations,"Science and Engineering Associate Professionals"
+13266,103293,"Tobacco Type","Never used tobacco"
+13266,103293,"Drinking Status","High risk"
+13266,103293,"Strenuous Lifting",No
+13277,135258,"Dietary Pattern",Normal
+13277,135258,Activities,"hand held interactive electronic device"
+13277,135258,Activities,"other involving animal care"
+13277,135258,Carcinogens,"Tobacco smoke, environmental"
+13277,135258,"Educational Level","High school graduate or GED diploma"
+13277,135258,"Socio Economic Status - Adult","Lower class"
+13277,135258,"Socio Economic Status - Adult","Middle class"
+13277,135258,"Socio Economic Status - Child","Middle class"
+13277,135258,Occupations,"Personal Services Workers"
+13277,135258,Occupations,"Agricultural, Forestry and Fishery Labourers"
+13277,135258,"Tobacco Type","Never used tobacco"
+13277,135258,"Drinking Status","Low risk"
+13277,135258,"Strenuous Lifting",Yes
+13331,177679,"Dietary Pattern",Normal
+13331,177679,Activities,"exercise machines primarily for muscle strengthening"
+13331,177679,Activities,"furniture building and finishing"
+13331,177679,Activities,"Working on cars and other mechanical objects"
+13331,177679,Carcinogens,"Oral tobacco products"
+13331,177679,Carcinogens,"Ultraviolet (UV) radiation, broad spectrum"
+13331,177679,"Educational Level","Some college credit but no degree"
+13331,177679,"Socio Economic Status - Adult","Upper middle class"
+13331,177679,"Socio Economic Status - Child","Lower middle class"
+13331,177679,Occupations,"Science and Engineering Professionals"
+13331,177679,Occupations,"Armed Forces Occupations, Other Ranks"
+13331,177679,"Tobacco Type","chew tobacco"
+13331,177679,"Tobacco Usage","Heavy tobacco user"
+13331,177679,"Tobacco Usage","light tobacco user"
+13331,177679,"Strenuous Lifting",Yes
+13577,184171,"Dietary Pattern","Convenience food"
+13577,184171,Activities,"horseback riding"
+13577,184171,Activities,"other involving other sports and athletics played individually"
+13577,184171,Activities,"Working on cars and other mechanical objects"
+13577,184171,Carcinogens,"Oral tobacco products"
+13577,184171,"Educational Level","Some college credit but no degree"
+13577,184171,"Socio Economic Status - Adult","Lower class"
+13577,184171,"Socio Economic Status - Child","Middle class"
+13577,184171,Occupations,"Protective Services Workers"
+13577,184171,Occupations,"Market-oriented Skilled Forestry, Fishery and Hunting Workers"
+13577,184171,"Tobacco Type","smoke tobacco"
+13577,184171,"Tobacco Type","chew tobacco"
+13577,184171,"Tobacco Usage","light tobacco user"
+13577,184171,"Drinking Status","Low risk"
+13577,184171,"Strenuous Lifting",No
+13580,180430,"Dietary Pattern",Normal
+13580,180430,Activities,bowling
+13580,180430,Activities,"american tackle football"
+13580,180430,Activities,baseball
+13580,180430,Carcinogens,"Oral tobacco products"
+13580,180430,"Educational Level","High school graduate or GED diploma"
+13580,180430,"Socio Economic Status - Adult","Middle class"
+13580,180430,"Socio Economic Status - Child","Upper middle class"
+13580,180430,Occupations,"Sales Workers"
+13580,180430,Occupations,"Metal, Machinery and Related Trades Workers"
+13580,180430,"Tobacco Type","smoke tobacco"
+13580,180430,"Tobacco Usage","Current everyday tobacco user"
+13580,180430,"Tobacco Usage","light tobacco user"
+13580,180430,"Drinking Status","Low risk"
+13580,180430,"Strenuous Lifting",No
+13627,136868,"Dietary Pattern",Normal
+13627,136868,Activities,"other involving arts and handcrafts"
+13627,136868,Activities,"other caregiving"
+13627,136868,Carcinogens,Unknown
+13627,136868,"Educational Level","High school graduate or GED diploma"
+13627,136868,"Socio Economic Status - Adult","Lower class"
+13627,136868,"Socio Economic Status - Child","Lower class"
+13627,136868,Occupations,"Other Clerical Support Workers"
+13627,136868,Occupations,"Refuse Workers and Other Elementary Workers"
+13627,136868,Occupations,Other
+13627,136868,"Tobacco Type","Never used tobacco"
+13627,136868,"Drinking Status","Low risk"
+13627,136868,"Strenuous Lifting",Yes
+13641,140141,"Dietary Pattern",Normal
+13641,140141,Activities,"other involving arts and handcrafts"
+13641,140141,Activities,"other caregiving"
+13641,140141,Carcinogens,"Oral tobacco products"
+13641,140141,"Educational Level",Unknown
+13641,140141,"Socio Economic Status - Adult",Unknown
+13641,140141,"Socio Economic Status - Child","Lower class"
+13641,140141,Occupations,"Metal, Machinery and Related Trades Workers"
+13641,140141,Occupations,"Refuse Workers and Other Elementary Workers"
+13641,140141,"Tobacco Type","smoke tobacco"
+13641,140141,"Tobacco Usage","tobacco user,  current status unknown"
+13641,140141,"Drinking Status","Drinker, current status unknown"
+13641,140141,"Strenuous Lifting",Unknown
+13652,110125,"Dietary Pattern",Normal
+13652,110125,Activities,"other involving arts and handcrafts"
+13652,110125,Carcinogens,"Oral tobacco products"
+13652,110125,"Educational Level","High school graduate or GED diploma"
+13652,110125,"Socio Economic Status - Adult","Middle class"
+13652,110125,"Socio Economic Status - Child","Middle class"
+13652,110125,Occupations,"Food Preparation Assistants"
+13652,110125,"Tobacco Type","smoke tobacco"
+13652,110125,"Tobacco Usage","light tobacco user"
+13652,110125,"Drinking Status","Low risk"
+13652,110125,"Strenuous Lifting",No
+13669,174753,Activities,golf
+13669,174753,Activities,"american tackle football"
+13669,174753,Activities,basketball
+13669,174753,Activities,wrestling
+13669,174753,Activities,frisbee
+13669,174753,Activities,"exercise machines primarily for muscle strengthening"
+13669,174753,Activities,"free weights"
+13669,174753,Activities,"other involving animal care"
+13669,174753,Carcinogens,Asbestos
+13669,174753,Carcinogens,"Oral tobacco products"
+13669,174753,Carcinogens,Unknown
+13669,174753,"Educational Level","Some college credit but no degree"
+13669,174753,"Socio Economic Status - Adult","Lower class"
+13669,174753,"Socio Economic Status - Adult","Middle class"
+13669,174753,"Socio Economic Status - Child","Lower class"
+13669,174753,Occupations,"Stationary Plant and Machine Operators"
+13669,174753,Occupations,"Drivers and Mobile Plant Operators"
+13669,174753,Occupations,"Agricultural, Forestry and Fishery Labourers"
+13669,174753,"Tobacco Type","smoke tobacco"
+13669,174753,"Tobacco Usage","Current everyday tobacco user"
+13669,174753,"Tobacco Usage","Heavy tobacco user"
+13669,174753,"Drinking Status","Never drank"
+13669,174753,"Strenuous Lifting",Yes
+13675,109799,"Dietary Pattern",Normal
+13675,109799,Activities,"other caregiving"
+13675,109799,Carcinogens,Asbestos
+13675,109799,Occupations,"Personal Services Workers"
+13675,109799,Occupations,"Personal Care Workers"
+13675,109799,"Tobacco Type","Never used tobacco"
+13675,109799,"Drinking Status","Low risk"
+13678,134740,"Dietary Pattern",Normal
+13678,134740,Activities,"other involving other sports and athletics played individually"
+13678,134740,Activities,"other specified sports and athletics"
+13678,134740,Carcinogens,"Oral tobacco products"
+13678,134740,"Educational Level","High school graduate or GED diploma"
+13678,134740,"Socio Economic Status - Adult","Middle class"
+13678,134740,"Socio Economic Status - Child","Middle class"
+13678,134740,Occupations,"Stationary Plant and Machine Operators"
+13678,134740,Occupations,"Drivers and Mobile Plant Operators"
+13678,134740,"Tobacco Type","smoke tobacco"
+13678,134740,"Tobacco Usage","Former tobacco user"
+13678,134740,"Drinking Status","Low risk"
+13678,134740,"Strenuous Lifting",No
+13692,132592,"Dietary Pattern",Normal
+13692,132592,Activities,swimming
+13692,132592,Activities,soccer
+13692,132592,Carcinogens,"Tobacco smoke, environmental"
+13692,132592,"Educational Level","High school graduate or GED diploma"
+13692,132592,"Socio Economic Status - Child","Lower class"
+13692,132592,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+13692,132592,Occupations,"Cleaners and Helpers"
+13692,132592,"Tobacco Type","Never used tobacco"
+13692,132592,"Drinking Status","Drinker, current status unknown"
+13692,132592,"Strenuous Lifting",No
+13718,101358,"Dietary Pattern",Normal
+13718,101358,Activities,"walking, marching and hiking"
+13718,101358,Activities,"other involving water and watercraft"
+13718,101358,Activities,"snow (alpine) (downhill) skiing, snow boarding, sledding, tobogganing and snow tubing"
+13718,101358,Activities,"roller skating (inline) and skateboarding"
+13718,101358,Activities,"bike riding"
+13718,101358,Activities,"other involving other sports and athletics played individually"
+13718,101358,Activities,"building and construction"
+13718,101358,Carcinogens,None
+13718,101358,"Educational Level","9th-12th, no diploma"
+13718,101358,"Socio Economic Status - Child","Middle class"
+13718,101358,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+13718,101358,"Tobacco Type","Never used tobacco"
+13718,101358,"Strenuous Lifting",No
+13729,149327,"Dietary Pattern",Normal
+13729,149327,Activities,running
+13729,149327,Activities,"horseback riding"
+13729,149327,Activities,basketball
+13729,149327,Activities,"grooming and shearing an animal"
+13729,149327,Activities,"other involving animal care"
+13729,149327,Activities,Other
+13729,149327,Carcinogens,None
+13729,149327,"Educational Level","8th grade/less"
+13729,149327,Occupations,"Electrical and Electronic Trades Workers"
+13729,149327,"Tobacco Type","Never used tobacco"
+13729,149327,"Drinking Status","Low risk"
+13729,149327,"Strenuous Lifting",No
+13745,183533,"Dietary Pattern",Normal
+13745,183533,Activities,"other involving arts and handcrafts"
+13745,183533,Activities,"caregiving, lifting"
+13745,183533,Activities,"other caregiving"
+13745,183533,Carcinogens,None
+13745,183533,"Educational Level","High school graduate or GED diploma"
+13745,183533,"Socio Economic Status - Adult","Lower class"
+13745,183533,"Socio Economic Status - Child","Lower class"
+13745,183533,Occupations,"Business and Administration Associate Professionals"
+13745,183533,Occupations,"Personal Care Workers"
+13745,183533,Occupations,"Refuse Workers and Other Elementary Workers"
+13745,183533,"Tobacco Type","Never used tobacco"
+13745,183533,"Drinking Status","High risk"
+13745,183533,"Strenuous Lifting",Yes
+13748,114220,"Dietary Pattern",Normal
+13748,114220,Activities,"horseback riding"
+13748,114220,Activities,"hand held interactive electronic device"
+13748,114220,Activities,"other caregiving"
+13748,114220,Activities,"grooming and shearing an animal"
+13748,114220,Activities,"other involving animal care"
+13748,114220,Activities,Other
+13748,114220,Carcinogens,"Oral tobacco products"
+13748,114220,"Educational Level","High school graduate or GED diploma"
+13748,114220,"Socio Economic Status - Adult","Lower class"
+13748,114220,"Socio Economic Status - Child","Middle class"
+13748,114220,Occupations,"Personal Care Workers"
+13748,114220,"Tobacco Type","smoke tobacco"
+13748,114220,"Tobacco Usage","Former tobacco user"
+13748,114220,"Drinking Status","Drinker, current status unknown"
+13748,114220,"Strenuous Lifting",No
+13776,139847,"Dietary Pattern",Normal
+13776,139847,Activities,"exercise machines primarily for cardiorespiratory conditioning"
+13776,139847,Activities,"Working on cars and other mechanical objects"
+13776,139847,Carcinogens,"Oral tobacco products"
+13776,139847,"Educational Level","High school graduate or GED diploma"
+13776,139847,"Socio Economic Status - Adult","Middle class"
+13776,139847,"Socio Economic Status - Child","Middle class"
+13776,139847,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+13776,139847,Occupations,"Drivers and Mobile Plant Operators"
+13776,139847,"Tobacco Type","smoke tobacco"
+13776,139847,"Tobacco Usage","light tobacco user"
+13776,139847,"Drinking Status","Previous High risk "
+13776,139847,"Strenuous Lifting",No
+13797,103783,"Dietary Pattern",Normal
+13797,103783,Activities,"walking, marching and hiking"
+13797,103783,Activities,"other involving arts and handcrafts"
+13797,103783,Activities,"caregiving, bathing"
+13797,103783,Activities,"caregiving, lifting"
+13797,103783,Carcinogens,"Oral tobacco products"
+13797,103783,"Educational Level","Associate degree"
+13797,103783,"Socio Economic Status - Adult","Middle class"
+13797,103783,"Socio Economic Status - Child","Middle class"
+13797,103783,Occupations,"Health Associate Professionals"
+13797,103783,Occupations,"Personal Care Workers"
+13797,103783,"Tobacco Type","smoke tobacco"
+13797,103783,"Tobacco Usage","Heavy tobacco user"
+13797,103783,"Drinking Status","High risk"
+13797,103783,"Strenuous Lifting",Yes
+13885,109860,"Dietary Pattern",Normal
+13885,109860,Activities,baseball
+13885,109860,Activities,"other involving other sports and athletics played as a team or group"
+13885,109860,Activities,"cooking and baking"
+13885,109860,Carcinogens,"Oral tobacco products"
+13885,109860,"Educational Level","Bachelor's degree"
+13885,109860,"Socio Economic Status - Adult","Upper class"
+13885,109860,"Socio Economic Status - Child","Middle class"
+13885,109860,Occupations,"Business and Administration Professionals"
+13885,109860,Occupations,"Business and Administration Associate Professionals"
+13885,109860,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+13885,109860,"Tobacco Type","chew tobacco"
+13885,109860,"Tobacco Usage","Heavy tobacco user"
+13885,109860,"Drinking Status","High risk"
+13885,109860,"Strenuous Lifting",Yes
+13894,183067,"Dietary Pattern",Normal
+13894,183067,Activities,"exercise machines primarily for cardiorespiratory conditioning"
+13894,183067,Activities,"exercise machines primarily for muscle strengthening"
+13894,183067,Carcinogens,None
+13894,183067,"Educational Level","9th-12th, no diploma"
+13894,183067,"Socio Economic Status - Adult","Middle class"
+13894,183067,"Socio Economic Status - Child","Middle class"
+13894,183067,Occupations,"Stationary Plant and Machine Operators"
+13894,183067,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+13894,183067,"Tobacco Type","Never used tobacco"
+13894,183067,"Drinking Status","Low risk"
+13894,183067,"Strenuous Lifting",No
+13902,184343,"Dietary Pattern","Convenience food"
+13902,184343,Activities,"bike riding"
+13902,184343,Activities,"Working on cars and other mechanical objects"
+13902,184343,Carcinogens,Unknown
+13902,184343,"Educational Level","High school graduate or GED diploma"
+13902,184343,"Socio Economic Status - Adult","Lower middle class"
+13902,184343,"Socio Economic Status - Child","Middle class"
+13902,184343,Occupations,"Metal, Machinery and Related Trades Workers"
+13902,184343,"Tobacco Type","Never used tobacco"
+13902,184343,"Drinking Status","Never drank"
+13902,184343,"Strenuous Lifting",Yes
+13961,148298,"Dietary Pattern","Convenience food"
+13961,148298,Activities,None
+13961,148298,Carcinogens,"Tobacco smoke, environmental"
+13961,148298,"Educational Level","9th-12th, no diploma"
+13961,148298,"Socio Economic Status - Adult","Middle class"
+13961,148298,"Socio Economic Status - Child","Middle class"
+13961,148298,Occupations,"Hospitality, Retail and Other Services Managers"
+13961,148298,Occupations,"Sales Workers"
+13961,148298,"Tobacco Type","Never used tobacco"
+13961,148298,"Drinking Status","High risk"
+13961,148298,"Strenuous Lifting",Yes
+13974,134922,"Dietary Pattern",Normal
+13974,134922,Activities,baseball
+13974,134922,Activities,wrestling
+13974,134922,Activities,"free weights"
+13974,134922,Carcinogens,"Oral tobacco products"
+13974,134922,"Educational Level","9th-12th, no diploma"
+13974,134922,"Socio Economic Status - Child","Middle class"
+13974,134922,Occupations,None
+13974,134922,"Tobacco Type","smoke tobacco"
+13974,134922,"Tobacco Type","chew tobacco"
+13974,134922,"Tobacco Usage","Former tobacco user"
+13974,134922,"Drinking Status","Low risk"
+13974,134922,"Strenuous Lifting",Yes
+14004,111927,"Dietary Pattern",Normal
+14004,111927,Activities,"walking, marching and hiking"
+14004,111927,Carcinogens,None
+14004,111927,"Educational Level","High school graduate or GED diploma"
+14004,111927,"Socio Economic Status - Adult","Middle class"
+14004,111927,"Socio Economic Status - Child","Middle class"
+14004,111927,Occupations,None
+14004,111927,"Tobacco Type","Never used tobacco"
+14004,111927,"Drinking Status","Low risk"
+14004,111927,"Strenuous Lifting",No
+14034,183025,"Dietary Pattern",Normal
+14034,183025,Activities,basketball
+14034,183025,Activities,"other specified sports and athletics"
+14034,183025,Carcinogens,"Oral tobacco products"
+14034,183025,"Educational Level","9th-12th, no diploma"
+14034,183025,"Socio Economic Status - Adult","Middle class"
+14034,183025,"Socio Economic Status - Child","Middle class"
+14034,183025,Occupations,"Business and Administration Associate Professionals"
+14034,183025,Occupations,"Cleaners and Helpers"
+14034,183025,"Tobacco Type","smoke tobacco"
+14034,183025,"Tobacco Usage","light tobacco user"
+14034,183025,"Drinking Status","Low risk"
+14034,183025,"Drinking Status","High risk"
+14034,183025,"Strenuous Lifting",No
+14036,147211,"Dietary Pattern",Normal
+14036,147211,Activities,dancing
+14036,147211,Activities,"other involving arts and handcrafts"
+14036,147211,Carcinogens,"Oral tobacco products"
+14036,147211,"Educational Level","High school graduate or GED diploma"
+14036,147211,"Socio Economic Status - Adult","Middle class"
+14036,147211,"Socio Economic Status - Child","Middle class"
+14036,147211,Occupations,"Customer Services Clerks"
+14036,147211,Occupations,"Personal Care Workers"
+14036,147211,"Tobacco Type","smoke tobacco"
+14036,147211,"Tobacco Usage","tobacco user,  current status unknown"
+14036,147211,"Drinking Status","High risk"
+14036,147211,"Strenuous Lifting",No
+14064,105604,"Dietary Pattern",Normal
+14064,105604,Activities,"hand held interactive electronic device"
+14064,105604,Activities,"other involving arts and handcrafts"
+14064,105604,Activities,"cooking and baking"
+14064,105604,Carcinogens,"Oral tobacco products"
+14064,105604,"Educational Level","9th-12th, no diploma"
+14064,105604,"Socio Economic Status - Adult","Middle class"
+14064,105604,"Socio Economic Status - Child","Lower class"
+14064,105604,Occupations,"Sales Workers"
+14064,105604,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+14064,105604,"Tobacco Type","smoke tobacco"
+14064,105604,"Tobacco Usage","Heavy tobacco user"
+14064,105604,"Drinking Status","High risk"
+14064,105604,"Strenuous Lifting",Yes
+14070,179019,"Dietary Pattern",Normal
+14070,179019,Activities,"Working on cars and other mechanical objects"
+14070,179019,Carcinogens,"Hepatitis C virus"
+14070,179019,Carcinogens,"Oral tobacco products"
+14070,179019,"Educational Level","High school graduate or GED diploma"
+14070,179019,"Socio Economic Status - Adult","Middle class"
+14070,179019,"Socio Economic Status - Child","Middle class"
+14070,179019,Occupations,"Metal, Machinery and Related Trades Workers"
+14070,179019,"Tobacco Type","smoke tobacco"
+14070,179019,"Drinking Status","High risk"
+14070,179019,"Strenuous Lifting",Yes
+14086,179458,"Dietary Pattern",Overeating
+14086,179458,Activities,trampolining
+14086,179458,Activities,"piano playing"
+14086,179458,Activities,"winds and brass instrument playing"
+14086,179458,Carcinogens,"Hepatitis C virus"
+14086,179458,Carcinogens,"Oral tobacco products"
+14086,179458,Carcinogens,"Tobacco smoke, environmental"
+14086,179458,"Educational Level","9th-12th, no diploma"
+14086,179458,"Socio Economic Status - Adult","Lower class"
+14086,179458,"Socio Economic Status - Child","Lower class"
+14086,179458,Occupations,"Personal Services Workers"
+14086,179458,"Tobacco Type","smoke tobacco"
+14086,179458,"Tobacco Usage","light tobacco user"
+14086,179458,"Drinking Status","High risk"
+14086,179458,"Strenuous Lifting",No
+14098,101236,"Dietary Pattern",Normal
+14098,101236,Activities,"Working on cars and other mechanical objects"
+14098,101236,Carcinogens,"Oral tobacco products"
+14098,101236,Carcinogens,"Tobacco smoke, environmental"
+14098,101236,"Educational Level","High school graduate or GED diploma"
+14098,101236,"Socio Economic Status - Adult","Middle class"
+14098,101236,"Socio Economic Status - Child","Middle class"
+14098,101236,Occupations,None
+14098,101236,"Tobacco Type","smoke tobacco"
+14098,101236,"Tobacco Usage","Current everyday tobacco user"
+14098,101236,"Tobacco Usage","light tobacco user"
+14098,101236,"Drinking Status","High risk"
+14098,101236,"Strenuous Lifting",No
+14106,144314,"Dietary Pattern",Normal
+14106,144314,Activities,soccer
+14106,144314,Activities,"building and construction"
+14106,144314,Activities,"string instrument playing"
+14106,144314,Carcinogens,"Oral tobacco products"
+14106,144314,"Educational Level","High school graduate or GED diploma"
+14106,144314,"Socio Economic Status - Adult","Lower class"
+14106,144314,"Socio Economic Status - Child","Middle class"
+14106,144314,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+14106,144314,"Tobacco Type","smoke tobacco"
+14106,144314,"Tobacco Usage","Current some day tobacco user"
+14106,144314,"Drinking Status","High risk"
+14106,144314,"Strenuous Lifting",Yes
+14107,180398,"Dietary Pattern","Convenience food"
+14107,180398,Activities,"cooking and baking"
+14107,180398,Activities,"gardening and landscaping"
+14107,180398,Carcinogens,"Oral tobacco products"
+14107,180398,"Educational Level","9th-12th, no diploma"
+14107,180398,"Socio Economic Status - Adult","Middle class"
+14107,180398,"Socio Economic Status - Child","Middle class"
+14107,180398,Occupations,"Business and Administration Associate Professionals"
+14107,180398,Occupations,"Sales Workers"
+14107,180398,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+14107,180398,Occupations,"Refuse Workers and Other Elementary Workers"
+14107,180398,"Tobacco Type","smoke tobacco"
+14107,180398,"Tobacco Usage","Heavy tobacco user"
+14107,180398,"Drinking Status","High risk"
+14107,180398,"Strenuous Lifting",Yes
+14232,147903,"Dietary Pattern","Convenience food"
+14232,147903,Activities,"hand held interactive electronic device"
+14232,147903,Carcinogens,None
+14232,147903,"Educational Level","9th-12th, no diploma"
+14232,147903,"Socio Economic Status - Adult","Lower middle class"
+14232,147903,"Socio Economic Status - Child","Middle class"
+14232,147903,Occupations,None
+14232,147903,"Tobacco Type","Never used tobacco"
+14232,147903,"Drinking Status","Low risk"
+14232,147903,"Strenuous Lifting",No
+14242,174808,"Dietary Pattern",Normal
+14242,174808,Activities,"walking, marching and hiking"
+14242,174808,Carcinogens,"Oral tobacco products"
+14242,174808,"Educational Level","High school graduate or GED diploma"
+14242,174808,"Socio Economic Status - Adult","Lower middle class"
+14242,174808,"Socio Economic Status - Child","Middle class"
+14242,174808,Occupations,"Customer Services Clerks"
+14242,174808,"Tobacco Type","smoke tobacco"
+14242,174808,"Tobacco Usage","Heavy tobacco user"
+14242,174808,"Drinking Status","Never drank"
+14242,174808,"Strenuous Lifting",Yes
+14254,172676,"Dietary Pattern",Normal
+14254,172676,Activities,"horseback riding"
+14254,172676,Activities,baseball
+14254,172676,Activities,basketball
+14254,172676,Activities,"volleyball (beach) (court)"
+14254,172676,Activities,"other involving other sports and athletics played as a team or group"
+14254,172676,"Educational Level","9th-12th, no diploma"
+14254,172676,"Socio Economic Status - Adult","Lower class"
+14254,172676,"Socio Economic Status - Child","Lower class"
+14254,172676,Occupations,"Cleaners and Helpers"
+14254,172676,Occupations,"Agricultural, Forestry and Fishery Labourers"
+14254,172676,"Tobacco Type","Never used tobacco"
+14254,172676,"Drinking Status","High risk"
+14254,172676,"Strenuous Lifting",Yes
+14258,135881,"Dietary Pattern",Normal
+14258,135881,Activities,basketball
+14258,135881,Activities,"hand held interactive electronic device"
+14258,135881,Activities,"cooking and baking"
+14258,135881,Activities,"gardening and landscaping"
+14258,135881,"Educational Level","High school graduate or GED diploma"
+14258,135881,"Socio Economic Status - Adult","Middle class"
+14258,135881,"Socio Economic Status - Child","Middle class"
+14258,135881,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+14258,135881,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+14258,135881,"Tobacco Type","smoke tobacco"
+14258,135881,"Tobacco Usage","Current everyday tobacco user"
+14258,135881,"Drinking Status","High risk"
+14258,135881,"Strenuous Lifting",Yes
+14279,136188,"Dietary Pattern",Normal
+14279,136188,Activities,"walking, marching and hiking"
+14279,136188,Activities,"other involving water and watercraft"
+14279,136188,Activities,baseball
+14279,136188,Activities,"martial arts"
+14279,136188,Carcinogens,"Oral tobacco products"
+14279,136188,Carcinogens,"Tobacco smoke, environmental"
+14279,136188,"Educational Level","Some college credit but no degree"
+14279,136188,"Socio Economic Status - Adult","Lower class"
+14279,136188,"Socio Economic Status - Child","Upper middle class"
+14279,136188,Occupations,"Business and Administration Professionals"
+14279,136188,Occupations,"Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+14279,136188,Occupations,"Cleaners and Helpers"
+14279,136188,"Tobacco Type","smoke tobacco"
+14279,136188,"Tobacco Usage","tobacco user,  current status unknown"
+14279,136188,"Drinking Status","High risk"
+14279,136188,"Strenuous Lifting",Yes
+14321,179082,"Dietary Pattern",Normal
+14321,179082,Activities,golf
+14321,179082,Activities,"other involving other sports and athletics played individually"
+14321,179082,Activities,"rough housing and horseplay"
+14321,179082,Carcinogens,"Tobacco smoke, environmental"
+14321,179082,"Educational Level","Bachelor's degree"
+14321,179082,"Socio Economic Status - Adult","Upper class"
+14321,179082,"Socio Economic Status - Child","Middle class"
+14321,179082,Occupations,"Customer Services Clerks"
+14321,179082,Occupations,"Personal Services Workers"
+14321,179082,"Tobacco Type","Never used tobacco"
+14321,179082,"Drinking Status","Drinker, current status unknown"
+14321,179082,"Strenuous Lifting",Yes
+14334,169132,"Dietary Pattern",Normal
+14334,169132,Activities,None
+14334,169132,Carcinogens,None
+14334,169132,"Educational Level","High school graduate or GED diploma"
+14334,169132,"Socio Economic Status - Adult","Middle class"
+14334,169132,"Socio Economic Status - Child","Middle class"
+14334,169132,Occupations,"Agricultural, Forestry and Fishery Labourers"
+14334,169132,Occupations,"Labourers in Mining, Construction, Manufacturing and Transport"
+14334,169132,"Tobacco Type","Never used tobacco"
+14334,169132,"Drinking Status","Low risk"
+14334,169132,"Strenuous Lifting",No
+14339,181540,"Dietary Pattern",Normal
+14339,181540,Activities,"other involving water and watercraft"
+14339,181540,Activities,"Working on cars and other mechanical objects"
+14339,181540,Carcinogens,None
+14339,181540,"Educational Level","High school graduate or GED diploma"
+14339,181540,"Socio Economic Status - Adult","Middle class"
+14339,181540,"Socio Economic Status - Child","Middle class"
+14339,181540,Occupations,"Stationary Plant and Machine Operators"
+14339,181540,Occupations,"Refuse Workers and Other Elementary Workers"
+14339,181540,"Tobacco Type","Never used tobacco"
+14339,181540,"Drinking Status","Low risk"
+14339,181540,"Strenuous Lifting",Yes
+14369,172338,"Dietary Pattern",Normal
+14369,172338,Activities,"piano playing"
+14369,172338,Carcinogens,"1-(2-Chloroethyl)-3-(4-methylcyclohexyl)-1-nitrosourea (MeCCNU)"
+14369,172338,Carcinogens,"Wood dust"
+14369,172338,"Educational Level","Associate degree"
+14369,172338,"Socio Economic Status - Adult","Middle class"
+14369,172338,"Socio Economic Status - Child","Middle class"
+14369,172338,Occupations,"Health Associate Professionals"
+14369,172338,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+14369,172338,"Tobacco Type","Never used tobacco"
+14369,172338,"Drinking Status","Never drank"
+14369,172338,"Strenuous Lifting",No
+14370,173611,"Dietary Pattern",Normal
+14370,173611,Activities,"furniture building and finishing"
+14370,173611,Activities,"cooking and baking"
+14370,173611,Activities,"building and construction"
+14370,173611,Activities,"Working on cars and other mechanical objects"
+14370,173611,Carcinogens,None
+14370,173611,"Educational Level","High school graduate or GED diploma"
+14370,173611,"Socio Economic Status - Adult","Middle class"
+14370,173611,"Socio Economic Status - Child","Lower class"
+14370,173611,Occupations,"Building and Related Trades Workers (excluding Electricians)"
+14370,173611,Occupations,"Metal, Machinery and Related Trades Workers"
+14370,173611,"Tobacco Type","Never used tobacco"
+14370,173611,"Drinking Status","Low risk"
+14370,173611,"Strenuous Lifting",No
+14372,115720,"Dietary Pattern",Normal
+14372,115720,Activities,"walking, marching and hiking"
+14372,115720,Carcinogens,"Tobacco smoke, environmental"
+14372,115720,"Educational Level","9th-12th, no diploma"
+14372,115720,"Socio Economic Status - Adult",Unknown
+14372,115720,"Socio Economic Status - Child","Lower class"
+14372,115720,Occupations,"Personal Services Workers"
+14372,115720,"Tobacco Type","smoke tobacco"
+14372,115720,"Tobacco Usage","Current everyday tobacco user"
+14372,115720,"Tobacco Usage","Heavy tobacco user"
+14372,115720,"Tobacco Usage","light tobacco user"
+14372,115720,"Drinking Status","Low risk"
+14372,115720,"Drinking Status","High risk"
+14372,115720,"Strenuous Lifting",No
+14386,106561,Activities,swimming
+14395,141349,"Dietary Pattern","Convenience food"
+14395,141349,Activities,None
+14395,141349,Carcinogens,None
+14395,141349,"Educational Level","Some college credit but no degree"
+14395,141349,"Socio Economic Status - Adult","Middle class"
+14395,141349,"Socio Economic Status - Child","Upper middle class"
+14395,141349,Occupations,"Hospitality, Retail and Other Services Managers"
+14395,141349,Occupations,"Numerical and Material Recording Clerks"
+14395,141349,Occupations,"Other Clerical Support Workers"
+14395,141349,"Tobacco Type","Never used tobacco"
+14395,141349,"Drinking Status","Low risk"
+14395,141349,"Strenuous Lifting",No
+14419,144903,"Dietary Pattern",Normal
+14419,144903,Activities,basketball
+14419,144903,"Educational Level","High school graduate or GED diploma"
+14419,144903,"Socio Economic Status - Child","Lower class"
+14419,144903,"Tobacco Type","Never used tobacco"
+14419,144903,"Drinking Status","Low risk"
+14419,144903,"Strenuous Lifting",No
+14420,136314,"Dietary Pattern","Convenience food"
+14420,136314,Activities,"hand held interactive electronic device"
+14420,136314,"Educational Level","Some college credit but no degree"
+14420,136314,"Socio Economic Status - Adult","Middle class"
+14420,136314,"Socio Economic Status - Child","Middle class"
+14420,136314,Occupations,"Hospitality, Retail and Other Services Managers"
+14420,136314,Occupations,"Customer Services Clerks"
+14420,136314,"Tobacco Type","Never used tobacco"
+14420,136314,"Drinking Status","Never drank"
+14420,136314,"Strenuous Lifting",No
+14424,184553,"Dietary Pattern",Normal
+14424,184553,Activities,soccer
+14424,184553,Carcinogens,"Oral tobacco products"
+14424,184553,"Educational Level","9th-12th, no diploma"
+14424,184553,"Socio Economic Status - Adult","Middle class"
+14424,184553,"Socio Economic Status - Child","Middle class"
+14424,184553,Occupations,"Cleaners and Helpers"
+14424,184553,"Tobacco Type","smoke tobacco"
+14424,184553,"Tobacco Usage","Current some day tobacco user"
+14424,184553,"Tobacco Usage","light tobacco user"
+14424,184553,"Drinking Status","Drinker, current status unknown"
+14424,184553,"Strenuous Lifting",No
+15201,176087,"Dietary Pattern",Normal
+15201,176087,Activities,"walking, marching and hiking"
+15201,176087,Activities,"volleyball (beach) (court)"
+15201,176087,Activities,"cooking and baking"
+15201,176087,"Educational Level","9th-12th, no diploma"
+15201,176087,"Socio Economic Status - Adult","Lower class"
+15201,176087,"Socio Economic Status - Child","Middle class"
+15201,176087,Occupations,"Customer Services Clerks"
+15201,176087,Occupations,"Food Preparation Assistants"
+15201,176087,"Tobacco Type","Never used tobacco"
+15201,176087,"Strenuous Lifting",No

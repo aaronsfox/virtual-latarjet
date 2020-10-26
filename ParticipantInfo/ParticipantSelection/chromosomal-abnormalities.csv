@@ -1,0 +1,1742 @@
+id,deidentified_record_number,chromosomal_abnormalities_type,abnormality_factor
+5,178440,,
+105,149776,"Congenital Abnormalities",None
+105,149776,"Congenital Abnormalities",None
+105,149776,"Genetic Disorders",None
+105,149776,"Genetic Disorders",None
+105,149776,Cancers,"Breast Cancer"
+105,149776,Cancers,"Prostate Cancer"
+105,149776,Cancers,None
+119,113462,"Congenital Abnormalities",None
+119,113462,"Congenital Abnormalities",None
+119,113462,"Genetic Disorders",None
+119,113462,"Genetic Disorders",None
+119,113462,Cancers,"Breast Cancer"
+119,113462,Cancers,None
+120,146027,"Congenital Abnormalities",None
+120,146027,"Congenital Abnormalities",None
+120,146027,"Genetic Disorders",None
+120,146027,"Genetic Disorders",None
+120,146027,Cancers,None
+120,146027,Cancers,None
+222,104735,"Congenital Abnormalities",None
+222,104735,"Genetic Disorders",None
+222,104735,Cancers,"Bladder Cancer"
+222,104735,Cancers,"Brain Tumors"
+222,104735,Cancers,"Colorectal Cancer"
+222,104735,Cancers,"Stomach (Gastric) Cancer"
+222,104735,Cancers,Unknown
+257,147194,"Congenital Abnormalities",None
+257,147194,"Congenital Abnormalities",None
+257,147194,"Genetic Disorders",None
+257,147194,"Genetic Disorders",None
+257,147194,Cancers,None
+257,147194,Cancers,None
+274,181140,"Congenital Abnormalities",None
+274,181140,"Congenital Abnormalities",None
+274,181140,"Genetic Disorders",None
+274,181140,"Genetic Disorders",None
+274,181140,Cancers,None
+309,142485,"Congenital Abnormalities",None
+309,142485,"Congenital Abnormalities",Unknown
+309,142485,"Genetic Disorders",None
+309,142485,"Genetic Disorders",None
+309,142485,Cancers,None
+342,143984,"Congenital Abnormalities",None
+342,143984,"Congenital Abnormalities",None
+342,143984,"Genetic Disorders","Down syndrome"
+342,143984,"Genetic Disorders",None
+342,143984,Cancers,"Breast Cancer"
+342,143984,Cancers,"Renal Cell (Kidney) Cancer"
+342,143984,Cancers,None
+343,140368,"Congenital Abnormalities",None
+343,140368,"Congenital Abnormalities",None
+343,140368,"Genetic Disorders",None
+343,140368,"Genetic Disorders",None
+343,140368,Cancers,None
+357,140694,"Congenital Abnormalities",None
+357,140694,"Congenital Abnormalities",Unknown
+357,140694,"Genetic Disorders",None
+357,140694,"Genetic Disorders",None
+357,140694,Cancers,"Multiple Myeloma/Plasma Cell Neoplasms"
+357,140694,Cancers,None
+359,138645,"Congenital Abnormalities",None
+359,138645,"Congenital Abnormalities",None
+359,138645,"Genetic Disorders",None
+359,138645,"Genetic Disorders",None
+359,138645,Cancers,None
+381,109634,"Congenital Abnormalities",None
+381,109634,"Congenital Abnormalities",Unknown
+381,109634,"Genetic Disorders",None
+381,109634,"Genetic Disorders",None
+381,109634,Cancers,None
+404,138238,"Congenital Abnormalities",None
+404,138238,"Congenital Abnormalities",None
+404,138238,"Genetic Disorders",None
+404,138238,"Genetic Disorders",None
+404,138238,Cancers,"Cervical Cancer"
+404,138238,Cancers,"Esophageal Cancer"
+465,170527,"Congenital Abnormalities",None
+465,170527,"Congenital Abnormalities",None
+465,170527,"Genetic Disorders",None
+465,170527,"Genetic Disorders",None
+465,170527,Cancers,None
+465,170527,Cancers,None
+489,108398,"Congenital Abnormalities",None
+489,108398,"Congenital Abnormalities",None
+489,108398,"Genetic Disorders",None
+489,108398,"Genetic Disorders",None
+489,108398,Cancers,None
+489,108398,Cancers,None
+499,178090,"Congenital Abnormalities",None
+499,178090,"Congenital Abnormalities",None
+499,178090,"Genetic Disorders",None
+499,178090,"Genetic Disorders",None
+499,178090,Cancers,"Cervical Cancer"
+499,178090,Cancers,Melanoma
+499,178090,Cancers,None
+500,106128,"Congenital Abnormalities",None
+500,106128,"Congenital Abnormalities",None
+500,106128,"Genetic Disorders",None
+500,106128,"Genetic Disorders",None
+500,106128,Cancers,None
+500,106128,Cancers,None
+525,138700,"Congenital Abnormalities",None
+525,138700,"Congenital Abnormalities",None
+525,138700,"Genetic Disorders",None
+525,138700,"Genetic Disorders",None
+525,138700,Cancers,"Uterine Sarcoma"
+525,138700,Cancers,None
+533,171351,"Congenital Abnormalities",None
+533,171351,"Congenital Abnormalities",None
+533,171351,"Genetic Disorders",None
+533,171351,"Genetic Disorders",None
+533,171351,Cancers,"Liver Cancer"
+533,171351,Cancers,"Throat Cancer (Head and Neck Cancer)"
+533,171351,Cancers,None
+549,139246,"Congenital Abnormalities",None
+549,139246,"Congenital Abnormalities",None
+549,139246,"Genetic Disorders",None
+549,139246,"Genetic Disorders",None
+549,139246,Cancers,None
+549,139246,Cancers,None
+554,103387,,
+566,108247,,
+568,177567,,
+677,149399,"Congenital Abnormalities","Other specified congenital malformation syndromes affecting multiple systems"
+677,149399,"Congenital Abnormalities",None
+677,149399,"Genetic Disorders",None
+677,149399,"Genetic Disorders",None
+677,149399,Cancers,"Bone Cancer (includes Ewing Sarcoma and Osteosarcoma and Malignant Fibrous Histiocytoma)"
+677,149399,Cancers,"Prostate Cancer"
+677,149399,Cancers,None
+695,181775,"Congenital Abnormalities",None
+695,181775,"Congenital Abnormalities",None
+695,181775,"Genetic Disorders",None
+695,181775,"Genetic Disorders",None
+695,181775,Cancers,None
+695,181775,Cancers,None
+718,103497,"Congenital Abnormalities",None
+718,103497,"Congenital Abnormalities",None
+718,103497,"Genetic Disorders",None
+718,103497,"Genetic Disorders",None
+718,103497,Cancers,"Breast Cancer"
+718,103497,Cancers,None
+731,173218,"Congenital Abnormalities",None
+731,173218,"Congenital Abnormalities",None
+731,173218,"Genetic Disorders",None
+731,173218,"Genetic Disorders",None
+731,173218,Cancers,"Breast Cancer"
+731,173218,Cancers,None
+747,142070,"Congenital Abnormalities",None
+747,142070,"Congenital Abnormalities",None
+747,142070,"Genetic Disorders",None
+747,142070,"Genetic Disorders",None
+747,142070,Cancers,"Breast Cancer"
+747,142070,Cancers,"Colorectal Cancer"
+747,142070,Cancers,Sarcoma
+747,142070,Cancers,None
+794,183707,,
+798,174203,,
+814,147375,"Congenital Abnormalities",None
+814,147375,"Congenital Abnormalities",None
+814,147375,"Genetic Disorders",None
+814,147375,"Genetic Disorders",None
+814,147375,Cancers,"Colorectal Cancer"
+814,147375,Cancers,Leukemia
+814,147375,Cancers,"Liver Cancer"
+814,147375,Cancers,None
+818,174551,"Congenital Abnormalities",None
+818,174551,"Congenital Abnormalities",None
+818,174551,"Genetic Disorders",None
+818,174551,"Genetic Disorders",None
+818,174551,Cancers,"Breast Cancer"
+818,174551,Cancers,"Gastric (Stomach) Cancer"
+818,174551,Cancers,Unknown
+850,110723,"Congenital Abnormalities",None
+850,110723,"Congenital Abnormalities",None
+850,110723,"Genetic Disorders",None
+850,110723,"Genetic Disorders",None
+850,110723,Cancers,None
+850,110723,Cancers,Unknown
+906,173359,"Congenital Abnormalities",None
+906,173359,"Congenital Abnormalities",None
+906,173359,"Genetic Disorders","Trisomy 18 and Trisomy 13"
+906,173359,"Genetic Disorders",None
+906,173359,Cancers,"Bladder Cancer"
+906,173359,Cancers,"Liver Cancer"
+906,173359,Cancers,None
+997,108421,"Congenital Abnormalities",None
+997,108421,"Congenital Abnormalities",None
+997,108421,"Genetic Disorders",None
+997,108421,"Genetic Disorders",None
+997,108421,Cancers,"Skin Cancer"
+997,108421,Cancers,None
+1011,178703,"Congenital Abnormalities",None
+1011,178703,"Congenital Abnormalities",Unknown
+1011,178703,"Genetic Disorders",None
+1011,178703,"Genetic Disorders",Unknown
+1011,178703,Cancers,None
+1011,178703,Cancers,Unknown
+1032,134662,"Congenital Abnormalities",None
+1032,134662,"Congenital Abnormalities",None
+1032,134662,"Genetic Disorders",None
+1032,134662,"Genetic Disorders",Unknown
+1032,134662,Cancers,None
+1032,134662,Cancers,None
+1084,143056,"Congenital Abnormalities",None
+1084,143056,"Congenital Abnormalities",None
+1084,143056,"Genetic Disorders",None
+1084,143056,"Genetic Disorders",None
+1084,143056,Cancers,None
+1084,143056,Cancers,None
+1127,170051,"Congenital Abnormalities",None
+1127,170051,"Congenital Abnormalities",None
+1127,170051,"Genetic Disorders",None
+1127,170051,"Genetic Disorders",None
+1127,170051,Cancers,"Throat Cancer (Head and Neck Cancer)"
+1127,170051,Cancers,None
+1137,108557,,
+1143,100749,"Congenital Abnormalities",None
+1143,100749,"Congenital Abnormalities",None
+1143,100749,"Genetic Disorders",None
+1143,100749,"Genetic Disorders",None
+1143,100749,Cancers,None
+1143,100749,Cancers,None
+1192,134142,"Congenital Abnormalities",None
+1192,134142,"Congenital Abnormalities",None
+1192,134142,"Genetic Disorders",None
+1192,134142,"Genetic Disorders",Unknown
+1192,134142,Cancers,"Breast Cancer"
+1192,134142,Cancers,"Cervical Cancer"
+1192,134142,Cancers,None
+1287,172501,"Congenital Abnormalities",None
+1287,172501,"Congenital Abnormalities",None
+1287,172501,"Genetic Disorders","Trisomy 18 and Trisomy 13"
+1287,172501,"Genetic Disorders",None
+1287,172501,Cancers,"Breast Cancer"
+1287,172501,Cancers,None
+1291,170726,"Congenital Abnormalities",None
+1291,170726,"Congenital Abnormalities",None
+1291,170726,"Genetic Disorders",None
+1291,170726,"Genetic Disorders",None
+1291,170726,Cancers,"Liver Cancer"
+1291,170726,Cancers,"Prostate Cancer"
+1291,170726,Cancers,None
+1315,113271,"Congenital Abnormalities",None
+1315,113271,"Congenital Abnormalities",None
+1315,113271,"Genetic Disorders",None
+1315,113271,"Genetic Disorders",None
+1315,113271,Cancers,None
+1315,113271,Cancers,None
+1365,168709,"Congenital Abnormalities",None
+1365,168709,"Congenital Abnormalities",Unknown
+1365,168709,"Genetic Disorders",None
+1365,168709,"Genetic Disorders",Unknown
+1365,168709,Cancers,None
+1365,168709,Cancers,Unknown
+1376,169082,"Congenital Abnormalities",None
+1376,169082,"Congenital Abnormalities",Unknown
+1376,169082,"Genetic Disorders",None
+1376,169082,"Genetic Disorders",Unknown
+1376,169082,Cancers,None
+1376,169082,Cancers,Unknown
+1390,179505,"Congenital Abnormalities",None
+1390,179505,"Congenital Abnormalities",None
+1390,179505,"Genetic Disorders",None
+1390,179505,"Genetic Disorders",None
+1390,179505,Cancers,None
+1390,179505,Cancers,Unknown
+1410,112574,"Congenital Abnormalities",None
+1410,112574,"Congenital Abnormalities",None
+1410,112574,"Genetic Disorders",None
+1410,112574,"Genetic Disorders",None
+1410,112574,Cancers,"Bladder Cancer"
+1410,112574,Cancers,"Cancer, unknown type"
+1410,112574,Cancers,None
+1553,147949,"Congenital Abnormalities",None
+1553,147949,"Congenital Abnormalities",Unknown
+1553,147949,"Genetic Disorders",None
+1553,147949,"Genetic Disorders",Unknown
+1553,147949,Cancers,None
+1553,147949,Cancers,Unknown
+1568,112802,"Congenital Abnormalities",None
+1568,112802,"Congenital Abnormalities",None
+1568,112802,"Genetic Disorders",None
+1568,112802,"Genetic Disorders",None
+1568,112802,Cancers,"Brain Tumors"
+1568,112802,Cancers,Leukemia
+1568,112802,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+1568,112802,Cancers,None
+1678,147599,"Congenital Abnormalities",None
+1678,147599,"Congenital Abnormalities",Unknown
+1678,147599,"Genetic Disorders",None
+1678,147599,"Genetic Disorders",None
+1678,147599,Cancers,"Colorectal Cancer"
+1678,147599,Cancers,"Gastrointestinal Carcinoid Tumor"
+1678,147599,Cancers,"Throat Cancer (Head and Neck Cancer)"
+1678,147599,Cancers,None
+1691,107935,"Congenital Abnormalities",None
+1691,107935,"Congenital Abnormalities",None
+1691,107935,"Genetic Disorders",None
+1691,107935,"Genetic Disorders",None
+1691,107935,Cancers,None
+1691,107935,Cancers,None
+1718,132433,"Congenital Abnormalities",Hypospadias
+1718,132433,"Congenital Abnormalities",Unknown
+1718,132433,"Genetic Disorders",None
+1718,132433,"Genetic Disorders",None
+1718,132433,Cancers,None
+1718,132433,Cancers,None
+1732,111539,"Congenital Abnormalities",None
+1732,111539,"Congenital Abnormalities",None
+1732,111539,"Genetic Disorders",None
+1732,111539,"Genetic Disorders",None
+1732,111539,Cancers,"Breast Cancer"
+1732,111539,Cancers,"Ovarian Cancer"
+1732,111539,Cancers,None
+1732,111539,Cancers,Unknown
+1765,179282,"Congenital Abnormalities",None
+1765,179282,"Congenital Abnormalities",None
+1765,179282,"Genetic Disorders",None
+1765,179282,"Genetic Disorders",None
+1765,179282,Cancers,"Bladder Cancer"
+1765,179282,Cancers,"Breast Cancer"
+1765,179282,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+1765,179282,Cancers,"Cancer, unknown type"
+1765,179282,Cancers,None
+1779,100625,"Congenital Abnormalities",None
+1779,100625,"Congenital Abnormalities",None
+1779,100625,"Genetic Disorders",None
+1779,100625,"Genetic Disorders",None
+1779,100625,Cancers,"Endometrial Cancer (Uterine Cancer)"
+1779,100625,Cancers,Leukemia
+1779,100625,Cancers,"Mesothelioma, Malignant"
+1779,100625,Cancers,None
+1782,110448,"Congenital Abnormalities",None
+1782,110448,"Genetic Disorders",None
+1782,110448,Cancers,None
+1793,173795,"Congenital Abnormalities",None
+1793,173795,"Congenital Abnormalities",Unknown
+1793,173795,"Genetic Disorders",None
+1793,173795,"Genetic Disorders",Unknown
+1793,173795,Cancers,None
+1793,173795,Cancers,Unknown
+1795,107215,"Congenital Abnormalities",None
+1795,107215,"Congenital Abnormalities",None
+1795,107215,"Genetic Disorders",None
+1795,107215,"Genetic Disorders",None
+1795,107215,Cancers,None
+1795,107215,Cancers,None
+1836,112942,"Congenital Abnormalities",None
+1836,112942,"Congenital Abnormalities",None
+1836,112942,"Genetic Disorders",None
+1836,112942,"Genetic Disorders",None
+1836,112942,Cancers,None
+1836,112942,Cancers,None
+1873,175470,"Congenital Abnormalities",None
+1873,175470,"Congenital Abnormalities",None
+1873,175470,"Genetic Disorders",None
+1873,175470,"Genetic Disorders",None
+1873,175470,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+1873,175470,Cancers,"Cancer, unknown type"
+1873,175470,Cancers,None
+1887,171479,"Congenital Abnormalities",None
+1887,171479,"Congenital Abnormalities",None
+1887,171479,"Genetic Disorders",None
+1887,171479,"Genetic Disorders",None
+1887,171479,Cancers,"Skin Cancer"
+1887,171479,Cancers,None
+1892,144977,"Congenital Abnormalities",None
+1892,144977,"Congenital Abnormalities",None
+1892,144977,"Genetic Disorders",None
+1892,144977,"Genetic Disorders",None
+1892,144977,Cancers,None
+1892,144977,Cancers,None
+1899,173684,"Congenital Abnormalities",None
+1899,173684,"Congenital Abnormalities",None
+1899,173684,"Genetic Disorders",None
+1899,173684,"Genetic Disorders",None
+1899,173684,Cancers,None
+1899,173684,Cancers,Unknown
+1948,110728,"Congenital Abnormalities",None
+1948,110728,"Congenital Abnormalities",None
+1948,110728,"Genetic Disorders",None
+1948,110728,"Genetic Disorders",None
+1948,110728,Cancers,None
+1948,110728,Cancers,None
+1985,178208,"Congenital Abnormalities",None
+1985,178208,"Congenital Abnormalities",None
+1985,178208,"Genetic Disorders",None
+1985,178208,"Genetic Disorders",None
+1985,178208,Cancers,None
+1985,178208,Cancers,None
+1999,142882,"Congenital Abnormalities",None
+1999,142882,"Congenital Abnormalities",None
+1999,142882,"Genetic Disorders",None
+1999,142882,"Genetic Disorders",None
+1999,142882,Cancers,"Urethral Cancer"
+1999,142882,Cancers,None
+2053,112738,"Congenital Abnormalities",None
+2053,112738,"Congenital Abnormalities",None
+2053,112738,"Genetic Disorders",None
+2053,112738,"Genetic Disorders",None
+2053,112738,Cancers,"Ovarian Cancer"
+2053,112738,Cancers,"Pancreatic Cancer"
+2053,112738,Cancers,None
+2223,146744,"Congenital Abnormalities",None
+2223,146744,"Congenital Abnormalities",Unknown
+2223,146744,"Genetic Disorders",None
+2223,146744,"Genetic Disorders",Unknown
+2223,146744,Cancers,None
+2223,146744,Cancers,Unknown
+2267,169575,"Congenital Abnormalities",None
+2267,169575,"Congenital Abnormalities",None
+2267,169575,"Genetic Disorders",None
+2267,169575,"Genetic Disorders",None
+2267,169575,Cancers,None
+2267,169575,Cancers,None
+2315,141318,"Congenital Abnormalities",None
+2315,141318,"Congenital Abnormalities",None
+2315,141318,"Genetic Disorders",None
+2315,141318,"Genetic Disorders",None
+2315,141318,Cancers,None
+2315,141318,Cancers,None
+2333,146511,"Congenital Abnormalities",None
+2333,146511,"Congenital Abnormalities",None
+2333,146511,"Genetic Disorders",None
+2333,146511,"Genetic Disorders",None
+2333,146511,Cancers,"Breast Cancer"
+2333,146511,Cancers,"Colorectal Cancer"
+2349,137685,"Congenital Abnormalities",None
+2349,137685,"Congenital Abnormalities",None
+2349,137685,"Genetic Disorders",None
+2349,137685,"Genetic Disorders",None
+2349,137685,Cancers,None
+2349,137685,Cancers,None
+2354,107024,"Congenital Abnormalities",None
+2354,107024,"Congenital Abnormalities",None
+2354,107024,"Genetic Disorders",None
+2354,107024,"Genetic Disorders",None
+2354,107024,Cancers,None
+2354,107024,Cancers,None
+2363,174058,"Congenital Abnormalities",None
+2363,174058,"Congenital Abnormalities",None
+2363,174058,"Genetic Disorders",None
+2363,174058,"Genetic Disorders",None
+2363,174058,Cancers,"Brain Tumors"
+2363,174058,Cancers,"Breast Cancer"
+2363,174058,Cancers,Leukemia
+2363,174058,Cancers,None
+2373,115014,"Congenital Abnormalities",None
+2373,115014,"Congenital Abnormalities",None
+2373,115014,"Genetic Disorders",None
+2373,115014,"Genetic Disorders",None
+2373,115014,Cancers,"Prostate Cancer"
+2373,115014,Cancers,None
+2525,144253,"Congenital Abnormalities",None
+2525,144253,"Congenital Abnormalities",None
+2525,144253,"Genetic Disorders",None
+2525,144253,"Genetic Disorders",None
+2525,144253,Cancers,"Breast Cancer"
+2525,144253,Cancers,"Stomach (Gastric) Cancer"
+2525,144253,Cancers,None
+2530,175848,"Congenital Abnormalities",None
+2530,175848,"Congenital Abnormalities",None
+2530,175848,"Genetic Disorders",None
+2530,175848,"Genetic Disorders",None
+2530,175848,Cancers,"Breast Cancer"
+2530,175848,Cancers,"Colorectal Cancer"
+2530,175848,Cancers,None
+2574,168936,"Congenital Abnormalities",None
+2574,168936,"Congenital Abnormalities",None
+2574,168936,"Genetic Disorders",None
+2574,168936,"Genetic Disorders",None
+2574,168936,Cancers,"Colorectal Cancer"
+2574,168936,Cancers,None
+2627,143284,"Congenital Abnormalities",None
+2627,143284,"Congenital Abnormalities",None
+2627,143284,"Genetic Disorders",None
+2627,143284,"Genetic Disorders",None
+2627,143284,Cancers,"Gastric (Stomach) Cancer"
+2627,143284,Cancers,None
+2639,145931,"Congenital Abnormalities","Other congenital malformations of skin"
+2639,145931,"Congenital Abnormalities",None
+2639,145931,"Genetic Disorders",None
+2639,145931,"Genetic Disorders",None
+2639,145931,Cancers,Melanoma
+2639,145931,Cancers,None
+2650,139915,"Congenital Abnormalities",None
+2650,139915,"Congenital Abnormalities",None
+2650,139915,"Genetic Disorders",None
+2650,139915,"Genetic Disorders",None
+2650,139915,Cancers,None
+2650,139915,Cancers,None
+2657,101607,"Congenital Abnormalities",None
+2657,101607,"Congenital Abnormalities",None
+2657,101607,"Genetic Disorders",None
+2657,101607,"Genetic Disorders",None
+2657,101607,Cancers,"Colorectal Cancer"
+2657,101607,Cancers,"Ovarian Cancer"
+2657,101607,Cancers,None
+2660,145172,"Congenital Abnormalities",None
+2660,145172,"Congenital Abnormalities",None
+2660,145172,"Genetic Disorders","Down syndrome"
+2660,145172,"Genetic Disorders",None
+2660,145172,Cancers,"Colorectal Cancer"
+2660,145172,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+2660,145172,Cancers,None
+2663,101014,"Congenital Abnormalities",None
+2663,101014,"Congenital Abnormalities",None
+2663,101014,"Genetic Disorders",None
+2663,101014,"Genetic Disorders",None
+2663,101014,Cancers,"Cancer, unknown type"
+2663,101014,Cancers,None
+2665,177588,"Congenital Abnormalities",None
+2665,177588,"Congenital Abnormalities",None
+2665,177588,"Genetic Disorders",None
+2665,177588,"Genetic Disorders",None
+2665,177588,Cancers,None
+2665,177588,Cancers,None
+2681,102436,"Congenital Abnormalities",None
+2681,102436,"Congenital Abnormalities",None
+2681,102436,"Genetic Disorders",None
+2681,102436,"Genetic Disorders",None
+2681,102436,Cancers,None
+2681,102436,Cancers,Unknown
+2685,179497,"Congenital Abnormalities",None
+2685,179497,"Congenital Abnormalities",None
+2685,179497,"Genetic Disorders",None
+2685,179497,"Genetic Disorders",None
+2685,179497,Cancers,"Colorectal Cancer"
+2685,179497,Cancers,"Cancer, unknown type"
+2685,179497,Cancers,None
+2725,109833,"Congenital Abnormalities","Congenital malformations of aortic and mitral valves"
+2725,109833,"Congenital Abnormalities","Congenital malformations of aortic and mitral valves"
+2725,109833,"Genetic Disorders",None
+2725,109833,"Genetic Disorders",None
+2725,109833,Cancers,"Skin Cancer"
+2725,109833,Cancers,None
+2744,174723,"Congenital Abnormalities",None
+2744,174723,"Congenital Abnormalities",None
+2744,174723,"Genetic Disorders",None
+2744,174723,"Genetic Disorders",None
+2744,174723,Cancers,"Breast Cancer"
+2744,174723,Cancers,None
+2746,138767,"Congenital Abnormalities",None
+2746,138767,"Congenital Abnormalities",None
+2746,138767,"Genetic Disorders",None
+2746,138767,"Genetic Disorders",None
+2746,138767,Cancers,None
+2746,138767,Cancers,None
+2748,180835,"Congenital Abnormalities",None
+2748,180835,"Congenital Abnormalities",Unknown
+2748,180835,"Genetic Disorders",None
+2748,180835,"Genetic Disorders",None
+2748,180835,Cancers,None
+2748,180835,Cancers,None
+2749,180333,"Congenital Abnormalities",None
+2749,180333,"Congenital Abnormalities",None
+2749,180333,"Genetic Disorders",None
+2749,180333,"Genetic Disorders",None
+2749,180333,Cancers,"Brain Tumors"
+2749,180333,Cancers,"Colorectal Cancer"
+2749,180333,Cancers,None
+2775,103350,"Congenital Abnormalities","Spina bifida"
+2775,103350,"Congenital Abnormalities",None
+2775,103350,"Genetic Disorders",None
+2775,103350,"Genetic Disorders",None
+2775,103350,Cancers,"Acute Lymphoblastic Leukemia (ALL)"
+2775,103350,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+2775,103350,Cancers,"Prostate Cancer"
+2775,103350,Cancers,None
+2817,143856,"Congenital Abnormalities",None
+2817,143856,"Congenital Abnormalities",None
+2817,143856,"Genetic Disorders",None
+2817,143856,"Genetic Disorders",None
+2817,143856,Cancers,"Breast Cancer"
+2817,143856,Cancers,None
+2913,136959,"Congenital Abnormalities",None
+2913,136959,"Congenital Abnormalities",None
+2913,136959,"Genetic Disorders",None
+2913,136959,"Genetic Disorders",None
+2913,136959,Cancers,None
+2913,136959,Cancers,None
+2914,112994,"Congenital Abnormalities","Undescended and ectopic testicle"
+2914,112994,"Congenital Abnormalities",None
+2914,112994,"Genetic Disorders",None
+2914,112994,"Genetic Disorders",None
+2914,112994,Cancers,None
+2914,112994,Cancers,None
+2990,174235,"Congenital Abnormalities",None
+2990,174235,"Genetic Disorders",None
+2990,174235,Cancers,None
+2996,111836,,
+3045,112387,"Congenital Abnormalities","Congenital malformation syndromes due to known exogenous causes, not elsewhere classified"
+3045,112387,"Genetic Disorders",None
+3045,112387,Cancers,None
+3102,135289,"Congenital Abnormalities",None
+3102,135289,"Genetic Disorders",None
+3102,135289,Cancers,None
+3103,146378,"Congenital Abnormalities",None
+3103,146378,"Genetic Disorders",None
+3103,146378,Cancers,None
+3171,171168,"Congenital Abnormalities",None
+3171,171168,"Genetic Disorders",None
+3171,171168,Cancers,None
+3183,112076,"Congenital Abnormalities",None
+3183,112076,"Genetic Disorders",None
+3183,112076,Cancers,None
+3233,105937,"Congenital Abnormalities",None
+3233,105937,"Congenital Abnormalities",None
+3233,105937,"Genetic Disorders",None
+3233,105937,"Genetic Disorders",None
+3233,105937,Cancers,None
+3233,105937,Cancers,None
+3237,105584,"Congenital Abnormalities",None
+3237,105584,"Congenital Abnormalities",None
+3237,105584,"Genetic Disorders",None
+3237,105584,"Genetic Disorders",None
+3237,105584,Cancers,"Colorectal Cancer"
+3237,105584,Cancers,None
+3258,178078,"Congenital Abnormalities",None
+3258,178078,"Congenital Abnormalities",Unknown
+3258,178078,"Genetic Disorders",None
+3258,178078,"Genetic Disorders",None
+3258,178078,Cancers,None
+3258,178078,Cancers,None
+3286,134434,"Congenital Abnormalities","Other congenital malformations, not elsewhere classified"
+3286,134434,"Congenital Abnormalities",None
+3286,134434,"Genetic Disorders",None
+3286,134434,"Genetic Disorders",None
+3286,134434,Cancers,"Colorectal Cancer"
+3286,134434,Cancers,"Liver Cancer"
+3286,134434,Cancers,"Prostate Cancer"
+3286,134434,Cancers,"Small Intestine Cancer"
+3286,134434,Cancers,None
+3383,116070,"Congenital Abnormalities",None
+3383,116070,"Congenital Abnormalities",None
+3383,116070,"Genetic Disorders",None
+3383,116070,"Genetic Disorders",None
+3383,116070,Cancers,None
+3383,116070,Cancers,None
+3409,178737,,
+3433,149112,,
+3445,107345,"Congenital Abnormalities",None
+3445,107345,"Congenital Abnormalities",None
+3445,107345,"Genetic Disorders",None
+3445,107345,"Genetic Disorders",None
+3445,107345,Cancers,"Cervical Cancer"
+3445,107345,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+3445,107345,Cancers,None
+3474,176194,"Congenital Abnormalities",None
+3474,176194,"Congenital Abnormalities",None
+3474,176194,"Genetic Disorders",None
+3474,176194,"Genetic Disorders",None
+3474,176194,Cancers,"Breast Cancer"
+3474,176194,Cancers,Leukemia
+3474,176194,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+3474,176194,Cancers,None
+3485,106598,"Congenital Abnormalities",None
+3485,106598,"Congenital Abnormalities",None
+3485,106598,"Genetic Disorders",None
+3485,106598,"Genetic Disorders",None
+3485,106598,Cancers,None
+3485,106598,Cancers,None
+3518,171946,,
+3525,115162,"Congenital Abnormalities",None
+3525,115162,"Congenital Abnormalities",None
+3525,115162,"Genetic Disorders",None
+3525,115162,"Genetic Disorders",None
+3525,115162,Cancers,None
+3525,115162,Cancers,Unknown
+3561,171208,"Congenital Abnormalities",None
+3561,171208,"Congenital Abnormalities",None
+3561,171208,"Genetic Disorders",None
+3561,171208,"Genetic Disorders",None
+3561,171208,Cancers,None
+3561,171208,Cancers,None
+3607,108039,"Congenital Abnormalities","Other congenital malformations, not elsewhere classified"
+3607,108039,"Congenital Abnormalities",None
+3607,108039,"Genetic Disorders",None
+3607,108039,"Genetic Disorders",None
+3607,108039,Cancers,"Brain Tumors"
+3607,108039,Cancers,"Cervical Cancer"
+3607,108039,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+3607,108039,Cancers,"Skin Cancer"
+3607,108039,Cancers,"Uterine Sarcoma"
+3607,108039,Cancers,None
+3613,148122,"Congenital Abnormalities",None
+3613,148122,"Congenital Abnormalities",None
+3613,148122,"Genetic Disorders",None
+3613,148122,"Genetic Disorders",None
+3613,148122,Cancers,None
+3613,148122,Cancers,None
+3648,107998,,
+3727,182401,"Congenital Abnormalities",None
+3727,182401,"Congenital Abnormalities",None
+3727,182401,"Genetic Disorders",None
+3727,182401,"Genetic Disorders",None
+3727,182401,Cancers,Melanoma
+3727,182401,Cancers,None
+3735,179637,,
+3739,146954,"Congenital Abnormalities",None
+3739,146954,"Congenital Abnormalities",None
+3739,146954,"Genetic Disorders",None
+3739,146954,"Genetic Disorders",None
+3739,146954,Cancers,"Skin Cancer"
+3739,146954,Cancers,None
+3744,181109,"Congenital Abnormalities",None
+3744,181109,"Congenital Abnormalities",None
+3744,181109,"Genetic Disorders",None
+3744,181109,"Genetic Disorders",None
+3744,181109,Cancers,Melanoma
+3744,181109,Cancers,"Prostate Cancer"
+3744,181109,Cancers,None
+3745,103862,"Congenital Abnormalities",None
+3745,103862,"Congenital Abnormalities",Unknown
+3745,103862,"Genetic Disorders",None
+3745,103862,"Genetic Disorders",Unknown
+3745,103862,Cancers,None
+3745,103862,Cancers,Unknown
+3774,133175,"Congenital Abnormalities",None
+3774,133175,"Congenital Abnormalities",None
+3774,133175,"Genetic Disorders",None
+3774,133175,"Genetic Disorders",None
+3774,133175,Cancers,None
+3774,133175,Cancers,None
+3869,100330,"Congenital Abnormalities",None
+3869,100330,"Congenital Abnormalities",None
+3869,100330,"Genetic Disorders",None
+3869,100330,"Genetic Disorders",None
+3869,100330,Cancers,"Stomach (Gastric) Cancer"
+3869,100330,Cancers,"Cancer, unknown type"
+3869,100330,Cancers,None
+3891,135963,"Congenital Abnormalities",None
+3891,135963,"Congenital Abnormalities",None
+3891,135963,"Genetic Disorders",None
+3891,135963,"Genetic Disorders",None
+3891,135963,Cancers,None
+3891,135963,Cancers,None
+3905,147865,"Congenital Abnormalities",None
+3905,147865,"Congenital Abnormalities",None
+3905,147865,"Genetic Disorders",None
+3905,147865,"Genetic Disorders",None
+3905,147865,Cancers,"Endometrial Cancer (Uterine Cancer)"
+3905,147865,Cancers,"Cancer, unknown type"
+3905,147865,Cancers,None
+3922,109619,"Congenital Abnormalities",None
+3922,109619,"Congenital Abnormalities",None
+3922,109619,"Genetic Disorders",None
+3922,109619,"Genetic Disorders",None
+3922,109619,Cancers,None
+3922,109619,Cancers,None
+4007,148327,"Congenital Abnormalities","Congenital malformations of musculoskeletal system, not elsewhere classified"
+4007,148327,"Congenital Abnormalities",None
+4007,148327,"Genetic Disorders",None
+4007,148327,"Genetic Disorders",None
+4007,148327,Cancers,"Colorectal Cancer"
+4007,148327,Cancers,"Liver Cancer"
+4007,148327,Cancers,None
+4046,100853,"Congenital Abnormalities",None
+4046,100853,"Congenital Abnormalities",None
+4046,100853,"Genetic Disorders",None
+4046,100853,"Genetic Disorders",None
+4046,100853,Cancers,None
+4046,100853,Cancers,None
+4060,147451,"Congenital Abnormalities","Congenital malformations of musculoskeletal system, not elsewhere classified"
+4060,147451,"Congenital Abnormalities",Unknown
+4060,147451,"Genetic Disorders",None
+4060,147451,"Genetic Disorders",Unknown
+4060,147451,Cancers,None
+4060,147451,Cancers,Unknown
+4094,178461,"Congenital Abnormalities",None
+4094,178461,"Congenital Abnormalities",None
+4094,178461,"Genetic Disorders",None
+4094,178461,"Genetic Disorders",None
+4094,178461,Cancers,None
+4094,178461,Cancers,None
+4108,100131,"Congenital Abnormalities",None
+4108,100131,"Congenital Abnormalities",None
+4108,100131,"Genetic Disorders",None
+4108,100131,"Genetic Disorders",None
+4108,100131,Cancers,None
+4108,100131,Cancers,None
+4117,171170,"Congenital Abnormalities",None
+4117,171170,"Congenital Abnormalities",None
+4117,171170,"Genetic Disorders",None
+4117,171170,"Genetic Disorders",None
+4117,171170,Cancers,None
+4117,171170,Cancers,Unknown
+4222,134898,"Congenital Abnormalities",None
+4222,134898,"Congenital Abnormalities",None
+4222,134898,"Genetic Disorders",None
+4222,134898,"Genetic Disorders",None
+4222,134898,Cancers,None
+4222,134898,Cancers,None
+4267,172583,,
+4342,143459,"Congenital Abnormalities",None
+4342,143459,"Congenital Abnormalities",None
+4342,143459,"Genetic Disorders",None
+4342,143459,"Genetic Disorders",None
+4342,143459,Cancers,"Breast Cancer"
+4342,143459,Cancers,Leukemia
+4342,143459,Cancers,None
+4371,143249,"Congenital Abnormalities",None
+4371,143249,"Congenital Abnormalities",None
+4371,143249,"Genetic Disorders",None
+4371,143249,"Genetic Disorders",None
+4371,143249,Cancers,Leukemia
+4371,143249,Cancers,Lymphoma
+4371,143249,Cancers,None
+4451,109385,"Congenital Abnormalities",None
+4451,109385,"Congenital Abnormalities",None
+4451,109385,"Genetic Disorders",None
+4451,109385,"Genetic Disorders",None
+4451,109385,Cancers,"Colorectal Cancer"
+4451,109385,Cancers,"Liver Cancer"
+4451,109385,Cancers,"Prostate Cancer"
+4451,109385,Cancers,Unknown
+4559,107389,,
+4763,101510,,
+4764,144615,"Congenital Abnormalities","Other congenital musculoskeletal deformities"
+4764,144615,"Congenital Abnormalities",None
+4764,144615,"Genetic Disorders",None
+4764,144615,"Genetic Disorders",None
+4764,144615,Cancers,"Breast Cancer"
+4764,144615,Cancers,None
+4814,103559,"Congenital Abnormalities",None
+4814,103559,"Congenital Abnormalities",None
+4814,103559,"Genetic Disorders",None
+4814,103559,"Genetic Disorders",None
+4814,103559,Cancers,"Brain Tumors"
+4814,103559,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+4814,103559,Cancers,None
+4845,105371,"Congenital Abnormalities",None
+4845,105371,"Congenital Abnormalities",None
+4845,105371,"Genetic Disorders",None
+4845,105371,"Genetic Disorders",None
+4845,105371,Cancers,None
+4845,105371,Cancers,None
+4901,170349,"Congenital Abnormalities",None
+4901,170349,"Congenital Abnormalities",None
+4901,170349,"Genetic Disorders",None
+4901,170349,"Genetic Disorders",Unknown
+4901,170349,Cancers,"Skin Cancer"
+4901,170349,Cancers,None
+4901,170349,Cancers,Unknown
+4974,170206,"Congenital Abnormalities",None
+4974,170206,"Genetic Disorders",None
+4974,170206,"Genetic Disorders",None
+4974,170206,Cancers,"Breast Cancer"
+4974,170206,Cancers,"Prostate Cancer"
+4974,170206,Cancers,None
+5009,136283,"Congenital Abnormalities",None
+5009,136283,"Congenital Abnormalities",None
+5009,136283,"Genetic Disorders",None
+5009,136283,"Genetic Disorders",None
+5009,136283,Cancers,None
+5009,136283,Cancers,Unknown
+5031,144071,"Congenital Abnormalities",None
+5031,144071,"Congenital Abnormalities",Unknown
+5031,144071,"Genetic Disorders",None
+5031,144071,"Genetic Disorders",Unknown
+5031,144071,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+5031,144071,Cancers,None
+5044,136287,"Congenital Abnormalities",None
+5044,136287,Cancers,"Breast Cancer"
+5044,136287,Cancers,"Thyroid Cancer"
+5044,136287,Cancers,None
+5061,135887,,
+5062,112798,"Congenital Abnormalities",None
+5062,112798,"Congenital Abnormalities",Unknown
+5062,112798,"Genetic Disorders",Unknown
+5062,112798,"Genetic Disorders",Unknown
+5062,112798,Cancers,"Pancreatic Cancer"
+5062,112798,Cancers,Unknown
+5078,139325,"Congenital Abnormalities",None
+5078,139325,"Congenital Abnormalities",None
+5078,139325,"Genetic Disorders",None
+5078,139325,"Genetic Disorders",None
+5078,139325,Cancers,None
+5078,139325,Cancers,None
+5143,173112,"Congenital Abnormalities",None
+5143,173112,"Congenital Abnormalities",None
+5143,173112,"Genetic Disorders",None
+5143,173112,"Genetic Disorders",None
+5143,173112,Cancers,"Colorectal Cancer"
+5143,173112,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+5143,173112,Cancers,None
+5163,104099,"Congenital Abnormalities",None
+5163,104099,"Congenital Abnormalities",None
+5163,104099,"Genetic Disorders",None
+5163,104099,"Genetic Disorders",None
+5163,104099,Cancers,"Breast Cancer"
+5163,104099,Cancers,None
+5251,143391,,
+5298,138720,"Congenital Abnormalities",None
+5298,138720,"Congenital Abnormalities",None
+5298,138720,"Genetic Disorders",None
+5298,138720,"Genetic Disorders",None
+5298,138720,Cancers,"Bladder Cancer"
+5298,138720,Cancers,"Colorectal Cancer"
+5298,138720,Cancers,"Testicular Cancer"
+5298,138720,Cancers,None
+5340,139236,"Congenital Abnormalities",None
+5340,139236,"Congenital Abnormalities",None
+5340,139236,"Genetic Disorders",None
+5340,139236,"Genetic Disorders",None
+5340,139236,Cancers,None
+5340,139236,Cancers,None
+5381,110235,"Congenital Abnormalities",None
+5381,110235,"Congenital Abnormalities",None
+5381,110235,"Genetic Disorders",None
+5381,110235,"Genetic Disorders",None
+5381,110235,Cancers,None
+5381,110235,Cancers,None
+5384,144303,"Congenital Abnormalities",None
+5384,144303,"Congenital Abnormalities",None
+5384,144303,"Genetic Disorders",None
+5384,144303,"Genetic Disorders",None
+5384,144303,Cancers,None
+5384,144303,Cancers,None
+5402,174615,"Congenital Abnormalities",None
+5402,174615,"Congenital Abnormalities",None
+5402,174615,"Genetic Disorders",None
+5402,174615,"Genetic Disorders",None
+5402,174615,Cancers,"Multiple Myeloma/Plasma Cell Neoplasms"
+5402,174615,Cancers,None
+5403,107190,"Congenital Abnormalities",None
+5403,107190,"Congenital Abnormalities",None
+5403,107190,"Genetic Disorders",None
+5403,107190,"Genetic Disorders",None
+5403,107190,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+5403,107190,Cancers,None
+5439,176980,,
+5447,112666,"Congenital Abnormalities",None
+5447,112666,"Congenital Abnormalities",None
+5447,112666,"Genetic Disorders",None
+5447,112666,"Genetic Disorders",None
+5447,112666,Cancers,"Brain Tumors"
+5447,112666,Cancers,"Stomach (Gastric) Cancer"
+5447,112666,Cancers,None
+5458,141682,"Congenital Abnormalities",None
+5458,141682,"Congenital Abnormalities",None
+5458,141682,"Genetic Disorders",None
+5458,141682,"Genetic Disorders",None
+5458,141682,Cancers,None
+5458,141682,Cancers,None
+5464,104998,"Congenital Abnormalities","Other congenital malformations of heart"
+5464,104998,"Congenital Abnormalities",None
+5464,104998,"Genetic Disorders",None
+5464,104998,"Genetic Disorders",None
+5464,104998,Cancers,None
+5464,104998,Cancers,None
+5500,144108,"Congenital Abnormalities",None
+5500,144108,"Congenital Abnormalities",None
+5500,144108,"Genetic Disorders",None
+5500,144108,"Genetic Disorders",None
+5500,144108,Cancers,"Colorectal Cancer"
+5500,144108,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+5500,144108,Cancers,None
+5782,102325,"Congenital Abnormalities",None
+5782,102325,"Congenital Abnormalities",None
+5782,102325,"Genetic Disorders",None
+5782,102325,"Genetic Disorders",None
+5782,102325,Cancers,"Breast Cancer"
+5782,102325,Cancers,"Kidney (Renal Cell) Cancer"
+5782,102325,Cancers,None
+5810,106643,"Congenital Abnormalities",None
+5810,106643,"Congenital Abnormalities",None
+5810,106643,"Genetic Disorders",None
+5810,106643,"Genetic Disorders",None
+5810,106643,Cancers,None
+5810,106643,Cancers,Unknown
+5835,113288,"Congenital Abnormalities",None
+5835,113288,"Congenital Abnormalities",None
+5835,113288,"Genetic Disorders",None
+5835,113288,"Genetic Disorders",None
+5835,113288,Cancers,"Bone Cancer (includes Ewing Sarcoma and Osteosarcoma and Malignant Fibrous Histiocytoma)"
+5835,113288,Cancers,None
+5857,145250,"Congenital Abnormalities",None
+5857,145250,"Congenital Abnormalities",None
+5857,145250,"Genetic Disorders",None
+5857,145250,"Genetic Disorders",None
+5857,145250,Cancers,"Liver Cancer"
+5857,145250,Cancers,None
+5899,109755,"Congenital Abnormalities",None
+5899,109755,"Congenital Abnormalities",None
+5899,109755,"Genetic Disorders",None
+5899,109755,"Genetic Disorders",None
+5899,109755,Cancers,"Throat Cancer (Head and Neck Cancer)"
+5899,109755,Cancers,None
+5905,170173,"Congenital Abnormalities",None
+5905,170173,"Congenital Abnormalities",None
+5905,170173,"Genetic Disorders",None
+5905,170173,"Genetic Disorders",None
+5905,170173,Cancers,"Colorectal Cancer"
+5905,170173,Cancers,None
+5927,178647,"Congenital Abnormalities",None
+5927,178647,"Congenital Abnormalities",None
+5927,178647,"Genetic Disorders",None
+5927,178647,"Genetic Disorders",None
+5927,178647,Cancers,None
+5927,178647,Cancers,None
+5958,139194,"Congenital Abnormalities",None
+5958,139194,"Congenital Abnormalities",Unknown
+5958,139194,"Genetic Disorders",None
+5958,139194,"Genetic Disorders",Unknown
+5958,139194,Cancers,None
+5958,139194,Cancers,Unknown
+6076,146237,,
+6127,133388,"Congenital Abnormalities",None
+6127,133388,"Congenital Abnormalities",None
+6127,133388,"Genetic Disorders",None
+6127,133388,"Genetic Disorders",None
+6127,133388,Cancers,"Cancer, unknown type"
+6127,133388,Cancers,None
+6171,134824,"Congenital Abnormalities",None
+6171,134824,"Congenital Abnormalities",None
+6171,134824,"Genetic Disorders",None
+6171,134824,"Genetic Disorders",None
+6171,134824,Cancers,None
+6171,134824,Cancers,None
+6191,113825,,
+6211,183704,"Congenital Abnormalities",None
+6211,183704,"Congenital Abnormalities",None
+6211,183704,"Genetic Disorders",None
+6211,183704,"Genetic Disorders",None
+6211,183704,Cancers,"Colorectal Cancer"
+6211,183704,Cancers,Leukemia
+6211,183704,Cancers,None
+6220,104730,"Congenital Abnormalities",None
+6220,104730,"Congenital Abnormalities",None
+6220,104730,"Genetic Disorders",None
+6220,104730,"Genetic Disorders",None
+6220,104730,Cancers,"Breast Cancer"
+6220,104730,Cancers,"Cervical Cancer"
+6220,104730,Cancers,None
+6229,102480,"Congenital Abnormalities",None
+6229,102480,"Congenital Abnormalities",None
+6229,102480,"Genetic Disorders",None
+6229,102480,"Genetic Disorders",None
+6229,102480,Cancers,None
+6229,102480,Cancers,None
+6239,114077,"Congenital Abnormalities",None
+6239,114077,"Congenital Abnormalities",None
+6239,114077,"Genetic Disorders",None
+6239,114077,"Genetic Disorders",None
+6239,114077,Cancers,None
+6239,114077,Cancers,Unknown
+6512,100049,"Congenital Abnormalities",None
+6512,100049,"Congenital Abnormalities",None
+6512,100049,"Genetic Disorders",None
+6512,100049,"Genetic Disorders",None
+6512,100049,Cancers,"Breast Cancer"
+6512,100049,Cancers,"Esophageal Cancer"
+6512,100049,Cancers,None
+6551,134987,"Congenital Abnormalities",None
+6551,134987,"Congenital Abnormalities",None
+6551,134987,"Genetic Disorders",None
+6551,134987,"Genetic Disorders",None
+6551,134987,Cancers,"Oral Cancer, Lip and Oral Cavity Cancer and Oropharyngeal Cancer (Head and Neck Cancer)"
+6551,134987,Cancers,None
+6568,144063,"Congenital Abnormalities",None
+6568,144063,"Congenital Abnormalities",None
+6568,144063,"Genetic Disorders",None
+6568,144063,"Genetic Disorders",None
+6568,144063,Cancers,"Cancer, unknown type"
+6568,144063,Cancers,None
+6974,109600,"Congenital Abnormalities",None
+6974,109600,"Congenital Abnormalities",None
+6974,109600,"Genetic Disorders",None
+6974,109600,"Genetic Disorders",None
+6974,109600,Cancers,"Bladder Cancer"
+6974,109600,Cancers,"Pancreatic Cancer"
+6974,109600,Cancers,None
+6975,180030,"Congenital Abnormalities",None
+6975,180030,"Congenital Abnormalities",None
+6975,180030,"Genetic Disorders",None
+6975,180030,"Genetic Disorders",None
+6975,180030,Cancers,None
+6975,180030,Cancers,None
+7039,108461,"Congenital Abnormalities",None
+7039,108461,"Congenital Abnormalities",None
+7039,108461,"Genetic Disorders",None
+7039,108461,"Genetic Disorders",None
+7039,108461,Cancers,None
+7039,108461,Cancers,None
+7162,112438,,
+7186,169746,,
+7205,182513,,
+7279,138873,"Congenital Abnormalities",None
+7279,138873,"Congenital Abnormalities",None
+7279,138873,"Genetic Disorders",None
+7279,138873,"Genetic Disorders",None
+7279,138873,Cancers,"Breast Cancer"
+7279,138873,Cancers,"Colorectal Cancer"
+7279,138873,Cancers,"Esophageal Cancer"
+7279,138873,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+7279,138873,Cancers,None
+7350,177697,"Congenital Abnormalities",None
+7350,177697,"Congenital Abnormalities",None
+7350,177697,"Genetic Disorders",None
+7350,177697,"Genetic Disorders",None
+7350,177697,Cancers,None
+7350,177697,Cancers,None
+7360,178321,"Congenital Abnormalities",None
+7360,178321,"Congenital Abnormalities",None
+7360,178321,"Genetic Disorders",None
+7360,178321,"Genetic Disorders",None
+7360,178321,Cancers,None
+7360,178321,Cancers,None
+7690,176245,"Congenital Abnormalities",None
+7690,176245,"Congenital Abnormalities",None
+7690,176245,"Genetic Disorders",None
+7690,176245,"Genetic Disorders",None
+7690,176245,Cancers,None
+7690,176245,Cancers,None
+8163,103543,"Congenital Abnormalities",None
+8163,103543,"Congenital Abnormalities",None
+8163,103543,"Genetic Disorders",None
+8163,103543,"Genetic Disorders",None
+8163,103543,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+8163,103543,Cancers,None
+9114,113033,"Congenital Abnormalities",None
+9114,113033,"Congenital Abnormalities",None
+9114,113033,"Genetic Disorders",None
+9114,113033,"Genetic Disorders",None
+9114,113033,Cancers,None
+9114,113033,Cancers,None
+9140,109631,"Congenital Abnormalities",None
+9140,109631,"Congenital Abnormalities",None
+9140,109631,"Genetic Disorders",None
+9140,109631,"Genetic Disorders",None
+9140,109631,Cancers,"Cancer, unknown type"
+9140,109631,Cancers,None
+9170,172969,"Congenital Abnormalities",None
+9170,172969,"Congenital Abnormalities",None
+9170,172969,"Genetic Disorders",None
+9170,172969,"Genetic Disorders",None
+9170,172969,Cancers,None
+9170,172969,Cancers,None
+9274,146242,"Congenital Abnormalities",None
+9274,146242,"Congenital Abnormalities",None
+9274,146242,"Genetic Disorders",None
+9274,146242,"Genetic Disorders",None
+9274,146242,Cancers,"Basal Cell Carcinoma of the Skin"
+9274,146242,Cancers,None
+9275,173494,"Congenital Abnormalities","Congenital malformations of aortic and mitral valves"
+9275,173494,"Congenital Abnormalities",None
+9275,173494,"Genetic Disorders",None
+9275,173494,"Genetic Disorders",None
+9275,173494,Cancers,"Breast Cancer"
+9275,173494,Cancers,None
+9300,181545,"Congenital Abnormalities","Other congenital malformations of heart"
+9300,181545,"Congenital Abnormalities",None
+9300,181545,"Genetic Disorders",None
+9300,181545,"Genetic Disorders",None
+9300,181545,Cancers,"Metastatic Cancer"
+9300,181545,Cancers,None
+9311,179036,"Congenital Abnormalities",None
+9311,179036,"Congenital Abnormalities",None
+9311,179036,"Genetic Disorders",None
+9311,179036,"Genetic Disorders",None
+9311,179036,Cancers,None
+9311,179036,Cancers,None
+9332,107813,"Congenital Abnormalities",None
+9332,107813,"Congenital Abnormalities",None
+9332,107813,"Genetic Disorders",None
+9332,107813,"Genetic Disorders",None
+9332,107813,Cancers,None
+9332,107813,Cancers,None
+9341,169436,,
+9384,102895,"Congenital Abnormalities",None
+9384,102895,"Congenital Abnormalities",None
+9384,102895,"Genetic Disorders",None
+9384,102895,"Genetic Disorders",None
+9384,102895,Cancers,"Cancer, unknown type"
+9384,102895,Cancers,None
+9416,184392,"Congenital Abnormalities",None
+9416,184392,"Congenital Abnormalities",None
+9416,184392,"Genetic Disorders",None
+9416,184392,"Genetic Disorders",None
+9416,184392,Cancers,None
+9416,184392,Cancers,None
+9473,148156,"Congenital Abnormalities",None
+9473,148156,"Congenital Abnormalities",Unknown
+9473,148156,"Genetic Disorders",None
+9473,148156,"Genetic Disorders",Unknown
+9473,148156,Cancers,None
+9473,148156,Cancers,Unknown
+9487,181648,"Congenital Abnormalities",None
+9487,181648,"Congenital Abnormalities",None
+9487,181648,"Genetic Disorders",None
+9487,181648,"Genetic Disorders",None
+9487,181648,Cancers,None
+9487,181648,Cancers,None
+9518,113059,"Congenital Abnormalities",None
+9518,113059,"Congenital Abnormalities",None
+9518,113059,"Genetic Disorders",None
+9518,113059,"Genetic Disorders",None
+9518,113059,Cancers,"Breast Cancer"
+9518,113059,Cancers,None
+9662,138712,"Congenital Abnormalities",None
+9662,138712,"Congenital Abnormalities",None
+9662,138712,"Genetic Disorders","Other chromosome abnormalities, not elsewhere classified"
+9662,138712,"Genetic Disorders",None
+9662,138712,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+9662,138712,Cancers,"Throat Cancer (Head and Neck Cancer)"
+9662,138712,Cancers,None
+9672,169522,"Congenital Abnormalities",None
+9672,169522,"Congenital Abnormalities",None
+9672,169522,"Genetic Disorders",None
+9672,169522,"Genetic Disorders",None
+9672,169522,Cancers,"Breast Cancer"
+9672,169522,Cancers,None
+9681,145435,"Congenital Abnormalities",None
+9681,145435,"Congenital Abnormalities",None
+9681,145435,"Genetic Disorders",None
+9681,145435,"Genetic Disorders",None
+9681,145435,Cancers,"Uterine Sarcoma"
+9681,145435,Cancers,None
+9727,133273,,
+10001,135418,"Congenital Abnormalities",None
+10001,135418,"Congenital Abnormalities",None
+10001,135418,"Genetic Disorders",None
+10001,135418,"Genetic Disorders",None
+10001,135418,Cancers,"Cervical Cancer"
+10001,135418,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+10001,135418,Cancers,None
+10002,149483,"Congenital Abnormalities",None
+10002,149483,"Congenital Abnormalities",None
+10002,149483,"Genetic Disorders",None
+10002,149483,"Genetic Disorders",None
+10002,149483,Cancers,None
+10002,149483,Cancers,None
+10013,104373,"Congenital Abnormalities",None
+10013,104373,"Congenital Abnormalities",None
+10013,104373,"Genetic Disorders",None
+10013,104373,"Genetic Disorders",None
+10013,104373,Cancers,None
+10013,104373,Cancers,None
+10023,175725,"Congenital Abnormalities",None
+10023,175725,"Congenital Abnormalities",None
+10023,175725,"Genetic Disorders",None
+10023,175725,"Genetic Disorders",None
+10023,175725,Cancers,Lymphoma
+10023,175725,Cancers,None
+10384,135098,"Congenital Abnormalities",None
+10384,135098,"Congenital Abnormalities",None
+10384,135098,"Genetic Disorders",None
+10384,135098,"Genetic Disorders",None
+10384,135098,Cancers,Melanoma
+10384,135098,Cancers,None
+10407,182948,"Congenital Abnormalities",None
+10407,182948,"Congenital Abnormalities",None
+10407,182948,"Genetic Disorders",None
+10407,182948,"Genetic Disorders",None
+10407,182948,Cancers,"Breast Cancer"
+10407,182948,Cancers,None
+11322,100221,"Congenital Abnormalities",None
+11322,100221,"Congenital Abnormalities",None
+11322,100221,"Genetic Disorders",None
+11322,100221,"Genetic Disorders",None
+11322,100221,Cancers,"Bladder Cancer"
+11322,100221,Cancers,"Breast Cancer"
+11322,100221,Cancers,"Colorectal Cancer"
+11322,100221,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+11322,100221,Cancers,Melanoma
+11322,100221,Cancers,None
+11336,102602,"Congenital Abnormalities",None
+11336,102602,"Congenital Abnormalities",None
+11336,102602,"Genetic Disorders",None
+11336,102602,"Genetic Disorders",None
+11336,102602,Cancers,None
+11336,102602,Cancers,None
+11342,134040,"Congenital Abnormalities",None
+11342,134040,"Congenital Abnormalities",None
+11342,134040,"Genetic Disorders",None
+11342,134040,"Genetic Disorders",None
+11342,134040,Cancers,"Pancreatic Cancer"
+11342,134040,Cancers,"Skin Cancer"
+11342,134040,Cancers,None
+11359,174623,"Congenital Abnormalities",None
+11359,174623,"Congenital Abnormalities",None
+11359,174623,"Genetic Disorders",None
+11359,174623,"Genetic Disorders",None
+11359,174623,Cancers,"Colorectal Cancer"
+11359,174623,Cancers,"Skin Cancer"
+11359,174623,Cancers,None
+11366,183944,"Congenital Abnormalities",None
+11366,183944,"Congenital Abnormalities",None
+11366,183944,"Genetic Disorders",None
+11366,183944,"Genetic Disorders",None
+11366,183944,Cancers,None
+11366,183944,Cancers,None
+11397,103530,"Congenital Abnormalities",None
+11397,103530,"Congenital Abnormalities",Unknown
+11397,103530,"Genetic Disorders",None
+11397,103530,"Genetic Disorders",Unknown
+11397,103530,Cancers,None
+11397,103530,Cancers,None
+11726,172918,"Congenital Abnormalities",None
+11726,172918,"Congenital Abnormalities",None
+11726,172918,"Genetic Disorders",None
+11726,172918,"Genetic Disorders",None
+11726,172918,Cancers,"Cancer, unknown type"
+11726,172918,Cancers,None
+11736,174004,"Congenital Abnormalities","Other congenital malformations of heart"
+11736,174004,"Congenital Abnormalities","Cleft palate"
+11736,174004,"Congenital Abnormalities",None
+11736,174004,"Genetic Disorders",None
+11736,174004,"Genetic Disorders",None
+11736,174004,Cancers,"Brain Tumors"
+11736,174004,Cancers,"Cancer, unknown type"
+11761,115974,"Congenital Abnormalities",None
+11761,115974,"Congenital Abnormalities",None
+11761,115974,"Genetic Disorders",None
+11761,115974,"Genetic Disorders",None
+11761,115974,Cancers,"Breast Cancer"
+11761,115974,Cancers,"Kidney (Renal Cell) Cancer"
+11761,115974,Cancers,None
+11773,147877,"Congenital Abnormalities",None
+11773,147877,"Congenital Abnormalities",None
+11773,147877,"Genetic Disorders",None
+11773,147877,"Genetic Disorders",None
+11773,147877,Cancers,"Cancer, unknown type"
+11773,147877,Cancers,None
+11791,142348,"Congenital Abnormalities",None
+11791,142348,"Congenital Abnormalities",None
+11791,142348,"Genetic Disorders",None
+11791,142348,"Genetic Disorders",None
+11791,142348,Cancers,"Prostate Cancer"
+11791,142348,Cancers,None
+11942,179200,"Congenital Abnormalities",None
+11942,179200,"Congenital Abnormalities",None
+11942,179200,"Genetic Disorders",None
+11942,179200,"Genetic Disorders",None
+11942,179200,Cancers,None
+11942,179200,Cancers,None
+12076,107029,"Congenital Abnormalities",None
+12076,107029,"Congenital Abnormalities",None
+12076,107029,"Genetic Disorders",None
+12076,107029,"Genetic Disorders",None
+12076,107029,Cancers,None
+12076,107029,Cancers,None
+12101,100122,"Congenital Abnormalities",None
+12101,100122,"Congenital Abnormalities",None
+12101,100122,"Genetic Disorders",None
+12101,100122,"Genetic Disorders",None
+12101,100122,Cancers,"Breast Cancer"
+12101,100122,Cancers,"Cervical Cancer"
+12101,100122,Cancers,None
+12103,134065,"Congenital Abnormalities",None
+12103,134065,"Congenital Abnormalities",None
+12103,134065,"Genetic Disorders",None
+12103,134065,"Genetic Disorders",None
+12103,134065,Cancers,None
+12103,134065,Cancers,None
+12117,101242,"Congenital Abnormalities",None
+12117,101242,"Congenital Abnormalities",None
+12117,101242,"Genetic Disorders",None
+12117,101242,"Genetic Disorders",None
+12117,101242,Cancers,"Endometrial Cancer (Uterine Cancer)"
+12117,101242,Cancers,None
+12129,183863,"Congenital Abnormalities",None
+12129,183863,"Congenital Abnormalities",None
+12129,183863,"Genetic Disorders",None
+12129,183863,"Genetic Disorders",None
+12129,183863,Cancers,None
+12129,183863,Cancers,None
+12148,115312,"Congenital Abnormalities",None
+12148,115312,"Congenital Abnormalities",None
+12148,115312,"Genetic Disorders",None
+12148,115312,"Genetic Disorders",None
+12148,115312,Cancers,"Colorectal Cancer"
+12148,115312,Cancers,"Skin Cancer"
+12148,115312,Cancers,None
+12513,147041,"Congenital Abnormalities",None
+12513,147041,"Congenital Abnormalities",None
+12513,147041,"Genetic Disorders",None
+12513,147041,"Genetic Disorders",None
+12513,147041,Cancers,None
+12513,147041,Cancers,None
+12567,182860,"Congenital Abnormalities",None
+12567,182860,"Congenital Abnormalities",None
+12567,182860,"Genetic Disorders",None
+12567,182860,"Genetic Disorders",None
+12567,182860,Cancers,None
+12567,182860,Cancers,None
+12587,107930,"Congenital Abnormalities",None
+12587,107930,"Congenital Abnormalities",None
+12587,107930,"Genetic Disorders",None
+12587,107930,"Genetic Disorders",None
+12587,107930,Cancers,None
+12587,107930,Cancers,None
+12624,101427,"Congenital Abnormalities","Other congenital malformations of skull and face bones"
+12624,101427,"Congenital Abnormalities",None
+12624,101427,"Genetic Disorders",None
+12624,101427,"Genetic Disorders",None
+12624,101427,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+12624,101427,Cancers,None
+12656,184373,"Congenital Abnormalities",None
+12656,184373,"Congenital Abnormalities",None
+12656,184373,"Genetic Disorders",None
+12656,184373,"Genetic Disorders",None
+12656,184373,Cancers,None
+12656,184373,Cancers,None
+12724,102924,"Congenital Abnormalities",None
+12724,102924,"Congenital Abnormalities",None
+12724,102924,"Genetic Disorders",None
+12724,102924,"Genetic Disorders",None
+12724,102924,Cancers,"Breast Cancer"
+12724,102924,Cancers,None
+13211,135579,"Congenital Abnormalities",None
+13211,135579,"Congenital Abnormalities",None
+13211,135579,"Genetic Disorders",None
+13211,135579,"Genetic Disorders",None
+13211,135579,Cancers,"Pancreatic Cancer"
+13211,135579,Cancers,None
+13212,137402,"Congenital Abnormalities",None
+13212,137402,"Congenital Abnormalities",None
+13212,137402,"Genetic Disorders",None
+13212,137402,"Genetic Disorders",None
+13212,137402,Cancers,"Pancreatic Cancer"
+13212,137402,Cancers,None
+13262,168993,"Congenital Abnormalities",None
+13262,168993,"Congenital Abnormalities",None
+13262,168993,"Genetic Disorders",None
+13262,168993,"Genetic Disorders",None
+13262,168993,Cancers,None
+13262,168993,Cancers,None
+13266,103293,"Congenital Abnormalities",None
+13266,103293,"Congenital Abnormalities",None
+13266,103293,"Genetic Disorders",None
+13266,103293,"Genetic Disorders",None
+13266,103293,Cancers,"Breast Cancer"
+13266,103293,Cancers,"Colorectal Cancer"
+13266,103293,Cancers,None
+13277,135258,"Congenital Abnormalities",None
+13277,135258,"Congenital Abnormalities",None
+13277,135258,"Genetic Disorders",None
+13277,135258,"Genetic Disorders",None
+13277,135258,Cancers,"Colorectal Cancer"
+13277,135258,Cancers,None
+13331,177679,"Congenital Abnormalities",None
+13331,177679,"Congenital Abnormalities",None
+13331,177679,"Genetic Disorders",None
+13331,177679,"Genetic Disorders",None
+13331,177679,Cancers,None
+13331,177679,Cancers,Unknown
+13577,184171,"Congenital Abnormalities",None
+13577,184171,"Congenital Abnormalities",None
+13577,184171,"Genetic Disorders",None
+13577,184171,"Genetic Disorders",None
+13577,184171,Cancers,"Colorectal Cancer"
+13577,184171,Cancers,"Esophageal Cancer"
+13577,184171,Cancers,None
+13580,180430,"Congenital Abnormalities",None
+13580,180430,"Congenital Abnormalities",None
+13580,180430,"Genetic Disorders",None
+13580,180430,"Genetic Disorders",None
+13580,180430,Cancers,"Prostate Cancer"
+13580,180430,Cancers,"Stomach (Gastric) Cancer"
+13580,180430,Cancers,None
+13627,136868,"Congenital Abnormalities","Congenital malformations of ear causing impairment of hearing"
+13627,136868,"Congenital Abnormalities",None
+13627,136868,"Genetic Disorders",None
+13627,136868,"Genetic Disorders",None
+13627,136868,Cancers,"Cancer, unknown type"
+13627,136868,Cancers,None
+13641,140141,"Congenital Abnormalities","Congenital malformations of ear causing impairment of hearing"
+13641,140141,"Congenital Abnormalities",None
+13641,140141,"Genetic Disorders",None
+13641,140141,"Genetic Disorders",None
+13641,140141,Cancers,"Cancer, unknown type"
+13641,140141,Cancers,"Cancer, unknown type"
+13652,110125,"Congenital Abnormalities","Congenital deformities of feet"
+13652,110125,"Congenital Abnormalities",None
+13652,110125,"Genetic Disorders",None
+13652,110125,"Genetic Disorders",None
+13652,110125,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+13652,110125,Cancers,None
+13669,174753,"Congenital Abnormalities",None
+13669,174753,"Congenital Abnormalities",None
+13669,174753,"Genetic Disorders",None
+13669,174753,"Genetic Disorders",None
+13669,174753,Cancers,"Cancer, unknown type"
+13669,174753,Cancers,None
+13675,109799,"Congenital Abnormalities","Other congenital malformations, not elsewhere classified"
+13675,109799,"Congenital Abnormalities",None
+13675,109799,"Genetic Disorders",None
+13675,109799,"Genetic Disorders",None
+13675,109799,Cancers,"Colorectal Cancer"
+13675,109799,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+13675,109799,Cancers,"Stomach (Gastric) Cancer"
+13675,109799,Cancers,"Throat Cancer (Head and Neck Cancer)"
+13675,109799,Cancers,None
+13678,134740,"Congenital Abnormalities",None
+13678,134740,"Congenital Abnormalities",None
+13678,134740,"Genetic Disorders","Down syndrome"
+13678,134740,"Genetic Disorders",None
+13678,134740,Cancers,"Breast Cancer"
+13678,134740,Cancers,"Colorectal Cancer"
+13678,134740,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+13678,134740,Cancers,None
+13692,132592,"Congenital Abnormalities",None
+13692,132592,"Congenital Abnormalities",None
+13692,132592,"Genetic Disorders",None
+13692,132592,"Genetic Disorders",None
+13692,132592,Cancers,None
+13692,132592,Cancers,None
+13718,101358,"Congenital Abnormalities","Congenital deformities of feet"
+13718,101358,"Congenital Abnormalities",None
+13718,101358,"Genetic Disorders",None
+13718,101358,"Genetic Disorders",None
+13718,101358,Cancers,None
+13718,101358,Cancers,None
+13729,149327,"Congenital Abnormalities",None
+13729,149327,"Congenital Abnormalities",None
+13729,149327,"Genetic Disorders",None
+13729,149327,"Genetic Disorders",None
+13729,149327,Cancers,None
+13729,149327,Cancers,None
+13745,183533,"Congenital Abnormalities",None
+13745,183533,"Congenital Abnormalities",None
+13745,183533,"Genetic Disorders",None
+13745,183533,"Genetic Disorders",None
+13745,183533,Cancers,"Cancer, unknown type"
+13745,183533,Cancers,None
+13748,114220,"Congenital Abnormalities",None
+13748,114220,"Congenital Abnormalities",None
+13748,114220,"Genetic Disorders",None
+13748,114220,"Genetic Disorders",None
+13748,114220,Cancers,None
+13748,114220,Cancers,None
+13776,139847,"Congenital Abnormalities","Congenital malformations of aortic and mitral valves"
+13776,139847,"Congenital Abnormalities",None
+13776,139847,"Genetic Disorders",None
+13776,139847,"Genetic Disorders",None
+13776,139847,Cancers,None
+13776,139847,Cancers,None
+13797,103783,"Congenital Abnormalities",None
+13797,103783,"Congenital Abnormalities",None
+13797,103783,"Genetic Disorders",None
+13797,103783,"Genetic Disorders",None
+13797,103783,Cancers,"Mesothelioma, Malignant"
+13797,103783,Cancers,"Ovarian Cancer"
+13797,103783,Cancers,None
+13885,109860,"Congenital Abnormalities",None
+13885,109860,"Congenital Abnormalities",None
+13885,109860,"Genetic Disorders",None
+13885,109860,"Genetic Disorders",None
+13885,109860,Cancers,"Prostate Cancer"
+13885,109860,Cancers,None
+13894,183067,"Congenital Abnormalities",None
+13894,183067,"Congenital Abnormalities",None
+13894,183067,"Genetic Disorders",None
+13894,183067,"Genetic Disorders",None
+13894,183067,Cancers,None
+13894,183067,Cancers,None
+13902,184343,"Congenital Abnormalities",None
+13902,184343,"Congenital Abnormalities",None
+13902,184343,"Genetic Disorders",None
+13902,184343,"Genetic Disorders",None
+13902,184343,Cancers,"Breast Cancer"
+13902,184343,Cancers,"Testicular Cancer"
+13902,184343,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+13902,184343,Cancers,"Ovarian Cancer"
+13902,184343,Cancers,"Stomach (Gastric) Cancer"
+13902,184343,Cancers,None
+13961,148298,"Congenital Abnormalities",None
+13961,148298,"Congenital Abnormalities",None
+13961,148298,"Genetic Disorders",None
+13961,148298,"Genetic Disorders",None
+13961,148298,Cancers,"Breast Cancer"
+13961,148298,Cancers,"Colorectal Cancer"
+13961,148298,Cancers,None
+13974,134922,"Congenital Abnormalities",None
+13974,134922,"Congenital Abnormalities",None
+13974,134922,"Genetic Disorders",None
+13974,134922,"Genetic Disorders",None
+13974,134922,Cancers,"Prostate Cancer"
+13974,134922,Cancers,None
+14004,111927,"Congenital Abnormalities",None
+14004,111927,"Congenital Abnormalities",None
+14004,111927,"Genetic Disorders",None
+14004,111927,"Genetic Disorders",None
+14004,111927,Cancers,None
+14004,111927,Cancers,Unknown
+14034,183025,"Congenital Abnormalities",None
+14034,183025,"Congenital Abnormalities",None
+14034,183025,"Genetic Disorders",None
+14034,183025,"Genetic Disorders",None
+14034,183025,Cancers,None
+14034,183025,Cancers,None
+14036,147211,"Congenital Abnormalities",None
+14036,147211,"Congenital Abnormalities",None
+14036,147211,"Genetic Disorders",None
+14036,147211,"Genetic Disorders",None
+14036,147211,Cancers,None
+14036,147211,Cancers,None
+14064,105604,"Congenital Abnormalities",None
+14064,105604,"Congenital Abnormalities",None
+14064,105604,"Genetic Disorders","Down syndrome"
+14064,105604,"Genetic Disorders",None
+14064,105604,Cancers,None
+14064,105604,Cancers,Unknown
+14070,179019,"Congenital Abnormalities",None
+14070,179019,"Congenital Abnormalities",None
+14070,179019,"Genetic Disorders",None
+14070,179019,"Genetic Disorders",None
+14070,179019,Cancers,"Cervical Cancer"
+14070,179019,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+14070,179019,Cancers,"Uterine Cancer, Endometrial"
+14070,179019,Cancers,None
+14086,179458,"Congenital Abnormalities","Other congenital malformations of male genital organs"
+14086,179458,"Congenital Abnormalities",None
+14086,179458,"Genetic Disorders",None
+14086,179458,"Genetic Disorders",None
+14086,179458,Cancers,"Cervical Cancer"
+14086,179458,Cancers,None
+14098,101236,"Congenital Abnormalities",None
+14098,101236,"Congenital Abnormalities",None
+14098,101236,"Genetic Disorders",None
+14098,101236,"Genetic Disorders",None
+14098,101236,Cancers,"Cancer, unknown type"
+14098,101236,Cancers,None
+14106,144314,"Congenital Abnormalities",None
+14106,144314,"Congenital Abnormalities",None
+14106,144314,"Genetic Disorders",None
+14106,144314,"Genetic Disorders",None
+14106,144314,Cancers,"Pancreatic Cancer"
+14106,144314,Cancers,None
+14107,180398,"Congenital Abnormalities",None
+14107,180398,"Congenital Abnormalities",None
+14107,180398,"Genetic Disorders",None
+14107,180398,"Genetic Disorders",None
+14107,180398,Cancers,None
+14107,180398,Cancers,None
+14232,147903,"Congenital Abnormalities",None
+14232,147903,"Congenital Abnormalities",None
+14232,147903,"Genetic Disorders",None
+14232,147903,"Genetic Disorders",None
+14232,147903,Cancers,"Prostate Cancer"
+14232,147903,Cancers,None
+14242,174808,"Congenital Abnormalities","Congenital malformations of ear causing impairment of hearing"
+14242,174808,"Congenital Abnormalities",None
+14242,174808,"Genetic Disorders",None
+14242,174808,"Genetic Disorders",None
+14242,174808,Cancers,None
+14242,174808,Cancers,None
+14254,172676,"Congenital Abnormalities",None
+14254,172676,"Congenital Abnormalities",None
+14254,172676,"Genetic Disorders",None
+14254,172676,"Genetic Disorders",None
+14254,172676,Cancers,None
+14254,172676,Cancers,None
+14258,135881,"Congenital Abnormalities",None
+14258,135881,"Congenital Abnormalities",Unknown
+14258,135881,"Genetic Disorders",None
+14258,135881,"Genetic Disorders",Unknown
+14258,135881,Cancers,None
+14258,135881,Cancers,Unknown
+14279,136188,"Congenital Abnormalities",None
+14279,136188,"Congenital Abnormalities",None
+14279,136188,"Genetic Disorders",None
+14279,136188,"Genetic Disorders",None
+14279,136188,Cancers,"Breast Cancer"
+14279,136188,Cancers,None
+14321,179082,"Congenital Abnormalities",None
+14321,179082,"Congenital Abnormalities",None
+14321,179082,"Genetic Disorders",None
+14321,179082,"Genetic Disorders",None
+14321,179082,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+14321,179082,Cancers,None
+14334,169132,"Congenital Abnormalities",None
+14334,169132,"Congenital Abnormalities",None
+14334,169132,"Genetic Disorders",None
+14334,169132,"Genetic Disorders",None
+14334,169132,Cancers,None
+14334,169132,Cancers,None
+14339,181540,"Congenital Abnormalities",None
+14339,181540,"Congenital Abnormalities",None
+14339,181540,"Genetic Disorders",None
+14339,181540,"Genetic Disorders",None
+14339,181540,Cancers,None
+14339,181540,Cancers,None
+14369,172338,"Congenital Abnormalities",None
+14369,172338,"Congenital Abnormalities",None
+14369,172338,"Genetic Disorders",None
+14369,172338,"Genetic Disorders",None
+14369,172338,Cancers,None
+14369,172338,Cancers,Unknown
+14370,173611,"Congenital Abnormalities",None
+14370,173611,"Congenital Abnormalities",None
+14370,173611,"Genetic Disorders",None
+14370,173611,"Genetic Disorders",None
+14370,173611,Cancers,"Breast Cancer"
+14370,173611,Cancers,"Stomach (Gastric) Cancer"
+14370,173611,Cancers,"Uterine Cancer, Endometrial"
+14370,173611,Cancers,None
+14372,115720,"Congenital Abnormalities",None
+14372,115720,"Congenital Abnormalities",None
+14372,115720,"Genetic Disorders",None
+14372,115720,"Genetic Disorders",None
+14372,115720,Cancers,"Breast Cancer"
+14372,115720,Cancers,"Colorectal Cancer"
+14372,115720,Cancers,None
+14386,106561,,
+14395,141349,"Congenital Abnormalities","Congenital malformations of esophagus"
+14395,141349,"Congenital Abnormalities",None
+14395,141349,"Genetic Disorders",None
+14395,141349,"Genetic Disorders",None
+14395,141349,Cancers,None
+14395,141349,Cancers,None
+14419,144903,"Congenital Abnormalities",None
+14419,144903,"Congenital Abnormalities",None
+14419,144903,"Genetic Disorders",None
+14419,144903,"Genetic Disorders",None
+14419,144903,Cancers,"Urethral Cancer"
+14419,144903,Cancers,None
+14420,136314,"Congenital Abnormalities",None
+14420,136314,"Congenital Abnormalities",None
+14420,136314,"Genetic Disorders",None
+14420,136314,"Genetic Disorders",None
+14420,136314,Cancers,"Cervical Cancer"
+14420,136314,Cancers,None
+14424,184553,"Congenital Abnormalities",None
+14424,184553,"Congenital Abnormalities",None
+14424,184553,"Genetic Disorders",None
+14424,184553,"Genetic Disorders",None
+14424,184553,Cancers,None
+14424,184553,Cancers,None
+15201,176087,"Congenital Abnormalities",None
+15201,176087,"Congenital Abnormalities",None
+15201,176087,"Genetic Disorders",None
+15201,176087,"Genetic Disorders",None
+15201,176087,Cancers,"Breast Cancer"
+15201,176087,Cancers,"Colorectal Cancer"
+15201,176087,Cancers,"Lung Cancer (Non-Small Cell and Small Cell)"
+15201,176087,Cancers,None

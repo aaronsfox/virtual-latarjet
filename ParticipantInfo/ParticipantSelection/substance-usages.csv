@@ -1,0 +1,443 @@
+id,deidentified_record_number,substance_usage_type
+5,178440,Cannabinoids
+105,149776,"Former cannabinoids drug user"
+119,113462,"Drug user, type unknown"
+120,146027,"Former cannabinoids drug user"
+120,146027,"Former hallucinogens drug user"
+222,104735,Cocaine
+222,104735,"Sedative hypnotics/depressants"
+257,147194,Cannabinoids
+257,147194,"Sedative hypnotics/depressants"
+274,181140,Cannabinoids
+309,142485,None
+342,143984,"Unknown if used drugs"
+343,140368,Cannabinoids
+357,140694,Opiods
+359,138645,Cannabinoids
+359,138645,"Unknown if used drugs"
+381,109634,None
+404,138238,Opiods
+404,138238,Cocaine
+404,138238,Cannabinoids
+404,138238,"Other Stimulants"
+465,170527,None
+489,108398,None
+499,178090,Cannabinoids
+500,106128,"Former cannabinoids drug user"
+525,138700,"Unknown if used drugs"
+533,171351,Cannabinoids
+533,171351,Opiods
+533,171351,Cocaine
+533,171351,"Other psychoactive substances"
+549,139246,"Unknown if used drugs"
+554,103387,
+566,108247,None
+568,177567,None
+677,149399,None
+695,181775,Cannabinoids
+718,103497,Cocaine
+718,103497,Opiods
+731,173218,None
+747,142070,None
+794,183707,None
+798,174203,"Former opiods drug user"
+814,147375,Cannabinoids
+814,147375,"Drug user, type unknown"
+818,174551,"Drug user, type unknown"
+850,110723,Cannabinoids
+906,173359,None
+997,108421,Cannabinoids
+997,108421,"Drug user, type unknown"
+1011,178703,None
+1032,134662,"Drug user, type unknown"
+1084,143056,None
+1127,170051,Cannabinoids
+1137,108557,
+1143,100749,Opiods
+1192,134142,Cannabinoids
+1192,134142,"Drug user, type unknown"
+1192,134142,Opiods
+1287,172501,None
+1291,170726,Cannabinoids
+1291,170726,Opiods
+1291,170726,"Sedative hypnotics/depressants"
+1315,113271,"Former drug user, type unknown"
+1365,168709,"Drug user, type unknown"
+1376,169082,Cannabinoids
+1376,169082,"Other Stimulants"
+1390,179505,Cannabinoids
+1390,179505,Opiods
+1410,112574,"Unknown if used drugs"
+1553,147949,Cannabinoids
+1568,112802,"Unknown if used drugs"
+1678,147599,"Former other stimulants drug user"
+1678,147599,"Former sedative hypnotics/depressants drug user"
+1691,107935,None
+1718,132433,Cannabinoids
+1718,132433,Opiods
+1732,111539,Cannabinoids
+1732,111539,"Former other stimulants drug user"
+1765,179282,Cannabinoids
+1779,100625,"Former cannabinoids drug user"
+1782,110448,Cannabinoids
+1782,110448,Cocaine
+1793,173795,None
+1795,107215,"Former cannabinoids drug user"
+1836,112942,None
+1873,175470,"Former opiods drug user"
+1873,175470,"Former cocaine drug user"
+1873,175470,"Other Stimulants"
+1887,171479,Cannabinoids
+1892,144977,Cannabinoids
+1892,144977,"Former sedative hypnotics/depressants drug user"
+1892,144977,Cocaine
+1899,173684,
+1948,110728,"Former cannabinoids drug user"
+1985,178208,"Unknown if used drugs"
+1999,142882,Cannabinoids
+2053,112738,"Unknown if used drugs"
+2223,146744,None
+2267,169575,None
+2315,141318,None
+2333,146511,Cannabinoids
+2349,137685,None
+2354,107024,None
+2363,174058,Cannabinoids
+2363,174058,"Drug user, type unknown"
+2373,115014,Cannabinoids
+2373,115014,"Other Stimulants"
+2525,144253,None
+2530,175848,Cannabinoids
+2530,175848,Opiods
+2530,175848,Cannabinoids
+2530,175848,"Other psychoactive substances"
+2574,168936,Cannabinoids
+2574,168936,"Other Stimulants"
+2574,168936,"Drug user, type unknown"
+2627,143284,"Other Stimulants"
+2627,143284,Cocaine
+2627,143284,Cannabinoids
+2639,145931,Cannabinoids
+2639,145931,"Other Stimulants"
+2639,145931,Cocaine
+2650,139915,"Former other stimulants drug user"
+2650,139915,Opiods
+2657,101607,Cannabinoids
+2657,101607,Opiods
+2660,145172,Cannabinoids
+2660,145172,Opiods
+2663,101014,None
+2665,177588,None
+2681,102436,None
+2685,179497,Cannabinoids
+2685,179497,Cocaine
+2685,179497,Opiods
+2685,179497,"Other Stimulants"
+2725,109833,None
+2744,174723,Opiods
+2746,138767,None
+2748,180835,Cocaine
+2748,180835,"Former opiods drug user"
+2748,180835,"Former cannabinoids drug user"
+2749,180333,None
+2775,103350,Cannabinoids
+2817,143856,Cannabinoids
+2817,143856,"Drug user, type unknown"
+2913,136959,Cannabinoids
+2913,136959,"Drug user, type unknown"
+2914,112994,Cannabinoids
+2990,174235,Cannabinoids
+2996,111836,"Unknown if used drugs"
+3045,112387,Cannabinoids
+3045,112387,"Former cocaine drug user"
+3102,135289,Cannabinoids
+3103,146378,Hallucinogens
+3171,171168,Opiods
+3171,171168,Cannabinoids
+3183,112076,Cannabinoids
+3183,112076,Cocaine
+3183,112076,"Drug user, type unknown"
+3233,105937,"Sedative hypnotics/depressants"
+3237,105584,Cannabinoids
+3258,178078,"Former cannabinoids drug user"
+3286,134434,None
+3383,116070,Cocaine
+3383,116070,"Other Stimulants"
+3409,178737,None
+3433,149112,Cannabinoids
+3445,107345,Cannabinoids
+3445,107345,"Other Stimulants"
+3445,107345,"Former cocaine drug user"
+3474,176194,Cannabinoids
+3485,106598,"Drug user, type unknown"
+3518,171946,"Other Stimulants"
+3518,171946,"Other psychoactive substances"
+3525,115162,None
+3561,171208,"Unknown if used drugs"
+3607,108039,"Former other stimulants drug user"
+3607,108039,"Former hallucinogens drug user"
+3607,108039,Cannabinoids
+3613,148122,Cannabinoids
+3613,148122,"Former cocaine drug user"
+3648,107998,
+3727,182401,None
+3735,179637,
+3739,146954,Cannabinoids
+3744,181109,Opiods
+3744,181109,Cannabinoids
+3745,103862,"Unknown if used drugs"
+3774,133175,Cannabinoids
+3774,133175,Opiods
+3774,133175,Cocaine
+3869,100330,Cocaine
+3891,135963,"Former cannabinoids drug user"
+3905,147865,Opiods
+3905,147865,"Former cocaine drug user"
+3922,109619,"Other Stimulants"
+4007,148327,Cannabinoids
+4007,148327,Cocaine
+4007,148327,"Other Stimulants"
+4007,148327,Opiods
+4046,100853,"Former cannabinoids drug user"
+4060,147451,Opiods
+4060,147451,"Other Stimulants"
+4060,147451,Cannabinoids
+4094,178461,Cannabinoids
+4108,100131,None
+4117,171170,None
+4222,134898,None
+4267,172583,
+4342,143459,"Unknown if used drugs"
+4371,143249,Opiods
+4371,143249,"Other Stimulants"
+4451,109385,Cannabinoids
+4559,107389,Opiods
+4559,107389,Cannabinoids
+4559,107389,"Drug user, type unknown"
+4763,101510,"Former opiods drug user"
+4764,144615,None
+4814,103559,None
+4845,105371,None
+4901,170349,Cannabinoids
+4974,170206,Cocaine
+4974,170206,"Sedative hypnotics/depressants"
+5009,136283,Cannabinoids
+5031,144071,None
+5044,136287,None
+5061,135887,
+5062,112798,None
+5078,139325,Cannabinoids
+5143,173112,Cannabinoids
+5143,173112,"Former cocaine drug user"
+5143,173112,"Former hallucinogens drug user"
+5163,104099,None
+5251,143391,
+5298,138720,Cocaine
+5298,138720,Cannabinoids
+5298,138720,"Other psychoactive substances"
+5340,139236,Cocaine
+5340,139236,"Other Stimulants"
+5340,139236,Cannabinoids
+5381,110235,Cannabinoids
+5384,144303,None
+5402,174615,Cannabinoids
+5403,107190,Opiods
+5403,107190,Cocaine
+5439,176980,
+5447,112666,Cannabinoids
+5458,141682,None
+5464,104998,Cannabinoids
+5500,144108,None
+5782,102325,Opiods
+5782,102325,Cannabinoids
+5810,106643,Opiods
+5835,113288,None
+5857,145250,None
+5899,109755,Opiods
+5899,109755,"Other Stimulants"
+5899,109755,Cannabinoids
+5905,170173,Cocaine
+5927,178647,Cocaine
+5958,139194,None
+6076,146237,
+6127,133388,None
+6171,134824,None
+6191,113825,
+6211,183704,None
+6220,104730,Cannabinoids
+6229,102480,None
+6239,114077,None
+6512,100049,None
+6551,134987,"Unknown if used drugs"
+6568,144063,"Drug user, type unknown"
+6974,109600,Opiods
+6975,180030,None
+7039,108461,None
+7162,112438,
+7186,169746,
+7205,182513,None
+7279,138873,Cannabinoids
+7279,138873,Opiods
+7350,177697,"Unknown if used drugs"
+7360,178321,
+7690,176245,Cannabinoids
+8163,103543,Opiods
+9114,113033,Cannabinoids
+9114,113033,Cocaine
+9140,109631,Cannabinoids
+9170,172969,Cannabinoids
+9170,172969,"Volatile solvents/inhalants"
+9274,146242,None
+9275,173494,Cannabinoids
+9300,181545,"Drug user, type unknown"
+9311,179036,Cannabinoids
+9332,107813,Cannabinoids
+9341,169436,
+9384,102895,"Unknown if used drugs"
+9416,184392,"Drug user, type unknown"
+9416,184392,Opiods
+9473,148156,None
+9487,181648,None
+9518,113059,"Drug user, type unknown"
+9662,138712,
+9672,169522,Cannabinoids
+9672,169522,"Other Stimulants"
+9681,145435,Opiods
+9681,145435,Cocaine
+9727,133273,
+10001,135418,Cannabinoids
+10002,149483,Opiods
+10002,149483,"Other Stimulants"
+10002,149483,Hallucinogens
+10013,104373,Cannabinoids
+10013,104373,Cocaine
+10013,104373,"Other Stimulants"
+10023,175725,"Other Stimulants"
+10023,175725,Cannabinoids
+10384,135098,Cocaine
+10384,135098,Cannabinoids
+10384,135098,Opiods
+10407,182948,None
+11322,100221,Cannabinoids
+11322,100221,Cocaine
+11322,100221,Opiods
+11322,100221,"Other Stimulants"
+11336,102602,"Unknown if used drugs"
+11342,134040,"Former volatile solvents/inhalants drug user"
+11359,174623,"Other Stimulants"
+11359,174623,Opiods
+11359,174623,Cannabinoids
+11359,174623,"Former volatile solvents/inhalants drug user"
+11359,174623,"Former cocaine drug user"
+11359,174623,"Former other psychoactive substances drug user"
+11359,174623,"Former hallucinogens drug user"
+11366,183944,Cannabinoids
+11366,183944,"Other Stimulants"
+11366,183944,Opiods
+11366,183944,Cocaine
+11366,183944,"Volatile solvents/inhalants"
+11397,103530,Cannabinoids
+11726,172918,Opiods
+11726,172918,"Other Stimulants"
+11726,172918,Cannabinoids
+11736,174004,None
+11761,115974,Cocaine
+11761,115974,Cannabinoids
+11761,115974,Opiods
+11773,147877,None
+11791,142348,Opiods
+11791,142348,"Former cannabinoids drug user"
+11791,142348,Cocaine
+11942,179200,Cannabinoids
+11942,179200,Opiods
+11942,179200,"Other Stimulants"
+11942,179200,"Other psychoactive substances"
+12076,107029,Cannabinoids
+12101,100122,Cocaine
+12101,100122,Cannabinoids
+12103,134065,Cannabinoids
+12103,134065,"Other Stimulants"
+12117,101242,Opiods
+12129,183863,Cannabinoids
+12148,115312,Cannabinoids
+12513,147041,Cannabinoids
+12513,147041,"Other Stimulants"
+12567,182860,Cannabinoids
+12587,107930,"Unknown if used drugs"
+12624,101427,None
+12656,184373,None
+12724,102924,None
+13211,135579,None
+13212,137402,None
+13262,168993,Cocaine
+13262,168993,"Other Stimulants"
+13262,168993,Cannabinoids
+13266,103293,Cannabinoids
+13277,135258,Opiods
+13331,177679,None
+13577,184171,"Other Stimulants"
+13577,184171,Cannabinoids
+13580,180430,Cannabinoids
+13580,180430,Opiods
+13627,136868,"Drug user, type unknown"
+13641,140141,"Unknown if used drugs"
+13652,110125,"Other Stimulants"
+13652,110125,Cannabinoids
+13669,174753,"Other psychoactive substances"
+13669,174753,Cannabinoids
+13675,109799,None
+13678,134740,"Former cannabinoids drug user"
+13678,134740,Opiods
+13692,132592,Cannabinoids
+13718,101358,None
+13729,149327,None
+13745,183533,None
+13748,114220,"Unknown if used drugs"
+13776,139847,"Former cannabinoids drug user"
+13776,139847,"Former cocaine drug user"
+13797,103783,"Former opiods drug user"
+13885,109860,Opiods
+13894,183067,"Unknown if used drugs"
+13902,184343,None
+13961,148298,None
+13974,134922,"Other Stimulants"
+14004,111927,"Unknown if used drugs"
+14034,183025,Cannabinoids
+14036,147211,Cannabinoids
+14036,147211,Cocaine
+14064,105604,Cannabinoids
+14070,179019,Opiods
+14070,179019,"Other Stimulants"
+14086,179458,Cocaine
+14086,179458,Opiods
+14086,179458,"Other Stimulants"
+14086,179458,Cannabinoids
+14098,101236,Cannabinoids
+14098,101236,Cocaine
+14098,101236,"Other Stimulants"
+14106,144314,"Unknown if used drugs"
+14107,180398,Cannabinoids
+14232,147903,None
+14242,174808,"Other Stimulants"
+14242,174808,Opiods
+14254,172676,Cannabinoids
+14258,135881,Cannabinoids
+14279,136188,Cannabinoids
+14279,136188,"Other Stimulants"
+14321,179082,None
+14334,169132,None
+14339,181540,"Other Stimulants"
+14369,172338,None
+14370,173611,"Volatile solvents/inhalants"
+14372,115720,"Former cocaine drug user"
+14372,115720,"Former hallucinogens drug user"
+14372,115720,"Former other stimulants drug user"
+14372,115720,Cannabinoids
+14386,106561,
+14395,141349,None
+14419,144903,Cannabinoids
+14420,136314,None
+14424,184553,None
+15201,176087,Cocaine
+15201,176087,"Other Stimulants"
+15201,176087,Opiods

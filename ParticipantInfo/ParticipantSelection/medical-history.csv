@@ -1,0 +1,2913 @@
+id,deidentified_record_number,medical_history_type,medical_history_detail
+5,178440,Diagnosis,Hypertension
+105,149776,Implant,None
+105,149776,Surgery,None
+105,149776,"Broken Bone",Arm
+105,149776,"Broken Bone",Ankle/foot
+105,149776,"Plastic Surgery",None
+105,149776,Diagnosis,None
+105,149776,"Dental Adult",Healthy
+105,149776,"Dental Child",Healthy
+105,149776,"Radiation Therapy",No
+105,149776,Scoliosis,Absent
+119,113462,Implant,None
+119,113462,Surgery,None
+119,113462,"Broken Bone",None
+119,113462,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+119,113462,"Plastic Surgery",None
+119,113462,Diagnosis,"Mental illness"
+119,113462,Diagnosis,None
+119,113462,"Dental Adult","Dental cavities"
+119,113462,"Dental Child",Healthy
+119,113462,Scoliosis,Absent
+120,146027,Implant,None
+120,146027,Surgery,Thorax
+120,146027,"Broken Bone",Arm
+120,146027,"Broken Bone",Wrist/hand
+120,146027,"Facial Trauma",None
+120,146027,"Plastic Surgery",None
+120,146027,Diagnosis,None
+120,146027,"Dental Adult",Healthy
+120,146027,"Dental Child",Healthy
+120,146027,"Radiation Therapy",No
+120,146027,Scoliosis,Absent
+222,104735,Implant,None
+222,104735,Surgery,Thorax
+222,104735,"Broken Bone",None
+222,104735,"Facial Trauma",None
+222,104735,"Plastic Surgery",None
+222,104735,Diagnosis,Other
+222,104735,"Dental Adult",Healthy
+222,104735,"Dental Child",Healthy
+222,104735,Scoliosis,Absent
+257,147194,Surgery,None
+257,147194,"Broken Bone",Arm
+257,147194,"Facial Trauma",None
+257,147194,"Plastic Surgery",None
+257,147194,Diagnosis,None
+257,147194,"Dental Adult",Healthy
+257,147194,"Dental Child",Healthy
+257,147194,"Radiation Therapy",No
+257,147194,Scoliosis,Absent
+274,181140,Implant,None
+274,181140,Surgery,None
+274,181140,"Broken Bone",None
+274,181140,"Facial Trauma",None
+274,181140,"Plastic Surgery",None
+274,181140,Diagnosis,None
+274,181140,"Dental Adult",Healthy
+274,181140,"Dental Child",Healthy
+274,181140,Scoliosis,Absent
+309,142485,Implant,None
+309,142485,Surgery,Unknown
+309,142485,"Broken Bone",None
+309,142485,"Facial Trauma",None
+309,142485,"Plastic Surgery",None
+309,142485,Diagnosis,Epilepsy
+309,142485,Diagnosis,Other
+309,142485,"Dental Adult",Healthy
+309,142485,"Dental Child",Healthy
+309,142485,Scoliosis,Absent
+342,143984,Implant,None
+342,143984,Surgery,Thorax
+342,143984,"Broken Bone",None
+342,143984,"Facial Trauma",None
+342,143984,"Plastic Surgery",None
+342,143984,Diagnosis,"Mental illness"
+342,143984,"Dental Adult",Healthy
+342,143984,"Dental Child",Healthy
+342,143984,Scoliosis,Absent
+343,140368,Implant,Stent
+343,140368,Surgery,Thorax
+343,140368,"Broken Bone",None
+343,140368,"Facial Trauma",None
+343,140368,"Plastic Surgery",None
+343,140368,Diagnosis,None
+343,140368,"Dental Adult",Healthy
+343,140368,"Dental Child",Healthy
+343,140368,Scoliosis,Absent
+357,140694,Implant,None
+357,140694,Surgery,"Head "
+357,140694,"Broken Bone",None
+357,140694,"Facial Trauma","trauma to face, area unknown"
+357,140694,"Plastic Surgery",None
+357,140694,Diagnosis,"Mental illness"
+357,140694,"Dental Adult","Dental cavities"
+357,140694,"Dental Adult",Healthy
+357,140694,"Dental Child","Dental cavities"
+357,140694,"Dental Child",Healthy
+357,140694,Scoliosis,Absent
+359,138645,Implant,"Implant, type unknown"
+359,138645,Surgery,Thorax
+359,138645,"Broken Bone",Unknown
+359,138645,"Facial Trauma",None
+359,138645,"Plastic Surgery",None
+359,138645,Diagnosis,"Mental illness"
+359,138645,Diagnosis,Other
+359,138645,"Dental Adult",Healthy
+359,138645,"Dental Child",Healthy
+359,138645,Scoliosis,Absent
+381,109634,Implant,None
+381,109634,Surgery,"Head "
+381,109634,"Broken Bone",Wrist/hand
+381,109634,"Broken Bone",Ribs
+381,109634,"Facial Trauma",None
+381,109634,"Plastic Surgery",None
+381,109634,Diagnosis,Other
+381,109634,"Dental Adult",Healthy
+381,109634,"Dental Child",Healthy
+381,109634,Scoliosis,Absent
+404,138238,Implant,Unknown
+404,138238,Surgery,Thorax
+404,138238,"Broken Bone",Unknown
+404,138238,"Facial Trauma",Unknown
+404,138238,"Plastic Surgery",None
+404,138238,Diagnosis,"Mental illness"
+404,138238,"Dental Adult",Healthy
+404,138238,"Dental Child",Healthy
+404,138238,"Radiation Therapy",No
+404,138238,Scoliosis,Absent
+465,170527,Implant,None
+465,170527,Surgery,Arms
+465,170527,Surgery,Thorax
+465,170527,"Broken Bone",None
+465,170527,"Facial Trauma",None
+465,170527,"Plastic Surgery",None
+465,170527,Diagnosis,"Mental illness"
+465,170527,"Dental Adult",Healthy
+465,170527,"Dental Child",Healthy
+465,170527,"Radiation Therapy",No
+465,170527,Scoliosis,Absent
+489,108398,Implant,"Birth control"
+489,108398,Surgery,Thorax
+489,108398,"Broken Bone",None
+489,108398,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+489,108398,"Plastic Surgery",None
+489,108398,Diagnosis,"Cirrhosis of the liver"
+489,108398,"Dental Adult","Dental cavities"
+489,108398,"Dental Adult","Tooth loss"
+489,108398,"Dental Child",Healthy
+489,108398,"Radiation Therapy",No
+489,108398,Scoliosis,Absent
+499,178090,Implant,None
+499,178090,Surgery,Legs
+499,178090,"Broken Bone",Arm
+499,178090,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+499,178090,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+499,178090,"Plastic Surgery",None
+499,178090,Diagnosis,Hypertension
+499,178090,"Dental Adult",Healthy
+499,178090,"Dental Child",Healthy
+499,178090,"Radiation Therapy",No
+499,178090,Scoliosis,Absent
+500,106128,Implant,None
+500,106128,Surgery,"Head "
+500,106128,"Broken Bone",None
+500,106128,"Facial Trauma",None
+500,106128,"Plastic Surgery",None
+500,106128,Diagnosis,"Mental illness"
+500,106128,"Dental Adult",Healthy
+500,106128,"Dental Child",Healthy
+500,106128,Scoliosis,Absent
+525,138700,Implant,None
+525,138700,Surgery,None
+525,138700,"Broken Bone",None
+525,138700,"Facial Trauma",None
+525,138700,"Plastic Surgery",None
+525,138700,Diagnosis,Hypertension
+525,138700,"Dental Adult","Dental cavities"
+525,138700,"Dental Adult","Dental abscess "
+525,138700,"Dental Adult","Tooth loss"
+525,138700,"Dental Child",Unknown
+525,138700,Scoliosis,Present
+533,171351,Implant,None
+533,171351,Surgery,Thorax
+533,171351,"Broken Bone","Spine-not neck"
+533,171351,"Facial Trauma","trauma to face, area unknown"
+533,171351,"Plastic Surgery",None
+533,171351,Diagnosis,"Mental illness"
+533,171351,Diagnosis,"Hepatitis C"
+533,171351,"Dental Adult","Dental cavities"
+533,171351,"Dental Adult","Tooth loss"
+533,171351,"Dental Child",Healthy
+533,171351,"Radiation Therapy",No
+533,171351,Scoliosis,Absent
+549,139246,Implant,None
+549,139246,Surgery,None
+549,139246,"Broken Bone",None
+549,139246,"Facial Trauma",None
+549,139246,"Plastic Surgery",None
+549,139246,Diagnosis,None
+549,139246,"Dental Adult",Healthy
+549,139246,"Dental Child",Healthy
+549,139246,Scoliosis,Absent
+554,103387,,
+566,108247,Diagnosis,"Non-epileptic seizures"
+568,177567,Surgery,None
+568,177567,"Facial Trauma",None
+677,149399,Implant,None
+677,149399,Surgery,None
+677,149399,"Broken Bone",Arm
+677,149399,"Facial Trauma",None
+677,149399,"Plastic Surgery",None
+677,149399,Diagnosis,Other
+677,149399,"Dental Adult",Healthy
+677,149399,"Dental Child",Healthy
+677,149399,"Radiation Therapy",No
+677,149399,Scoliosis,Absent
+695,181775,Implant,None
+695,181775,Surgery,Arms
+695,181775,Surgery,Legs
+695,181775,Surgery,"Head "
+695,181775,"Broken Bone",Wrist/hand
+695,181775,"Facial Trauma",None
+695,181775,"Plastic Surgery",None
+695,181775,Diagnosis,"Mental illness"
+695,181775,Diagnosis,None
+695,181775,"Dental Adult",Healthy
+695,181775,"Dental Child",Healthy
+695,181775,Scoliosis,Absent
+718,103497,Implant,None
+718,103497,Surgery,None
+718,103497,"Broken Bone",None
+718,103497,"Facial Trauma","trauma to face, area unknown"
+718,103497,"Plastic Surgery",None
+718,103497,Diagnosis,Hypertension
+718,103497,"Dental Adult",Healthy
+718,103497,"Dental Child",Healthy
+718,103497,Scoliosis,Absent
+731,173218,Implant,None
+731,173218,Surgery,None
+731,173218,"Broken Bone",None
+731,173218,"Facial Trauma","Trauma to upper face- hairline to glabella"
+731,173218,"Plastic Surgery",None
+731,173218,Diagnosis,None
+731,173218,"Dental Adult",Healthy
+731,173218,"Dental Child",Healthy
+731,173218,Scoliosis,Absent
+747,142070,Implant,None
+747,142070,Surgery,Neck
+747,142070,"Broken Bone",None
+747,142070,"Facial Trauma",None
+747,142070,"Plastic Surgery",None
+747,142070,Diagnosis,"Mental illness"
+747,142070,"Dental Adult",Healthy
+747,142070,"Dental Child",Healthy
+747,142070,"Radiation Therapy",No
+747,142070,Scoliosis,Absent
+794,183707,Diagnosis,Hyperlipedimia
+798,174203,,
+814,147375,Implant,None
+814,147375,Surgery,Arms
+814,147375,Surgery,"Head "
+814,147375,Surgery,Thorax
+814,147375,"Broken Bone",None
+814,147375,"Facial Trauma",None
+814,147375,"Plastic Surgery",None
+814,147375,Diagnosis,"Mental illness"
+814,147375,Diagnosis,Hypertension
+814,147375,"Dental Adult","Tooth loss"
+814,147375,"Dental Adult",Unknown
+814,147375,"Dental Child",Healthy
+814,147375,Scoliosis,Absent
+818,174551,Implant,None
+818,174551,Surgery,None
+818,174551,"Broken Bone",None
+818,174551,"Facial Trauma",None
+818,174551,"Plastic Surgery",None
+818,174551,Diagnosis,"Mental illness"
+818,174551,Diagnosis,"Hepatitis C"
+818,174551,"Dental Adult",Healthy
+818,174551,"Dental Adult",Unknown
+818,174551,"Dental Child",Healthy
+818,174551,Scoliosis,Absent
+850,110723,Implant,None
+850,110723,Surgery,None
+850,110723,"Broken Bone",Leg
+850,110723,"Facial Trauma",None
+850,110723,"Plastic Surgery",None
+850,110723,Diagnosis,None
+850,110723,"Dental Adult",Healthy
+850,110723,"Dental Child",Healthy
+850,110723,Scoliosis,Absent
+906,173359,Implant,None
+906,173359,Surgery,Thorax
+906,173359,"Broken Bone",None
+906,173359,"Facial Trauma",None
+906,173359,"Plastic Surgery",None
+906,173359,Diagnosis,Hypertension
+906,173359,"Dental Adult",Healthy
+906,173359,"Dental Child",Healthy
+906,173359,Scoliosis,Absent
+997,108421,Implant,None
+997,108421,Surgery,Arms
+997,108421,Surgery,"Head "
+997,108421,"Broken Bone",Arm
+997,108421,"Facial Trauma","trauma to face, area unknown"
+997,108421,"Plastic Surgery",None
+997,108421,Diagnosis,"Mental illness"
+997,108421,"Dental Adult",Healthy
+997,108421,"Dental Child",Healthy
+997,108421,"Radiation Therapy",No
+997,108421,Scoliosis,Absent
+1011,178703,Implant,None
+1011,178703,Surgery,None
+1011,178703,"Broken Bone",None
+1011,178703,"Facial Trauma",None
+1011,178703,"Plastic Surgery",None
+1011,178703,Diagnosis,None
+1011,178703,"Dental Adult",Healthy
+1011,178703,"Dental Child",Unknown
+1011,178703,Scoliosis,Absent
+1032,134662,Implant,None
+1032,134662,Surgery,None
+1032,134662,"Broken Bone",None
+1032,134662,"Facial Trauma",None
+1032,134662,"Plastic Surgery",None
+1032,134662,Diagnosis,"Mental illness"
+1032,134662,Diagnosis,None
+1032,134662,"Dental Adult",Healthy
+1032,134662,"Dental Child",Healthy
+1032,134662,Scoliosis,Absent
+1084,143056,Implant,None
+1084,143056,Surgery,None
+1084,143056,"Broken Bone",None
+1084,143056,"Facial Trauma",None
+1084,143056,"Plastic Surgery",None
+1084,143056,Diagnosis,"Mental illness"
+1084,143056,"Dental Adult",Healthy
+1084,143056,"Dental Child","Dental cavities"
+1084,143056,"Dental Child",Healthy
+1084,143056,Scoliosis,Absent
+1127,170051,Implant,None
+1127,170051,Surgery,None
+1127,170051,"Broken Bone",None
+1127,170051,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+1127,170051,"Plastic Surgery",None
+1127,170051,Diagnosis,Unknown
+1127,170051,"Dental Adult",Healthy
+1127,170051,"Dental Child",Healthy
+1127,170051,Scoliosis,Absent
+1137,108557,Diagnosis,"Mental illness"
+1137,108557,Diagnosis,Unknown
+1143,100749,Implant,None
+1143,100749,Surgery,None
+1143,100749,"Broken Bone",None
+1143,100749,"Facial Trauma",None
+1143,100749,"Plastic Surgery",None
+1143,100749,Diagnosis,None
+1143,100749,"Dental Adult",Healthy
+1143,100749,"Dental Child",Healthy
+1143,100749,Scoliosis,Absent
+1192,134142,Implant,None
+1192,134142,Surgery,Thorax
+1192,134142,"Broken Bone",None
+1192,134142,"Facial Trauma",None
+1192,134142,"Plastic Surgery",None
+1192,134142,Diagnosis,"Mental illness"
+1192,134142,"Dental Adult","Dental cavities"
+1192,134142,"Dental Adult","Dental trauma"
+1192,134142,"Dental Child",Healthy
+1192,134142,Scoliosis,Absent
+1287,172501,Implant,Pacemaker
+1287,172501,Surgery,Neck
+1287,172501,Surgery,Thorax
+1287,172501,"Broken Bone",None
+1287,172501,"Facial Trauma",None
+1287,172501,"Plastic Surgery",None
+1287,172501,Diagnosis,"Mental illness"
+1287,172501,"Dental Adult",Healthy
+1287,172501,"Dental Child",Healthy
+1287,172501,"Radiation Therapy",No
+1287,172501,Scoliosis,Absent
+1291,170726,Implant,None
+1291,170726,Surgery,None
+1291,170726,"Broken Bone",None
+1291,170726,"Facial Trauma",None
+1291,170726,"Plastic Surgery",None
+1291,170726,Diagnosis,"Mental illness"
+1291,170726,"Dental Adult","Dental cavities"
+1291,170726,"Dental Child",Healthy
+1291,170726,Scoliosis,Absent
+1315,113271,Implant,Unknown
+1315,113271,Surgery,Arms
+1315,113271,Surgery,Legs
+1315,113271,"Broken Bone",Wrist/hand
+1315,113271,"Broken Bone",Leg
+1315,113271,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+1315,113271,"Plastic Surgery",None
+1315,113271,Diagnosis,None
+1315,113271,"Dental Adult",Healthy
+1315,113271,"Dental Child","Dental cavities"
+1315,113271,Scoliosis,Absent
+1365,168709,Implant,None
+1365,168709,Surgery,None
+1365,168709,"Broken Bone",None
+1365,168709,"Facial Trauma",None
+1365,168709,"Plastic Surgery",None
+1365,168709,Diagnosis,None
+1365,168709,"Dental Adult",Healthy
+1365,168709,"Dental Child",Healthy
+1365,168709,Scoliosis,Absent
+1376,169082,Implant,None
+1376,169082,Surgery,Thorax
+1376,169082,"Broken Bone",Ankle/foot
+1376,169082,"Facial Trauma",None
+1376,169082,"Plastic Surgery",None
+1376,169082,Diagnosis,"Mental illness"
+1376,169082,Diagnosis,Asthma
+1376,169082,"Dental Adult",Healthy
+1376,169082,"Dental Child",Healthy
+1376,169082,Scoliosis,Absent
+1390,179505,Implant,None
+1390,179505,Surgery,None
+1390,179505,"Broken Bone",None
+1390,179505,"Facial Trauma",None
+1390,179505,"Plastic Surgery",None
+1390,179505,Diagnosis,"Mental illness"
+1390,179505,"Dental Adult",Healthy
+1390,179505,"Dental Child",Healthy
+1390,179505,Scoliosis,Absent
+1410,112574,Implant,Nail
+1410,112574,Surgery,Legs
+1410,112574,"Broken Bone",None
+1410,112574,"Facial Trauma",None
+1410,112574,"Plastic Surgery",None
+1410,112574,Diagnosis,None
+1410,112574,"Dental Adult",Healthy
+1410,112574,"Dental Child",Healthy
+1410,112574,Scoliosis,Absent
+1553,147949,Implant,None
+1553,147949,Surgery,None
+1553,147949,"Broken Bone",Arm
+1553,147949,"Broken Bone",Neck
+1553,147949,"Facial Trauma",None
+1553,147949,"Plastic Surgery",None
+1553,147949,Diagnosis,"Mental illness"
+1553,147949,Diagnosis,None
+1553,147949,"Dental Adult",Healthy
+1553,147949,"Dental Child",Healthy
+1553,147949,Scoliosis,Absent
+1568,112802,Implant,"Birth control"
+1568,112802,Surgery,None
+1568,112802,"Broken Bone",None
+1568,112802,"Facial Trauma","trauma to face, area unknown"
+1568,112802,"Plastic Surgery",None
+1568,112802,Diagnosis,"Diabetes Type II"
+1568,112802,Diagnosis,Other
+1568,112802,"Dental Adult",Healthy
+1568,112802,"Dental Child",Healthy
+1568,112802,Scoliosis,Absent
+1678,147599,Implant,None
+1678,147599,Surgery,Legs
+1678,147599,Surgery,Thorax
+1678,147599,"Broken Bone",None
+1678,147599,"Facial Trauma",None
+1678,147599,"Plastic Surgery",None
+1678,147599,Diagnosis,"Mental illness"
+1678,147599,Diagnosis,Other
+1678,147599,"Dental Adult",Healthy
+1678,147599,"Dental Child",Healthy
+1678,147599,Scoliosis,Absent
+1691,107935,Implant,None
+1691,107935,Surgery,Arms
+1691,107935,Surgery,Thorax
+1691,107935,Surgery,Unknown
+1691,107935,"Broken Bone",Unknown
+1691,107935,"Facial Trauma","trauma to face, area unknown"
+1691,107935,"Plastic Surgery",Unknown
+1691,107935,Diagnosis,"Mental illness"
+1691,107935,Diagnosis,Other
+1691,107935,"Dental Adult",Healthy
+1691,107935,"Dental Child",Healthy
+1691,107935,Scoliosis,Absent
+1718,132433,Implant,None
+1718,132433,Surgery,"Head "
+1718,132433,Surgery,Genitals
+1718,132433,"Broken Bone",None
+1718,132433,"Facial Trauma",None
+1718,132433,"Plastic Surgery","Plastic surgery- Reconstructive surgery"
+1718,132433,Diagnosis,Other
+1718,132433,"Dental Adult",Healthy
+1718,132433,"Dental Child",Healthy
+1718,132433,Scoliosis,Absent
+1732,111539,Implant,None
+1732,111539,Surgery,Unknown
+1732,111539,"Broken Bone",Arm
+1732,111539,"Facial Trauma",None
+1732,111539,"Plastic Surgery",None
+1732,111539,Diagnosis,"Mental illness"
+1732,111539,Diagnosis,"Hepatitis C"
+1732,111539,"Dental Adult",Healthy
+1732,111539,"Dental Child",Healthy
+1732,111539,Scoliosis,Absent
+1765,179282,Implant,None
+1765,179282,Surgery,None
+1765,179282,"Broken Bone",None
+1765,179282,"Facial Trauma",None
+1765,179282,"Plastic Surgery",None
+1765,179282,Diagnosis,"Mental illness"
+1765,179282,Diagnosis,"Non-epileptic seizures"
+1765,179282,"Dental Adult","Dental cavities"
+1765,179282,"Dental Child","Tooth loss"
+1765,179282,"Dental Child",Healthy
+1765,179282,Scoliosis,Absent
+1779,100625,Implant,None
+1779,100625,Surgery,None
+1779,100625,"Broken Bone",Leg
+1779,100625,"Broken Bone",Ankle/foot
+1779,100625,"Facial Trauma",None
+1779,100625,"Plastic Surgery",None
+1779,100625,Diagnosis,"Mental illness"
+1779,100625,"Dental Adult","Dental cavities"
+1779,100625,"Dental Adult",Healthy
+1779,100625,"Dental Child","Dental cavities"
+1779,100625,"Dental Child",Healthy
+1779,100625,Scoliosis,Absent
+1782,110448,Implant,Rod
+1782,110448,Surgery,Legs
+1782,110448,Surgery,Thorax
+1782,110448,"Broken Bone",Leg
+1782,110448,"Broken Bone",Head
+1782,110448,"Broken Bone",Unknown
+1782,110448,"Facial Trauma","Trauma to upper face- hairline to glabella"
+1782,110448,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+1782,110448,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+1782,110448,"Plastic Surgery",None
+1782,110448,Diagnosis,"Mental illness"
+1782,110448,"Dental Adult",Healthy
+1782,110448,"Dental Child","Dental cavities"
+1782,110448,"Radiation Therapy",No
+1782,110448,Scoliosis,Absent
+1793,173795,Implant,None
+1793,173795,Surgery,None
+1793,173795,"Broken Bone",None
+1793,173795,"Facial Trauma",None
+1793,173795,"Plastic Surgery",None
+1793,173795,Diagnosis,Unknown
+1793,173795,"Dental Adult",Healthy
+1793,173795,"Dental Child",Healthy
+1793,173795,Scoliosis,Absent
+1795,107215,Implant,None
+1795,107215,Surgery,None
+1795,107215,"Broken Bone",None
+1795,107215,"Facial Trauma","trauma to face, area unknown"
+1795,107215,"Plastic Surgery",None
+1795,107215,"Dental Adult",Healthy
+1795,107215,"Dental Child",Healthy
+1795,107215,Scoliosis,Absent
+1836,112942,Implant,None
+1836,112942,Surgery,Legs
+1836,112942,"Broken Bone",None
+1836,112942,"Facial Trauma",None
+1836,112942,"Plastic Surgery",None
+1836,112942,Diagnosis,"Mental illness"
+1836,112942,"Dental Adult",Healthy
+1836,112942,"Dental Child",Healthy
+1836,112942,Scoliosis,Absent
+1873,175470,Implant,None
+1873,175470,Surgery,Thorax
+1873,175470,"Broken Bone",Head
+1873,175470,"Facial Trauma",None
+1873,175470,"Plastic Surgery",None
+1873,175470,Diagnosis,"Mental illness"
+1873,175470,Diagnosis,"Non-epileptic seizures"
+1873,175470,"Dental Adult","Dental cavities"
+1873,175470,"Dental Child",Healthy
+1873,175470,Scoliosis,Absent
+1887,171479,Implant,None
+1887,171479,Surgery,Genitals
+1887,171479,"Broken Bone",Ankle/foot
+1887,171479,"Facial Trauma","Trauma to upper face- hairline to glabella"
+1887,171479,"Plastic Surgery",None
+1887,171479,Diagnosis,None
+1887,171479,"Dental Adult",Healthy
+1887,171479,"Dental Child",Healthy
+1887,171479,Scoliosis,Absent
+1892,144977,Implant,None
+1892,144977,Surgery,"Head "
+1892,144977,"Broken Bone",None
+1892,144977,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+1892,144977,"Plastic Surgery",None
+1892,144977,Diagnosis,Other
+1892,144977,"Dental Adult",Healthy
+1892,144977,"Dental Child",Healthy
+1892,144977,Scoliosis,Absent
+1899,173684,Implant,None
+1899,173684,Surgery,Unknown
+1899,173684,"Broken Bone",Unknown
+1899,173684,"Facial Trauma",Unknown
+1899,173684,"Plastic Surgery",None
+1899,173684,Diagnosis,"Mental illness"
+1899,173684,"Dental Adult",Healthy
+1899,173684,"Dental Child",Unknown
+1899,173684,Scoliosis,Absent
+1948,110728,Implant,"Implant, type unknown"
+1948,110728,Surgery,Legs
+1948,110728,"Broken Bone",None
+1948,110728,"Facial Trauma","trauma to face, area unknown"
+1948,110728,"Plastic Surgery",None
+1948,110728,Diagnosis,None
+1948,110728,"Dental Adult",Healthy
+1948,110728,"Dental Child",Healthy
+1948,110728,Scoliosis,Absent
+1985,178208,Implant,"Implant, type unknown"
+1985,178208,Surgery,Legs
+1985,178208,Surgery,"Head "
+1985,178208,"Broken Bone",Arm
+1985,178208,"Broken Bone",Wrist/hand
+1985,178208,"Broken Bone",Leg
+1985,178208,"Broken Bone",Ribs
+1985,178208,"Facial Trauma","trauma to face, area unknown"
+1985,178208,"Plastic Surgery",None
+1985,178208,Diagnosis,Asthma
+1985,178208,Diagnosis,Arthritis
+1985,178208,"Dental Adult","Dental cavities"
+1985,178208,"Dental Child",Unknown
+1985,178208,"Radiation Therapy",No
+1985,178208,Scoliosis,Absent
+1999,142882,Implant,None
+1999,142882,Surgery,None
+1999,142882,"Broken Bone",None
+1999,142882,"Facial Trauma",None
+1999,142882,"Plastic Surgery",None
+1999,142882,Diagnosis,Hypertension
+1999,142882,Diagnosis,Other
+1999,142882,"Dental Adult",Healthy
+1999,142882,"Dental Child",Healthy
+1999,142882,"Radiation Therapy",No
+1999,142882,Scoliosis,Absent
+2053,112738,Implant,None
+2053,112738,Surgery,None
+2053,112738,"Broken Bone",None
+2053,112738,"Facial Trauma",None
+2053,112738,"Plastic Surgery",None
+2053,112738,Diagnosis,Unknown
+2053,112738,"Dental Adult",Healthy
+2053,112738,"Dental Child",Healthy
+2053,112738,"Radiation Therapy",No
+2053,112738,Scoliosis,Absent
+2223,146744,Implant,None
+2223,146744,Surgery,None
+2223,146744,"Broken Bone",None
+2223,146744,"Facial Trauma",None
+2223,146744,"Plastic Surgery",None
+2223,146744,Diagnosis,None
+2223,146744,"Dental Adult",Healthy
+2223,146744,"Dental Child",Healthy
+2223,146744,Scoliosis,Absent
+2267,169575,Implant,None
+2267,169575,Surgery,None
+2267,169575,"Broken Bone",None
+2267,169575,"Facial Trauma",None
+2267,169575,"Plastic Surgery",None
+2267,169575,Diagnosis,"Mental illness"
+2267,169575,Diagnosis,Other
+2267,169575,"Dental Adult",Healthy
+2267,169575,"Dental Child",Healthy
+2267,169575,"Radiation Therapy",No
+2267,169575,Scoliosis,Absent
+2315,141318,Implant,None
+2315,141318,Surgery,None
+2315,141318,"Broken Bone",Arm
+2315,141318,"Facial Trauma",None
+2315,141318,"Plastic Surgery",None
+2315,141318,Diagnosis,"Mental illness"
+2315,141318,Diagnosis,"Cirrhosis of the liver"
+2315,141318,"Dental Adult",Healthy
+2315,141318,"Dental Child",Healthy
+2315,141318,Scoliosis,Absent
+2333,146511,Implant,None
+2333,146511,Surgery,None
+2333,146511,"Broken Bone",None
+2333,146511,"Facial Trauma",None
+2333,146511,"Plastic Surgery",None
+2333,146511,Diagnosis,None
+2333,146511,"Dental Adult",Healthy
+2333,146511,"Dental Child",Healthy
+2333,146511,Scoliosis,Absent
+2349,137685,Implant,None
+2349,137685,Surgery,None
+2349,137685,"Broken Bone",None
+2349,137685,"Facial Trauma","Trauma to upper face- hairline to glabella"
+2349,137685,"Plastic Surgery",None
+2349,137685,Diagnosis,None
+2349,137685,"Dental Adult",Healthy
+2349,137685,"Dental Child",Healthy
+2349,137685,"Radiation Therapy",No
+2349,137685,Scoliosis,Absent
+2354,107024,Implant,Unknown
+2354,107024,Surgery,Arms
+2354,107024,Surgery,Neck
+2354,107024,Surgery,Thorax
+2354,107024,"Broken Bone",Arm
+2354,107024,"Facial Trauma","trauma to face, area unknown"
+2354,107024,"Plastic Surgery",None
+2354,107024,Diagnosis,None
+2354,107024,"Dental Adult",Healthy
+2354,107024,"Dental Child",Healthy
+2354,107024,Scoliosis,Unknown
+2363,174058,Implant,None
+2363,174058,Surgery,Arms
+2363,174058,"Broken Bone",Head
+2363,174058,"Facial Trauma",None
+2363,174058,"Plastic Surgery",None
+2363,174058,Diagnosis,"Mental illness"
+2363,174058,Diagnosis,Schizophrenia
+2363,174058,"Dental Adult",Healthy
+2363,174058,"Dental Child",Healthy
+2363,174058,Scoliosis,Absent
+2373,115014,Implant,None
+2373,115014,Surgery,Unknown
+2373,115014,"Broken Bone",Unknown
+2373,115014,"Facial Trauma","trauma to face, area unknown"
+2373,115014,"Plastic Surgery",None
+2373,115014,Diagnosis,"Mental illness"
+2373,115014,Diagnosis,Hypertension
+2373,115014,"Dental Adult","Dental cavities"
+2373,115014,"Dental Child",Healthy
+2373,115014,Scoliosis,Absent
+2525,144253,Implant,"Implant, type unknown"
+2525,144253,Surgery,Legs
+2525,144253,"Broken Bone",Leg
+2525,144253,"Facial Trauma",None
+2525,144253,"Plastic Surgery",None
+2525,144253,Diagnosis,None
+2525,144253,"Dental Adult",Healthy
+2525,144253,"Dental Child",Healthy
+2525,144253,Scoliosis,Absent
+2530,175848,Implant,None
+2530,175848,Surgery,Thorax
+2530,175848,"Broken Bone",None
+2530,175848,"Facial Trauma","trauma to face, area unknown"
+2530,175848,"Plastic Surgery",None
+2530,175848,Diagnosis,"Mental illness"
+2530,175848,Diagnosis,"Cirrhosis of the liver"
+2530,175848,Diagnosis,Other
+2530,175848,Diagnosis,"Hepatitis C"
+2530,175848,"Dental Adult",Healthy
+2530,175848,"Dental Child",Healthy
+2530,175848,"Radiation Therapy",No
+2530,175848,Scoliosis,Present
+2574,168936,Implant,None
+2574,168936,Surgery,None
+2574,168936,"Broken Bone",None
+2574,168936,"Facial Trauma",None
+2574,168936,"Plastic Surgery","Cosmetic surgery-Breast surgery"
+2574,168936,Diagnosis,"Mental illness"
+2574,168936,Diagnosis,"Cirrhosis of the liver"
+2574,168936,Diagnosis,Stroke
+2574,168936,"Dental Adult","Dental cavities"
+2574,168936,"Dental Child",Healthy
+2574,168936,Scoliosis,Absent
+2627,143284,Implant,None
+2627,143284,Surgery,Thorax
+2627,143284,"Broken Bone",None
+2627,143284,"Facial Trauma",None
+2627,143284,"Plastic Surgery",None
+2627,143284,Diagnosis,"Chronic heart failure"
+2627,143284,Diagnosis,"Hepatitis C"
+2627,143284,"Dental Adult","Dental cavities"
+2627,143284,"Dental Child","Dental cavities"
+2627,143284,"Radiation Therapy",No
+2627,143284,Scoliosis,Absent
+2639,145931,Implant,None
+2639,145931,Surgery,Thorax
+2639,145931,"Broken Bone",Ribs
+2639,145931,"Facial Trauma","Trauma to upper face- hairline to glabella"
+2639,145931,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+2639,145931,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+2639,145931,"Plastic Surgery",None
+2639,145931,Diagnosis,"Mental illness"
+2639,145931,"Dental Adult",Healthy
+2639,145931,"Dental Child",Healthy
+2639,145931,"Radiation Therapy",No
+2639,145931,Scoliosis,Absent
+2650,139915,Implant,None
+2650,139915,Surgery,None
+2650,139915,"Broken Bone",None
+2650,139915,"Facial Trauma",None
+2650,139915,"Plastic Surgery",None
+2650,139915,Diagnosis,"Mental illness"
+2650,139915,Diagnosis,"Diabetes Type II"
+2650,139915,Diagnosis,Schizophrenia
+2650,139915,"Dental Adult","Periodontal disease"
+2650,139915,"Dental Adult","Tooth loss"
+2650,139915,"Dental Child","Dental cavities"
+2650,139915,"Radiation Therapy",No
+2650,139915,Scoliosis,Present
+2657,101607,Implant,Unknown
+2657,101607,Surgery,None
+2657,101607,"Broken Bone",Arm
+2657,101607,"Facial Trauma",None
+2657,101607,"Plastic Surgery",None
+2657,101607,Diagnosis,Asthma
+2657,101607,"Dental Adult",Healthy
+2657,101607,"Dental Child",Healthy
+2657,101607,Scoliosis,Absent
+2660,145172,Implant,None
+2660,145172,Surgery,None
+2660,145172,"Broken Bone",Wrist/hand
+2660,145172,"Facial Trauma","Trauma to upper face- hairline to glabella"
+2660,145172,"Plastic Surgery",None
+2660,145172,Diagnosis,"Mental illness"
+2660,145172,Diagnosis,Asthma
+2660,145172,Diagnosis,Arthritis
+2660,145172,Diagnosis,"Non-epileptic seizures"
+2660,145172,"Dental Adult","Dental cavities"
+2660,145172,"Dental Child",Healthy
+2660,145172,"Radiation Therapy",No
+2660,145172,Scoliosis,Absent
+2663,101014,Implant,None
+2663,101014,Surgery,None
+2663,101014,"Broken Bone",Wrist/hand
+2663,101014,"Broken Bone",Head
+2663,101014,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+2663,101014,"Plastic Surgery",None
+2663,101014,Diagnosis,None
+2663,101014,"Dental Adult","Dental cavities"
+2663,101014,"Dental Adult","Tooth loss"
+2663,101014,"Dental Adult",Healthy
+2663,101014,"Radiation Therapy",No
+2663,101014,Scoliosis,Absent
+2665,177588,Implant,None
+2665,177588,Surgery,None
+2665,177588,"Broken Bone",None
+2665,177588,"Facial Trauma",None
+2665,177588,"Plastic Surgery",None
+2665,177588,Diagnosis,None
+2665,177588,"Dental Adult",Healthy
+2665,177588,"Dental Child",Healthy
+2665,177588,Scoliosis,Absent
+2681,102436,Implant,None
+2681,102436,Surgery,None
+2681,102436,"Broken Bone",None
+2681,102436,"Facial Trauma",None
+2681,102436,"Plastic Surgery",None
+2681,102436,Diagnosis,Hypertension
+2681,102436,Diagnosis,Asthma
+2681,102436,"Dental Adult",Healthy
+2681,102436,"Dental Child",Healthy
+2681,102436,"Radiation Therapy",No
+2681,102436,Scoliosis,Absent
+2685,179497,Implant,None
+2685,179497,Surgery,None
+2685,179497,"Broken Bone",Arm
+2685,179497,"Facial Trauma","trauma to face, area unknown"
+2685,179497,"Plastic Surgery",None
+2685,179497,Diagnosis,None
+2685,179497,"Dental Adult","Dental cavities"
+2685,179497,"Dental Child",Healthy
+2685,179497,Scoliosis,Absent
+2725,109833,Implant,None
+2725,109833,Surgery,Legs
+2725,109833,"Broken Bone",Arm
+2725,109833,"Facial Trauma",None
+2725,109833,"Plastic Surgery",None
+2725,109833,Diagnosis,"Mental illness"
+2725,109833,Diagnosis,"Diabetes Type I"
+2725,109833,"Dental Adult",Healthy
+2725,109833,"Dental Child",Healthy
+2725,109833,"Radiation Therapy",No
+2725,109833,Scoliosis,Absent
+2744,174723,Implant,Pin
+2744,174723,Implant,Wire
+2744,174723,Surgery,Legs
+2744,174723,"Broken Bone",Leg
+2744,174723,"Facial Trauma",None
+2744,174723,"Plastic Surgery",None
+2744,174723,Diagnosis,None
+2744,174723,"Dental Adult",Healthy
+2744,174723,"Dental Child","Dental cavities"
+2744,174723,"Radiation Therapy",No
+2744,174723,Scoliosis,Absent
+2746,138767,Implant,None
+2746,138767,Surgery,None
+2746,138767,"Broken Bone",None
+2746,138767,"Facial Trauma",None
+2746,138767,"Plastic Surgery",None
+2746,138767,Diagnosis,None
+2746,138767,"Dental Adult",Healthy
+2746,138767,"Dental Child",Healthy
+2746,138767,"Radiation Therapy",No
+2746,138767,Scoliosis,Absent
+2748,180835,Implant,None
+2748,180835,Surgery,None
+2748,180835,"Broken Bone",Wrist/hand
+2748,180835,"Broken Bone",Ankle/foot
+2748,180835,"Facial Trauma",None
+2748,180835,"Plastic Surgery",None
+2748,180835,Diagnosis,"Hepatitis C"
+2748,180835,Diagnosis,Schizophrenia
+2748,180835,"Dental Adult",Healthy
+2748,180835,"Dental Child",Healthy
+2748,180835,Scoliosis,Absent
+2749,180333,Implant,None
+2749,180333,Surgery,None
+2749,180333,"Broken Bone",None
+2749,180333,"Facial Trauma",None
+2749,180333,"Plastic Surgery",None
+2749,180333,Diagnosis,"Mental illness"
+2749,180333,Diagnosis,Hypertension
+2749,180333,Diagnosis,Asthma
+2749,180333,"Dental Adult",Healthy
+2749,180333,"Dental Child",Healthy
+2749,180333,"Radiation Therapy",No
+2749,180333,Scoliosis,Absent
+2775,103350,Implant,None
+2775,103350,Surgery,Neck
+2775,103350,"Broken Bone",None
+2775,103350,"Facial Trauma",None
+2775,103350,"Plastic Surgery",None
+2775,103350,Diagnosis,"Mental illness"
+2775,103350,"Dental Adult","Dental cavities"
+2775,103350,"Dental Adult","Dental trauma"
+2775,103350,"Dental Child","Dental cavities"
+2775,103350,"Radiation Therapy",No
+2775,103350,Scoliosis,Absent
+2817,143856,Implant,None
+2817,143856,Surgery,None
+2817,143856,"Broken Bone",Wrist/hand
+2817,143856,"Facial Trauma",None
+2817,143856,"Plastic Surgery",None
+2817,143856,Diagnosis,None
+2817,143856,"Dental Adult",Healthy
+2817,143856,"Dental Child",Healthy
+2817,143856,Scoliosis,Absent
+2913,136959,Implant,None
+2913,136959,Surgery,None
+2913,136959,"Broken Bone",None
+2913,136959,"Facial Trauma",None
+2913,136959,"Plastic Surgery",None
+2913,136959,Diagnosis,"Mental illness"
+2913,136959,Diagnosis,Hypertension
+2913,136959,"Dental Adult",Healthy
+2913,136959,"Dental Child",Healthy
+2913,136959,"Radiation Therapy",No
+2913,136959,Scoliosis,Absent
+2914,112994,Implant,None
+2914,112994,Surgery,Genitals
+2914,112994,"Broken Bone",None
+2914,112994,"Facial Trauma",None
+2914,112994,"Plastic Surgery",None
+2914,112994,Diagnosis,Asthma
+2914,112994,"Dental Adult",Healthy
+2914,112994,"Dental Child","Dental cavities"
+2914,112994,"Radiation Therapy",No
+2914,112994,Scoliosis,Absent
+2990,174235,Implant,None
+2990,174235,Surgery,None
+2990,174235,"Broken Bone",Leg
+2990,174235,"Facial Trauma",None
+2990,174235,"Plastic Surgery",None
+2990,174235,Diagnosis,"Mental illness"
+2990,174235,"Dental Adult",Unknown
+2990,174235,"Dental Child",Healthy
+2990,174235,"Radiation Therapy",No
+2990,174235,Scoliosis,Absent
+2996,111836,Diagnosis,"Mental illness"
+3045,112387,Implant,None
+3045,112387,Surgery,Thorax
+3045,112387,"Broken Bone",Pelvis
+3045,112387,"Facial Trauma",None
+3045,112387,Diagnosis,"Mental illness"
+3045,112387,Diagnosis,Other
+3045,112387,Diagnosis,"Diabetes Type I"
+3045,112387,"Dental Adult",Healthy
+3045,112387,"Dental Child",Healthy
+3045,112387,"Radiation Therapy",No
+3045,112387,Scoliosis,Present
+3102,135289,Implant,None
+3102,135289,Surgery,Thorax
+3102,135289,"Broken Bone",Wrist/hand
+3102,135289,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3102,135289,"Plastic Surgery",None
+3102,135289,Diagnosis,"Mental illness"
+3102,135289,Diagnosis,Other
+3102,135289,"Dental Adult","Dental trauma"
+3102,135289,"Dental Child",Healthy
+3102,135289,Scoliosis,Present
+3103,146378,Implant,None
+3103,146378,Surgery,Thorax
+3103,146378,"Broken Bone",Wrist/hand
+3103,146378,"Facial Trauma",None
+3103,146378,Diagnosis,"Mental illness"
+3103,146378,"Dental Adult",Healthy
+3103,146378,"Dental Child",Healthy
+3103,146378,Scoliosis,Absent
+3171,171168,Implant,None
+3171,171168,Surgery,Arms
+3171,171168,Surgery,"Head "
+3171,171168,Surgery,Thorax
+3171,171168,"Broken Bone",None
+3171,171168,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+3171,171168,"Plastic Surgery",None
+3171,171168,Diagnosis,"Mental illness"
+3171,171168,"Dental Adult",Healthy
+3171,171168,"Dental Child",Healthy
+3171,171168,Scoliosis,Absent
+3183,112076,Implant,None
+3183,112076,Surgery,None
+3183,112076,"Broken Bone",None
+3183,112076,"Facial Trauma",None
+3183,112076,"Plastic Surgery",None
+3183,112076,Diagnosis,"Mental illness"
+3183,112076,"Dental Adult",Healthy
+3183,112076,"Dental Child",Healthy
+3183,112076,Scoliosis,Absent
+3233,105937,Implant,None
+3233,105937,Surgery,None
+3233,105937,"Broken Bone",Ankle/foot
+3233,105937,"Facial Trauma",None
+3233,105937,"Plastic Surgery",None
+3233,105937,"Dental Adult",Healthy
+3233,105937,"Dental Child",Healthy
+3233,105937,"Radiation Therapy",No
+3233,105937,Scoliosis,Absent
+3237,105584,Implant,None
+3237,105584,Surgery,None
+3237,105584,"Broken Bone",Ankle/foot
+3237,105584,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3237,105584,"Plastic Surgery",None
+3237,105584,Diagnosis,Hypertension
+3237,105584,"Dental Adult",Healthy
+3237,105584,"Dental Child",Healthy
+3237,105584,"Radiation Therapy",No
+3237,105584,Scoliosis,Absent
+3258,178078,Implant,None
+3258,178078,Surgery,None
+3258,178078,"Broken Bone",None
+3258,178078,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+3258,178078,"Plastic Surgery",None
+3258,178078,Diagnosis,None
+3258,178078,"Dental Adult",Healthy
+3258,178078,"Dental Child",Healthy
+3258,178078,"Radiation Therapy",No
+3258,178078,Scoliosis,Absent
+3286,134434,Implant,"Dental implant"
+3286,134434,Surgery,Thorax
+3286,134434,Surgery,Genitals
+3286,134434,"Broken Bone",Arm
+3286,134434,"Broken Bone",Wrist/hand
+3286,134434,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+3286,134434,"Plastic Surgery",None
+3286,134434,Diagnosis,"Mental illness"
+3286,134434,Diagnosis,Other
+3286,134434,"Dental Adult","Dental cavities"
+3286,134434,"Dental Adult","Dental abscess "
+3286,134434,"Dental Child",Healthy
+3286,134434,"Radiation Therapy",No
+3286,134434,Scoliosis,Absent
+3383,116070,Implant,None
+3383,116070,Surgery,None
+3383,116070,"Facial Trauma","trauma to face, area unknown"
+3383,116070,"Plastic Surgery",None
+3383,116070,Diagnosis,None
+3383,116070,"Dental Adult",Healthy
+3383,116070,"Dental Child",Healthy
+3383,116070,Scoliosis,Absent
+3409,178737,,
+3433,149112,,
+3445,107345,Implant,None
+3445,107345,Surgery,None
+3445,107345,"Broken Bone",None
+3445,107345,"Facial Trauma",None
+3445,107345,"Plastic Surgery",None
+3445,107345,Diagnosis,None
+3445,107345,"Dental Adult","Fungal, bacterial, or viral infection"
+3445,107345,"Dental Child",Healthy
+3445,107345,Scoliosis,Absent
+3474,176194,Implant,None
+3474,176194,Surgery,None
+3474,176194,"Broken Bone",None
+3474,176194,"Facial Trauma",None
+3474,176194,"Plastic Surgery",None
+3474,176194,"Dental Adult",Healthy
+3474,176194,"Dental Child",Healthy
+3474,176194,Scoliosis,Absent
+3485,106598,Implant,None
+3485,106598,Surgery,Thorax
+3485,106598,"Broken Bone",None
+3485,106598,"Facial Trauma",None
+3485,106598,"Plastic Surgery",None
+3485,106598,Diagnosis,None
+3485,106598,"Dental Adult","Tooth loss"
+3485,106598,"Dental Adult",Healthy
+3485,106598,"Dental Child",Healthy
+3485,106598,Scoliosis,Absent
+3518,171946,,
+3525,115162,Implant,Prosthesis
+3525,115162,Surgery,Legs
+3525,115162,Surgery,Thorax
+3525,115162,"Broken Bone",Leg
+3525,115162,"Facial Trauma","trauma to face, area unknown"
+3525,115162,"Plastic Surgery",None
+3525,115162,Diagnosis,Hypertension
+3525,115162,Diagnosis,Asthma
+3525,115162,"Dental Adult","Periodontal disease"
+3525,115162,"Dental Adult","Tooth loss"
+3525,115162,"Dental Child","Dental cavities"
+3525,115162,"Radiation Therapy",No
+3525,115162,Scoliosis,Absent
+3561,171208,Implant,"Implant, type unknown"
+3561,171208,Surgery,Legs
+3561,171208,Surgery,Thorax
+3561,171208,"Broken Bone",Leg
+3561,171208,"Facial Trauma",None
+3561,171208,"Plastic Surgery","Cosmetic surgery- Tummy tuck"
+3561,171208,"Plastic Surgery","Cosmetic surgery-Breast surgery"
+3561,171208,Diagnosis,"Mental illness"
+3561,171208,Diagnosis,Other
+3561,171208,"Dental Adult",Healthy
+3561,171208,"Dental Child",Healthy
+3561,171208,Scoliosis,Absent
+3607,108039,Implant,Plate
+3607,108039,Surgery,Legs
+3607,108039,Surgery,"Head "
+3607,108039,Surgery,Thorax
+3607,108039,"Broken Bone",None
+3607,108039,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3607,108039,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+3607,108039,"Plastic Surgery",None
+3607,108039,Diagnosis,"Mental illness"
+3607,108039,Diagnosis,Hyperlipedimia
+3607,108039,"Dental Adult",Healthy
+3607,108039,"Dental Child",Healthy
+3607,108039,"Radiation Therapy",No
+3607,108039,Scoliosis,Absent
+3613,148122,Implant,None
+3613,148122,Surgery,None
+3613,148122,"Broken Bone",Wrist/hand
+3613,148122,"Facial Trauma",None
+3613,148122,"Plastic Surgery",None
+3613,148122,Diagnosis,"Cirrhosis of the liver"
+3613,148122,"Dental Adult","Dental cavities"
+3613,148122,"Dental Child",Healthy
+3613,148122,Scoliosis,Absent
+3648,107998,,
+3727,182401,Implant,None
+3727,182401,Surgery,None
+3727,182401,"Broken Bone",None
+3727,182401,"Facial Trauma",None
+3727,182401,"Plastic Surgery",None
+3727,182401,Diagnosis,None
+3727,182401,"Dental Adult",Healthy
+3727,182401,"Dental Child",Healthy
+3727,182401,"Radiation Therapy",No
+3727,182401,Scoliosis,Absent
+3735,179637,,
+3739,146954,Implant,None
+3739,146954,Surgery,Neck
+3739,146954,"Broken Bone",Leg
+3739,146954,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3739,146954,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+3739,146954,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+3739,146954,"Plastic Surgery",None
+3739,146954,"Dental Adult",Healthy
+3739,146954,"Dental Child",Healthy
+3739,146954,"Radiation Therapy",No
+3739,146954,Scoliosis,Absent
+3744,181109,Implant,None
+3744,181109,Surgery,None
+3744,181109,"Broken Bone",Wrist/hand
+3744,181109,"Facial Trauma",None
+3744,181109,"Plastic Surgery",None
+3744,181109,Diagnosis,None
+3744,181109,"Dental Adult","Dental cavities"
+3744,181109,"Dental Adult","Dental trauma"
+3744,181109,"Dental Child",Healthy
+3744,181109,Scoliosis,Absent
+3745,103862,Implant,None
+3745,103862,Surgery,None
+3745,103862,"Broken Bone",Unknown
+3745,103862,"Facial Trauma",None
+3745,103862,"Plastic Surgery",None
+3745,103862,Diagnosis,Unknown
+3745,103862,"Dental Adult",Healthy
+3745,103862,"Dental Child",Unknown
+3745,103862,Scoliosis,Absent
+3774,133175,Implant,None
+3774,133175,Surgery,"Head "
+3774,133175,"Broken Bone",None
+3774,133175,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3774,133175,"Plastic Surgery",None
+3774,133175,Diagnosis,Asthma
+3774,133175,"Dental Adult",Healthy
+3774,133175,"Dental Child",Healthy
+3774,133175,Scoliosis,Absent
+3869,100330,Implant,None
+3869,100330,Surgery,None
+3869,100330,"Broken Bone",Head
+3869,100330,"Broken Bone",None
+3869,100330,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3869,100330,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+3869,100330,"Plastic Surgery","Plastic surgery- Reconstructive surgery"
+3869,100330,Diagnosis,None
+3869,100330,"Dental Adult",Healthy
+3869,100330,"Dental Child",Healthy
+3869,100330,"Radiation Therapy",No
+3869,100330,Scoliosis,Absent
+3891,135963,Implant,None
+3891,135963,Surgery,None
+3891,135963,"Broken Bone",Leg
+3891,135963,"Facial Trauma",None
+3891,135963,"Plastic Surgery",None
+3891,135963,Diagnosis,None
+3891,135963,"Dental Adult",Healthy
+3891,135963,"Dental Child",Healthy
+3891,135963,"Radiation Therapy",No
+3891,135963,Scoliosis,Absent
+3905,147865,Implant,None
+3905,147865,Surgery,Legs
+3905,147865,"Broken Bone",Leg
+3905,147865,"Facial Trauma","Trauma to upper face- hairline to glabella"
+3905,147865,"Plastic Surgery",None
+3905,147865,Diagnosis,"Mental illness"
+3905,147865,"Dental Adult","Dental trauma"
+3905,147865,"Dental Adult",Healthy
+3905,147865,"Dental Child",Healthy
+3905,147865,"Radiation Therapy",No
+3905,147865,Scoliosis,Present
+3922,109619,Implant,"Dental implant"
+3922,109619,Surgery,"Head "
+3922,109619,Surgery,Genitals
+3922,109619,"Broken Bone",Wrist/hand
+3922,109619,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+3922,109619,Diagnosis,Hypertension
+3922,109619,Diagnosis,"Autoimmune diseases"
+3922,109619,Diagnosis,Arthritis
+3922,109619,"Dental Adult","Tooth loss"
+3922,109619,"Dental Child",Healthy
+3922,109619,"Radiation Therapy",Yes
+3922,109619,Scoliosis,Absent
+4007,148327,Surgery,None
+4007,148327,"Broken Bone",None
+4007,148327,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+4007,148327,"Plastic Surgery",None
+4007,148327,Diagnosis,"Autism spectrum"
+4007,148327,"Dental Adult",Healthy
+4007,148327,"Dental Child",Healthy
+4007,148327,"Radiation Therapy",No
+4007,148327,Scoliosis,Absent
+4046,100853,Implant,None
+4046,100853,Surgery,None
+4046,100853,"Broken Bone",None
+4046,100853,"Facial Trauma",None
+4046,100853,"Plastic Surgery",None
+4046,100853,Diagnosis,None
+4046,100853,"Dental Adult",Healthy
+4046,100853,"Dental Child",Unknown
+4046,100853,"Radiation Therapy",No
+4046,100853,Scoliosis,Absent
+4060,147451,Implant,None
+4060,147451,Surgery,Thorax
+4060,147451,"Broken Bone",None
+4060,147451,"Facial Trauma","trauma to face, area unknown"
+4060,147451,"Plastic Surgery","Cosmetic surgery-Face surgery"
+4060,147451,Diagnosis,"Mental illness"
+4060,147451,"Dental Adult","Dental cavities"
+4060,147451,"Dental Adult","Periodontal disease"
+4060,147451,"Dental Child","Dental cavities"
+4060,147451,"Radiation Therapy",No
+4060,147451,Scoliosis,Absent
+4094,178461,Implant,None
+4094,178461,Surgery,None
+4094,178461,"Broken Bone",None
+4094,178461,"Facial Trauma",None
+4094,178461,"Plastic Surgery",None
+4094,178461,Diagnosis,"Mental illness"
+4094,178461,"Dental Adult","Dental cavities"
+4094,178461,"Dental Child","Dental cavities"
+4094,178461,"Radiation Therapy",No
+4094,178461,Scoliosis,Absent
+4108,100131,Implant,None
+4108,100131,Surgery,Thorax
+4108,100131,"Broken Bone",None
+4108,100131,"Facial Trauma",None
+4108,100131,"Plastic Surgery",None
+4108,100131,Diagnosis,"Mental illness"
+4108,100131,Diagnosis,"Non-epileptic seizures"
+4108,100131,"Dental Adult",Healthy
+4108,100131,"Dental Child",Healthy
+4108,100131,"Radiation Therapy",No
+4108,100131,Scoliosis,Absent
+4117,171170,Implant,Unknown
+4117,171170,Surgery,Arms
+4117,171170,Surgery,Legs
+4117,171170,"Broken Bone",Arm
+4117,171170,"Broken Bone",Ankle/foot
+4117,171170,"Facial Trauma",None
+4117,171170,"Plastic Surgery",None
+4117,171170,Diagnosis,"Mental illness"
+4117,171170,Diagnosis,Asthma
+4117,171170,Diagnosis,Other
+4117,171170,"Dental Adult",Healthy
+4117,171170,"Dental Child",Healthy
+4117,171170,"Radiation Therapy",No
+4117,171170,Scoliosis,Absent
+4222,134898,Implant,None
+4222,134898,Surgery,None
+4222,134898,"Broken Bone",None
+4222,134898,"Facial Trauma","Trauma to upper face- hairline to glabella"
+4222,134898,"Plastic Surgery",None
+4222,134898,Diagnosis,Hypertension
+4222,134898,"Dental Adult",Healthy
+4222,134898,"Dental Child",Healthy
+4222,134898,"Radiation Therapy",No
+4222,134898,Scoliosis,Absent
+4267,172583,,
+4342,143459,Implant,None
+4342,143459,Surgery,Thorax
+4342,143459,"Broken Bone",None
+4342,143459,"Facial Trauma",None
+4342,143459,"Plastic Surgery",None
+4342,143459,Diagnosis,"Mental illness"
+4342,143459,"Dental Adult",Healthy
+4342,143459,"Dental Child",Healthy
+4342,143459,Scoliosis,Absent
+4371,143249,Implant,Pin
+4371,143249,Implant,Plate
+4371,143249,Surgery,Neck
+4371,143249,"Broken Bone",Leg
+4371,143249,"Broken Bone","Spine-not neck"
+4371,143249,"Facial Trauma",Unknown
+4371,143249,"Plastic Surgery",None
+4371,143249,Diagnosis,None
+4371,143249,"Dental Adult",Healthy
+4371,143249,"Dental Child",Healthy
+4371,143249,"Radiation Therapy",No
+4371,143249,Scoliosis,Absent
+4451,109385,Implant,None
+4451,109385,Surgery,None
+4451,109385,"Broken Bone",None
+4451,109385,"Facial Trauma",None
+4451,109385,"Plastic Surgery","Cosmetic surgery-Breast surgery"
+4451,109385,Diagnosis,None
+4451,109385,"Dental Adult",Healthy
+4451,109385,"Dental Child",Healthy
+4451,109385,"Radiation Therapy",No
+4451,109385,Scoliosis,Absent
+4559,107389,,
+4763,101510,Diagnosis,"Mental illness"
+4764,144615,Surgery,None
+4764,144615,"Broken Bone",None
+4764,144615,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+4764,144615,"Plastic Surgery",None
+4764,144615,Diagnosis,"Cirrhosis of the liver"
+4764,144615,"Dental Adult",Healthy
+4764,144615,"Dental Child",Healthy
+4764,144615,"Radiation Therapy",No
+4764,144615,Scoliosis,Absent
+4814,103559,Implant,None
+4814,103559,Surgery,None
+4814,103559,"Broken Bone","Spine-not neck"
+4814,103559,"Facial Trauma",None
+4814,103559,"Plastic Surgery",None
+4814,103559,Diagnosis,Unknown
+4814,103559,"Dental Adult","Dental cavities"
+4814,103559,"Dental Child","Dental cavities"
+4814,103559,"Radiation Therapy",No
+4814,103559,Scoliosis,Absent
+4845,105371,Implant,None
+4845,105371,Surgery,Legs
+4845,105371,"Broken Bone",Leg
+4845,105371,"Facial Trauma",None
+4845,105371,"Plastic Surgery",None
+4845,105371,Diagnosis,Asthma
+4845,105371,"Dental Adult",Healthy
+4845,105371,"Dental Child",Healthy
+4845,105371,"Radiation Therapy",No
+4845,105371,Scoliosis,Absent
+4901,170349,Implant,None
+4901,170349,Surgery,None
+4901,170349,"Broken Bone",Wrist/hand
+4901,170349,"Facial Trauma",None
+4901,170349,"Plastic Surgery",None
+4901,170349,Diagnosis,None
+4901,170349,"Dental Adult",Healthy
+4901,170349,"Dental Child",Healthy
+4901,170349,"Radiation Therapy",No
+4901,170349,Scoliosis,Absent
+4974,170206,Implant,None
+4974,170206,Surgery,Thorax
+4974,170206,"Broken Bone",None
+4974,170206,"Facial Trauma",None
+4974,170206,"Plastic Surgery","Cosmetic surgery-Breast surgery"
+4974,170206,Diagnosis,None
+4974,170206,"Dental Adult",Healthy
+4974,170206,"Dental Child",Healthy
+4974,170206,"Radiation Therapy",No
+4974,170206,Scoliosis,Absent
+5009,136283,Implant,None
+5009,136283,Surgery,None
+5009,136283,"Broken Bone",Arm
+5009,136283,"Facial Trauma",None
+5009,136283,"Plastic Surgery",None
+5009,136283,Diagnosis,"Mental illness"
+5009,136283,Diagnosis,Asthma
+5009,136283,"Dental Adult",Healthy
+5009,136283,"Dental Child",Healthy
+5009,136283,"Radiation Therapy",No
+5009,136283,Scoliosis,Absent
+5031,144071,Implant,None
+5031,144071,Surgery,Legs
+5031,144071,Surgery,Thorax
+5031,144071,"Broken Bone",None
+5031,144071,"Facial Trauma",None
+5031,144071,"Plastic Surgery","Cosmetic surgery-Breast surgery"
+5031,144071,Diagnosis,"Mental illness"
+5031,144071,Diagnosis,Other
+5031,144071,"Dental Adult",Healthy
+5031,144071,"Dental Child",Healthy
+5031,144071,"Radiation Therapy",No
+5031,144071,Scoliosis,Absent
+5044,136287,Implant,None
+5044,136287,Surgery,None
+5044,136287,"Broken Bone",None
+5044,136287,"Facial Trauma",None
+5044,136287,"Plastic Surgery",None
+5044,136287,Diagnosis,None
+5044,136287,"Dental Adult",Healthy
+5044,136287,"Dental Child",Healthy
+5044,136287,"Radiation Therapy",No
+5044,136287,Scoliosis,Absent
+5061,135887,Diagnosis,"Non-epileptic seizures"
+5062,112798,Implant,None
+5062,112798,Surgery,"Head "
+5062,112798,Surgery,Neck
+5062,112798,"Broken Bone",Unknown
+5062,112798,"Facial Trauma",None
+5062,112798,"Plastic Surgery",None
+5062,112798,Diagnosis,"Mental illness"
+5062,112798,Diagnosis,Other
+5062,112798,"Dental Adult","Fungal, bacterial, or viral infection"
+5062,112798,"Dental Child",Unknown
+5062,112798,"Radiation Therapy",No
+5062,112798,Scoliosis,Absent
+5078,139325,Implant,None
+5078,139325,Surgery,None
+5078,139325,"Broken Bone",Head
+5078,139325,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+5078,139325,"Plastic Surgery",None
+5078,139325,Diagnosis,"Mental illness"
+5078,139325,Diagnosis,None
+5078,139325,"Dental Adult",Healthy
+5078,139325,"Dental Child",Unknown
+5078,139325,"Radiation Therapy",No
+5078,139325,Scoliosis,Absent
+5143,173112,Implant,None
+5143,173112,Surgery,None
+5143,173112,"Broken Bone",Head
+5143,173112,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+5143,173112,"Facial Trauma",None
+5143,173112,"Plastic Surgery",None
+5143,173112,Diagnosis,Unknown
+5143,173112,"Dental Adult",Healthy
+5143,173112,"Dental Child",Healthy
+5143,173112,"Radiation Therapy",No
+5143,173112,Scoliosis,Absent
+5163,104099,Implant,None
+5163,104099,Surgery,None
+5163,104099,"Broken Bone",Head
+5163,104099,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+5163,104099,"Plastic Surgery",None
+5163,104099,Diagnosis,"Mental illness"
+5163,104099,"Dental Adult",Healthy
+5163,104099,"Dental Child",Healthy
+5163,104099,"Radiation Therapy",No
+5163,104099,Scoliosis,Absent
+5251,143391,,
+5298,138720,Implant,None
+5298,138720,Surgery,"Head "
+5298,138720,"Broken Bone",Head
+5298,138720,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+5298,138720,"Plastic Surgery",None
+5298,138720,Diagnosis,"Mental illness"
+5298,138720,Diagnosis,Asthma
+5298,138720,"Dental Adult","Dental trauma"
+5298,138720,"Dental Child",Healthy
+5298,138720,"Radiation Therapy",No
+5298,138720,Scoliosis,Absent
+5340,139236,Implant,None
+5340,139236,Surgery,Thorax
+5340,139236,"Broken Bone",Arm
+5340,139236,"Broken Bone",Wrist/hand
+5340,139236,"Facial Trauma","Trauma to upper face- hairline to glabella"
+5340,139236,"Plastic Surgery",None
+5340,139236,Diagnosis,"Mental illness"
+5340,139236,"Dental Adult",Healthy
+5340,139236,"Dental Child",Healthy
+5340,139236,"Radiation Therapy",No
+5340,139236,Scoliosis,Absent
+5381,110235,Implant,None
+5381,110235,Surgery,None
+5381,110235,"Broken Bone",Wrist/hand
+5381,110235,"Facial Trauma",None
+5381,110235,"Plastic Surgery",None
+5381,110235,"Dental Adult",Healthy
+5381,110235,"Dental Child",Healthy
+5381,110235,Scoliosis,Absent
+5384,144303,Implant,Pin
+5384,144303,Surgery,Arms
+5384,144303,Surgery,Legs
+5384,144303,Surgery,Thorax
+5384,144303,"Broken Bone",Arm
+5384,144303,"Broken Bone",Ribs
+5384,144303,"Facial Trauma",None
+5384,144303,"Plastic Surgery",None
+5384,144303,Diagnosis,"Mental illness"
+5384,144303,"Dental Adult",Healthy
+5384,144303,"Dental Child",Healthy
+5384,144303,"Radiation Therapy",No
+5384,144303,Scoliosis,Absent
+5402,174615,Implant,None
+5402,174615,Surgery,None
+5402,174615,"Broken Bone",None
+5402,174615,"Facial Trauma",None
+5402,174615,"Plastic Surgery",None
+5402,174615,Diagnosis,"Mental illness"
+5402,174615,"Dental Adult",Healthy
+5402,174615,"Dental Child",Healthy
+5402,174615,"Radiation Therapy",No
+5402,174615,Scoliosis,Absent
+5403,107190,Implant,None
+5403,107190,Surgery,Thorax
+5403,107190,"Broken Bone",None
+5403,107190,"Facial Trauma",None
+5403,107190,"Plastic Surgery",None
+5403,107190,Diagnosis,"Mental illness"
+5403,107190,Diagnosis,"Diabetes Type II"
+5403,107190,Diagnosis,Hypertension
+5403,107190,Diagnosis,"Autoimmune diseases"
+5403,107190,Diagnosis,Stroke
+5403,107190,Diagnosis,"Coronary artery disease"
+5403,107190,Diagnosis,Other
+5403,107190,"Dental Adult","Dental trauma"
+5403,107190,"Dental Child",Healthy
+5403,107190,"Radiation Therapy",No
+5403,107190,Scoliosis,Absent
+5439,176980,,
+5447,112666,Implant,None
+5447,112666,Surgery,None
+5447,112666,"Broken Bone",None
+5447,112666,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+5447,112666,"Plastic Surgery",None
+5447,112666,Diagnosis,"Coronary artery disease"
+5447,112666,Diagnosis,None
+5447,112666,"Dental Adult","Dental trauma"
+5447,112666,"Dental Child",Healthy
+5447,112666,"Radiation Therapy",No
+5447,112666,Scoliosis,Absent
+5458,141682,Implant,None
+5458,141682,Surgery,"Head "
+5458,141682,"Broken Bone",None
+5458,141682,"Facial Trauma",None
+5458,141682,Diagnosis,"Mental illness"
+5458,141682,"Dental Adult",Healthy
+5458,141682,"Dental Child",Healthy
+5458,141682,"Radiation Therapy",No
+5458,141682,Scoliosis,Absent
+5464,104998,Implant,None
+5464,104998,Surgery,None
+5464,104998,Surgery,Unknown
+5464,104998,"Broken Bone",None
+5464,104998,"Facial Trauma","Trauma to upper face- hairline to glabella"
+5464,104998,"Plastic Surgery",None
+5464,104998,Diagnosis,"Mental illness"
+5464,104998,"Dental Adult",Healthy
+5464,104998,"Dental Child",Healthy
+5464,104998,"Radiation Therapy",No
+5464,104998,Scoliosis,Absent
+5500,144108,Implant,None
+5500,144108,Surgery,None
+5500,144108,"Broken Bone",None
+5500,144108,"Facial Trauma",None
+5500,144108,"Plastic Surgery",None
+5500,144108,"Dental Adult",Healthy
+5500,144108,"Dental Child",Healthy
+5500,144108,"Radiation Therapy",No
+5500,144108,Scoliosis,Absent
+5782,102325,Surgery,Arms
+5782,102325,Surgery,"Head "
+5782,102325,Surgery,Thorax
+5782,102325,"Broken Bone",Arm
+5782,102325,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+5782,102325,"Plastic Surgery",None
+5782,102325,Diagnosis,"Mental illness"
+5782,102325,"Dental Adult","Tooth loss"
+5782,102325,"Dental Child",Healthy
+5782,102325,"Radiation Therapy",No
+5782,102325,Scoliosis,Absent
+5810,106643,Implant,None
+5810,106643,Surgery,None
+5810,106643,"Broken Bone",Unknown
+5810,106643,"Facial Trauma",None
+5810,106643,"Plastic Surgery",None
+5810,106643,Diagnosis,None
+5810,106643,"Dental Adult",Healthy
+5810,106643,"Dental Child",Healthy
+5810,106643,"Radiation Therapy",No
+5810,106643,Scoliosis,Absent
+5835,113288,Implant,None
+5835,113288,Surgery,None
+5835,113288,"Broken Bone",Arm
+5835,113288,"Facial Trauma",None
+5835,113288,"Plastic Surgery",None
+5835,113288,Diagnosis,None
+5835,113288,"Dental Adult",Healthy
+5835,113288,"Dental Child",Healthy
+5835,113288,"Radiation Therapy",No
+5835,113288,Scoliosis,Absent
+5857,145250,Implant,None
+5857,145250,Surgery,None
+5857,145250,"Broken Bone",None
+5857,145250,"Facial Trauma",None
+5857,145250,"Plastic Surgery",None
+5857,145250,Diagnosis,None
+5857,145250,"Dental Adult","Dental cavities"
+5857,145250,"Dental Child",Healthy
+5857,145250,"Radiation Therapy",No
+5857,145250,Scoliosis,Absent
+5899,109755,Implant,"Dental implant"
+5899,109755,Surgery,"Head "
+5899,109755,"Broken Bone",Arm
+5899,109755,"Facial Trauma",None
+5899,109755,"Plastic Surgery",None
+5899,109755,Diagnosis,Other
+5899,109755,"Dental Adult","Dental cavities"
+5899,109755,"Dental Child",Healthy
+5899,109755,"Radiation Therapy",No
+5899,109755,Scoliosis,Absent
+5905,170173,Implant,"Dental implant"
+5905,170173,Surgery,Thorax
+5905,170173,"Broken Bone",None
+5905,170173,"Facial Trauma",None
+5905,170173,Diagnosis,Asthma
+5905,170173,"Dental Adult","Dental cavities"
+5905,170173,"Dental Child","Dental trauma"
+5905,170173,Scoliosis,Absent
+5927,178647,Implant,None
+5927,178647,Surgery,"Head "
+5927,178647,"Broken Bone",None
+5927,178647,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+5927,178647,Diagnosis,"Mental illness"
+5927,178647,Diagnosis,Hypertension
+5927,178647,"Dental Adult","Dental trauma"
+5927,178647,"Dental Adult","Fungal, bacterial, or viral infection"
+5927,178647,"Dental Child","Dental cavities"
+5927,178647,"Radiation Therapy",No
+5927,178647,Scoliosis,Absent
+5958,139194,Implant,None
+5958,139194,Surgery,None
+5958,139194,"Broken Bone",None
+5958,139194,"Facial Trauma",None
+5958,139194,"Plastic Surgery",None
+5958,139194,Diagnosis,Epilepsy
+5958,139194,"Dental Adult",Healthy
+5958,139194,"Dental Child",Healthy
+5958,139194,"Radiation Therapy",No
+5958,139194,Scoliosis,Absent
+6076,146237,Diagnosis,Unknown
+6127,133388,Implant,None
+6127,133388,Surgery,None
+6127,133388,"Broken Bone",None
+6127,133388,"Facial Trauma",None
+6127,133388,"Plastic Surgery",None
+6127,133388,Diagnosis,Hypertension
+6127,133388,"Dental Adult","Dental cavities"
+6127,133388,"Dental Child",Unknown
+6127,133388,"Radiation Therapy",No
+6127,133388,Scoliosis,Absent
+6171,134824,Implant,None
+6171,134824,Surgery,None
+6171,134824,"Broken Bone",None
+6171,134824,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+6171,134824,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+6171,134824,"Plastic Surgery",None
+6171,134824,Diagnosis,"Mental illness"
+6171,134824,"Dental Adult",Healthy
+6171,134824,"Dental Child",Healthy
+6171,134824,"Radiation Therapy",No
+6171,134824,Scoliosis,Absent
+6191,113825,,
+6211,183704,Implant,None
+6211,183704,Surgery,None
+6211,183704,"Broken Bone",None
+6211,183704,"Facial Trauma",None
+6211,183704,"Plastic Surgery",None
+6211,183704,Diagnosis,"Mental illness"
+6211,183704,Diagnosis,Hypertension
+6211,183704,"Dental Adult",Healthy
+6211,183704,"Dental Child",Healthy
+6211,183704,"Radiation Therapy",No
+6211,183704,Scoliosis,Absent
+6220,104730,Surgery,Legs
+6220,104730,"Broken Bone",None
+6220,104730,"Facial Trauma",None
+6220,104730,"Plastic Surgery",None
+6220,104730,Diagnosis,None
+6220,104730,"Dental Adult",Healthy
+6220,104730,"Dental Child",Healthy
+6220,104730,"Radiation Therapy",No
+6220,104730,Scoliosis,Absent
+6229,102480,Implant,None
+6229,102480,Surgery,Genitals
+6229,102480,"Broken Bone",None
+6229,102480,"Facial Trauma","trauma to face, area unknown"
+6229,102480,"Plastic Surgery",None
+6229,102480,"Dental Adult",Healthy
+6229,102480,"Dental Child",Healthy
+6229,102480,"Radiation Therapy",No
+6229,102480,Scoliosis,Absent
+6239,114077,Implant,Nail
+6239,114077,Implant,Rod
+6239,114077,Surgery,Legs
+6239,114077,"Broken Bone",Leg
+6239,114077,"Facial Trauma",None
+6239,114077,"Plastic Surgery",None
+6239,114077,Diagnosis,"Mental illness"
+6239,114077,"Dental Adult","Dental cavities"
+6239,114077,"Dental Child",Healthy
+6239,114077,"Radiation Therapy",No
+6239,114077,Scoliosis,Absent
+6512,100049,Implant,None
+6512,100049,Surgery,"Head "
+6512,100049,"Broken Bone",Arm
+6512,100049,"Facial Trauma",None
+6512,100049,"Plastic Surgery",None
+6512,100049,Diagnosis,"Mental illness"
+6512,100049,"Dental Adult","Dental cavities"
+6512,100049,"Dental Adult",Healthy
+6512,100049,"Dental Child","Dental cavities"
+6512,100049,"Dental Child",Healthy
+6512,100049,"Radiation Therapy",No
+6512,100049,Scoliosis,Absent
+6551,134987,Implant,None
+6551,134987,Surgery,None
+6551,134987,"Broken Bone",None
+6551,134987,"Facial Trauma","Trauma to upper face- hairline to glabella"
+6551,134987,"Plastic Surgery",None
+6551,134987,Diagnosis,Other
+6551,134987,"Dental Adult",Healthy
+6551,134987,"Dental Child",Healthy
+6551,134987,"Radiation Therapy",No
+6551,134987,Scoliosis,Absent
+6568,144063,Implant,None
+6568,144063,Surgery,None
+6568,144063,"Broken Bone",None
+6568,144063,"Facial Trauma",None
+6568,144063,"Plastic Surgery",None
+6568,144063,Diagnosis,"Mental illness"
+6568,144063,"Dental Adult",Healthy
+6568,144063,"Dental Child",Healthy
+6568,144063,"Radiation Therapy",No
+6568,144063,Scoliosis,Absent
+6974,109600,Implant,None
+6974,109600,Surgery,None
+6974,109600,"Broken Bone",None
+6974,109600,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+6974,109600,"Plastic Surgery",None
+6974,109600,Diagnosis,"Mental illness"
+6974,109600,Diagnosis,Schizophrenia
+6974,109600,"Dental Adult",Healthy
+6974,109600,"Dental Child",Healthy
+6974,109600,"Radiation Therapy",No
+6974,109600,Scoliosis,Absent
+6975,180030,Implant,"Implant, type unknown"
+6975,180030,Surgery,Legs
+6975,180030,"Broken Bone",Leg
+6975,180030,"Facial Trauma",None
+6975,180030,"Plastic Surgery",None
+6975,180030,Diagnosis,Other
+6975,180030,"Dental Adult",Healthy
+6975,180030,"Dental Child",Healthy
+6975,180030,"Radiation Therapy",No
+6975,180030,Scoliosis,Absent
+7039,108461,Implant,Unknown
+7039,108461,Surgery,Unknown
+7039,108461,"Broken Bone",Arm
+7039,108461,"Facial Trauma",Unknown
+7039,108461,"Plastic Surgery",None
+7039,108461,Diagnosis,"Mental illness"
+7039,108461,Diagnosis,Epilepsy
+7039,108461,"Dental Adult","Dental cavities"
+7039,108461,"Dental Child",Healthy
+7039,108461,"Radiation Therapy",No
+7039,108461,Scoliosis,Absent
+7162,112438,,
+7186,169746,,
+7205,182513,,
+7279,138873,Implant,None
+7279,138873,Surgery,Thorax
+7279,138873,"Broken Bone",Arm
+7279,138873,"Broken Bone",Leg
+7279,138873,"Facial Trauma",None
+7279,138873,"Plastic Surgery",None
+7279,138873,Diagnosis,"Mental illness"
+7279,138873,"Dental Adult","Dental trauma"
+7279,138873,"Dental Adult","Fungal, bacterial, or viral infection"
+7279,138873,"Dental Child",Healthy
+7279,138873,"Radiation Therapy",No
+7279,138873,Scoliosis,Absent
+7350,177697,Implant,None
+7350,177697,Surgery,None
+7350,177697,"Broken Bone",None
+7350,177697,"Facial Trauma",None
+7350,177697,"Plastic Surgery",None
+7350,177697,Diagnosis,None
+7350,177697,"Dental Adult",Healthy
+7350,177697,"Dental Child",Healthy
+7350,177697,"Radiation Therapy",No
+7350,177697,Scoliosis,Absent
+7360,178321,Implant,None
+7360,178321,Surgery,None
+7360,178321,"Broken Bone",None
+7360,178321,"Facial Trauma",None
+7360,178321,"Plastic Surgery",None
+7360,178321,Diagnosis,"Mental illness"
+7360,178321,"Dental Adult",Healthy
+7360,178321,"Dental Child",Healthy
+7360,178321,"Radiation Therapy",No
+7360,178321,Scoliosis,Absent
+7690,176245,Implant,None
+7690,176245,Surgery,Legs
+7690,176245,"Broken Bone",None
+7690,176245,"Facial Trauma","Trauma to upper face- hairline to glabella"
+7690,176245,"Plastic Surgery",None
+7690,176245,Diagnosis,None
+7690,176245,"Dental Adult","Dental cavities"
+7690,176245,"Dental Child",Healthy
+7690,176245,"Radiation Therapy",No
+7690,176245,Scoliosis,Absent
+8163,103543,Implant,None
+8163,103543,Surgery,None
+8163,103543,"Broken Bone","Spine-not neck"
+8163,103543,"Facial Trauma",None
+8163,103543,"Plastic Surgery",None
+8163,103543,Diagnosis,"Mental illness"
+8163,103543,"Dental Adult",Healthy
+8163,103543,"Dental Child",Healthy
+8163,103543,"Radiation Therapy",No
+8163,103543,Scoliosis,Absent
+9114,113033,Implant,None
+9114,113033,Surgery,None
+9114,113033,"Broken Bone",None
+9114,113033,"Facial Trauma",None
+9114,113033,"Plastic Surgery",None
+9114,113033,Diagnosis,None
+9114,113033,"Dental Adult",Healthy
+9114,113033,"Dental Child",Healthy
+9114,113033,"Radiation Therapy",No
+9114,113033,Scoliosis,Absent
+9140,109631,Implant,None
+9140,109631,Surgery,Thorax
+9140,109631,"Broken Bone",None
+9140,109631,"Facial Trauma",None
+9140,109631,"Plastic Surgery",None
+9140,109631,Diagnosis,"Mental illness"
+9140,109631,Diagnosis,"Autoimmune diseases"
+9140,109631,"Dental Adult","Dental cavities"
+9140,109631,"Dental Adult","Tooth loss"
+9140,109631,"Dental Child",Unknown
+9140,109631,"Radiation Therapy",No
+9140,109631,Scoliosis,Absent
+9170,172969,Implant,Unknown
+9170,172969,Surgery,Thorax
+9170,172969,"Broken Bone",Unknown
+9170,172969,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+9170,172969,"Plastic Surgery",None
+9170,172969,Diagnosis,"Mental illness"
+9170,172969,Diagnosis,"Hepatitis C"
+9170,172969,Diagnosis,Schizophrenia
+9170,172969,"Dental Adult","Dental cavities"
+9170,172969,"Dental Child",Healthy
+9170,172969,"Radiation Therapy",No
+9170,172969,Scoliosis,Absent
+9274,146242,Implant,None
+9274,146242,Surgery,None
+9274,146242,"Broken Bone",None
+9274,146242,"Facial Trauma",None
+9274,146242,"Plastic Surgery",None
+9274,146242,Diagnosis,Asthma
+9274,146242,"Dental Adult",Healthy
+9274,146242,"Dental Child",Healthy
+9274,146242,"Radiation Therapy",No
+9274,146242,Scoliosis,Absent
+9275,173494,Implant,"Birth control"
+9275,173494,Surgery,None
+9275,173494,"Broken Bone",Wrist/hand
+9275,173494,"Plastic Surgery",None
+9275,173494,Diagnosis,"Hepatitis C"
+9275,173494,"Dental Adult",Healthy
+9275,173494,"Dental Child",Healthy
+9275,173494,"Radiation Therapy",No
+9275,173494,Scoliosis,Absent
+9300,181545,Implant,None
+9300,181545,Surgery,None
+9300,181545,"Broken Bone",None
+9300,181545,"Facial Trauma",None
+9300,181545,"Plastic Surgery",None
+9300,181545,Diagnosis,Unknown
+9300,181545,"Dental Adult",Unknown
+9300,181545,"Dental Child",Unknown
+9300,181545,"Radiation Therapy",No
+9300,181545,Scoliosis,Absent
+9311,179036,Implant,None
+9311,179036,Surgery,None
+9311,179036,"Broken Bone",Arm
+9311,179036,"Facial Trauma",None
+9311,179036,"Plastic Surgery",None
+9311,179036,Diagnosis,None
+9311,179036,"Dental Adult",Healthy
+9311,179036,"Dental Child",Unknown
+9311,179036,"Radiation Therapy",No
+9311,179036,Scoliosis,Absent
+9332,107813,Implant,None
+9332,107813,Surgery,Thorax
+9332,107813,"Broken Bone",None
+9332,107813,"Facial Trauma",None
+9332,107813,"Plastic Surgery",None
+9332,107813,Diagnosis,None
+9332,107813,"Dental Adult",Healthy
+9332,107813,"Dental Child",Healthy
+9332,107813,"Radiation Therapy",No
+9332,107813,Scoliosis,Absent
+9341,169436,,
+9384,102895,Implant,Unknown
+9384,102895,Surgery,Unknown
+9384,102895,"Broken Bone",None
+9384,102895,"Facial Trauma",None
+9384,102895,"Plastic Surgery",None
+9384,102895,Diagnosis,None
+9384,102895,"Dental Adult",Healthy
+9384,102895,"Dental Child",Unknown
+9384,102895,"Radiation Therapy",No
+9384,102895,Scoliosis,Absent
+9416,184392,Implant,None
+9416,184392,Surgery,None
+9416,184392,"Broken Bone",None
+9416,184392,"Facial Trauma","trauma to face, area unknown"
+9416,184392,"Plastic Surgery",None
+9416,184392,Diagnosis,"Mental illness"
+9416,184392,Diagnosis,Other
+9416,184392,Diagnosis,"Hepatitis C"
+9416,184392,"Dental Adult","Dental cavities"
+9416,184392,"Dental Child","Dental cavities"
+9416,184392,"Radiation Therapy",No
+9416,184392,Scoliosis,Absent
+9473,148156,Implant,None
+9473,148156,Surgery,Thorax
+9473,148156,"Broken Bone",Wrist/hand
+9473,148156,"Facial Trauma",None
+9473,148156,"Plastic Surgery",None
+9473,148156,Diagnosis,None
+9473,148156,"Dental Adult","Dental cavities"
+9473,148156,"Dental Child",Healthy
+9473,148156,"Radiation Therapy",No
+9473,148156,Scoliosis,Absent
+9487,181648,Implant,None
+9487,181648,Surgery,Thorax
+9487,181648,"Broken Bone",Arm
+9487,181648,"Facial Trauma",None
+9487,181648,"Plastic Surgery",None
+9487,181648,Diagnosis,"Diabetes Type II"
+9487,181648,Diagnosis,Hypertension
+9487,181648,Diagnosis,"Staphylococcus aureus"
+9487,181648,"Dental Adult",Healthy
+9487,181648,"Dental Child",Healthy
+9487,181648,"Radiation Therapy",No
+9487,181648,Scoliosis,Absent
+9518,113059,Implant,None
+9518,113059,Surgery,None
+9518,113059,"Broken Bone",None
+9518,113059,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+9518,113059,"Plastic Surgery",None
+9518,113059,Diagnosis,Hypertension
+9518,113059,Diagnosis,"Coronary artery disease"
+9518,113059,"Dental Adult","Dental cavities"
+9518,113059,"Dental Child",Healthy
+9518,113059,"Radiation Therapy",No
+9518,113059,Scoliosis,Absent
+9662,138712,Implant,None
+9662,138712,Surgery,None
+9662,138712,"Broken Bone",Arm
+9662,138712,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+9662,138712,"Plastic Surgery",None
+9662,138712,Diagnosis,Epilepsy
+9662,138712,"Dental Adult",Healthy
+9662,138712,"Dental Child",Healthy
+9662,138712,"Radiation Therapy",No
+9662,138712,Scoliosis,Absent
+9672,169522,Implant,None
+9672,169522,Surgery,None
+9672,169522,"Broken Bone",Arm
+9672,169522,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+9672,169522,"Plastic Surgery",None
+9672,169522,Diagnosis,Other
+9672,169522,"Dental Adult","Tooth loss"
+9672,169522,"Dental Child",Healthy
+9672,169522,"Radiation Therapy",No
+9672,169522,Scoliosis,Absent
+9681,145435,Implant,None
+9681,145435,Surgery,Legs
+9681,145435,"Broken Bone",Ankle/foot
+9681,145435,"Facial Trauma","Trauma to upper face- hairline to glabella"
+9681,145435,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+9681,145435,"Plastic Surgery",None
+9681,145435,Diagnosis,"Cirrhosis of the liver"
+9681,145435,Diagnosis,Other
+9681,145435,"Dental Adult","Tooth loss"
+9681,145435,"Dental Child",Healthy
+9681,145435,"Radiation Therapy",No
+9681,145435,Scoliosis,Absent
+9727,133273,,
+10001,135418,Implant,None
+10001,135418,Surgery,None
+10001,135418,"Broken Bone",None
+10001,135418,"Facial Trauma",None
+10001,135418,"Plastic Surgery",None
+10001,135418,Diagnosis,"Mental illness"
+10001,135418,Diagnosis,"Diabetes Type II"
+10001,135418,Diagnosis,Hypertension
+10001,135418,"Dental Adult",Healthy
+10001,135418,"Dental Child",Healthy
+10001,135418,"Radiation Therapy",No
+10001,135418,Scoliosis,Absent
+10002,149483,Implant,None
+10002,149483,Surgery,None
+10002,149483,"Broken Bone",None
+10002,149483,"Facial Trauma",None
+10002,149483,"Plastic Surgery",None
+10002,149483,Diagnosis,None
+10002,149483,"Dental Adult",Healthy
+10002,149483,"Dental Child",Healthy
+10002,149483,"Radiation Therapy",No
+10002,149483,Scoliosis,Absent
+10013,104373,Implant,None
+10013,104373,Surgery,None
+10013,104373,"Broken Bone",Arm
+10013,104373,"Facial Trauma",None
+10013,104373,"Plastic Surgery",None
+10013,104373,"Dental Adult",Healthy
+10013,104373,"Dental Child",Healthy
+10013,104373,"Radiation Therapy",No
+10013,104373,Scoliosis,Absent
+10023,175725,Implant,Rod
+10023,175725,Surgery,Legs
+10023,175725,"Broken Bone",Leg
+10023,175725,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+10023,175725,"Plastic Surgery",None
+10023,175725,Diagnosis,"Mental illness"
+10023,175725,"Dental Adult",Healthy
+10023,175725,"Dental Child",Healthy
+10023,175725,"Radiation Therapy",No
+10023,175725,Scoliosis,Unknown
+10384,135098,Implant,None
+10384,135098,Surgery,Unknown
+10384,135098,"Broken Bone",Arm
+10384,135098,"Facial Trauma",None
+10384,135098,"Plastic Surgery",None
+10384,135098,Diagnosis,"Mental illness"
+10384,135098,Diagnosis,Hypertension
+10384,135098,Diagnosis,Hyperlipedimia
+10384,135098,Diagnosis,Osteoporosis
+10384,135098,"Dental Adult",Healthy
+10384,135098,"Dental Child",Healthy
+10384,135098,"Radiation Therapy",No
+10384,135098,Scoliosis,Absent
+10407,182948,Implant,None
+10407,182948,Surgery,Legs
+10407,182948,"Broken Bone",None
+10407,182948,"Facial Trauma",None
+10407,182948,"Plastic Surgery",None
+10407,182948,Diagnosis,Other
+10407,182948,"Dental Adult","Tooth loss"
+10407,182948,"Dental Adult",Healthy
+10407,182948,"Dental Child","Dental cavities"
+10407,182948,"Dental Child",Healthy
+10407,182948,"Radiation Therapy",No
+10407,182948,Scoliosis,Absent
+11322,100221,Implant,None
+11322,100221,Surgery,Neck
+11322,100221,"Broken Bone",Leg
+11322,100221,"Facial Trauma","Trauma to upper face- hairline to glabella"
+11322,100221,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+11322,100221,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+11322,100221,"Plastic Surgery",None
+11322,100221,Diagnosis,"Mental illness"
+11322,100221,"Dental Adult","Dental cavities"
+11322,100221,"Dental Child",Healthy
+11322,100221,"Radiation Therapy",No
+11322,100221,Scoliosis,Absent
+11336,102602,Implant,"Implant, type unknown"
+11336,102602,Surgery,Legs
+11336,102602,"Broken Bone",Leg
+11336,102602,"Broken Bone",Ankle/foot
+11336,102602,"Facial Trauma",None
+11336,102602,"Plastic Surgery",None
+11336,102602,Diagnosis,"Mental illness"
+11336,102602,"Dental Adult","Dental cavities"
+11336,102602,"Dental Child",Healthy
+11336,102602,"Radiation Therapy",No
+11336,102602,Scoliosis,Present
+11342,134040,Implant,None
+11342,134040,Surgery,Legs
+11342,134040,"Broken Bone",None
+11342,134040,"Facial Trauma",None
+11342,134040,"Plastic Surgery",None
+11342,134040,Diagnosis,None
+11342,134040,"Dental Adult","Dental cavities"
+11342,134040,"Dental Child",Healthy
+11342,134040,"Radiation Therapy",No
+11342,134040,Scoliosis,Absent
+11359,174623,Implant,None
+11359,174623,Surgery,Arms
+11359,174623,Surgery,"Head "
+11359,174623,"Broken Bone",Wrist/hand
+11359,174623,"Facial Trauma","Trauma to upper face- hairline to glabella"
+11359,174623,"Plastic Surgery",None
+11359,174623,Diagnosis,"Mental illness"
+11359,174623,"Dental Adult","Tooth loss"
+11359,174623,"Dental Adult",Healthy
+11359,174623,"Dental Child",Healthy
+11359,174623,"Radiation Therapy",No
+11359,174623,Scoliosis,Absent
+11366,183944,Implant,None
+11366,183944,Surgery,Legs
+11366,183944,"Broken Bone",Arm
+11366,183944,"Facial Trauma","Trauma to upper face- hairline to glabella"
+11366,183944,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+11366,183944,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+11366,183944,"Plastic Surgery",None
+11366,183944,Diagnosis,"Mental illness"
+11366,183944,"Dental Adult",Healthy
+11366,183944,"Dental Child",Healthy
+11366,183944,"Radiation Therapy",No
+11366,183944,Scoliosis,Absent
+11397,103530,Implant,None
+11397,103530,Surgery,None
+11397,103530,"Broken Bone",None
+11397,103530,"Facial Trauma",None
+11397,103530,"Plastic Surgery",None
+11397,103530,Diagnosis,None
+11397,103530,"Dental Adult","Dental cavities"
+11397,103530,"Dental Child",Healthy
+11397,103530,"Radiation Therapy",No
+11397,103530,Scoliosis,Absent
+11726,172918,Implant,None
+11726,172918,Surgery,None
+11726,172918,"Broken Bone",None
+11726,172918,"Facial Trauma",None
+11726,172918,"Plastic Surgery",None
+11726,172918,Diagnosis,None
+11726,172918,"Dental Adult",Healthy
+11726,172918,"Dental Child",Healthy
+11726,172918,"Radiation Therapy",No
+11726,172918,Scoliosis,Absent
+11736,174004,Implant,Unknown
+11736,174004,Surgery,"Head "
+11736,174004,"Broken Bone",None
+11736,174004,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+11736,174004,"Plastic Surgery","Plastic surgery- Reconstructive surgery"
+11736,174004,Diagnosis,"Mental illness"
+11736,174004,Diagnosis,COPD
+11736,174004,Diagnosis,Other
+11736,174004,Diagnosis,Schizophrenia
+11736,174004,"Dental Adult",Unknown
+11736,174004,"Dental Child",Unknown
+11736,174004,"Radiation Therapy",No
+11736,174004,Scoliosis,Absent
+11761,115974,Implant,Stent
+11761,115974,Surgery,Arms
+11761,115974,Surgery,Thorax
+11761,115974,"Broken Bone",None
+11761,115974,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+11761,115974,"Plastic Surgery",None
+11761,115974,Diagnosis,"Diabetes Type II"
+11761,115974,Diagnosis,Hypertension
+11761,115974,Diagnosis,"Myocardial infarction"
+11761,115974,"Dental Adult",Unknown
+11761,115974,"Dental Child",Healthy
+11761,115974,"Radiation Therapy",No
+11761,115974,Scoliosis,Absent
+11773,147877,Implant,None
+11773,147877,Surgery,None
+11773,147877,"Broken Bone",None
+11773,147877,"Facial Trauma",None
+11773,147877,"Plastic Surgery",None
+11773,147877,Diagnosis,"Diabetes Type II"
+11773,147877,"Dental Adult",Unknown
+11773,147877,"Dental Child",Healthy
+11773,147877,"Radiation Therapy",No
+11773,147877,Scoliosis,Absent
+11791,142348,Implant,None
+11791,142348,Surgery,None
+11791,142348,"Broken Bone",Wrist/hand
+11791,142348,"Facial Trauma","trauma to face, area unknown"
+11791,142348,"Plastic Surgery",None
+11791,142348,Diagnosis,"Mental illness"
+11791,142348,Diagnosis,"Hepatitis C"
+11791,142348,"Dental Adult","Dental cavities"
+11791,142348,"Dental Child",Healthy
+11791,142348,"Radiation Therapy",No
+11791,142348,Scoliosis,Absent
+11942,179200,Implant,None
+11942,179200,Surgery,None
+11942,179200,"Broken Bone",None
+11942,179200,"Facial Trauma",None
+11942,179200,"Plastic Surgery",None
+11942,179200,Diagnosis,Schizophrenia
+11942,179200,"Dental Adult",Healthy
+11942,179200,"Dental Child",Healthy
+11942,179200,"Radiation Therapy",No
+11942,179200,Scoliosis,Absent
+12076,107029,Implant,None
+12076,107029,Surgery,None
+12076,107029,"Broken Bone",None
+12076,107029,"Facial Trauma",None
+12076,107029,"Plastic Surgery",None
+12076,107029,Diagnosis,None
+12076,107029,"Dental Adult",Healthy
+12076,107029,"Dental Child",Healthy
+12076,107029,"Radiation Therapy",No
+12076,107029,Scoliosis,Absent
+12101,100122,Implant,None
+12101,100122,Surgery,Genitals
+12101,100122,"Broken Bone",Wrist/hand
+12101,100122,"Facial Trauma",None
+12101,100122,"Plastic Surgery",None
+12101,100122,Diagnosis,None
+12101,100122,"Dental Adult",Healthy
+12101,100122,"Dental Child",Healthy
+12101,100122,"Radiation Therapy",No
+12101,100122,Scoliosis,Absent
+12103,134065,Implant,None
+12103,134065,Surgery,None
+12103,134065,"Broken Bone",None
+12103,134065,"Facial Trauma",None
+12103,134065,"Plastic Surgery",None
+12103,134065,Diagnosis,None
+12103,134065,"Dental Adult","Dental cavities"
+12103,134065,"Dental Child",Healthy
+12103,134065,"Radiation Therapy",No
+12103,134065,Scoliosis,Absent
+12117,101242,Implant,None
+12117,101242,Surgery,Thorax
+12117,101242,"Broken Bone",None
+12117,101242,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+12117,101242,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+12117,101242,"Plastic Surgery",None
+12117,101242,Diagnosis,Asthma
+12117,101242,"Dental Adult",Healthy
+12117,101242,"Dental Child",Healthy
+12117,101242,"Radiation Therapy",No
+12117,101242,Scoliosis,Absent
+12129,183863,Implant,None
+12129,183863,Surgery,None
+12129,183863,"Broken Bone",None
+12129,183863,"Facial Trauma",None
+12129,183863,"Plastic Surgery",None
+12129,183863,Diagnosis,None
+12129,183863,"Dental Adult",Healthy
+12129,183863,"Dental Child",Healthy
+12129,183863,"Radiation Therapy",No
+12129,183863,Scoliosis,Absent
+12148,115312,Implant,None
+12148,115312,Surgery,None
+12148,115312,"Broken Bone",None
+12148,115312,"Facial Trauma",None
+12148,115312,"Plastic Surgery",None
+12148,115312,Diagnosis,"Mental illness"
+12148,115312,"Dental Adult",Healthy
+12148,115312,"Dental Child",Healthy
+12148,115312,"Radiation Therapy",No
+12148,115312,Scoliosis,Absent
+12513,147041,Implant,None
+12513,147041,Surgery,None
+12513,147041,"Broken Bone",Wrist/hand
+12513,147041,"Facial Trauma",None
+12513,147041,"Plastic Surgery",None
+12513,147041,Diagnosis,"Mental illness"
+12513,147041,"Dental Adult","Dental cavities"
+12513,147041,"Dental Child",Healthy
+12513,147041,"Radiation Therapy",No
+12513,147041,Scoliosis,Absent
+12567,182860,Implant,None
+12567,182860,Surgery,None
+12567,182860,"Broken Bone",None
+12567,182860,"Facial Trauma",None
+12567,182860,"Plastic Surgery",None
+12567,182860,Diagnosis,"Mental illness"
+12567,182860,"Dental Adult",Healthy
+12567,182860,"Dental Child",Healthy
+12567,182860,"Radiation Therapy",No
+12567,182860,Scoliosis,Absent
+12587,107930,Implant,Pin
+12587,107930,Surgery,Arms
+12587,107930,"Broken Bone",Wrist/hand
+12587,107930,"Facial Trauma",None
+12587,107930,"Plastic Surgery",None
+12587,107930,Diagnosis,None
+12587,107930,"Dental Adult",Healthy
+12587,107930,"Dental Child",Healthy
+12587,107930,"Radiation Therapy",No
+12587,107930,Scoliosis,Absent
+12624,101427,Implant,None
+12624,101427,Surgery,"Head "
+12624,101427,Surgery,Thorax
+12624,101427,"Broken Bone",Arm
+12624,101427,"Broken Bone",Leg
+12624,101427,"Facial Trauma",None
+12624,101427,"Plastic Surgery",None
+12624,101427,Diagnosis,Hypertension
+12624,101427,"Dental Adult",Healthy
+12624,101427,"Dental Child",Healthy
+12624,101427,"Radiation Therapy",No
+12624,101427,Scoliosis,Absent
+12656,184373,Implant,None
+12656,184373,Surgery,None
+12656,184373,"Broken Bone",None
+12656,184373,"Facial Trauma",None
+12656,184373,"Plastic Surgery",None
+12656,184373,Diagnosis,Asthma
+12656,184373,"Dental Adult",Healthy
+12656,184373,"Dental Child",Healthy
+12656,184373,"Radiation Therapy",No
+12656,184373,Scoliosis,Absent
+12724,102924,Implant,None
+12724,102924,Surgery,None
+12724,102924,"Broken Bone",None
+12724,102924,"Facial Trauma",None
+12724,102924,"Plastic Surgery",None
+12724,102924,Diagnosis,"Mental illness"
+12724,102924,"Dental Adult","Dental cavities"
+12724,102924,"Dental Child",Healthy
+12724,102924,"Radiation Therapy",No
+12724,102924,Scoliosis,Absent
+13211,135579,Implant,None
+13211,135579,Surgery,None
+13211,135579,"Broken Bone",None
+13211,135579,"Facial Trauma",None
+13211,135579,"Plastic Surgery",None
+13211,135579,Diagnosis,None
+13211,135579,"Dental Adult",Healthy
+13211,135579,"Dental Child",Healthy
+13211,135579,"Radiation Therapy",No
+13211,135579,Scoliosis,Absent
+13212,137402,Implant,Unknown
+13212,137402,Surgery,Legs
+13212,137402,"Broken Bone",None
+13212,137402,"Facial Trauma",None
+13212,137402,"Plastic Surgery",None
+13212,137402,Diagnosis,"Diabetes Type II"
+13212,137402,Diagnosis,Hypertension
+13212,137402,"Dental Adult",Healthy
+13212,137402,"Dental Child",Healthy
+13212,137402,"Radiation Therapy",No
+13212,137402,Scoliosis,Absent
+13262,168993,Implant,None
+13262,168993,Surgery,None
+13262,168993,"Broken Bone",None
+13262,168993,"Facial Trauma",None
+13262,168993,"Plastic Surgery",None
+13262,168993,Diagnosis,None
+13262,168993,"Dental Adult",Healthy
+13262,168993,"Dental Child",Healthy
+13262,168993,"Radiation Therapy",No
+13262,168993,Scoliosis,Absent
+13266,103293,Implant,None
+13266,103293,Surgery,None
+13266,103293,"Broken Bone",None
+13266,103293,"Facial Trauma",None
+13266,103293,"Plastic Surgery",None
+13266,103293,Diagnosis,None
+13266,103293,"Dental Adult",Healthy
+13266,103293,"Dental Child",Healthy
+13266,103293,"Radiation Therapy",No
+13266,103293,Scoliosis,Absent
+13277,135258,Implant,None
+13277,135258,Surgery,Thorax
+13277,135258,"Broken Bone",Leg
+13277,135258,"Facial Trauma",None
+13277,135258,"Plastic Surgery",None
+13277,135258,Diagnosis,Hypertension
+13277,135258,Diagnosis,Arthritis
+13277,135258,"Dental Adult",Healthy
+13277,135258,"Dental Child",Healthy
+13277,135258,"Radiation Therapy",No
+13277,135258,Scoliosis,Absent
+13331,177679,Implant,None
+13331,177679,Surgery,Neck
+13331,177679,"Broken Bone",Leg
+13331,177679,"Facial Trauma","Trauma to upper face- hairline to glabella"
+13331,177679,"Plastic Surgery",None
+13331,177679,Diagnosis,None
+13331,177679,"Dental Adult",Healthy
+13331,177679,"Dental Child",Healthy
+13331,177679,"Radiation Therapy",No
+13331,177679,Scoliosis,Absent
+13577,184171,Implant,Plate
+13577,184171,Surgery,Arms
+13577,184171,"Broken Bone",Arm
+13577,184171,"Facial Trauma",None
+13577,184171,"Plastic Surgery",None
+13577,184171,Diagnosis,"Mental illness"
+13577,184171,"Dental Adult","Dental cavities"
+13577,184171,"Dental Child","Dental cavities"
+13577,184171,"Radiation Therapy",No
+13577,184171,Scoliosis,Absent
+13580,180430,Implant,None
+13580,180430,Surgery,Thorax
+13580,180430,"Broken Bone",None
+13580,180430,"Facial Trauma",None
+13580,180430,"Plastic Surgery",None
+13580,180430,Diagnosis,Other
+13580,180430,Diagnosis,"Non-epileptic seizures"
+13580,180430,"Dental Adult","Tooth loss"
+13580,180430,"Dental Child",Healthy
+13580,180430,"Radiation Therapy",No
+13580,180430,Scoliosis,Absent
+13627,136868,Implant,None
+13627,136868,Surgery,Thorax
+13627,136868,"Broken Bone",None
+13627,136868,"Facial Trauma","Trauma to upper face- hairline to glabella"
+13627,136868,"Plastic Surgery",None
+13627,136868,Diagnosis,None
+13627,136868,"Dental Adult","Dental cavities"
+13627,136868,"Dental Adult",Healthy
+13627,136868,"Dental Child",Healthy
+13627,136868,"Radiation Therapy",No
+13627,136868,Scoliosis,Absent
+13641,140141,Implant,None
+13641,140141,Surgery,Unknown
+13641,140141,"Broken Bone",None
+13641,140141,"Facial Trauma",None
+13641,140141,"Plastic Surgery",None
+13641,140141,Diagnosis,Unknown
+13641,140141,"Dental Adult",Unknown
+13641,140141,"Dental Child",Healthy
+13641,140141,"Radiation Therapy",Unknown
+13641,140141,Scoliosis,Absent
+13652,110125,Implant,None
+13652,110125,Surgery,Genitals
+13652,110125,"Broken Bone",None
+13652,110125,"Facial Trauma",None
+13652,110125,"Plastic Surgery",None
+13652,110125,Diagnosis,None
+13652,110125,"Dental Adult",Healthy
+13652,110125,"Dental Child",Healthy
+13652,110125,"Radiation Therapy",No
+13652,110125,Scoliosis,Absent
+13669,174753,Implant,None
+13669,174753,Surgery,Legs
+13669,174753,Surgery,"Head "
+13669,174753,"Broken Bone",Wrist/hand
+13669,174753,"Broken Bone",Ankle/foot
+13669,174753,"Facial Trauma","Trauma to upper face- hairline to glabella"
+13669,174753,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+13669,174753,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+13669,174753,"Plastic Surgery",None
+13669,174753,Diagnosis,None
+13669,174753,"Dental Adult","Dental cavities"
+13669,174753,"Dental Adult","Tooth loss"
+13669,174753,"Dental Adult","Fungal, bacterial, or viral infection"
+13669,174753,"Dental Child",Healthy
+13669,174753,"Radiation Therapy",No
+13669,174753,Scoliosis,Absent
+13675,109799,Implant,"Gastric band"
+13675,109799,Surgery,Thorax
+13675,109799,"Broken Bone",Unknown
+13675,109799,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+13675,109799,"Plastic Surgery",None
+13675,109799,Diagnosis,"Diabetes Type II"
+13675,109799,Diagnosis,Hypertension
+13675,109799,Diagnosis,Other
+13675,109799,"Dental Adult",Healthy
+13675,109799,"Dental Child",Healthy
+13675,109799,"Radiation Therapy",No
+13675,109799,Scoliosis,Unknown
+13678,134740,Implant,None
+13678,134740,Surgery,"Head "
+13678,134740,Surgery,Thorax
+13678,134740,"Broken Bone",None
+13678,134740,"Facial Trauma",None
+13678,134740,"Plastic Surgery",None
+13678,134740,Diagnosis,"Mental illness"
+13678,134740,"Dental Adult",Healthy
+13678,134740,"Dental Child",Healthy
+13678,134740,Scoliosis,Absent
+13692,132592,Implant,None
+13692,132592,Surgery,None
+13692,132592,"Broken Bone",None
+13692,132592,"Facial Trauma",None
+13692,132592,"Plastic Surgery",None
+13692,132592,Diagnosis,None
+13692,132592,"Dental Adult",Healthy
+13692,132592,"Dental Child",Healthy
+13692,132592,"Radiation Therapy",No
+13692,132592,Scoliosis,Absent
+13718,101358,Implant,None
+13718,101358,Surgery,None
+13718,101358,"Broken Bone",Unknown
+13718,101358,"Facial Trauma",None
+13718,101358,"Plastic Surgery",None
+13718,101358,Diagnosis,Hypertension
+13718,101358,"Dental Adult",Healthy
+13718,101358,"Dental Child",Healthy
+13718,101358,"Radiation Therapy",No
+13718,101358,Scoliosis,Absent
+13729,149327,Implant,None
+13729,149327,Surgery,None
+13729,149327,"Broken Bone",None
+13729,149327,"Facial Trauma",None
+13729,149327,"Plastic Surgery",None
+13729,149327,Diagnosis,None
+13729,149327,"Dental Adult",Healthy
+13729,149327,"Dental Child",Healthy
+13729,149327,"Radiation Therapy",No
+13729,149327,Scoliosis,Absent
+13745,183533,Implant,None
+13745,183533,Surgery,None
+13745,183533,"Broken Bone",None
+13745,183533,"Facial Trauma",None
+13745,183533,"Plastic Surgery",None
+13745,183533,Diagnosis,"Mental illness"
+13745,183533,"Dental Adult",Healthy
+13745,183533,"Dental Child",Healthy
+13745,183533,"Radiation Therapy",No
+13745,183533,Scoliosis,Absent
+13748,114220,Implant,None
+13748,114220,Surgery,Unknown
+13748,114220,"Broken Bone",None
+13748,114220,"Facial Trauma",None
+13748,114220,"Plastic Surgery",None
+13748,114220,Diagnosis,"Mental illness"
+13748,114220,"Dental Adult",Healthy
+13748,114220,"Dental Child",Healthy
+13748,114220,"Radiation Therapy",No
+13748,114220,Scoliosis,Absent
+13776,139847,Implant,None
+13776,139847,Surgery,None
+13776,139847,"Broken Bone",None
+13776,139847,"Facial Trauma","Trauma to upper face- hairline to glabella"
+13776,139847,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+13776,139847,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+13776,139847,"Plastic Surgery",None
+13776,139847,Diagnosis,"Mental illness"
+13776,139847,"Dental Adult",Healthy
+13776,139847,"Dental Child",Healthy
+13776,139847,"Radiation Therapy",No
+13776,139847,Scoliosis,Absent
+13797,103783,Implant,None
+13797,103783,Surgery,Thorax
+13797,103783,"Broken Bone",None
+13797,103783,"Facial Trauma",None
+13797,103783,"Plastic Surgery",None
+13797,103783,Diagnosis,"Mental illness"
+13797,103783,"Dental Adult",Healthy
+13797,103783,"Dental Child",Healthy
+13797,103783,"Radiation Therapy",No
+13797,103783,Scoliosis,Present
+13885,109860,Implant,None
+13885,109860,Surgery,Arms
+13885,109860,Surgery,Legs
+13885,109860,Surgery,None
+13885,109860,"Broken Bone",Arm
+13885,109860,"Broken Bone",Leg
+13885,109860,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+13885,109860,"Plastic Surgery",None
+13885,109860,Diagnosis,"Coronary artery disease"
+13885,109860,"Dental Adult",Healthy
+13885,109860,"Dental Child",Healthy
+13885,109860,"Radiation Therapy",No
+13885,109860,Scoliosis,Absent
+13894,183067,Implant,None
+13894,183067,Surgery,None
+13894,183067,"Broken Bone",None
+13894,183067,"Facial Trauma",Unknown
+13894,183067,"Plastic Surgery",None
+13894,183067,Diagnosis,None
+13894,183067,"Dental Adult",Healthy
+13894,183067,"Dental Child",Healthy
+13894,183067,"Radiation Therapy",No
+13894,183067,Scoliosis,Absent
+13902,184343,Implant,None
+13902,184343,Surgery,Genitals
+13902,184343,"Broken Bone",None
+13902,184343,"Facial Trauma",None
+13902,184343,"Plastic Surgery",None
+13902,184343,Diagnosis,"Autism spectrum"
+13902,184343,Diagnosis,"Non-epileptic seizures"
+13902,184343,"Dental Adult",Healthy
+13902,184343,"Dental Child",Healthy
+13902,184343,"Radiation Therapy",No
+13902,184343,Scoliosis,Absent
+13961,148298,Implant,None
+13961,148298,Surgery,None
+13961,148298,"Broken Bone",Wrist/hand
+13961,148298,"Facial Trauma","trauma to face, area unknown"
+13961,148298,"Plastic Surgery",None
+13961,148298,Diagnosis,"Mental illness"
+13961,148298,Diagnosis,Hypertension
+13961,148298,"Dental Adult",Healthy
+13961,148298,"Dental Child",Healthy
+13961,148298,"Radiation Therapy",No
+13961,148298,Scoliosis,Absent
+13974,134922,Implant,None
+13974,134922,Surgery,Legs
+13974,134922,"Broken Bone",Arm
+13974,134922,"Facial Trauma","Trauma to lower face- anterior nasal spine and below"
+13974,134922,"Plastic Surgery",None
+13974,134922,Diagnosis,"Mental illness"
+13974,134922,"Dental Adult",Healthy
+13974,134922,"Dental Child",Healthy
+13974,134922,"Radiation Therapy",No
+13974,134922,Scoliosis,Absent
+14004,111927,Implant,None
+14004,111927,Surgery,None
+14004,111927,"Broken Bone",None
+14004,111927,"Facial Trauma",None
+14004,111927,"Plastic Surgery",None
+14004,111927,Diagnosis,Other
+14004,111927,Diagnosis,Schizophrenia
+14004,111927,"Dental Adult",Healthy
+14004,111927,"Dental Child",Healthy
+14004,111927,"Radiation Therapy",No
+14004,111927,Scoliosis,Absent
+14034,183025,Implant,None
+14034,183025,Surgery,None
+14034,183025,"Broken Bone",Leg
+14034,183025,"Facial Trauma",None
+14034,183025,"Plastic Surgery",None
+14034,183025,Diagnosis,"Mental illness"
+14034,183025,"Dental Adult",Healthy
+14034,183025,"Dental Child",Healthy
+14034,183025,"Radiation Therapy",No
+14034,183025,Scoliosis,Absent
+14036,147211,Implant,None
+14036,147211,Surgery,None
+14036,147211,"Broken Bone",Wrist/hand
+14036,147211,"Facial Trauma","Trauma to upper face- hairline to glabella"
+14036,147211,"Plastic Surgery",None
+14036,147211,Diagnosis,"Mental illness"
+14036,147211,"Dental Adult",Healthy
+14036,147211,"Dental Child",Healthy
+14036,147211,"Radiation Therapy",No
+14036,147211,Scoliosis,Absent
+14064,105604,Implant,None
+14064,105604,Surgery,None
+14064,105604,"Broken Bone",Wrist/hand
+14064,105604,"Facial Trauma",None
+14064,105604,"Plastic Surgery",None
+14064,105604,Diagnosis,"Mental illness"
+14064,105604,Diagnosis,Asthma
+14064,105604,"Dental Adult",Healthy
+14064,105604,"Dental Child",Healthy
+14064,105604,"Radiation Therapy",No
+14064,105604,Scoliosis,Absent
+14070,179019,Implant,None
+14070,179019,Surgery,None
+14070,179019,"Broken Bone",None
+14070,179019,"Facial Trauma",None
+14070,179019,"Plastic Surgery",None
+14070,179019,Diagnosis,"Mental illness"
+14070,179019,Diagnosis,COPD
+14070,179019,Diagnosis,Asthma
+14070,179019,Diagnosis,HIV/AIDS
+14070,179019,Diagnosis,Other
+14070,179019,Diagnosis,"Hepatitis C"
+14070,179019,"Dental Adult",Healthy
+14070,179019,"Dental Child",Healthy
+14070,179019,"Radiation Therapy",No
+14070,179019,Scoliosis,Absent
+14086,179458,Implant,Unknown
+14086,179458,Surgery,Legs
+14086,179458,Surgery,Neck
+14086,179458,"Broken Bone",Ankle/foot
+14086,179458,"Broken Bone",Neck
+14086,179458,"Facial Trauma",None
+14086,179458,"Plastic Surgery",None
+14086,179458,Diagnosis,"Mental illness"
+14086,179458,Diagnosis,"Diabetes Type II"
+14086,179458,Diagnosis,Hypertension
+14086,179458,Diagnosis,Asthma
+14086,179458,Diagnosis,Other
+14086,179458,Diagnosis,"Hepatitis C"
+14086,179458,"Dental Adult",Healthy
+14086,179458,"Dental Child",Healthy
+14086,179458,"Radiation Therapy",No
+14086,179458,Scoliosis,Absent
+14098,101236,Implant,None
+14098,101236,Surgery,None
+14098,101236,"Broken Bone",None
+14098,101236,"Facial Trauma",None
+14098,101236,"Plastic Surgery",None
+14098,101236,Diagnosis,"Diabetes Type I"
+14098,101236,"Dental Adult",Healthy
+14098,101236,"Dental Child",Healthy
+14098,101236,"Radiation Therapy",No
+14098,101236,Scoliosis,Absent
+14106,144314,Implant,None
+14106,144314,Surgery,None
+14106,144314,"Broken Bone",Arm
+14106,144314,"Broken Bone",Wrist/hand
+14106,144314,"Broken Bone",Ankle/foot
+14106,144314,"Facial Trauma",None
+14106,144314,"Plastic Surgery",None
+14106,144314,Diagnosis,"Mental illness"
+14106,144314,Diagnosis,Schizophrenia
+14106,144314,"Dental Adult",Healthy
+14106,144314,"Dental Child",Healthy
+14106,144314,"Radiation Therapy",No
+14106,144314,Scoliosis,Absent
+14107,180398,Implant,Plate
+14107,180398,Surgery,"Head "
+14107,180398,"Broken Bone",Ankle/foot
+14107,180398,"Broken Bone",Head
+14107,180398,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+14107,180398,"Plastic Surgery",None
+14107,180398,Diagnosis,"Mental illness"
+14107,180398,Diagnosis,Hypertension
+14107,180398,Diagnosis,Hyperlipedimia
+14107,180398,Diagnosis,Asthma
+14107,180398,Diagnosis,Other
+14107,180398,"Dental Adult",Healthy
+14107,180398,"Dental Child",Healthy
+14107,180398,"Radiation Therapy",No
+14107,180398,Scoliosis,Absent
+14232,147903,Implant,None
+14232,147903,Surgery,None
+14232,147903,"Broken Bone",None
+14232,147903,"Facial Trauma",None
+14232,147903,"Plastic Surgery",None
+14232,147903,Diagnosis,"Autism spectrum"
+14232,147903,Diagnosis,"Mental illness"
+14232,147903,"Dental Adult","Periodontal disease"
+14232,147903,"Dental Child","Dental cavities"
+14232,147903,"Radiation Therapy",No
+14232,147903,Scoliosis,Absent
+14242,174808,Implant,None
+14242,174808,Surgery,Legs
+14242,174808,Surgery,Genitals
+14242,174808,"Broken Bone",Wrist/hand
+14242,174808,"Broken Bone",Ankle/foot
+14242,174808,"Broken Bone","Spine-not neck"
+14242,174808,"Facial Trauma","trauma to face, area unknown"
+14242,174808,"Plastic Surgery",None
+14242,174808,Diagnosis,"Mental illness"
+14242,174808,Diagnosis,"Autoimmune diseases"
+14242,174808,Diagnosis,Arthritis
+14242,174808,Diagnosis,Other
+14242,174808,"Dental Adult","Tooth loss"
+14242,174808,"Dental Child",Healthy
+14242,174808,"Radiation Therapy",No
+14242,174808,Scoliosis,Absent
+14254,172676,Implant,None
+14254,172676,Surgery,None
+14254,172676,"Broken Bone",None
+14254,172676,"Facial Trauma","Trauma to upper face- hairline to glabella"
+14254,172676,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+14254,172676,"Plastic Surgery",None
+14254,172676,Diagnosis,Hypertension
+14254,172676,Diagnosis,"Cirrhosis of the liver"
+14254,172676,"Dental Adult","Dental cavities"
+14254,172676,"Dental Child",Unknown
+14254,172676,"Radiation Therapy",No
+14254,172676,Scoliosis,Absent
+14258,135881,Implant,None
+14258,135881,Surgery,Thorax
+14258,135881,"Broken Bone",None
+14258,135881,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+14258,135881,"Plastic Surgery",None
+14258,135881,Diagnosis,"Mental illness"
+14258,135881,Diagnosis,Asthma
+14258,135881,Diagnosis,HIV/AIDS
+14258,135881,Diagnosis,Other
+14258,135881,"Dental Adult","Dental cavities"
+14258,135881,"Dental Child",Unknown
+14258,135881,"Radiation Therapy",No
+14258,135881,Scoliosis,Absent
+14279,136188,Implant,None
+14279,136188,Surgery,None
+14279,136188,"Broken Bone",Arm
+14279,136188,"Facial Trauma",None
+14279,136188,"Plastic Surgery",None
+14279,136188,Diagnosis,"Mental illness"
+14279,136188,"Dental Adult","Tooth loss"
+14279,136188,"Dental Child","Dental cavities"
+14279,136188,"Radiation Therapy",No
+14279,136188,Scoliosis,Absent
+14321,179082,Implant,None
+14321,179082,Surgery,None
+14321,179082,"Broken Bone",Arm
+14321,179082,"Broken Bone",Leg
+14321,179082,"Facial Trauma",None
+14321,179082,"Plastic Surgery",None
+14321,179082,Diagnosis,Asthma
+14321,179082,"Dental Adult",Healthy
+14321,179082,"Dental Child",Healthy
+14321,179082,"Radiation Therapy",No
+14321,179082,Scoliosis,Absent
+14334,169132,Implant,None
+14334,169132,Surgery,Thorax
+14334,169132,"Broken Bone",None
+14334,169132,"Facial Trauma",None
+14334,169132,"Plastic Surgery",None
+14334,169132,Diagnosis,None
+14334,169132,"Dental Adult",Healthy
+14334,169132,"Dental Child",Healthy
+14334,169132,"Radiation Therapy",No
+14334,169132,Scoliosis,Absent
+14339,181540,Implant,None
+14339,181540,Surgery,None
+14339,181540,"Broken Bone",Wrist/hand
+14339,181540,"Facial Trauma",None
+14339,181540,"Plastic Surgery",None
+14339,181540,Diagnosis,None
+14339,181540,"Dental Adult",Healthy
+14339,181540,"Dental Child",Healthy
+14339,181540,"Radiation Therapy",No
+14339,181540,Scoliosis,Absent
+14369,172338,Implant,None
+14369,172338,Surgery,Thorax
+14369,172338,"Broken Bone",None
+14369,172338,"Facial Trauma","Trauma to upper face- hairline to glabella"
+14369,172338,"Facial Trauma","Trauma to middle face-glabella to anterior nasal spine"
+14369,172338,"Plastic Surgery",None
+14369,172338,"Dental Adult",Healthy
+14369,172338,"Dental Child",Healthy
+14369,172338,"Radiation Therapy",No
+14369,172338,Scoliosis,Absent
+14370,173611,Implant,None
+14370,173611,Surgery,None
+14370,173611,"Broken Bone",None
+14370,173611,"Facial Trauma",None
+14370,173611,"Plastic Surgery",None
+14370,173611,Diagnosis,"Mental illness"
+14370,173611,"Dental Adult",Healthy
+14370,173611,"Dental Child",Healthy
+14370,173611,"Radiation Therapy",No
+14370,173611,Scoliosis,Absent
+14372,115720,Implant,None
+14372,115720,Surgery,Thorax
+14372,115720,"Broken Bone",Arm
+14372,115720,"Facial Trauma",None
+14372,115720,"Plastic Surgery",None
+14372,115720,Diagnosis,"Mental illness"
+14372,115720,"Dental Adult",Healthy
+14372,115720,"Dental Child",Unknown
+14372,115720,"Radiation Therapy",No
+14372,115720,Scoliosis,Absent
+14386,106561,,
+14395,141349,Implant,None
+14395,141349,Surgery,"Head "
+14395,141349,Surgery,Neck
+14395,141349,"Broken Bone",Wrist/hand
+14395,141349,"Facial Trauma",None
+14395,141349,"Plastic Surgery",None
+14395,141349,Diagnosis,"Mental illness"
+14395,141349,"Dental Adult",Healthy
+14395,141349,"Dental Child",Healthy
+14395,141349,"Radiation Therapy",No
+14395,141349,Scoliosis,Absent
+14419,144903,Implant,None
+14419,144903,Surgery,None
+14419,144903,"Broken Bone",Arm
+14419,144903,"Plastic Surgery",None
+14419,144903,Diagnosis,"Mental illness"
+14419,144903,"Dental Adult",Healthy
+14419,144903,"Dental Child",Healthy
+14419,144903,"Radiation Therapy",No
+14419,144903,Scoliosis,Absent
+14420,136314,Implant,None
+14420,136314,Surgery,"Head "
+14420,136314,"Broken Bone",None
+14420,136314,"Facial Trauma",None
+14420,136314,"Plastic Surgery",None
+14420,136314,Diagnosis,Hypertension
+14420,136314,Diagnosis,Hyperlipedimia
+14420,136314,Diagnosis,Epilepsy
+14420,136314,Diagnosis,"Coronary artery disease"
+14420,136314,"Dental Adult",Healthy
+14420,136314,"Dental Child",Healthy
+14420,136314,"Radiation Therapy",No
+14420,136314,Scoliosis,Absent
+14424,184553,Implant,None
+14424,184553,Surgery,Thorax
+14424,184553,"Broken Bone",Wrist/hand
+14424,184553,"Facial Trauma",None
+14424,184553,"Plastic Surgery",None
+14424,184553,Diagnosis,None
+14424,184553,"Dental Adult",Healthy
+14424,184553,"Dental Child",Healthy
+14424,184553,"Radiation Therapy",No
+14424,184553,Scoliosis,Unknown
+15201,176087,Implant,None
+15201,176087,Surgery,Genitals
+15201,176087,"Broken Bone",None
+15201,176087,"Facial Trauma",None
+15201,176087,"Plastic Surgery",None
+15201,176087,"Dental Adult","Dental cavities"
+15201,176087,"Dental Child","Dental cavities"
+15201,176087,"Radiation Therapy",No
+15201,176087,Scoliosis,Absent
