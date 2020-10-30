@@ -1,4 +1,4 @@
-function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmarks,generatePlots)
+function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmarks,pointSpacing,generatePlots)
     
     %% TODO: consider inlcluding Latarjet process with this? Or separate
 
@@ -10,6 +10,9 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
     %   glenoidMesh         structure of glenoid mesh containing faces and
     %                       vertices as 'glenoidF' and 'glenoidV'
     %   landmarks           structure containing glenoid landmarks 
+    %   pointSpacing        desired point spacing for remeshing if
+    %                       required. Defaults to empty if no input which
+    %                       means no remeshing is performed.
     %   generatePlots       flag whether to generate figures from the
     %                       processing throughout the function (default = false)
     %
@@ -36,9 +39,14 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
     if nargin < 2
         error('Structures containing the glenoid mesh as well as landmarks are required')
     end
-
-    %Generate plots flag
+    
+    %Remeshing
     if nargin < 3
+        pointSpacing = [];
+    end
+    
+    %Generate plots flag
+    if nargin < 4
         generatePlots = false;
     else
         %Check whether it is a logical operator
@@ -373,10 +381,15 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
             error('Holes detected in glenoid defect mesh. Stopping here as volumetric meshing won''t work');
         end
         
+        %Remesh the glenoids to the desired point spacing
+        if ~isempty(pointSpacing)
+            [glenoidFb,glenoidVb] = triRemeshLabel(glenoidF,glenoidV,pointSpacing);
+        end
+        
         %Output the created meshes
         varName = ['anteriorDefect_',num2str(defectSizes(dd)*100),'per'];
-        glenoidDefectMesh.(char(varName)).glenoidF = glenoidF;
-        glenoidDefectMesh.(char(varName)).glenoidV = glenoidV;
+        glenoidDefectMesh.(char(varName)).glenoidF = glenoidFb;
+        glenoidDefectMesh.(char(varName)).glenoidV = glenoidVb;
         
     end
     clear dd

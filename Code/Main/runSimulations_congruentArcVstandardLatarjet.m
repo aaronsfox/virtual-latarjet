@@ -71,7 +71,7 @@ function runSimulations_congruentArcVstandardLatarjet()
     
     %Run import and create surfaces function
     [scapulaMesh,humerusMesh,glenoidMesh,headMesh,...
-        scapulaCS,humerusCS,landmarks,shapes] = ...
+        scapulaCS,humerusCS,landmarks,shapes,planes] = ...
         importAndCreateSurfaces(currSegDir,generatePlots);
     
     %% Mesh refinement...
@@ -81,8 +81,6 @@ function runSimulations_congruentArcVstandardLatarjet()
     
     %% Create anterior glenoid bone defects
     
-    %%%%% DEPRECATED: using only anteroinferior defects
-    
     % This step takes in the extracted base glenoid surface and creates
     % anterior Bankart bone defects of varying sizes. The process included
     % in the function follows that of Klemt et al. (2019), whereby the
@@ -90,10 +88,13 @@ function runSimulations_congruentArcVstandardLatarjet()
     % distances relative to the lengh of the glenoid. The length of the
     % glenoid is determined based on landmarks added to the scapula surface
     % during segmentation.
-    [anteriorDefectsMesh] = createAnteriorBankartDefects(glenoidMesh,landmarks,generatePlots);
+    [anteriorDefectsMesh] = createAnteriorBankartDefects(glenoidMesh,landmarks,1.5,generatePlots);
     
     %%%%%% TODO: remeshing of glenoids could be necessary if we want to fix
-    %%%%%% up the flat surfaces, but it might not matter?
+    %%%%%% up the flat surfaces, but it might not matter? -- didn't think
+    %%%%%% that remeshing worked with these - but it seems to? the geodesic
+    %%%%%% remeshing seems to work fairly well to eliminate small triangles
+    %%%%%% after remeshing...
     
     %Generate list of anterior defect meshes
     anteriorDefectsList = fieldnames(anteriorDefectsMesh);
@@ -174,9 +175,7 @@ function runSimulations_congruentArcVstandardLatarjet()
     
     %Close wbar
     close(wbar);
-    
-    %%%%% TODO: internal anterior defect meshes look a little iffy...
-    
+        
     %% Create anteroinferior bone defects
     
 % % %     %%%%% NOTE: code can create multiple anteroinferior defect sizes, but
@@ -300,12 +299,28 @@ function runSimulations_congruentArcVstandardLatarjet()
 % % %     %Close wbar
 % % %     close(wbar);
     
+    %% Create coracoid grafts
+    
+    % This step takes the landmarks extracted from 3matic relating to the
+    % coracoid position and creates two different graft variants. First,
+    % the coracoid is extracted from the scapula using the graft plane.
+    % Second, a standard Latarjet coracoid is created by using the plane
+    % positioned on the inferior portion of the coracoid. Last, a congruent
+    % arc Latarjet coracoid is created by using the plane positioned on the
+    % anterior portion of the coracoid.
+    
+    createCoracoidGrafts_congruentArcVstandardLatarjet(scapulaMesh,planes,generatePlots);
+
     %% Run FEBio simulations
     
     %%%%% TODO: consider Hill-Sachs defect incorporation here too?
     
     %%%%% TODO: need to simplify mesh around edges, the computation time
     %%%%% for the smaller, gritty edges is quite large
+    
+    %%%%% TODO: the hard edge of the defect is causing very slow
+    %%%%% simulations, need to fix this otherwise the simulation protocol
+    %%%%% is impractical...
     
     %Navigate to the FEA directory
     cd('..\FEA');

@@ -127,6 +127,9 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile_congruentArcVst
     %Shift the created sphere to the starting head point
     headVolV(:,3) = headVolV(:,3) + (headPt(3) - 9.5);
     
+% % %     %Remesh head???
+% % %     [headVolE,headVolV] = triRemeshLabel(headVolE,headVolV,1.5);
+    
     %Create a volumetric mesh of the sphere
     headInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
     headInputStruct.Faces = headVolE; %Boundary faces

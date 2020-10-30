@@ -1,5 +1,5 @@
 function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
-    scapulaCS,humerusCS,landmarks,shapes] = importAndCreateSurfaces(participantDir,generatePlots)
+    scapulaCS,humerusCS,landmarks,shapes,planes] = importAndCreateSurfaces(participantDir,generatePlots)
 
 %% This function serves to import in and create the base surface system for
 %  running the FEA analysis of the humeral head against the glenoid.
@@ -20,6 +20,7 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
 %   humerusCS           coordinate system axes for humerus
 %   landmarks           imported landmark points on scapula/humerus
 %   shapes              imported shapes data for scapula/humerus (i.e. humeral head radius)
+%   planes              imported planes data for scapula/humerus
 %
 %  This function, like parts of the main code, uses elements of the GIBBON
 %  toolbox (https://www.gibboncode.org/) and the geom3d MATLAB package
@@ -220,11 +221,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     %Transform planes
     for pp = 1:length(coracoidPlanes)
         planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,worldTransform);
-        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,worldTransform);
+        planes.(coracoidPlanes{pp}).normal = transformVector3d(planes.(coracoidPlanes{pp}).normal,worldTransform);
     end
     clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,worldTransform);
-    planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,worldTransform);
+    planes.glenoid.normal = transformVector3d(planes.glenoid.normal,worldTransform);
 
     %Do the secondary rotation to align the Y-axis with the SGT to IGT plane
     %Identify the angle need to rotate around the Z-axis to align the SGT and
@@ -276,11 +277,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     %Rotate planes
     for pp = 1:length(coracoidPlanes)
         planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,rotMatrix);
-        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,rotMatrix);
+        planes.(coracoidPlanes{pp}).normal = transformVector3d(planes.(coracoidPlanes{pp}).normal,rotMatrix);
     end
     clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,rotMatrix);
-    planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,rotMatrix);
+    planes.glenoid.normal = transformVector3d(planes.glenoid.normal,rotMatrix);
     
     %Rotate around the y-axis so that X points forward and Z points out.
     %This requires a 180 degree rotation
@@ -312,11 +313,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     %Rotate planes
     for pp = 1:length(coracoidPlanes)
         planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,rotMatrixY);
-        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,rotMatrixY);
+        planes.(coracoidPlanes{pp}).normal = transformVector3d(planes.(coracoidPlanes{pp}).normal,rotMatrixY);
     end
     clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,rotMatrixY);
-    planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,rotMatrixY);
+    planes.glenoid.normal = transformVector3d(planes.glenoid.normal,rotMatrixY);
     
     %Create translation matrix to make deep glenoid point the origin
     transMatrix = createTranslation3d([0,0,0] - landmarks.DeepGlenoid);
@@ -347,11 +348,11 @@ function [scapulaOutput,humerusOutput,glenoidOutput,headOutput,...
     %Translate planes
     for pp = 1:length(coracoidPlanes)
         planes.(coracoidPlanes{pp}).origin = transformPoint3d(planes.(coracoidPlanes{pp}).origin,transMatrix);
-        planes.(coracoidPlanes{pp}).normal = transformPoint3d(planes.(coracoidPlanes{pp}).normal,transMatrix);
+        planes.(coracoidPlanes{pp}).normal = transformVector3d(planes.(coracoidPlanes{pp}).normal,transMatrix);
     end
     clear pp
     planes.glenoid.origin = transformPoint3d(planes.glenoid.origin,transMatrix);
-    planes.glenoid.normal = transformPoint3d(planes.glenoid.normal,transMatrix);
+    planes.glenoid.normal = transformVector3d(planes.glenoid.normal,transMatrix);
 
     %Visualise rotated
     if generatePlots
