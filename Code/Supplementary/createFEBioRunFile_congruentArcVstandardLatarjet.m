@@ -127,8 +127,14 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile_congruentArcVst
     %Shift the created sphere to the starting head point
     headVolV(:,3) = headVolV(:,3) + (headPt(3) - 9.5);
     
-% % %     %Remesh head???
-% % %     [headVolE,headVolV] = triRemeshLabel(headVolE,headVolV,1.5);
+    %The head may need to be remeshed to handle to hard 90 degree edge
+    %created for the defects. Convergence seems to be a problem at the
+    %edges of the defect, and this may be due to the drastic changes
+    %between contact of the surfaces with a smaller mesh.
+    %Note that this usees the same point spacing specified or the default
+    %of the glenoid
+% % %     headSpacing = mean(patchEdgeLengths(headVolE,headVolV));
+    [headVolE,headVolV] = triRemeshLabel(headVolE,headVolV,pointSpacing);
     
     %Create a volumetric mesh of the sphere
     headInputStruct.stringOpt = '-pq1.2AaY'; %Tetgen options
@@ -285,19 +291,43 @@ function [glenoidMeshOutput,headMeshOutput] = createFEBioRunFile_congruentArcVst
     % mm of penetration, hence 18600*(1/0.5) is the penalty.
     
     %Contact section
+% % %     febio_spec.Contact.contact{1}.ATTR.surface_pair = febio_spec.Geometry.SurfacePair{1}.ATTR.name;
+% % %     febio_spec.Contact.contact{1}.ATTR.type = 'sliding-elastic';
+% % %     febio_spec.Contact.contact{1}.ATTR.name = 'headToGlenoid';
+% % %     febio_spec.Contact.contact{1}.two_pass = 1;
+% % %     febio_spec.Contact.contact{1}.laugon = 0;
+% % %     febio_spec.Contact.contact{1}.tolerance = 0.1;
+% % %     febio_spec.Contact.contact{1}.gaptol = 0;
+% % %     febio_spec.Contact.contact{1}.search_tol = 0.01;
+% % %     febio_spec.Contact.contact{1}.search_radius = pointSpacing/10;
+% % %     febio_spec.Contact.contact{1}.symmetric_stiffness = 0;
+% % %     febio_spec.Contact.contact{1}.auto_penalty = 0;
+% % %     febio_spec.Contact.contact{1}.penalty = 18600*(1/0.5); %25,000 worked in FEBio Studio
+% % %     febio_spec.Contact.contact{1}.fric_coeff = 0;
+    
+    %facet to facet seems to work better getting across the sticking point
+    %combined with denser mesh of head sphere
+    %there is still this jumpiness on the edge - despite the surfaces not
+    %seemingly being in physical contact - and this causes convergence
+    %issues
+    %turning auto penalty on just allows surfaces to go through each other
+    %reducing search radius seemed to speed things up a little
+    %increased search tolerance from 0.01 to 0.1 -- possibly helps, but
+    %didn't change much with same above issues
+    %reducing contact penalty - still gives that same step issue at the
+    %end, and fails to converge...
+
     febio_spec.Contact.contact{1}.ATTR.surface_pair = febio_spec.Geometry.SurfacePair{1}.ATTR.name;
-    febio_spec.Contact.contact{1}.ATTR.type = 'sliding-elastic';
+    febio_spec.Contact.contact{1}.ATTR.type = 'facet-to-facet sliding';
     febio_spec.Contact.contact{1}.ATTR.name = 'headToGlenoid';
-    febio_spec.Contact.contact{1}.two_pass = 1;
+    febio_spec.Contact.contact{1}.two_pass = 0;
     febio_spec.Contact.contact{1}.laugon = 0;
     febio_spec.Contact.contact{1}.tolerance = 0.1;
     febio_spec.Contact.contact{1}.gaptol = 0;
     febio_spec.Contact.contact{1}.search_tol = 0.01;
-    febio_spec.Contact.contact{1}.search_radius = pointSpacing/10;
-    febio_spec.Contact.contact{1}.symmetric_stiffness = 0;
+    febio_spec.Contact.contact{1}.search_radius = pointSpacing/2;
     febio_spec.Contact.contact{1}.auto_penalty = 0;
     febio_spec.Contact.contact{1}.penalty = 18600*(1/0.5); %25,000 worked in FEBio Studio
-    febio_spec.Contact.contact{1}.fric_coeff = 0;
 
     %% Load curves
     

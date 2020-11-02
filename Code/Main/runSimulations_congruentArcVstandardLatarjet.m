@@ -309,6 +309,9 @@ function runSimulations_congruentArcVstandardLatarjet()
     % arc Latarjet coracoid is created by using the plane positioned on the
     % anterior portion of the coracoid.
     
+    %%%%%% TODO: still need to update/complete graft creating process after
+    %%%%%% discussion with RP...
+    
     createCoracoidGrafts_congruentArcVstandardLatarjet(scapulaMesh,planes,generatePlots);
 
     %% Run FEBio simulations

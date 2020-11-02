@@ -333,7 +333,7 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
                     axisGeom;
                     title('Filled Glenoid Defect Surface');
                 end
-
+                
                 %Join the two element sets
                 [glenoidF,glenoidV,glenoidC] = joinElementSets({glenoidF,defectF},{glenoidV,defectV});
                 
@@ -445,7 +445,7 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
         if ~isempty(pointSpacing)
             [glenoidFb,glenoidVb] = triRemeshLabel(glenoidF,glenoidV,pointSpacing);
         end
-        
+
         %Output the created meshes
         varName = ['anteriorDefect_',num2str(defectSizes(dd)*100),'per'];
         glenoidDefectMesh.(char(varName)).glenoidF = glenoidFb;
