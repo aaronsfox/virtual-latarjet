@@ -54,6 +54,7 @@ Created on Mon Oct 26 16:21:28 2020
 import pandas as pd
 import numpy as np
 from itertools import chain
+import random
 
 # %% Load in metadata
 
@@ -401,8 +402,30 @@ df_incParticipantsLeg = df_incParticipantsLeg[maskAbnormalities]
 #Upper limb
 df_incParticipantsArm.to_csv('extractedParticipants_UpperLimb.csv', index = False)
 
+
 #Lower limb
+
+#All
 df_incParticipantsLeg.to_csv('extractedParticipants_LowerLimb.csv',index = False)
+
+#Extract a set of 30 male and female participants
+#Note there is only 11 female, so we will take 11 and 19
+#Get the females
+df_legFemale = df_incParticipantsLeg.loc[df_incParticipantsLeg['sex_code'] == 'Female',]
+#Get male id's
+legMale_id = list(df_incParticipantsLeg.loc[df_incParticipantsLeg['sex_code'] == 'Male',]['id'])
+#Randomly select 19 male participants from ID list
+#Set seed and select 19 participants
+random.seed(1234)
+legMale_selected = random.sample(legMale_id, 19)
+#Extract male dataframe
+df_legMale = df_incParticipantsLeg.loc[(df_incParticipantsLeg['sex_code'] == 'Male') &
+                                       (df_incParticipantsLeg['id'].isin(legMale_selected)),]
+#Concatenate male and female databases
+df_selectParticipantsLeg = pd.concat([df_legFemale,df_legMale])
+#Print to file
+df_selectParticipantsLeg.to_csv('selectedParticipants_LowerLimb.csv',index = False)
+
 
 #Extract the unique ID numbers across the two dataframes for NMDID searching
 uniqueParticipants = pd.concat([df_incParticipantsArm,df_incParticipantsLeg])['deidentified_record_number'].unique()
