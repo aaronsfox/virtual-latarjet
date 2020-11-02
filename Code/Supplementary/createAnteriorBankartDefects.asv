@@ -279,37 +279,37 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
                 %Force boundary to have an X level aligned with the cut
                 glenoidV(indBoundaryDefect,1) = cutLevelX;
                 
-% % %                 %The hard edge of the cut at 90 degrees causes convergence
-% % %                 %issues when simulating the humeral head surface over the
-% % %                 %glenoid. A potential solution here is to create a chafered
-% % %                 %edge. To do this we need to both contract the size of the
-% % %                 %boundary and shift it along the x-axis.
-% % %                 
-% % %                 %Push to boundary 1mm away from the edge of the cut
-% % %                 defectPoints = glenoidV(indBoundaryDefect,:);
-% % %                 defectPoints(:,1) = cutLevelX + 1.00;
-% % %                 
-% % %                 %Contract the size of the defect by 1mm
-% % %                 %Set up polygon
-% % %                 pg = [defectPoints(:,2),defectPoints(:,3)];
-% % %                 %Contract polygon
-% % %                 %Uses positive number for some reason???
-% % %                 %These values need to be more rigorously tested as they are
-% % %                 %somewhat arbitrary to work for the current examp;e
-% % %                 pgIn = expandPolygon(pg, 0.25, 'cleanuploops', true);
-% % %                 %Set back into the defect points structure. Throw error if
-% % %                 %mismatching length
-% % %                 if length(pgIn{1,1}) ~= length(defectPoints)
-% % %                     error('Mismatching length between defect points and contracted polygon.')
-% % %                 end
-% % %                 defectPointsContracted = [defectPoints(:,1),pgIn{1,1}(:,1),pgIn{1,1}(:,2)];
+                %The hard edge of the cut at 90 degrees causes convergence
+                %issues when simulating the humeral head surface over the
+                %glenoid. A potential solution here is to create a chafered
+                %edge. To do this we need to both contract the size of the
+                %boundary and shift it along the x-axis.
+                
+                %Push to boundary 1mm away from the edge of the cut
+                defectPoints = glenoidV(indBoundaryDefect,:);
+                defectPoints(:,1) = cutLevelX + 1.00;
+                
+                %Contract the size of the defect by 1mm
+                %Set up polygon
+                pg = [defectPoints(:,2),defectPoints(:,3)];
+                %Contract polygon
+                %Uses positive number for some reason???
+                %These values need to be more rigorously tested as they are
+                %somewhat arbitrary to work for the current examp;e
+                pgIn = expandPolygon(pg, 0.25, 'cleanuploops', true);
+                %Set back into the defect points structure. Throw error if
+                %mismatching length
+                if length(pgIn{1,1}) ~= length(defectPoints)
+                    error('Mismatching length between defect points and contracted polygon.')
+                end
+                defectPointsContracted = [defectPoints(:,1),pgIn{1,1}(:,1),pgIn{1,1}(:,2)];
                 
                 %Visualise the boundary on the cut surface
                 if generatePlots
                     cFigure; hold on;
                     gpatch(glenoidF,glenoidV,'bw','k');
-                    plotV(glenoidV(indBoundaryDefect,:),'r-','LineWidth',2);
-% % %                     plotV(defectPointsContracted,'r-','LineWidth',2);
+% % %                     plotV(glenoidV(indBoundaryDefect,:),'r-','LineWidth',2);
+                    plotV(defectPointsContracted,'r-','LineWidth',2);
                     camlight('headlight');
                     axisGeom;
                     title('Boundary of Cut Glenoid Defect')
@@ -317,10 +317,10 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
 
                 %Create a surface that closes the glenoid defect
                 %Currently uses the default 1.0 point spacing used for the glenoid
-                [defectF,defectV] = regionTriMesh2D({glenoidV(indBoundaryDefect,[2 3])},1.0,0,0);
-% % %                 [defectF,defectV] = regionTriMesh2D({defectPointsContracted(:,[2 3])},1.0,0,0);
-                defectX = ones(length(defectV),1)*mean(glenoidV(indBoundaryDefect,1));
-% % %                 defectX = ones(length(defectV),1)*mean(defectPointsContracted(:,1));
+% % %                 [defectF,defectV] = regionTriMesh2D({glenoidV(indBoundaryDefect,[2 3])},1.0,0,0);
+                [defectF,defectV] = regionTriMesh2D({defectPointsContracted(:,[2 3])},1.0,0,0);
+% % %                 defectX = ones(length(defectV),1)*mean(glenoidV(indBoundaryDefect,1));
+                defectX = ones(length(defectV),1)*mean(defectPointsContracted(:,1));
                 defectV = [defectX(:,1), defectV(:,1), defectV(:,2)]; %Add/set x-level converting to 3D mesh
 
                 %Visualise new meshes
@@ -347,35 +347,32 @@ function [glenoidDefectMesh] = createAnteriorBankartDefects(glenoidMesh,landmark
                     title('Boundary of Cut Glenoid Defect')
                 end
                 
-% % %                 %Sweep loft between the original defect and contracted
-% % %                 %curve
-% % %                 numStepsCurve = 3; %Number of steps for the curve
-% % %                 p1 = mean(glenoidV(indBoundary,:),1); %First point
-% % %                 n1 = [1,0,0]; %First direction vector
-% % %                 p2 = mean(defectPointsContracted,1); %End point
-% % %                 n2 = [1,0,0]; %End direction vector
-% % %                 csapsSmoothPar = 1; %Cubic smoothening spline smoothening parameter
-% % %                 f = 0.05; %Extent of tangential nature to boundary curves, surface will remain approximately orthogonal to input curves for f*distance between curves
-% % %                 [Vg] = sweepCurveSmooth(p1,p2,n1,n2,numStepsCurve,csapsSmoothPar,f);
-% % %                 [F,V,C] = sweepLoft(glenoidV(indBoundaryDefect,:),defectPointsContracted,n1,n2,Vg);
-% % %                 
-% % %                 %Convert quad loft to tri
-% % %                 [Ft,Vt,Ct] = quad2tri(F,V,'f',C);
-% % %                 
-% % %                 %Visualise
-% % %                 if generatePlots
-% % %                     cFigure; hold on;
-% % %                     gpatch(glenoidF,glenoidV,'bw','k');
-% % %                     plotV(glenoidV(indBoundary,:),'r-','LineWidth',2);
-% % %                     gpatch(Ft,Vt,'gw','k');
-% % %                     camlight('headlight');
-% % %                     axisGeom;
-% % %                     title('Boundary of Cut Glenoid Defect')
-% % %                 end
-% % %                 
-% % %                 %Join the element sets
-% % %                 [glenoidF,glenoidV,glenoidC] = joinElementSets({glenoidF,Ft},{glenoidV,Vt});
+                %Sweep loft between the original defect and contracted
+                %curve
+                numStepsCurve = 3; %Number of steps for the curve
+                p1 = mean(glenoidV(indBoundary,:),1); %First point
+                n1 = [1,0,0]; %First direction vector
+                p2 = mean(defectPointsContracted,1); %End point
+                n2 = [1,0,0]; %End direction vector
+                csapsSmoothPar = 1; %Cubic smoothening spline smoothening parameter
+                f = 0.05; %Extent of tangential nature to boundary curves, surface will remain approximately orthogonal to input curves for f*distance between curves
+                [Vg] = sweepCurveSmooth(p1,p2,n1,n2,numStepsCurve,csapsSmoothPar,f);
+                [F,V,C] = sweepLoft(glenoidV(indBoundaryDefect,:),defectPointsContracted,n1,n2,Vg);
+                
+                %Convert quad loft to tri
+                [Ft,Vt,Ct] = quad2tri(F,V,'f',C);
                                 
+                if generatePlots
+                    cFigure; hold on;
+                    gpatch(glenoidF,glenoidV,'bw','k');
+                    plotV(glenoidV(indBoundary,:),'r-','LineWidth',2);
+                    gpatch(Ft,Vt,'gw','k');
+                    camlight('headlight');
+                    axisGeom;
+                    title('Boundary of Cut Glenoid Defect')
+                end
+                
+                
             end
             clear bb
 
